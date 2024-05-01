@@ -81,7 +81,11 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Main view.resx">
+      <DependentUpon>Main view.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Images\background.jpg" />
     <Content Include="Images\icon.png" />
