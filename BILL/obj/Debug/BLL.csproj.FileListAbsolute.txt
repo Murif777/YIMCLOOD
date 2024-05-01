@@ -1,0 +1,11 @@
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\BILL.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\BILL.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\DAL.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\ENTITY.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\DAL.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\ENTITY.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BILL.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BILL.pdb
