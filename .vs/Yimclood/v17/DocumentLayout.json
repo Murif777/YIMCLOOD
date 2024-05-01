@@ -3,48 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\rutina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\rutina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\entrenador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\entrenador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\membresia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\membresia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\miembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\miembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\perfilmiembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\perfilmiembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\yimclood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Yimclood.csproj|C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\yimclood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Yimclood.csproj|solutionrelative:yimclood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\perfilmembresia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\perfilmembresia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D8E8448-1CC7-4DB5-B01C-68EA0D1D5403}|BILL\\BLL.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\bill\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D8E8448-1CC7-4DB5-B01C-68EA0D1D5403}|BILL\\BLL.csproj|solutionrelative:bill\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D8E8448-1CC7-4DB5-B01C-68EA0D1D5403}|BILL\\BILL.csproj|C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\bill\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D8E8448-1CC7-4DB5-B01C-68EA0D1D5403}|BILL\\BILL.csproj|solutionrelative:bill\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\entrenador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\entrenador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D151788-0DD6-4F07-821C-81CE95635A63}|DAL\\DAL.csproj|C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D151788-0DD6-4F07-821C-81CE95635A63}|DAL\\DAL.csproj|solutionrelative:dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\farid muriel\\onedrive\\escritorio\\c#\\yimclood\\entity\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\entity\\membresia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\membresia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,142 +51,120 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Rutina.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Rutina.cs",
-              "RelativeDocumentMoniker": "ENTITY\\Rutina.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Rutina.cs",
-              "RelativeToolTip": "ENTITY\\Rutina.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Usuario.cs",
+              "RelativeDocumentMoniker": "ENTITY\\Usuario.cs",
+              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Usuario.cs",
+              "RelativeToolTip": "ENTITY\\Usuario.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:58:36.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Entrenador.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Entrenador.cs",
-              "RelativeDocumentMoniker": "ENTITY\\Entrenador.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Entrenador.cs",
-              "RelativeToolTip": "ENTITY\\Entrenador.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:58:26.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Membresia.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Membresia.cs",
-              "RelativeDocumentMoniker": "ENTITY\\Membresia.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Membresia.cs",
-              "RelativeToolTip": "ENTITY\\Membresia.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:58:02.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Asistencia.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Asistencia.cs",
-              "RelativeDocumentMoniker": "ENTITY\\Asistencia.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Asistencia.cs",
-              "RelativeToolTip": "ENTITY\\Asistencia.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:57:43.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Miembro.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Miembro.cs",
-              "RelativeDocumentMoniker": "ENTITY\\Miembro.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Miembro.cs",
-              "RelativeToolTip": "ENTITY\\Miembro.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:57:28.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\BILL\\Class1.cs",
-              "RelativeDocumentMoniker": "BILL\\Class1.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\BILL\\Class1.cs",
-              "RelativeToolTip": "BILL\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:32:19.994Z",
+              "WhenOpened": "2024-05-01T02:54:34.657Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\Yimclood\\Program.cs",
-              "RelativeDocumentMoniker": "Yimclood\\Program.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\Yimclood\\Program.cs",
-              "RelativeToolTip": "Yimclood\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Title": "Entrenador.cs",
+              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Entrenador.cs",
+              "RelativeDocumentMoniker": "ENTITY\\Entrenador.cs",
+              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Entrenador.cs",
+              "RelativeToolTip": "ENTITY\\Entrenador.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwB0AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:32:19.585Z",
+              "WhenOpened": "2024-05-01T05:19:06.136Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Asistencia.cs",
+              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Asistencia.cs",
+              "RelativeDocumentMoniker": "ENTITY\\Asistencia.cs",
+              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Asistencia.cs",
+              "RelativeToolTip": "ENTITY\\Asistencia.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T05:18:17.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Persona.cs",
               "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Persona.cs",
               "RelativeDocumentMoniker": "ENTITY\\Persona.cs",
               "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Persona.cs",
               "RelativeToolTip": "ENTITY\\Persona.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwB0AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T00:55:43.05Z",
+              "WhenOpened": "2024-05-01T05:15:51.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\DAL\\Class1.cs",
-              "RelativeDocumentMoniker": "DAL\\Class1.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\DAL\\Class1.cs",
-              "RelativeToolTip": "DAL\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T00:55:19.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\BILL\\Class1.cs",
-              "RelativeDocumentMoniker": "BILL\\Class1.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\BILL\\Class1.cs",
-              "RelativeToolTip": "BILL\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T00:54:05.057Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\Yimclood\\Program.cs",
-              "RelativeDocumentMoniker": "Yimclood\\Program.cs",
-              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\Yimclood\\Program.cs",
-              "RelativeToolTip": "Yimclood\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Title": "Factura.cs",
+              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Factura.cs",
+              "RelativeDocumentMoniker": "ENTITY\\Factura.cs",
+              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Factura.cs",
+              "RelativeToolTip": "ENTITY\\Factura.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T00:52:31.783Z"
+              "WhenOpened": "2024-05-01T05:10:21.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Producto.cs",
+              "RelativeDocumentMoniker": "ENTITY\\Producto.cs",
+              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Producto.cs",
+              "RelativeToolTip": "ENTITY\\Producto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T05:07:00.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PerfilMiembro.cs",
+              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\PerfilMiembro.cs",
+              "RelativeDocumentMoniker": "ENTITY\\PerfilMiembro.cs",
+              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\PerfilMiembro.cs",
+              "RelativeToolTip": "ENTITY\\PerfilMiembro.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T03:03:09.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PerfilMembresia.cs",
+              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\PerfilMembresia.cs",
+              "RelativeDocumentMoniker": "ENTITY\\PerfilMembresia.cs",
+              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\PerfilMembresia.cs",
+              "RelativeToolTip": "ENTITY\\PerfilMembresia.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA8wB0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T04:00:02.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Membresia.cs",
+              "DocumentMoniker": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Membresia.cs",
+              "RelativeDocumentMoniker": "ENTITY\\Membresia.cs",
+              "ToolTip": "C:\\Users\\farid muriel\\OneDrive\\Escritorio\\c#\\Yimclood\\ENTITY\\Membresia.cs",
+              "RelativeToolTip": "ENTITY\\Membresia.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T02:58:02.232Z",
+              "EditorCaption": ""
             }
           ]
         }

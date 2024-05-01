@@ -1,31 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    public class Membresia
+    public class Producto
     {
-        public Membresia() { }
-        public Membresia(
-            int idmembresia,
+        public Producto() { }
+        public Producto(
+            int idproducto,
             string nombre,
             string descripcion,
-            int valor,
-            int duracionMeses
+            int valor
             ) {
-            Idmembresia = idmembresia;
+            Idproducto = idproducto;
             Nombre = nombre;
             Descripcion = descripcion;
             Valor = valor;
-            DuracionMeses = duracionMeses;
         }
-        public int Idmembresia { get;  set; }
+
+        public int Idproducto { get;  set; }
         public string Nombre { get;  set; }
         public string Descripcion { get;  set; }
         public int Valor { get;  set; }
-        public int DuracionMeses { get;  set; }
     }
 }
