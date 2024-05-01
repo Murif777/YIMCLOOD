@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:2:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:Yimclood\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:2:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\yimclood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D8E8448-1CC7-4DB5-B01C-68EA0D1D5403}|BILL\\BLL.csproj|C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\bill\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,15 +27,15 @@
       "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\yimclood\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\yimclood\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\yimclood\\main view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\yimclood\\main view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\main view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\yimclood\\member view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\yimclood\\member view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\member view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -57,8 +57,7 @@
               "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\Main view.cs [Dise\u00F1o]",
               "RelativeToolTip": "Yimclood\\Main view.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:21:04.234Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-04-30T19:21:04.234Z"
             },
             {
               "$type": "Document",
@@ -69,8 +68,7 @@
               "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\LoginView.xaml",
               "RelativeToolTip": "Yimclood\\LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-30T18:53:50.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T18:53:50.446Z"
             },
             {
               "$type": "Document",
@@ -82,8 +80,7 @@
               "RelativeToolTip": "ENTITY\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T00:55:43.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T00:55:43.05Z"
             },
             {
               "$type": "Document",
@@ -95,8 +92,7 @@
               "RelativeToolTip": "DAL\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T00:55:19.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T00:55:19.041Z"
             },
             {
               "$type": "Document",
@@ -121,8 +117,7 @@
               "RelativeToolTip": "BILL\\Class1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T18:04:27.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T18:04:27.416Z"
             },
             {
               "$type": "Document",
@@ -132,7 +127,7 @@
               "RelativeDocumentMoniker": "Yimclood\\Program.cs",
               "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\Program.cs",
               "RelativeToolTip": "Yimclood\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T00:52:31.783Z",
               "EditorCaption": ""
@@ -158,8 +153,7 @@
               "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\Member view.cs [Dise\u00F1o]",
               "RelativeToolTip": "Yimclood\\Member view.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T19:23:05.528Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-04-30T19:23:05.528Z"
             }
           ]
         }
