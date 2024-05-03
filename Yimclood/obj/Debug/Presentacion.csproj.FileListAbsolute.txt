@@ -1,0 +1,15 @@
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\BILL.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\ENTITY.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\BILL.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\ENTITY.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Yimclood.FormularioWelcome.resources
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\Presentacion.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormLogin.resources

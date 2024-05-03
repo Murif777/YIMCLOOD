@@ -52,7 +52,7 @@ namespace Yimclood {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Yimclood;component/loginview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Presentacion;component/loginview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\LoginView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
