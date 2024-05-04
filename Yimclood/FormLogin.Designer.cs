@@ -120,6 +120,7 @@ namespace Presentacion
             this.btnAcceder.TabIndex = 3;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // linkpass
             // 

@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4D8E8448-1CC7-4DB5-B01C-68EA0D1D5403}|BILL\\BLL.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\bill\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D8E8448-1CC7-4DB5-B01C-68EA0D1D5403}|BILL\\BLL.csproj|solutionrelative:bill\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\yimclood\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\yimclood\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D151788-0DD6-4F07-821C-81CE95635A63}|DAL\\DAL.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\dal\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D151788-0DD6-4F07-821C-81CE95635A63}|DAL\\DAL.csproj|solutionrelative:dal\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\yimclood\\formlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\formlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\entity\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0C3516-8BD0-4319-A593-29BDB1310A2D}|ENTITY\\ENTITY.csproj|solutionrelative:entity\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|c:\\users\\dario\\onedrive\\escritorio\\clonp3\\yimclood\\yimclood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\yimclood\\formulariowelcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\formulariowelcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\yimclood\\formulariowelcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59F41FE9-13E3-49E6-8492-3885F4A4D3AC}|Yimclood\\Presentacion.csproj|solutionrelative:yimclood\\formulariowelcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,20 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormularioWelcome.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormularioWelcome.cs",
-              "RelativeDocumentMoniker": "Yimclood\\FormularioWelcome.cs",
-              "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormularioWelcome.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Yimclood\\FormularioWelcome.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T23:01:32.134Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -43,6 +51,83 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\BILL\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "BILL\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\BILL\\UsuarioService.cs",
+              "RelativeToolTip": "BILL\\UsuarioService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwCgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T22:29:03.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormLogin.cs",
+              "RelativeDocumentMoniker": "Yimclood\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormLogin.cs",
+              "RelativeToolTip": "Yimclood\\FormLogin.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAmwGEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T22:04:15.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormLogin.cs",
+              "RelativeDocumentMoniker": "Yimclood\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Yimclood\\FormLogin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T20:54:18.973Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConexionBD.cs",
+              "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\DAL\\ConexionBD.cs",
+              "RelativeDocumentMoniker": "DAL\\ConexionBD.cs",
+              "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\DAL\\ConexionBD.cs",
+              "RelativeToolTip": "DAL\\ConexionBD.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T21:52:16.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormLogin.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormLogin.Designer.cs",
+              "RelativeDocumentMoniker": "Yimclood\\FormLogin.Designer.cs",
+              "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormLogin.Designer.cs",
+              "RelativeToolTip": "Yimclood\\FormLogin.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T22:04:05.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\ENTITY\\Usuario.cs",
+              "RelativeDocumentMoniker": "ENTITY\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\ENTITY\\Usuario.cs",
+              "RelativeToolTip": "ENTITY\\Usuario.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T21:44:46.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\Program.cs",
               "RelativeDocumentMoniker": "Yimclood\\Program.cs",
@@ -55,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "FormularioWelcome.cs",
               "DocumentMoniker": "C:\\Users\\Dario\\OneDrive\\Escritorio\\clonp3\\YIMCLOOD\\Yimclood\\FormularioWelcome.cs",
               "RelativeDocumentMoniker": "Yimclood\\FormularioWelcome.cs",
@@ -63,7 +148,8 @@
               "RelativeToolTip": "Yimclood\\FormularioWelcome.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T03:27:10.782Z"
+              "WhenOpened": "2024-05-03T03:27:10.782Z",
+              "EditorCaption": ""
             }
           ]
         }
