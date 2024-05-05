@@ -14,7 +14,7 @@ namespace Yimclood
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormLogin login=new FormLogin();
+            FormLogin login= new FormLogin();
             Application.Run(login);
 
         }

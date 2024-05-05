@@ -111,5 +111,10 @@ namespace Presentacion
             UsuarioService.login(txtUsuario.Text, txtContrasena.Text);
         }
 
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            FormCrear crear=new FormCrear();
+            crear.ShowDialog();
+        }
     }
 }

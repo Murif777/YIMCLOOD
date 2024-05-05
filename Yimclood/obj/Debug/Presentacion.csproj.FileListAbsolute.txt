@@ -19,3 +19,5 @@ C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\System.Thr
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\System.Buffers.dll
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\DAL.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormCrear.resources
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormMenu.resources
