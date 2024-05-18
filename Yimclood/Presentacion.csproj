@@ -37,6 +37,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -53,11 +54,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCrear.Designer.cs">
+      <DependentUpon>FormCrear.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="FormularioWelcome.cs">
       <SubType>Form</SubType>
@@ -84,8 +97,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormCrear.resx">
+      <DependentUpon>FormCrear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioWelcome.resx">
       <DependentUpon>FormularioWelcome.cs</DependentUpon>
@@ -97,13 +116,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\background.jpg" />
+    <Content Include="Images\cerrar.png" />
     <Content Include="Images\Close_Icon.png" />
     <Content Include="Images\icon.png" />
     <Content Include="Images\icon1.png" />
     <Content Include="Images\key-icon.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\logo1.jpg" />
+    <Content Include="Images\maxi.png" />
+    <Content Include="Images\minimazar.png" />
     <Content Include="Images\Minimize_Icon.png" />
+    <Content Include="Images\Mobile-Menu-Icon.png" />
+    <Content Include="Images\pagos.png" />
+    <Content Include="Images\res.png" />
     <Content Include="Images\user-icon.png" />
     <Content Include="Images\WhatsApp Image 2024-04-25 at 7.34.44 PM.jpeg" />
     <Content Include="Images\WhatsApp Image 2024-04-25 at 7.35.46 PM.jpeg" />

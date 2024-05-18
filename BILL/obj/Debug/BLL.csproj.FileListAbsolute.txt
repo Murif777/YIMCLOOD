@@ -9,3 +9,7 @@ C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Cor
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BILL.dll
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\System.Memory.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\BILL\bin\Debug\System.Buffers.dll
