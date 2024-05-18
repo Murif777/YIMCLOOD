@@ -7,3 +7,9 @@ C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\obj\Debug\DAL.csproj.Core
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\obj\Debug\DAL.dll
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\obj\Debug\DAL.pdb
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\bin\Debug\MySql.Data.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\bin\Debug\System.Memory.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\bin\Debug\System.Buffers.dll
+C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\DAL\bin\Debug\MySql.Data.xml
