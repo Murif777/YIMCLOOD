@@ -37,6 +37,6 @@ namespace ENTITY
         public int Estatura { get;  set; }
         public List<Asistencia> HorarioAsistencias { get;  set; }
         public PerfilMembresia Perfilmembresia { get;  set; }
-        public Factura Factura { get;  set; }
+        public FacturaProducto Factura { get;  set; }
     }
 }

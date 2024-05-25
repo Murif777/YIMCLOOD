@@ -9,18 +9,14 @@ namespace ENTITY
     public class Factura
     {
         public Factura() { }
-        public Factura(
-            int idfactura,
-            DateTime fechafactura,
-            List<Producto> productos)
+        public Factura(int idfactura,PerfilMiembro miembro,DateTime fechafactura)
         {
             IdFactura = idfactura;
+            Miembro = miembro;
             FechaFactura = fechafactura;
-            Productos = productos;        
         }
-
-        public int IdFactura { get;  set; }
-        public DateTime FechaFactura { get;  set; }
-        public List<Producto> Productos { get;  set; }
+        public int IdFactura { get; set; }
+        public PerfilMiembro Miembro { get; set; }
+        public DateTime FechaFactura { get; set; }
     }
 }

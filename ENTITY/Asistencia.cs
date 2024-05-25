@@ -10,15 +10,18 @@ namespace ENTITY
     {
         public Asistencia() { }
         public Asistencia(
+            List<DayOfWeek> diasDeLaSemana,
             DateTime fechallegada,
-            DateTime? fechasalida) 
+            DateTime? fechasalida)
         {
+            DiasDeLaSemana = diasDeLaSemana ?? new List<DayOfWeek>();
             HoraLlegada = fechallegada;
             HoraSalida = fechasalida;
         }
 
-        public DateTime HoraLlegada { get;  set; }
-        public DateTime? HoraSalida { get;  set; }
+        public List<DayOfWeek> DiasDeLaSemana { get; set; }
+        public DateTime HoraLlegada { get; set; }
+        public DateTime? HoraSalida { get; set; }
         public void RegistrarSalida(DateTime horaSalida)
         {
             HoraSalida = horaSalida;
