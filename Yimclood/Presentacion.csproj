@@ -54,6 +54,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAgregarProductocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarProductocs.Designer.cs">
+      <DependentUpon>FormAgregarProductocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCnsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCnsultarUsuario.Designer.cs">
+      <DependentUpon>FormCnsultarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultar.Designer.cs">
+      <DependentUpon>FormConsultar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCrear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,17 +84,23 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenu.cs">
+    <Compile Include="FormMenuR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu.Designer.cs">
-      <DependentUpon>FormMenu.cs</DependentUpon>
+    <Compile Include="FormMenuR.Designer.cs">
+      <DependentUpon>FormMenuR.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormularioWelcome.cs">
+    <Compile Include="FormPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormularioWelcome.Designer.cs">
-      <DependentUpon>FormularioWelcome.cs</DependentUpon>
+    <Compile Include="FormPerfil.Designer.cs">
+      <DependentUpon>FormPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrar.Designer.cs">
+      <DependentUpon>FormRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,17 +121,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAgregarProductocs.resx">
+      <DependentUpon>FormAgregarProductocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCnsultarUsuario.resx">
+      <DependentUpon>FormCnsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultar.resx">
+      <DependentUpon>FormConsultar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCrear.resx">
       <DependentUpon>FormCrear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu.resx">
-      <DependentUpon>FormMenu.cs</DependentUpon>
+    <EmbeddedResource Include="FormMenuR.resx">
+      <DependentUpon>FormMenuR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormularioWelcome.resx">
-      <DependentUpon>FormularioWelcome.cs</DependentUpon>
+    <EmbeddedResource Include="FormPerfil.resx">
+      <DependentUpon>FormPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrar.resx">
+      <DependentUpon>FormRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

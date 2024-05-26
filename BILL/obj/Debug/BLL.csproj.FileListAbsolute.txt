@@ -30,3 +30,7 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BILL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BILL.pdb
+C:\Users\juann\Desktop\YIMCLOOD\BILL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\juann\Desktop\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\juann\Desktop\YIMCLOOD\BILL\obj\Debug\BILL.dll
+C:\Users\juann\Desktop\YIMCLOOD\BILL\obj\Debug\BILL.pdb

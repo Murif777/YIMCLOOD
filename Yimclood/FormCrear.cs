@@ -67,7 +67,7 @@ namespace Presentacion
             {
                 txtRContraseña.Text = "CONTRASEÑA";
                 txtRContraseña.ForeColor = Color.DimGray;
-                txtRContraseña.UseSystemPasswordChar = false;
+                txtRContraseña.UseSystemPasswordChar= false;
             }
         }
 
@@ -101,15 +101,6 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnCrear_Click(object sender, EventArgs e)
-        {
-
-        }
-        private string CrearUsuario()
-        {
-           
         }
     }
   }
