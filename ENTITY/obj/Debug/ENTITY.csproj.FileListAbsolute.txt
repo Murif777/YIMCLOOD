@@ -4,3 +4,9 @@ C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\ENTITY\obj\Debug\ENTITY.cspro
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
+C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
+C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
+C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
+C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
+C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
+C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
