@@ -8,25 +8,18 @@ namespace ENTITY
 {
     public class Entrenador:Persona
     {
+        public Usuario DatosUsuario { get; set; }
+        public PerfilMembresia TipoMembresia { get; set; }
         public Entrenador() { }
         public Entrenador(
-            int identrenador,
-            Usuario datosusuario,
-            string nombre,
-            string apellido,
-            string telefono,
-            string sexo,
-            DateTime fechaNacimiento,
-            List<Asistencia> horarioAsistencias)
-            :base(nombre,apellido,telefono,sexo,fechaNacimiento)
+            int id, string cedula, string nombre,
+            string apellido, string telefono, string sexo,
+            string correo, DateTime fechaNacimiento,PerfilMembresia tipomembresia)
+            :base(id,cedula,nombre,apellido,telefono,sexo,correo,fechaNacimiento)
         {
-            IdEntrenador = identrenador;
-            DatosUsuario = datosusuario;
-            HorarioAsistencias = horarioAsistencias;
+            DatosUsuario = new Usuario(correo, cedula);
+            TipoMembresia = tipomembresia;
         }
 
-        public int IdEntrenador { get;  set; }
-        public Usuario DatosUsuario { get;  set; }
-        public List<Asistencia> HorarioAsistencias { get;  set; }
     }
 }

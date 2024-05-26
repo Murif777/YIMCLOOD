@@ -1,26 +1,26 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ENTITY;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class UsuarioRepository
+    public class UsuarioRepository:ConexionBD
     {
-        public static string GuardarUsuarioBD(string CorreoElectronico, string Clave)
+        public string GuardarUsuarioBD(Usuario usuario)
         {
             string sql = "INSERT INTO usuarios(CorreoElectronico, Clave) VALUES" +
-                "('" + CorreoElectronico + "','" + Clave + "')";
-            MySqlConnection conexion = ConexionBD.conexion();
+                "('" + usuario.CorreoElectronico + "','" + usuario.Clave + "')";
             try
             {
-                conexion.Open();
-                MySqlCommand comando = new MySqlCommand(sql, conexion);
+                AbrirConexion();
+                MySqlCommand comando = new MySqlCommand(sql,conexion());
                 comando.ExecuteNonQuery();
                 return "Usuario registrado";
-
             }
             catch (MySqlException ex)
             {
@@ -28,22 +28,21 @@ namespace DAL
             }
             finally
             {
-                conexion.Close();
+                CerrarConexion();
             }
         }
-        public static string login(string CorreoElectronico, string Clave)
+        public string login(Usuario usuario)
         {
             MySqlDataReader reader = null;
             string sql = "SELECT CorreoElectronico, Clave" +
                 " FROM usuarios " +
-                "WHERE CorreoElectronico = '" + CorreoElectronico +
-                "' AND Clave = '" + Clave +
+                "WHERE CorreoElectronico = '" + usuario.CorreoElectronico +
+                "' AND Clave = '" + usuario.Clave +
                 "' LIMIT 1";
-            MySqlConnection Conexion = ConexionBD.conexion();
             try
             {
-                Conexion.Open();
-                MySqlCommand comando = new MySqlCommand(sql, Conexion);
+                AbrirConexion();
+                MySqlCommand comando = new MySqlCommand(sql, conexion());
                 reader = comando.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -60,7 +59,7 @@ namespace DAL
             }
             finally
             {
-                Conexion.Close();
+                CerrarConexion();
             }
         }
     }

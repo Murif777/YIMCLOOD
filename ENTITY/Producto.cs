@@ -9,22 +9,21 @@ namespace ENTITY
 {
     public class Producto
     {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public int Valor { get; set; }
+
         public Producto() { }
         public Producto(
-            int idproducto,
-            string nombre,
-            string descripcion,
-            int valor
-            ) {
-            Idproducto = idproducto;
+                        int id, string nombre,
+                        string descripcion, int valor
+                        ) 
+        {
+            Id = id;
             Nombre = nombre;
             Descripcion = descripcion;
             Valor = valor;
         }
-
-        public int Idproducto { get;  set; }
-        public string Nombre { get;  set; }
-        public string Descripcion { get;  set; }
-        public int Valor { get;  set; }
     }
 }

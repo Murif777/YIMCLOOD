@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +10,12 @@ namespace DAL
 {
     public class ConexionBD
     {
-        public static MySqlConnection conexion()
+        private string servidor = "localhost";
+        private string bd = "yimclood";
+        private string usuario = "root";
+        private string password = "123456";
+        public MySqlConnection conexion()
         {
-            string servidor = "localhost";
-            string bd = "YIMCLOOD";
-            string usuario = "usuario";
-            string password = "654321";
-
             string cadenaConexion = "Database=" + bd
             + "; Data Source=" + servidor 
             + "; User Id= " + usuario 
@@ -30,6 +30,19 @@ namespace DAL
                 Console.WriteLine("Error: "+ex.Message);
                 return null;
             }
+        }
+        public bool AbrirConexion()
+        {
+            if (conexion().State != ConnectionState.Open)
+            {
+                conexion().Open();
+                return true;
+            }
+            return false;
+        }
+        public void CerrarConexion()
+        {
+            conexion().Close();
         }
     }
 }

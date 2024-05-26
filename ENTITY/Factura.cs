@@ -8,15 +8,26 @@ namespace ENTITY
 {
     public class Factura
     {
+        public int Id { get; set; }
+        public Miembro Miembro { get; set; }
+        public DateTime FechaFactura { get; set; }
+        public PerfilMembresia Membresia { get; set; }
+        public List<Producto> Productos { get; set; }
+
         public Factura() { }
-        public Factura(int idfactura,PerfilMiembro miembro,DateTime fechafactura)
+        public Factura(int id,Miembro miembro,DateTime fechafactura, PerfilMembresia membresia)
         {
-            IdFactura = idfactura;
+            Id = id;
             Miembro = miembro;
             FechaFactura = fechafactura;
+            Membresia = membresia;
         }
-        public int IdFactura { get; set; }
-        public PerfilMiembro Miembro { get; set; }
-        public DateTime FechaFactura { get; set; }
+        public Factura(int id, Miembro miembro, DateTime fechafactura, List<Producto> productos)
+        {
+            Id = id;
+            Miembro = miembro;
+            FechaFactura = fechafactura;
+            Productos = productos;
+        }
     }
 }

@@ -8,15 +8,14 @@ namespace ENTITY
 {
     public class Usuario
     {
+        public string CorreoElectronico { get; set; }
+        public string Clave { get; set; }
+
         public Usuario() { }
-        public Usuario(int idUsuario, string correoElectronico,string clave ) {
-            IdUsuario = idUsuario;
+        public Usuario( string correoElectronico,string clave )
+        {
             CorreoElectronico = correoElectronico;
             Clave = clave;
         }
-
-        public int IdUsuario { get;  set; }
-        public string CorreoElectronico { get;  set;}
-        public string Clave { get;  set; }
     }
 }

@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace BILL
 {
-    public class UsuarioService
+    public class UsuarioService:UsuarioRepository
     {
 
     }

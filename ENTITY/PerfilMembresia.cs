@@ -8,6 +8,11 @@ namespace ENTITY
 {
     public class PerfilMembresia
     {
+        public Membresia TipoMembresia { get; set; }
+        public string Estado { get; set; }
+        public DateTime Fechainicio { get; set; }
+        public DateTime Fechafinal { get; set; }
+        public int SaldoDebe { get; set; }
         public PerfilMembresia() { }
         public PerfilMembresia(
             Membresia tipomembresia,
@@ -22,11 +27,5 @@ namespace ENTITY
             Fechafinal = fechafinal;
             SaldoDebe = saldodebe;
         }
-
-        public Membresia TipoMembresia { get;  set; }
-        public string Estado { get;  set; }
-        public DateTime Fechainicio { get;  set; }
-        public DateTime Fechafinal { get;  set; }
-        public int SaldoDebe { get;  set; }
     }
 }
