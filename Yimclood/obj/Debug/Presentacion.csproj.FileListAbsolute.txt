@@ -110,3 +110,6 @@ C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.CoreCompi
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb
+C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormEntrenador.resources
+C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormAgregarEntrenamiento.resources
+C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormEntrenamientos.resources

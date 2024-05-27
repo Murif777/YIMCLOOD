@@ -87,5 +87,10 @@ namespace Presentacion
         {
             Abrirformpanel(new FormConsultar());
         }
+
+        private void btnAEntrenador_Click(object sender, EventArgs e)
+        {
+            Abrirformpanel(new FormEntrenador());
+        }
     }
 }

@@ -54,6 +54,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAgregarEntrenamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarEntrenamiento.Designer.cs">
+      <DependentUpon>FormAgregarEntrenamiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarProductocs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,18 @@
     </Compile>
     <Compile Include="FormCrear.Designer.cs">
       <DependentUpon>FormCrear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntrenador.Designer.cs">
+      <DependentUpon>FormEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEntrenamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntrenamientos.Designer.cs">
+      <DependentUpon>FormEntrenamientos.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -121,6 +139,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAgregarEntrenamiento.resx">
+      <DependentUpon>FormAgregarEntrenamiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarProductocs.resx">
       <DependentUpon>FormAgregarProductocs.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCrear.resx">
       <DependentUpon>FormCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEntrenador.resx">
+      <DependentUpon>FormEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEntrenamientos.resx">
+      <DependentUpon>FormEntrenamientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
