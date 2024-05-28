@@ -17,14 +17,12 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\BILL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\BILL.pdb
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\DAL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\MySql.Data.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\System.Memory.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\System.Buffers.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\DAL.pdb
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\MySql.Data.xml
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.AssemblyReference.cache
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.Up2Date

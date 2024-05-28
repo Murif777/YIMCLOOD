@@ -25,7 +25,6 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Present
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.pdb
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\BILL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\MySql.Data.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\DAL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Memory.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Threading.Tasks.Extensions.dll
@@ -33,13 +32,10 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Buffers.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\BILL.pdb
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\MySql.Data.xml
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\DAL.pdb
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.FormCrear.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.FormLogin.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.FormMenu.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Yimclood.FormularioWelcome.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.Properties.Resources.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.GenerateResource.cache
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
@@ -113,3 +109,13 @@ C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormEntrenador.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormAgregarEntrenamiento.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormEntrenamientos.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormAgregarEntrenamiento.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormAgregarProductocs.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormCnsultarUsuario.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormConsultar.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormEntrenador.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormEntrenamientos.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormMenuR.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormPerfil.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormRegistrar.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe.config

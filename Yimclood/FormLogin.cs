@@ -103,12 +103,13 @@ namespace Presentacion
 
         private void registrar() 
         {
-            UsuarioService.Conexion(txtUsuario.Text,txtContrasena.Text);
+            
+            //UsuarioService.Conexion(txtUsuario.Text,txtContrasena.Text);
         }
 
         private void login()
         {
-            UsuarioService.login(txtUsuario.Text, txtContrasena.Text);
+            //UsuarioService.login(txtUsuario.Text, txtContrasena.Text);
         }
 
         private void btnCrear_Click(object sender, EventArgs e)

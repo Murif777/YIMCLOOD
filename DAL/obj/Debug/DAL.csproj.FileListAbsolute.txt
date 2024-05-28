@@ -31,3 +31,4 @@ C:\Users\juann\Desktop\YIMCLOOD\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
 C:\Users\juann\Desktop\YIMCLOOD\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\juann\Desktop\YIMCLOOD\DAL\obj\Debug\DAL.dll
 C:\Users\juann\Desktop\YIMCLOOD\DAL\obj\Debug\DAL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\bin\Debug\MySql.Data.dll

@@ -8,7 +8,7 @@ namespace ENTITY
 {
     public class Persona
     { 
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string Cedula { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -18,7 +18,7 @@ namespace ENTITY
         public string Correo { get; set; }
         public Persona() { }
         public Persona(
-            int id,
+            int? id,
             string cedula,
             string nombre,
             string apellido,

@@ -1,23 +1,21 @@
 ﻿using DAL;
 using ENTITY;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace BILL
 {
-    public class UsuarioService
+    public class EntrenamientoService
     {
-        UsuarioRepository u_repository = new UsuarioRepository();
-        public string Actualizar(Usuario usuario)
+        EntramientoRepository e_repository = new EntramientoRepository();
+        public string Registrar(Entrenamiento entrenamiento)
         {
             try
             {
-                return u_repository.ActualizaUsuarioBD(usuario);
+                return e_repository.GuardarEntrenamientoBD(entrenamiento);
             }
             catch (Exception ex)
             {

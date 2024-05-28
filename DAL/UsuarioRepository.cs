@@ -11,16 +11,30 @@ namespace DAL
 {
     public class UsuarioRepository:ConexionBD
     {
-        public string GuardarUsuarioBD(Usuario usuario)
+        public string GuardarUsuarioBD(Miembro miembro, Entrenador entrenador)
         {
+
             string sql = "INSERT INTO usuarios(CorreoElectronico, Clave) VALUES" +
-                "('" + usuario.CorreoElectronico + "','" + usuario.Clave + "')";
+                "(@Correo,@Clave)";
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
             try
             {
-                AbrirConexion();
-                MySqlCommand comando = new MySqlCommand(sql,conexion());
+                conexionBd.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                if (entrenador == null) 
+                {
+                    comando.Parameters.AddWithValue("@Correo", miembro.DatosUsuario.CorreoElectronico);
+                    comando.Parameters.AddWithValue("@Clave", miembro.DatosUsuario.Clave);
+                }
+                if(miembro==null) 
+                {
+                    comando.Parameters.AddWithValue("@Correo", entrenador.DatosUsuario.CorreoElectronico);
+                    comando.Parameters.AddWithValue("@Clave", entrenador.DatosUsuario.Clave);
+                }
                 comando.ExecuteNonQuery();
                 return "Usuario registrado";
+
             }
             catch (MySqlException ex)
             {
@@ -28,9 +42,15 @@ namespace DAL
             }
             finally
             {
-                CerrarConexion();
+                conexionBd.Close();
             }
         }
+
+        public string ActualizaUsuarioBD(Usuario usuario)
+        {
+            return null;//agregar actualizar
+        }
+        
         public string login(Usuario usuario)
         {
             MySqlDataReader reader = null;
@@ -41,7 +61,7 @@ namespace DAL
                 "' LIMIT 1";
             try
             {
-                AbrirConexion();
+                //AbrirConexion();
                 MySqlCommand comando = new MySqlCommand(sql, conexion());
                 reader = comando.ExecuteReader();
                 if (reader.HasRows)
@@ -59,7 +79,7 @@ namespace DAL
             }
             finally
             {
-                CerrarConexion();
+                //CerrarConexion();
             }
         }
     }

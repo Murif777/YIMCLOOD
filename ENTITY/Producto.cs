@@ -25,5 +25,14 @@ namespace ENTITY
             Descripcion = descripcion;
             Valor = valor;
         }
+        public Producto(
+                string nombre,
+                string descripcion, int valor
+                )
+        {
+            Nombre = nombre;
+            Descripcion = descripcion;
+            Valor = valor;
+        }
     }
 }

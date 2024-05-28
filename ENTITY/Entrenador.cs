@@ -19,7 +19,15 @@ namespace ENTITY
         {
             DatosUsuario = new Usuario(correo, cedula);
             TipoMembresia = tipomembresia;
+        }//agregar foto 
+        public Entrenador(
+            string cedula, string nombre,
+            string apellido, string telefono, string sexo,
+            string correo, DateTime fechaNacimiento, PerfilMembresia tipomembresia)
+            : base(null, cedula, nombre, apellido, telefono, sexo, correo, fechaNacimiento)
+        {
+            DatosUsuario = new Usuario(correo, cedula);
+            TipoMembresia = tipomembresia;
         }
-
     }
 }
