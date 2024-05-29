@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class CategoriaRepository:ConexionBD
+    public class HistorialRepository:ConexionBD
     {
-        public string GuardarCategoriaBD(CategoriaEjercicio categoria)
+        public string GuardarHistorialBD(Historial historial)
         {
-            string sql = "INSERT INTO categorias(Nombre,Descripcion) " +
-                  "VALUES (@Nombre, @Descripcion)";
+            string sql = "INSERT INTO historiales(Miembro, DiaDeLaSemana, Registro ,Entrenamiento) " +
+                  "VALUES (@Miembro, @DiaDeLaSemana, @Registro, @Entrenamiento)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -21,16 +21,18 @@ namespace DAL
                 //AbrirConexion();
                 conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-                comando.Parameters.AddWithValue("@Nombre", categoria.Nombre);
-                comando.Parameters.AddWithValue("@Descripcion", categoria.Descripcion);
+                comando.Parameters.AddWithValue("@Miembro", historial.Miembro);
+                comando.Parameters.AddWithValue("@DiaDeLaSemana", historial.DiaDeLaSemana);
+                comando.Parameters.AddWithValue("@Registro", historial.Registro);
+                comando.Parameters.AddWithValue("@Entrenamiento", historial.Entrenamiento);
                 var res = comando.ExecuteNonQuery();
                 if (res == 0)
                 {
-                    return "Categoria no guardada";
+                    return "Historial no guardado";
                 }
                 if (res != 0)
                 {
-                    return "Categoria guardada";
+                    return "Historial guardado";
                 }
             }
             catch (MySqlException ex)
@@ -43,6 +45,7 @@ namespace DAL
                 //CerrarConexion();
             }
             return null;
+
         }
     }
 }

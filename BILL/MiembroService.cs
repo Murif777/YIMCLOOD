@@ -10,12 +10,12 @@ namespace BILL
 {
     public class MiembroService:ICrud<Miembro>
     {
-        MiembroRepository m_repository =new MiembroRepository();
+        MiembroRepository mi_repository =new MiembroRepository();
         public string Registrar(Miembro miembro)
         {
             try
             {
-                return m_repository.GuardarMiembroBD(miembro);
+                return mi_repository.GuardarMiembroBD(miembro);
                 //return m_repository.AbrirConexion().ToString();
             }
             catch (Exception ex)

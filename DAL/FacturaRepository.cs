@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class CategoriaRepository:ConexionBD
+    public class FacturaRepository:ConexionBD
     {
-        public string GuardarCategoriaBD(CategoriaEjercicio categoria)
+        public string GuardarFacturaBD(Factura factura)
         {
-            string sql = "INSERT INTO categorias(Nombre,Descripcion) " +
-                  "VALUES (@Nombre, @Descripcion)";
+            UsuarioRepository usuarioRepository = new UsuarioRepository();
+            string sql = "INSERT INTO facturas(Id, Miembro, FechaFactura, Membresia, Productos) " +
+                  "VALUES (@Id, @Miembro, @FechaFactura, @Membresia, @Productos)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -21,16 +22,19 @@ namespace DAL
                 //AbrirConexion();
                 conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-                comando.Parameters.AddWithValue("@Nombre", categoria.Nombre);
-                comando.Parameters.AddWithValue("@Descripcion", categoria.Descripcion);
+                comando.Parameters.AddWithValue("@Id", factura.Id);
+                comando.Parameters.AddWithValue("@Miembro", factura.Miembro);
+                comando.Parameters.AddWithValue("@FechaFactura", factura.FechaFactura);
+                comando.Parameters.AddWithValue("@Membresia", factura.Membresia);
+                comando.Parameters.AddWithValue("@Productos", factura.Productos);
                 var res = comando.ExecuteNonQuery();
                 if (res == 0)
                 {
-                    return "Categoria no guardada";
+                    return "Factura no guardada";
                 }
                 if (res != 0)
                 {
-                    return "Categoria guardada";
+                    return "Factura guardada";
                 }
             }
             catch (MySqlException ex)
@@ -43,6 +47,7 @@ namespace DAL
                 //CerrarConexion();
             }
             return null;
+
         }
     }
 }

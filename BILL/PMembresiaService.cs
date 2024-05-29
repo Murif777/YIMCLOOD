@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace BILL
 {
-    public class EjercicioService : ICrud<Ejercicio>
+    public class PMembresiaService : ICrud<PerfilMembresia>
     {
-        EjercicioRepository e_repository = new EjercicioRepository();
-        public string Registrar(Ejercicio ejercicio)
+        PMembresiaRepository pm_repository = new PMembresiaRepository();
+        public string Registrar(PerfilMembresia pMembresia)
         {
             try
             {
-                return e_repository.GuardarEjercicioBD(ejercicio);
+                return pm_repository.GuardarPMembresiaBD(pMembresia);
+                //return m_repository.AbrirConexion().ToString();
             }
             catch (Exception ex)
             {

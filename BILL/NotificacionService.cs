@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace BILL
 {
-    public class EjercicioService : ICrud<Ejercicio>
+    public class NotificacionService : ICrud<Notificacion>
     {
-        EjercicioRepository e_repository = new EjercicioRepository();
-        public string Registrar(Ejercicio ejercicio)
+        NotificacionRepository n_repository = new NotificacionRepository();
+        public string Registrar(Notificacion notificacion)
         {
             try
             {
-                return e_repository.GuardarEjercicioBD(ejercicio);
+                return n_repository.GuardarNotificacionBD(notificacion);
+                //return m_repository.AbrirConexion().ToString();
             }
             catch (Exception ex)
             {

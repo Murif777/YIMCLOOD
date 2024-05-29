@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class CategoriaRepository:ConexionBD
+    public class PMembresiaRepository:ConexionBD
     {
-        public string GuardarCategoriaBD(CategoriaEjercicio categoria)
+        public string GuardarPMembresiaBD(PerfilMembresia pMembresia)
         {
-            string sql = "INSERT INTO categorias(Nombre,Descripcion) " +
-                  "VALUES (@Nombre, @Descripcion)";
+            string sql = "INSERT INTO perfilMembresias(TipoMembresia,Estado,Fechainicio,Fechafinal,SaldoDebe) " +
+                  "VALUES (@TipoMembresia, @Estado, @Fechainicio, @Fechafinal, @SaldoDebe)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -21,16 +21,19 @@ namespace DAL
                 //AbrirConexion();
                 conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-                comando.Parameters.AddWithValue("@Nombre", categoria.Nombre);
-                comando.Parameters.AddWithValue("@Descripcion", categoria.Descripcion);
+                comando.Parameters.AddWithValue("@TipoMembresia", pMembresia.TipoMembresia);
+                comando.Parameters.AddWithValue("@Estado", pMembresia.Estado);
+                comando.Parameters.AddWithValue("@Fechainicio", pMembresia.Fechainicio);
+                comando.Parameters.AddWithValue("@Fechafinal", pMembresia.Fechafinal);
+                comando.Parameters.AddWithValue("@SaldoDebe", pMembresia.SaldoDebe);
                 var res = comando.ExecuteNonQuery();
                 if (res == 0)
                 {
-                    return "Categoria no guardada";
+                    return "Perfil membresia no guardada";
                 }
                 if (res != 0)
                 {
-                    return "Categoria guardada";
+                    return "Perfil membresia guardada";
                 }
             }
             catch (MySqlException ex)
@@ -43,6 +46,7 @@ namespace DAL
                 //CerrarConexion();
             }
             return null;
+
         }
     }
 }

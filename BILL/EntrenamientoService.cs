@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BILL
 {
-    public class EntrenamientoService
+    public class EntrenamientoService : ICrud<Entrenamiento>
     {
-        EntramientoRepository e_repository = new EntramientoRepository();
+        EntrenamientoRepository e_repository = new EntrenamientoRepository();
         public string Registrar(Entrenamiento entrenamiento)
         {
             try

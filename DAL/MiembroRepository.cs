@@ -16,8 +16,8 @@ namespace DAL
         public string GuardarMiembroBD(Miembro miembro)
         {
             UsuarioRepository usuarioRepository = new UsuarioRepository();
-            string sql = "INSERT INTO Miembros(Cedula, Nombre, Apellido, Telefono, Sexo, Correo, FechaNacimiento, Peso, Estatura, TipoMembresia, Foto) " +
-                  "VALUES (@Cedula, @Nombre, @Apellido, @Telefono, @Sexo, @Correo, @FechaNacimiento, @Peso, @Estatura, @TipoMembresia, @Foto)";
+            string sql = "INSERT INTO Miembros(Id, Cedula, Nombre, Apellido, Telefono, Sexo, Correo, FechaNacimiento, DatosUsuario, Peso, Estatura, TipoMembresia, Foto) " +
+                  "VALUES (@Id, @Cedula, @Nombre, @Apellido, @Telefono, @Sexo, @Correo, @FechaNacimiento, @DatosUsuario, @Peso, @Estatura, @TipoMembresia, @Foto)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -25,6 +25,7 @@ namespace DAL
                 //AbrirConexion();
                 conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                comando.Parameters.AddWithValue("@Id", miembro.Id);
                 comando.Parameters.AddWithValue("@Cedula", miembro.Cedula);
                 comando.Parameters.AddWithValue("@Nombre", miembro.Nombre);
                 comando.Parameters.AddWithValue("@Apellido", miembro.Apellido);
@@ -32,13 +33,20 @@ namespace DAL
                 comando.Parameters.AddWithValue("@Sexo", miembro.Sexo);
                 comando.Parameters.AddWithValue("@Correo", miembro.Correo);
                 comando.Parameters.AddWithValue("@FechaNacimiento", miembro.FechaNacimiento.ToString("yyyy-MM-dd")); // Formato de fecha de MySQL
+                comando.Parameters.AddWithValue("@DatosUsuario", miembro.DatosUsuario);
                 comando.Parameters.AddWithValue("@Peso", miembro.Peso);
                 comando.Parameters.AddWithValue("@Estatura", miembro.Estatura);
                 comando.Parameters.AddWithValue("@TipoMembresia", miembro.TipoMembresia);
                 comando.Parameters.AddWithValue("@Foto", miembro.Foto);
-                comando.ExecuteNonQuery();
-                return $"Miembro registrado {usuarioRepository.GuardarUsuarioBD(miembro,null)}";
-
+                var res=comando.ExecuteNonQuery();
+                if (res==0)
+                {
+                    return "Miembro no guardado";
+                }
+                if (res!=0)
+                {
+                    return $"Miembro registrado {usuarioRepository.GuardarUsuarioBD(miembro, null)}";
+                }
             }
             catch (MySqlException ex)
             {
@@ -49,6 +57,7 @@ namespace DAL
                 conexionBd.Close();
                 //CerrarConexion();
             }
+            return null;
 
         }
 

@@ -12,8 +12,8 @@ namespace DAL
     {
         public string GuardarProductoBD(Producto producto)
         {
-            string sql = "INSERT INTO productos(Nombre,Descripcion,Valor) " +
-                  "VALUES (@Nombre, @Descripcion, @Valor)";
+            string sql = "INSERT INTO productos(Id, Nombre, Descripcion, Valor) " +
+                  "VALUES (@Id, @Nombre, @Descripcion, @Valor)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -21,12 +21,19 @@ namespace DAL
                 //AbrirConexion();
                 conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                comando.Parameters.AddWithValue("@Id", producto.Id);
                 comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
                 comando.Parameters.AddWithValue("@Valor", producto.Valor);
-                comando.ExecuteNonQuery();
-                return "Producto registrado";
-
+                var res = comando.ExecuteNonQuery();
+                if (res == 0)
+                {
+                    return "Producto no guardado";
+                }
+                if (res != 0)
+                {
+                    return "Producto guardado";
+                }
             }
             catch (MySqlException ex)
             {
@@ -37,6 +44,7 @@ namespace DAL
                 conexionBd.Close();
                 //CerrarConexion();
             }
+            return null;
 
         }
     }

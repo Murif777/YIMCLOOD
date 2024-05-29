@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class EntramientoRepository:ConexionBD
+    public class EntrenamientoRepository:ConexionBD
     {
         public string GuardarEntrenamientoBD(Entrenamiento entrenamiento)
         {
-            string sql = "INSERT INTO entrenamientos(HoraInicio,HoraFinal,Tiempo,Rutinas) " +
-                  "VALUES (@HoraInicio,@HoraFinal,@Tiempo,@Rutinas)";
+            string sql = "INSERT INTO entrenamientos(HoraInicio, HoraFinal, Rutinas) " +
+                  "VALUES (@HoraInicio, @HoraFinal, @Rutinas)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -23,11 +23,16 @@ namespace DAL
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@HoraInicio", entrenamiento.HoraInicio);
                 comando.Parameters.AddWithValue("@HoraFinal", entrenamiento.HoraFinal);
-                comando.Parameters.AddWithValue("@Tiempo", entrenamiento.Duracion());
                 comando.Parameters.AddWithValue("@Rutinas", entrenamiento.Rutinas);
-                comando.ExecuteNonQuery();
-                return "Entrenamiento registrado";
-
+                var res = comando.ExecuteNonQuery();
+                if (res == 0)
+                {
+                    return "Entrenamiento no guardado";
+                }
+                if (res != 0)
+                {
+                    return "Entrenamiento guardado";
+                }
             }
             catch (MySqlException ex)
             {
@@ -38,6 +43,7 @@ namespace DAL
                 conexionBd.Close();
                 //CerrarConexion();
             }
+            return null;
 
         }
     }

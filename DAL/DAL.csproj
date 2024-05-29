@@ -48,11 +48,19 @@
     <Compile Include="CategoriaRepository.cs" />
     <Compile Include="ConexionBD.cs" />
     <Compile Include="EjercicioRepository.cs" />
-    <Compile Include="EntramientoRepository.cs" />
+    <Compile Include="EntrenamientoRepository.cs" />
     <Compile Include="EntrenadorRepository.cs" />
+    <Compile Include="FacturaRepository.cs" />
+    <Compile Include="HistorialRepository.cs" />
+    <Compile Include="MembresiaRepository.cs" />
     <Compile Include="MiembroRepository.cs" />
+    <Compile Include="NotificacionRepository.cs" />
+    <Compile Include="PMembresiaRepository.cs" />
+    <Compile Include="PNotificacionRepository.cs" />
     <Compile Include="ProductoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroRepository.cs" />
+    <Compile Include="RutinaRepository.cs" />
     <Compile Include="UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>

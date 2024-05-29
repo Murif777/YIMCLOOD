@@ -10,8 +10,20 @@ using System.Windows;
 
 namespace BILL
 {
-    public class UsuarioService
+    public class UsuarioService //: ICrud<Usuario>
     {
+        //public string Registrar(Usuario usuario)
+        //{
+        //    try
+        //    {
+        //       return u_repository.GuardarUsuarioBD(usuario);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return "Error al registrar: " + ex.Message;
+        //    }
+        //}
+
         UsuarioRepository u_repository = new UsuarioRepository();
         public string Actualizar(Usuario usuario)
         {

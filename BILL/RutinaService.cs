@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace BILL
 {
-    public class EjercicioService : ICrud<Ejercicio>
+    public class RutinaService : ICrud<Rutina>
     {
-        EjercicioRepository e_repository = new EjercicioRepository();
-        public string Registrar(Ejercicio ejercicio)
+        RutinaRepository ru_repository = new RutinaRepository();
+        public string Registrar(Rutina rutina)
         {
             try
             {
-                return e_repository.GuardarEjercicioBD(ejercicio);
+                return ru_repository.GuardarRutinaBD(rutina);
             }
             catch (Exception ex)
             {
