@@ -21,31 +21,6 @@ C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\System.Buf
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\bin\Debug\DAL.pdb
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormCrear.resources
 C:\Users\Dario\OneDrive\Escritorio\clonp3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormMenu.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.exe
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\BILL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\MySql.Data.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\DAL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Memory.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Buffers.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\BILL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\MySql.Data.xml
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\DAL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.FormCrear.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.FormLogin.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.FormMenu.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Yimclood.FormularioWelcome.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.Properties.Resources.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.GenerateResource.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.exe
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.pdb
 C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe.config
 C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe
 C:\Users\juann\OneDrive\Escritorio\YIMCLOOD\Yimclood\bin\Debug\Presentacion.pdb
@@ -113,3 +88,31 @@ C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormEntrenador.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormAgregarEntrenamiento.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.FormEntrenamientos.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.ConsultarMiembro.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.ConsultarProd.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.RegistrarEntrenador.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.Login.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.MenuPrincipal.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.exe.config
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.exe
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\BILL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\ENTITY.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\DAL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Memory.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Buffers.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\BILL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\ENTITY.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\DAL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.exe
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.AgregarProducto.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.AgregarMembresia.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.Registrar.resources

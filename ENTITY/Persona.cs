@@ -8,7 +8,6 @@ namespace ENTITY
 {
     public class Persona
     { 
-        public int Id { get; set; }
         public string Cedula { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -18,7 +17,6 @@ namespace ENTITY
         public string Correo { get; set; }
         public Persona() { }
         public Persona(
-            int id,
             string cedula,
             string nombre,
             string apellido,
@@ -27,7 +25,6 @@ namespace ENTITY
             string correo,
             DateTime fechaNacimiento)
         {
-            Id = id;
             Cedula = cedula;
             Nombre = nombre;
             Apellido = apellido;
@@ -35,6 +32,11 @@ namespace ENTITY
             Sexo = sexo;
             Correo = correo;
             FechaNacimiento = fechaNacimiento;
+        }
+        public override string ToString()
+        {
+            // Devuelve el nombre del entrenador al convertirlo a una cadena
+            return Nombre;
         }
     }
 }

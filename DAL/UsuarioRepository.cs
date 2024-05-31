@@ -13,14 +13,35 @@ namespace DAL
     {
         public string GuardarUsuarioBD(Usuario usuario)
         {
-            string sql = "INSERT INTO usuarios(CorreoElectronico, Clave) VALUES" +
-                "('" + usuario.CorreoElectronico + "','" + usuario.Clave + "')";
+            string sql = "INSERT INTO usuarios(Correo_Electronico, Clave, Ced_Miembro) VALUES" +
+                "(@Correo,@Clave, @Ced_Miembro)";
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
             try
             {
-                AbrirConexion();
-                MySqlCommand comando = new MySqlCommand(sql,conexion());
-                comando.ExecuteNonQuery();
-                return "Usuario registrado";
+                conexionBd.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                if (usuario.DatosEntrenador == null) 
+                {
+                    comando.Parameters.AddWithValue("@Correo", usuario.CorreoElectronico);
+                    comando.Parameters.AddWithValue("@Clave", usuario.Clave);
+                    comando.Parameters.AddWithValue("@Ced_Miembro", usuario.DatosMiembro.Cedula);
+                }
+                if(usuario.DatosMiembro==null) 
+                {
+                    comando.Parameters.AddWithValue("@Correo", usuario.CorreoElectronico);
+                    comando.Parameters.AddWithValue("@Clave", usuario.Clave);
+                    comando.Parameters.AddWithValue("@Ced_Miembro", usuario.DatosEntrenador.Cedula);
+                }
+                var res = comando.ExecuteNonQuery();
+                if (res == 0)
+                {
+                    return "Usuario no guardado";
+                }
+                if (res != 0)
+                {
+                    return "Usuario guardado";
+                }
             }
             catch (MySqlException ex)
             {
@@ -28,39 +49,40 @@ namespace DAL
             }
             finally
             {
-                CerrarConexion();
+                conexionBd.Close();
             }
+            return null;
         }
-        public string login(Usuario usuario)
+
+        public string ActualizaUsuarioBD(Usuario usuario)
         {
-            MySqlDataReader reader = null;
-            string sql = "SELECT CorreoElectronico, Clave" +
-                " FROM usuarios " +
-                "WHERE CorreoElectronico = '" + usuario.CorreoElectronico +
-                "' AND Clave = '" + usuario.Clave +
-                "' LIMIT 1";
-            try
+            return null;//agregar actualizar
+        }
+
+        public bool Login(Usuario usuario)
+        {
+            string sql = "SELECT 1 FROM Usuarios WHERE Correo_Electronico = @CorreoElectronico AND Clave = @Clave LIMIT 1";
+
+            using (var connection = conexion())
             {
-                AbrirConexion();
-                MySqlCommand comando = new MySqlCommand(sql, conexion());
-                reader = comando.ExecuteReader();
-                if (reader.HasRows)
+                MySqlCommand comando = new MySqlCommand(sql, connection);
+                comando.Parameters.AddWithValue("@CorreoElectronico", usuario.CorreoElectronico);
+                comando.Parameters.AddWithValue("@Clave", usuario.Clave);
+
+                try
                 {
-                    return "Acesso exitoso";
+                    connection.Open();
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        return reader.HasRows;
+                    }
                 }
-                else
+                catch (MySqlException ex)
                 {
-                    return "Correo electronico o contraseña incorrectos ";
+                    throw new Exception("Error al realizar la consulta", ex);
                 }
-            }
-            catch (MySqlException ex)
-            {
-                return "Error: " + ex.Message;
-            }
-            finally
-            {
-                CerrarConexion();
             }
         }
+
     }
 }

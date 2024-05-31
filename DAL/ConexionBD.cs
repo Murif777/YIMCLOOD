@@ -10,16 +10,17 @@ namespace DAL
 {
     public class ConexionBD
     {
-        private string servidor = "localhost";
+        private string servidor = "127.0.0.1";
         private string bd = "yimclood";
         private string usuario = "root";
         private string password = "123456";
-        public MySqlConnection conexion()
+        public  MySqlConnection conexion()
         {
-            string cadenaConexion = "Database=" + bd
-            + "; Data Source=" + servidor 
-            + "; User Id= " + usuario 
-            + "; Password=" + password +"";
+            string cadenaConexion = $"Server={servidor};" +
+                $"Database={bd};" +
+                $"Uid={usuario};" +
+                $"Pwd={password};";
+
             try
             {
                 MySqlConnection conexionBd = new MySqlConnection(cadenaConexion);
@@ -30,19 +31,6 @@ namespace DAL
                 Console.WriteLine("Error: "+ex.Message);
                 return null;
             }
-        }
-        public bool AbrirConexion()
-        {
-            if (conexion().State != ConnectionState.Open)
-            {
-                conexion().Open();
-                return true;
-            }
-            return false;
-        }
-        public void CerrarConexion()
-        {
-            conexion().Close();
         }
     }
 }

@@ -14,9 +14,7 @@ namespace Yimclood
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormMenuR login= new FormMenuR();
-            Application.Run(login);
-
+            Application.Run(new Login());
         }
     }
 }

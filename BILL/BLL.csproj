@@ -43,6 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaService.cs" />
+    <Compile Include="EjercicioService.cs" />
+    <Compile Include="EntrenadorService.cs" />
+    <Compile Include="EntrenamientoService.cs" />
+    <Compile Include="FacturaService.cs" />
+    <Compile Include="HistorialService.cs" />
+    <Compile Include="ICrud.cs" />
+    <Compile Include="MembresiaService.cs" />
+    <Compile Include="MiembroService.cs" />
+    <Compile Include="NotificacionService.cs" />
+    <Compile Include="PMembresiaService.cs" />
+    <Compile Include="PNotificacionService.cs" />
+    <Compile Include="ProductoService.cs" />
+    <Compile Include="RegistroService.cs" />
+    <Compile Include="RutinaService.cs" />
     <Compile Include="UsuarioService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

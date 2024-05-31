@@ -8,27 +8,25 @@ namespace ENTITY
 {
     public class Miembro : Persona
     {
-        public Usuario DatosUsuario { get; set; }
-        public int Peso { get; set; }
-        public int Estatura { get; set; }
-        public PerfilMembresia TipoMembresia { get; set; }
-        public byte[] Foto { get; set; }
-        public Miembro() { }
-        public Miembro(
-                            int id, string cedula, string nombre,
-                            string apellido, string telefono, string sexo,
-                            string correo, DateTime fechaNacimiento, int peso,
-                            int estatura, PerfilMembresia tipomembresia, byte[] foto
-                            ) : base(
-                                      id, cedula, nombre,
-                                      apellido, telefono, sexo,
-                                      correo, fechaNacimiento
-                                      )
+        public int Peso { get; set; } = 0;
+        public int Estatura { get; set; } = 0;
+        public byte[] Foto { get; set; } = null;
+        public Miembro()
         {
-            DatosUsuario = new Usuario(correo, cedula);
+        }
+        public Miembro(
+                     string cedula, string nombre,
+                    string apellido, string telefono, string sexo,
+                    string correo, DateTime fechaNacimiento, int peso,
+                    int estatura, byte[] foto
+                    ) : base(
+                               cedula, nombre,
+                              apellido, telefono, sexo,
+                              correo, fechaNacimiento
+                              )
+        {
             Peso = peso;
             Estatura = estatura;
-            TipoMembresia = tipomembresia;
             Foto = foto;
         }
     }
