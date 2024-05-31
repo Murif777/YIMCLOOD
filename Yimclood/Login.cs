@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
 using BILL;
+using ENTITY;
 
 namespace Presentacion
 {
-    public partial class FormLogin : Form
+    public partial class Login : Form
     {
-        public FormLogin()
+        private UsuarioService UsuarioService = new UsuarioService();
+        public Login()
         {
             InitializeComponent();
         }
@@ -109,13 +111,24 @@ namespace Presentacion
 
         private void login()
         {
-            //UsuarioService.login(txtUsuario.Text, txtContrasena.Text);
+            string correo= txtUsuario.Text;
+            string clave = txtContrasena.Text;
+            Usuario usuario = new Usuario(correo,clave);
+            if (UsuarioService.Login(usuario))
+            {
+                MessageBox.Show("Acceso Exitoso");
+                AbrirMenu();
+            }
+            else
+            {
+                MessageBox.Show("Correo electronico o contraseña incorrectos");
+            }
         }
-
-        private void btnCrear_Click(object sender, EventArgs e)
+        private void AbrirMenu()
         {
-            FormCrear crear=new FormCrear();
-            crear.ShowDialog();
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
+            this.Hide();
         }
     }
 }

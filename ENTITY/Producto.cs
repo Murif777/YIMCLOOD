@@ -9,30 +9,23 @@ namespace ENTITY
 {
     public class Producto
     {
-        public int Id { get; set; }
+        public string Referencia { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int Valor { get; set; }
+        public byte[] Foto { get; set; }
 
         public Producto() { }
         public Producto(
-                        int id, string nombre,
-                        string descripcion, int valor
+                        string referencia, string nombre,
+                        string descripcion, int valor, byte[] foto
                         ) 
         {
-            Id = id;
+            Referencia =referencia;
             Nombre = nombre;
             Descripcion = descripcion;
             Valor = valor;
-        }
-        public Producto(
-                string nombre,
-                string descripcion, int valor
-                )
-        {
-            Nombre = nombre;
-            Descripcion = descripcion;
-            Valor = valor;
+            Foto = foto;
         }
     }
 }

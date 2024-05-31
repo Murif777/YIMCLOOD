@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class FormCnsultarUsuario
+    partial class ConsultarMiembro
     {
         /// <summary>
         /// Required designer variable.
@@ -44,17 +44,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(134, 91);
+            this.label1.Location = new System.Drawing.Point(120, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 27);
+            this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ID del usuario";
+            this.label1.Text = "Cedula";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(407, 91);
+            this.textBox1.Location = new System.Drawing.Point(262, 75);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 22);
+            this.textBox1.Size = new System.Drawing.Size(153, 20);
             this.textBox1.TabIndex = 1;
             // 
             // dataGridView1
@@ -64,11 +66,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(58, 237);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 193);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(599, 198);
+            this.dataGridView1.Size = new System.Drawing.Size(480, 161);
             this.dataGridView1.TabIndex = 2;
             // 
             // Column1
@@ -95,9 +98,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(259, 152);
+            this.button1.Location = new System.Drawing.Point(194, 124);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 68);
+            this.button1.Size = new System.Drawing.Size(143, 55);
             this.button1.TabIndex = 3;
             this.button1.Text = "buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -110,18 +114,20 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(753, 468);
+            this.panel1.Size = new System.Drawing.Size(565, 380);
             this.panel1.TabIndex = 4;
             // 
             // FormCnsultarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(753, 468);
+            this.ClientSize = new System.Drawing.Size(565, 380);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCnsultarUsuario";
             this.Text = "FormCnsultarUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

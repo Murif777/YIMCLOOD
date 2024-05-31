@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class FormConsultar
+    partial class ConsultarProd
     {
         /// <summary>
         /// Required designer variable.

@@ -9,25 +9,23 @@ namespace ENTITY
     public class Entrenador:Persona
     {
         public Usuario DatosUsuario { get; set; }
-        public PerfilMembresia TipoMembresia { get; set; }
+        public byte[] Foto { get;  set; }
+
         public Entrenador() { }
-        public Entrenador(
-            int id, string cedula, string nombre,
-            string apellido, string telefono, string sexo,
-            string correo, DateTime fechaNacimiento,PerfilMembresia tipomembresia)
-            :base(id,cedula,nombre,apellido,telefono,sexo,correo,fechaNacimiento)
-        {
-            DatosUsuario = new Usuario(correo, cedula);
-            TipoMembresia = tipomembresia;
-        }//agregar foto 
         public Entrenador(
             string cedula, string nombre,
             string apellido, string telefono, string sexo,
-            string correo, DateTime fechaNacimiento, PerfilMembresia tipomembresia)
-            : base(null, cedula, nombre, apellido, telefono, sexo, correo, fechaNacimiento)
+            string correo, DateTime fechaNacimiento,byte[] foto)
+            : base(cedula, nombre, apellido, telefono, sexo, correo, fechaNacimiento)
         {
-            DatosUsuario = new Usuario(correo, cedula);
-            TipoMembresia = tipomembresia;
+            Foto = foto;
         }
+        public override string ToString()
+        {
+            // Devuelve el nombre del entrenador al convertirlo a una cadena
+            return Nombre;
+        }
+
     }
+
 }

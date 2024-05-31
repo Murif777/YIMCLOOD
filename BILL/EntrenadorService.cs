@@ -9,29 +9,29 @@ using System.Threading.Tasks;
 
 namespace BILL
 {
-    public class MembresiaService : ICrud<Membresia>
+    public class EntrenadorService:ICrud<Entrenador>
     {
-        MembresiaRepository me_repository = new MembresiaRepository();
-        public string Registrar(Membresia membresia)
+        EntrenadorRepository en_repository = new EntrenadorRepository();
+        public string Registrar(Entrenador entrenador)
         {
             try
             {
-                return me_repository.GuardarMembresiaBD(membresia);
+                return en_repository.GuardarEntrenadorBD(entrenador);
+                //return m_repository.AbrirConexion().ToString();
             }
             catch (Exception ex)
             {
                 return "Error al registrar: " + ex.Message;
             }
         }
-        public List<Membresia> ConsultarTodo()
+        public List<Entrenador> Consultar()
         {
             try
             {
-                return me_repository.Consultar();
+                return en_repository.Consultar();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("Error al consultar membresias: " + ex.Message);
                 return null;
             }
         }

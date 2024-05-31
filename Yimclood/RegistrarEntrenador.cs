@@ -6,19 +6,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FormRegistrar : Form
+    public partial class RegistrarEntrenador : Form
     {
-        MiembroService miembroService = new MiembroService();
-        public FormRegistrar()
+     private EntrenadorService entrenadorService = new EntrenadorService();
+     private UsuarioService usuarioService = new UsuarioService();
+        public RegistrarEntrenador()
         {
-            
             InitializeComponent();
             this.Shown += new EventHandler(FormRegistrar_Shown);
         }
@@ -28,13 +27,12 @@ namespace Presentacion
             txtCedula.Focus();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            registrarMiembro();
+            registrarEntrenador();
             Limpiar_Campos();
-
         }
-        private void registrarMiembro()
+        private void registrarEntrenador()
         {
             string cedula = txtCedula.Text;
             string nombre = txtNombre.Text;
@@ -43,13 +41,17 @@ namespace Presentacion
             string sexo = Sexo();
             string correo = txtCorreo.Text;
             DateTime FechaNacimiento = fechaNacimiento.Value;
-            PerfilMembresia tipoMembresia = null;//Falta agregar listado de membresias
-            Miembro miembro = new Miembro(
-                cedula, nombre, apellido, telefono, sexo, correo, FechaNacimiento,
-                0, 0, tipoMembresia, null);
-            MessageBox.Show(miembroService.Registrar(miembro));
-            //MessageBox.Show("correo+"+miembro.Correo + "+" + miembro.DatosUsuario.Clave);
-        
+            Entrenador entrenador = new Entrenador(
+                                                    cedula, nombre, apellido, telefono, sexo,
+                                                    correo, FechaNacimiento, null
+                                                   );
+            MessageBox.Show(entrenadorService.Registrar(entrenador));
+            registrarUsuario(entrenador);
+        }
+        private void registrarUsuario(Entrenador entrenador)
+        {
+            Usuario usuario = new Usuario(entrenador);
+            MessageBox.Show(usuarioService.Registrar(usuario));
         }
         private string Sexo()
         {
@@ -73,6 +75,7 @@ namespace Presentacion
             rdbtnHombre.Checked = false;
             rdbtnMujer.Checked = false;
         }
-    }
 
+        
+    }
 }

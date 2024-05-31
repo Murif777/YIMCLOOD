@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FormMenuR : Form
+    public partial class MenuPrincipal : Form
     {
-        public FormMenuR()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
@@ -69,27 +69,27 @@ namespace Presentacion
 
         private void AgregarUsuario_Click(object sender, EventArgs e)
         {
-            Abrirformpanel(new FormRegistrar());
+            Abrirformpanel(new Registrar());
         }
 
         private void BntAgregarporducto_Click(object sender, EventArgs e)
         {
-            Abrirformpanel(new FormAgregarProductocs());
+            Abrirformpanel(new AgregarProducto());
         }
 
         private void btn_ConsultarUsuario_Click(object sender, EventArgs e)
         {
-            Abrirformpanel(new FormCnsultarUsuario());
+            Abrirformpanel(new ConsultarMiembro());
         }
 
         private void bnt_ConsultarProducto_Click(object sender, EventArgs e)
         {
-            Abrirformpanel(new FormConsultar());
+            Abrirformpanel(new ConsultarProd());
         }
 
         private void btnAEntrenador_Click(object sender, EventArgs e)
         {
-            Abrirformpanel(new FormEntrenador());
+            Abrirformpanel(new RegistrarEntrenador());
         }
     }
 }
