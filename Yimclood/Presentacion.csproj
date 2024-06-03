@@ -60,6 +60,18 @@
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEntrenador.Designer.cs">
+      <DependentUpon>ConsultarEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarFacturas.Designer.cs">
+      <DependentUpon>ConsultarFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,12 @@
   <ItemGroup>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEntrenador.resx">
+      <DependentUpon>ConsultarEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarFacturas.resx">
+      <DependentUpon>ConsultarFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarMiembro.resx">
       <DependentUpon>ConsultarMiembro.cs</DependentUpon>
