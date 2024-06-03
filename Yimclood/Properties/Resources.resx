@@ -117,4 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="abdominalesF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\abdominalesF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="antebrazosF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\antebrazosF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bicepsF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\bicepsF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="espaldaF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\espaldaF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gluteosF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\gluteosF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hombrosF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\hombrosF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Musculos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Musculos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pantorrillasF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\pantorrillasF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pechoF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\pechoF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piernasF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\piernasF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tricepsF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\tricepsF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

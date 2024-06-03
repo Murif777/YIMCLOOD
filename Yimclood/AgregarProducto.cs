@@ -40,9 +40,10 @@ namespace Presentacion
             string nombre = txtNombre.Text;
             string Descripcion = txtDescripcion.Text;
             int valor = int.Parse(txtPrecio.Text);
+            int cantidad=0;
             byte[] foto = null;
             Producto producto = new Producto(
-                Referencia, nombre, Descripcion, valor,null);
+                Referencia, nombre, Descripcion, valor,cantidad,null);
             MessageBox.Show(productoService.Registrar(producto));
         }
         private void Limpiar_Campos()
