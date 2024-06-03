@@ -60,6 +60,9 @@
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="botones\botones.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ConsultarMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +80,48 @@
     </Compile>
     <Compile Include="AgregarMembresia.Designer.cs">
       <DependentUpon>AgregarMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEjercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarEjercicios.Designer.cs">
+      <DependentUpon>AgregarEjercicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios.Designer.cs">
+      <DependentUpon>Ejercicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarMedidas.Designer.cs">
+      <DependentUpon>MostrarMedidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMedidas.Designer.cs">
+      <DependentUpon>AgregarMedidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilPeso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilPeso.Designer.cs">
+      <DependentUpon>PerfilPeso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rutinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rutinas.Designer.cs">
+      <DependentUpon>Rutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetodoRutina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetodoRutina.Designer.cs">
+      <DependentUpon>MetodoRutina.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistrarEntrenador.cs">
       <SubType>Form</SubType>
@@ -133,6 +178,27 @@
     <EmbeddedResource Include="AgregarMembresia.resx">
       <DependentUpon>AgregarMembresia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarEjercicios.resx">
+      <DependentUpon>AgregarEjercicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios.resx">
+      <DependentUpon>Ejercicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarMedidas.resx">
+      <DependentUpon>MostrarMedidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMedidas.resx">
+      <DependentUpon>AgregarMedidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilPeso.resx">
+      <DependentUpon>PerfilPeso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rutinas.resx">
+      <DependentUpon>Rutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetodoRutina.resx">
+      <DependentUpon>MetodoRutina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrarEntrenador.resx">
       <DependentUpon>RegistrarEntrenador.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,9 +217,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\abdominalesF.png" />
+    <Content Include="Images\addominales.png" />
+    <Content Include="Images\antebrazosF.png" />
     <Content Include="Images\background.jpg" />
+    <Content Include="Images\bicepsF.png" />
     <Content Include="Images\cerrar.png" />
     <Content Include="Images\Close_Icon.png" />
+    <Content Include="Images\espaldaF.png" />
+    <Content Include="Images\gluteosF.png" />
+    <Content Include="Images\hombrosF.png" />
     <Content Include="Images\icon.png" />
     <Content Include="Images\icon1.png" />
     <Content Include="Images\key-icon.png" />
@@ -164,8 +237,14 @@
     <Content Include="Images\minimazar.png" />
     <Content Include="Images\Minimize_Icon.png" />
     <Content Include="Images\Mobile-Menu-Icon.png" />
+    <None Include="Images\Musculos.png" />
     <Content Include="Images\pagos.png" />
+    <Content Include="Images\pantorrillasF.png" />
+    <Content Include="Images\pechoF.png" />
+    <Content Include="Images\piernasF.png" />
     <Content Include="Images\res.png" />
+    <Content Include="Images\rutinas.png" />
+    <Content Include="Images\tricepsF.png" />
     <Content Include="Images\user-icon.png" />
     <Content Include="Images\WhatsApp Image 2024-04-25 at 7.34.44 PM.jpeg" />
     <Content Include="Images\WhatsApp Image 2024-04-25 at 7.35.46 PM.jpeg" />
