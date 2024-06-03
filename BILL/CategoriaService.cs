@@ -22,5 +22,18 @@ namespace BILL
                 return "Error al registrar: " + ex.Message;
             }
         }
+        public List<CategoriaEjercicio> ConsultarCategorias()
+        {
+            try
+            {
+                return c_repository.ConsultarCategorias();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error"+ex.Message);
+                return null;
+            }
+        }
+
     }
 }

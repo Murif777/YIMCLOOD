@@ -76,7 +76,7 @@
             this.Btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnregresar.Image = ((System.Drawing.Image)(resources.GetObject("Btnregresar.Image")));
             this.Btnregresar.Location = new System.Drawing.Point(9, 9);
-            this.Btnregresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btnregresar.Margin = new System.Windows.Forms.Padding(2);
             this.Btnregresar.Name = "Btnregresar";
             this.Btnregresar.Size = new System.Drawing.Size(66, 44);
             this.Btnregresar.TabIndex = 28;
@@ -156,7 +156,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(109, 471);
+            this.label8.Location = new System.Drawing.Point(66, 471);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(263, 31);
             this.label8.TabIndex = 13;
@@ -227,7 +227,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(272, 421);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(224, 20);
             this.txtCorreo.TabIndex = 22;
@@ -235,7 +235,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(268, 291);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(226, 20);
             this.txtTelefono.TabIndex = 21;
@@ -243,7 +243,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(268, 232);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(226, 20);
             this.txtApellido.TabIndex = 20;
@@ -251,7 +251,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(268, 172);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(226, 20);
             this.txtNombre.TabIndex = 19;
@@ -261,7 +261,7 @@
             this.TiposMembresia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TiposMembresia.FormattingEnabled = true;
             this.TiposMembresia.Location = new System.Drawing.Point(363, 546);
-            this.TiposMembresia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TiposMembresia.Margin = new System.Windows.Forms.Padding(2);
             this.TiposMembresia.Name = "TiposMembresia";
             this.TiposMembresia.Size = new System.Drawing.Size(149, 21);
             this.TiposMembresia.TabIndex = 17;
@@ -269,7 +269,7 @@
             // txtCedula
             // 
             this.txtCedula.Location = new System.Drawing.Point(268, 119);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(226, 20);
             this.txtCedula.TabIndex = 18;

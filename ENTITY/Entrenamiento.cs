@@ -9,12 +9,14 @@ namespace ENTITY
 {
     public class Entrenamiento
     {
+        public int Id { get;  set; }
         public DateTime HoraInicio { get; set; }
         public DateTime HoraFinal { get; set; }
         public List<Rutina> Rutinas { get; set; }
         public Entrenamiento() { }
-        public Entrenamiento( DateTime horainicio,DateTime horafinal, List<Rutina> rutinas)
+        public Entrenamiento(int id, DateTime horainicio,DateTime horafinal, List<Rutina> rutinas)
         {
+            Id = id;
             HoraInicio = horainicio;
             HoraFinal = horafinal;
             Rutinas = rutinas;

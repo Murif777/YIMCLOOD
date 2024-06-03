@@ -27,5 +27,10 @@ namespace ENTITY
         {
             return (int)Duracion.TotalDays;
         }
+        public override string ToString()
+        {
+            // Devuelve el nombre del entrenador al convertirlo a una cadena
+            return Nombre;
+        }
     }
 }

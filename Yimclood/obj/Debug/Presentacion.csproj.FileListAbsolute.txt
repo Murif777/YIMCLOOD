@@ -115,3 +115,5 @@ C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MenuPrincipal.re
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Registrar.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarFacturas.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarEntrenador.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarEntrenador.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarFacturas.resources

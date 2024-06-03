@@ -11,6 +11,7 @@ namespace ENTITY
     public class Registro
     {
         public byte[] Foto { get; set; }=null;
+        public int Id { get; set; }
         public Miembro Miembro { get; set; }
         public DateTime Fecha { get; set; }
         public double Peso { get; set; }
@@ -28,8 +29,9 @@ namespace ENTITY
         public double? GemeloDerecho { get; set; }
         public double? Altura { get; set; }
 
-        public Registro(Miembro miembro, DateTime fecha, double peso)
+        public Registro(int id,Miembro miembro, DateTime fecha, double peso)
         {
+            Id = id;
             Miembro = miembro;
             Fecha = fecha;
             Peso = peso;

@@ -15,8 +15,8 @@ namespace ENTITY
         public int SaldoDebe { get; set; }
         public bool Pagado { get; set; }
         public Usuario DatosUsuario { get;  set; }
-        public TimeSpan DuracionAcumulada { get; set; } // Nuevo campo para duración acumulada
-        public TimeSpan TiempoRestante { get; set; } // Nuevo campo para tiempo restante
+        public int DuracionAcumulada { get; set; }
+        public int TiempoRestante { get; set; }
 
         public PerfilMembresia() { }
         public PerfilMembresia(
@@ -27,8 +27,8 @@ namespace ENTITY
             DateTime fechafinal,
             int saldodebe,
             bool pagado,
-            TimeSpan duracionAcumulada,
-            TimeSpan tiempoRestante
+            int duracionAcumulada,
+            int tiempoRestante
             ) {
              DatosUsuario = usuario;
             TipoMembresia= tipomembresia;

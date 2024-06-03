@@ -1,8 +1,12 @@
-﻿using BILL;
+﻿using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
+using BILL;
 using ENTITY;
-using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System;
+using System.Linq;
 
 namespace Presentacion
 {
@@ -11,13 +15,16 @@ namespace Presentacion
         private MiembroService miembroService = new MiembroService();
         private UsuarioService usuarioService = new UsuarioService();
         private MembresiaService MembresiaService = new MembresiaService();
+        private byte[] imageBytes;
+
         public event EventHandler OnRegresar;
+
         public Registrar()
         {
             InitializeComponent();
             ComboboxMembresias();
             this.Shown += new EventHandler(FormRegistrar_Shown);
-            btnagregarfoto.Click += new EventHandler(btnagregarfoto_Click);
+            btnagregarfoto.Click += btnagregarfoto_Click;
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
         }
 
@@ -26,10 +33,10 @@ namespace Presentacion
             txtCedula.Focus();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             registrarMiembro();
-            Limpiar_Campos();
+            //Limpiar_Campos();
         }
 
         private void registrarMiembro()
@@ -41,20 +48,55 @@ namespace Presentacion
             string sexo = Sexo();
             string correo = txtCorreo.Text;
             DateTime FechaNacimiento = fechaNacimiento.Value;
-
-            Membresia membresiaSeleccionada = (Membresia)TiposMembresia.SelectedItem;
+            Membresia membresiaSeleccionada = ObtenerMembresia();
             Miembro miembro = new Miembro(
                 cedula, nombre, apellido, telefono, sexo, correo, FechaNacimiento,
-                0, 0, null);
+                0, 0, imageBytes);
 
             MessageBox.Show(miembroService.Registrar(miembro));
-            registrarUsuario(miembro);
+            RegistrarMembresia(membresiaSeleccionada, registrarUsuario(miembro));
         }
 
-        private void registrarUsuario(Miembro miembro)
+        private Usuario registrarUsuario(Miembro miembro)
         {
             Usuario usuario = new Usuario(miembro);
-            MessageBox.Show(usuarioService.Registrar(usuario));
+            string resultado = usuarioService.Registrar(usuario);
+            MessageBox.Show(resultado);
+            return usuario;
+        }
+
+        private void RegistrarMembresia(Membresia membresia,Usuario usuario)
+        {
+            if (usuario != null)
+            {
+                PerfilMembresia perfil = new PerfilMembresia();
+                perfil.DatosUsuario = usuario;
+                perfil.TipoMembresia = membresia;
+                perfil.Pagado = true;
+                PMembresiaService PmembresiaService = new PMembresiaService();
+                MessageBox.Show(PmembresiaService.Registrar(perfil));
+            }
+            else
+            {
+                MessageBox.Show("usuario vacio");
+            }
+        }
+        private Membresia ObtenerMembresia()
+        {
+            MembresiaService membresiaService = new MembresiaService();
+            List<Membresia> listaMembresias = membresiaService.ConsultarTodo();
+
+            if (listaMembresias != null && listaMembresias.Count > 0 && TiposMembresia.SelectedItem != null)
+            {
+                string nombreSeleccionado = TiposMembresia.SelectedItem.ToString();
+
+                Membresia MembresiaSeleccionada = listaMembresias
+                    .FirstOrDefault(m => m.Nombre.Equals(nombreSeleccionado, StringComparison.OrdinalIgnoreCase));
+
+                return MembresiaSeleccionada;
+            }
+
+            return null;
         }
 
         private string Sexo()
@@ -79,6 +121,7 @@ namespace Presentacion
             txtCorreo.Clear();
             rdbtnHombre.Checked = false;
             rdbtnMujer.Checked = false;
+            imageBytes = null; // Limpiar la imagen seleccionada
         }
 
         private void ComboboxMembresias()
@@ -90,12 +133,12 @@ namespace Presentacion
             }
             else
             {
-                membresias.Insert(0, new Membresia { Nombre = "Ninguno" }); // Añade "Ninguno" al inicio de la lista
+                membresias.Insert(0, new Membresia { Nombre = "Ninguno" }); 
             }
-
             TiposMembresia.DataSource = membresias;
             TiposMembresia.DisplayMember = "Nombre";
         }
+
 
         private void btnagregarfoto_Click(object sender, EventArgs e)
         {
@@ -104,15 +147,17 @@ namespace Presentacion
                 openFileDialog.InitialDirectory = "c:\\";
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
                 openFileDialog.FilterIndex = 1;
-                openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Obtener la ruta del archivo seleccionado
                     string filePath = openFileDialog.FileName;
 
-                    // Mostrar la imagen en un PictureBox o realizar cualquier acción con la ruta del archivo
+                    imageBytes = File.ReadAllBytes(filePath);
                     MessageBox.Show("Imagen seleccionada: " + filePath);
+                }
+                else
+                {
+                    return;
                 }
             }
         }
@@ -121,5 +166,6 @@ namespace Presentacion
         {
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
+
     }
 }

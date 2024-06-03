@@ -36,7 +36,6 @@
             this.btnagregarfoto = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbtnMujer = new System.Windows.Forms.RadioButton();
             this.rdbtnHombre = new System.Windows.Forms.RadioButton();
@@ -54,6 +53,7 @@
             this.TiposMembresia = new System.Windows.Forms.ComboBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,11 +62,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.fechaNacimiento);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnagregarfoto);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.fechaNacimiento);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -161,30 +161,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(155, 405);
+            this.label5.Location = new System.Drawing.Point(127, 322);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 22);
             this.label5.TabIndex = 17;
             this.label5.Text = "Fecha de nacimiento:";
             // 
-            // fechaNacimiento
-            // 
-            this.fechaNacimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.fechaNacimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaNacimiento.Location = new System.Drawing.Point(353, 405);
-            this.fechaNacimiento.Name = "fechaNacimiento";
-            this.fechaNacimiento.Size = new System.Drawing.Size(130, 29);
-            this.fechaNacimiento.TabIndex = 16;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rdbtnMujer);
             this.groupBox1.Controls.Add(this.rdbtnHombre);
-            this.groupBox1.Location = new System.Drawing.Point(257, 277);
+            this.groupBox1.Location = new System.Drawing.Point(259, 247);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(202, 45);
+            this.groupBox1.Size = new System.Drawing.Size(195, 51);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
@@ -214,7 +204,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(155, 357);
+            this.label8.Location = new System.Drawing.Point(157, 381);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 22);
@@ -225,7 +215,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(154, 238);
+            this.label7.Location = new System.Drawing.Point(156, 208);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 22);
@@ -236,7 +226,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 150);
+            this.label1.Location = new System.Drawing.Point(156, 120);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 22);
@@ -258,12 +248,13 @@
             this.btnRegistrar.TabIndex = 12;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 196);
+            this.label2.Location = new System.Drawing.Point(157, 166);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 22);
@@ -272,7 +263,7 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(257, 356);
+            this.txtCorreo.Location = new System.Drawing.Point(257, 374);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(256, 29);
@@ -282,7 +273,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(155, 107);
+            this.label3.Location = new System.Drawing.Point(157, 77);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 22);
@@ -291,7 +282,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(256, 237);
+            this.txtTelefono.Location = new System.Drawing.Point(258, 207);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(226, 29);
@@ -301,7 +292,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(155, 291);
+            this.label4.Location = new System.Drawing.Point(157, 261);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 22);
@@ -310,7 +301,7 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(257, 198);
+            this.txtApellido.Location = new System.Drawing.Point(259, 168);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(226, 29);
@@ -318,7 +309,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(256, 149);
+            this.txtNombre.Location = new System.Drawing.Point(258, 119);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(226, 29);
@@ -327,7 +318,7 @@
             // TiposMembresia
             // 
             this.TiposMembresia.FormattingEnabled = true;
-            this.TiposMembresia.Location = new System.Drawing.Point(350, 463);
+            this.TiposMembresia.Location = new System.Drawing.Point(349, 436);
             this.TiposMembresia.Margin = new System.Windows.Forms.Padding(2);
             this.TiposMembresia.Name = "TiposMembresia";
             this.TiposMembresia.Size = new System.Drawing.Size(149, 28);
@@ -336,7 +327,7 @@
             // txtCedula
             // 
             this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCedula.Location = new System.Drawing.Point(255, 108);
+            this.txtCedula.Location = new System.Drawing.Point(257, 78);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(223, 22);
@@ -346,12 +337,23 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(155, 465);
+            this.label6.Location = new System.Drawing.Point(156, 442);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 22);
             this.label6.TabIndex = 6;
             this.label6.Text = "Tipo de Membresia:";
+            // 
+            // fechaNacimiento
+            // 
+            this.fechaNacimiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fechaNacimiento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.fechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaNacimiento.Location = new System.Drawing.Point(373, 322);
+            this.fechaNacimiento.Name = "fechaNacimiento";
+            this.fechaNacimiento.Size = new System.Drawing.Size(118, 22);
+            this.fechaNacimiento.TabIndex = 25;
             // 
             // Registrar
             // 
@@ -378,7 +380,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker fechaNacimiento;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdbtnMujer;
         private System.Windows.Forms.RadioButton rdbtnHombre;
@@ -400,5 +401,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button Btnregresar;
+        private System.Windows.Forms.DateTimePicker fechaNacimiento;
     }
 }

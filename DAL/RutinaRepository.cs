@@ -46,5 +46,6 @@ namespace DAL
             return null;
 
         }
+        //faltan metodos buscar eliminar y actualizar
     }
 }

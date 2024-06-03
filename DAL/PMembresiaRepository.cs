@@ -12,7 +12,7 @@ namespace DAL
     {
         public string GuardarPMembresiaBD(PerfilMembresia pMembresia)
         {
-            string sql = "INSERT INTO membresias_usuarios(Correo_Usuario, Nombre_Membresia,Estado,Fecha_Inicio,Fecha_final,SaldoDebe,Pagado,Duracion_Acumulada,Tiempo_Restante) " +
+            string sql = "INSERT INTO membresias_usuarios(Correo_Usuario, Nombre_Membresia,Estado,Fecha_Inicio,Fecha_final,Saldo_Debe,Pagado,Duracion_Acumulada,Tiempo_Restante) " +
                   "VALUES (@Correo_Usuario, @Nombre_Membresia, @Estado, @Fecha_Inicio,@Fecha_final,@SaldoDebe,@Pagado,@Duracion_Acumulada,@Tiempo_Restante)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
@@ -159,8 +159,8 @@ namespace DAL
                 Fechafinal = reader.GetDateTime("Fecha_Final"),
                 SaldoDebe = reader.GetInt32("Saldo_Debe"),
                 Pagado = reader.GetBoolean("Pagado"),
-                DuracionAcumulada = TimeSpan.FromDays(reader.GetInt32("Duracion_Acumulada")),
-                TiempoRestante = TimeSpan.FromDays(reader.GetInt32("Tiempo_Restante"))
+                DuracionAcumulada = reader.GetInt32("Duracion_Acumulada"),
+                TiempoRestante = reader.GetInt32("Tiempo_Restante")
             };
             return perfil;
         }

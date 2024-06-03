@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,43 @@ namespace DAL
                 //CerrarConexion();
             }
             return null;
+        }
+        public List<CategoriaEjercicio> ConsultarCategorias()
+        {
+            List<CategoriaEjercicio> categorias = new List<CategoriaEjercicio>();
+
+            string ssql = $"select * from categorias_ejercicios";
+
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
+                conexionBd.Open();
+                var reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    categorias.Add(Map(reader));
+                }
+                return categorias;
+            }
+            catch (MySqlException)
+            {
+                return null;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
+
+        private CategoriaEjercicio Map(MySqlDataReader reader)
+        {
+            CategoriaEjercicio categoria = new CategoriaEjercicio();
+            categoria.Nombre = reader.GetString(0);
+            categoria.Descripcion = reader.GetString(1);
+            return categoria;
         }
     }
 }

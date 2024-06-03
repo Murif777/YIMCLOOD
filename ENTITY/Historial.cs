@@ -8,22 +8,25 @@ namespace ENTITY
 {
     public class Historial
     {
+        public int Id { get; private set; }
         public Miembro Miembro { get; set; }
-        public DayOfWeek DiaDeLaSemana { get; set; }
+        public DayOfWeek  DiaDeLaSemana { get; set; }
         public Registro Registro { get; set; }
-        public Entrenamiento Entrenamiento { get; set; }
+        public Rutina Rutina { get; set; }
         public Historial() { }
-        public Historial(Miembro miembro, DayOfWeek diaDeLaSemana, Registro registro)
+        public Historial(int id,Miembro miembro, DayOfWeek diaDeLaSemana, Registro registro)
         {
+            Id = id;
             Miembro = miembro;
             DiaDeLaSemana = diaDeLaSemana;
             Registro = registro;
         }
-        public Historial(Miembro miembro, DayOfWeek diaDeLaSemana, Entrenamiento entrenamiento)
+        public Historial(int id, Miembro miembro, DayOfWeek diaDeLaSemana, Rutina rutina)
         {
+            Id = id;
             Miembro= miembro;
             DiaDeLaSemana = diaDeLaSemana;
-            Entrenamiento = entrenamiento;
+            Rutina = rutina;
         }
     }
 }

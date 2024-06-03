@@ -3,51 +3,48 @@ using ENTITY;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BILL
 {
-    public class PMembresiaService:ICrud<PerfilMembresia>
+    public class PMembresiaService : ICrud<PerfilMembresia>
     {
-        private readonly PMembresiaRepository pmRepository;
-
-        public PMembresiaService(PMembresiaRepository repository)
-        {
-            pmRepository = repository;
-        }
+        private PMembresiaRepository PmembresiaRepository = new PMembresiaRepository();
 
         public string Registrar(PerfilMembresia perfil)
         {
             try
             {
-                var perfilCompleto = CrearPerfilCompleto(perfil.DatosUsuario, perfil.TipoMembresia);
-                return pmRepository.GuardarPMembresiaBD(perfilCompleto);
+                var perfilCompleto = CrearPerfilCompleto(perfil);
+                return PmembresiaRepository.GuardarPMembresiaBD(perfilCompleto);
             }
             catch (Exception ex)
             {
-                return "Error al registrar: " + ex.Message;
+                return "rror al registrar: " + ex.Message;
             }
         }
 
-        private PerfilMembresia CrearPerfilCompleto(Usuario usuario, Membresia membresia)
+        private PerfilMembresia CrearPerfilCompleto(PerfilMembresia perfil)
         {
-            var perfil = new PerfilMembresia
-            {
-                DatosUsuario = usuario,
-                TipoMembresia = membresia,
-                Fechainicio = DateTime.Now,
-                Fechafinal = DateTime.Now.Add(membresia.Duracion),
-                DuracionAcumulada = TimeSpan.FromDays(membresia.Duracion.Days),
-                TiempoRestante = TimeSpan.FromDays(membresia.Duracion.Days)
-            };
+            var perfilCompleto = new PerfilMembresia();
 
-            perfil.Pagado = EsPagado(perfil);
-            perfil.Estado = DeterminarEstado(perfil);
-            perfil.SaldoDebe = CalcularSaldoDebe(perfil);
-
-            return perfil;
+            perfilCompleto.DatosUsuario = perfil.DatosUsuario;
+            perfilCompleto.TipoMembresia = perfil.TipoMembresia;
+            perfilCompleto.Fechainicio = DateTime.Now;
+            perfilCompleto.Fechafinal = DateTime.Now.Add(perfil.TipoMembresia.Duracion);
+            perfilCompleto.DuracionAcumulada = CalcularDuracionAcumulada(perfilCompleto.Fechainicio, DateTime.Now, perfilCompleto.TipoMembresia.Duracion);
+            perfilCompleto.TiempoRestante = CalcularTiempoRestante(perfilCompleto.Fechafinal);
+                     
+            perfilCompleto.Pagado =perfil.Pagado;
+            perfilCompleto.Estado = DeterminarEstado(perfil);
+            perfilCompleto.SaldoDebe = CalcularSaldoDebe(perfil);
+            Console.WriteLine(perfil.Pagado);
+            Console.WriteLine(perfilCompleto.DuracionAcumulada);
+            Console.WriteLine(perfilCompleto.TiempoRestante);
+            return perfilCompleto;
         }
 
         private string DeterminarEstado(PerfilMembresia perfil)
@@ -67,10 +64,10 @@ namespace BILL
         {
             if (perfil.Pagado)
             {
-                perfil.DuracionAcumulada += TimeSpan.FromDays(perfil.TipoMembresia.Duracion.Days);
+                perfil.DuracionAcumulada += perfil.TipoMembresia.Duracion.Days;
                 perfil.Fechainicio = DateTime.Now;
                 perfil.Fechafinal = perfil.Fechainicio.AddDays(perfil.TipoMembresia.Duracion.Days);
-                perfil.TiempoRestante = TimeSpan.FromDays(perfil.TipoMembresia.Duracion.Days);
+                perfil.TiempoRestante = perfil.TipoMembresia.Duracion.Days;
                 perfil.Estado = "Activo";
             }
             else
@@ -93,6 +90,18 @@ namespace BILL
 
             return DateTime.Now <= fechaFinalConPeriodoDeGracia && perfil.SaldoDebe == 0;
         }
-    }
+        private int CalcularDuracionAcumulada(DateTime fechaInicio, DateTime fechaFin, TimeSpan duracionMembresia)
+        {
+            int totalDias = (int)(fechaFin - fechaInicio).TotalDays;
+            double promedioDiasPorMes = 365.25 / 12; // 365.25 es el promedio de días por año, considerando los años bisiestos
+            int totalMeses = (int)(totalDias / promedioDiasPorMes);
 
+            return totalMeses;
+        }
+        private int CalcularTiempoRestante(DateTime fechaFinal)
+        {
+            TimeSpan diferencia = fechaFinal - DateTime.Now;
+            return (int)diferencia.TotalDays; // Convertir la diferencia de tiempo a días
+        }
+    }
 }

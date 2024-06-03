@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,5 +47,52 @@ namespace DAL
             return null;
 
         }
+        //public List<Entrenamiento> ConsultarEntremiento()
+        //{
+        //    List<Entrenamiento> entrenamientos = new List<Entrenamiento>();
+
+        //    string ssql = $"select * from entrenamientos";
+
+        //    MySqlConnection conexionBd = new MySqlConnection();
+        //    conexionBd = conexion();
+
+        //    try
+        //    {
+        //        MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
+        //        conexionBd.Open();
+        //        var reader = comando.ExecuteReader();
+        //        while (reader.Read())
+        //        {
+        //            entrenamientos.Add(Map(reader));
+        //        }
+        //        return entrenamientos;
+        //    }
+        //    catch (MySqlException)
+        //    {
+        //        return null;
+        //    }
+        //    finally
+        //    {
+        //        conexionBd.Close();
+        //    }
+        //}
+
+        //private Entrenamiento Map(MySqlDataReader reader)
+        //{
+        //    Entrenamiento Entrenamiento = new Entrenamiento();
+        //    Entrenamiento.Id = reader.GetString(0);
+        //    Entrenamiento.HoraInicio = reader.GetString(1);
+        //    Entrenamiento.HoraFinal = reader.GetString(2);
+        //    Entrenamiento.Rutinas = reader.GetString(3);
+        //    Entrenamiento.Sexo = reader.GetString(4);
+        //    entrenador.Correo = reader.GetString(5);
+        //    string fechaNacimientoString = reader.GetString(6);
+        //    DateTime fechaNacimiento;
+        //    if (DateTime.TryParseExact(fechaNacimientoString, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaNacimiento))
+        //    {
+        //        entrenador.FechaNacimiento = fechaNacimiento;
+        //    }
+        //    return entrenador;
+        //}
     }
 }
