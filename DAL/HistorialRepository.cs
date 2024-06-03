@@ -82,13 +82,13 @@ namespace DAL
                             // Asignar otras propiedades del Miembro de manera similar
                         };
 
-                        historial.Registro = new Registro
-                        {
-                            Id = int.Parse(reader.GetString("Id")),
-                            Miembro = historial.Miembro,
-                            Fecha = reader.GetDateTime("Fecha"),
-                            Peso = reader.GetDouble("Peso")
-                        };
+                        //historial.Registro = new Registro
+                        //{
+                        //    Id = int.Parse(reader.GetString("Id")),
+                        //    Miembro = historial.Miembro,
+                        //    Fecha = reader.GetDateTime("Fecha"),
+                        //    Peso = reader.GetDouble("Peso")
+                        //};
                         historial.DiaDeLaSemana = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), reader.GetString("DiaDeLaSemana"));
                         historiales.Add(historial);
                     }
