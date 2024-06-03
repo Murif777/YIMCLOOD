@@ -12,9 +12,16 @@ namespace Presentacion
 {
     public partial class ConsultarProd : Form
     {
+        public event EventHandler OnRegresar;
         public ConsultarProd()
         {
             InitializeComponent();
+            Btnregresar.Click += new EventHandler(Btnregresar_Click);
+        }
+
+        private void Btnregresar_Click(object sender, EventArgs e)
+        {
+            OnRegresar?.Invoke(this, EventArgs.Empty);
         }
     }
 }

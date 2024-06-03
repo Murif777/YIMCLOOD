@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarProd));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btnregresar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,42 +49,57 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 49);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(104, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 26);
+            this.label1.Size = new System.Drawing.Size(305, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del producto:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(426, 50);
+            this.textBox1.Location = new System.Drawing.Point(429, 82);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 28);
+            this.textBox1.Size = new System.Drawing.Size(189, 28);
             this.textBox1.TabIndex = 1;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.Btnregresar);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(660, 50);
+            this.panel1.Size = new System.Drawing.Size(847, 50);
             this.panel1.TabIndex = 2;
+            // 
+            // Btnregresar
+            // 
+            this.Btnregresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btnregresar.FlatAppearance.BorderSize = 0;
+            this.Btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btnregresar.Image = ((System.Drawing.Image)(resources.GetObject("Btnregresar.Image")));
+            this.Btnregresar.Location = new System.Drawing.Point(9, 7);
+            this.Btnregresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btnregresar.Name = "Btnregresar";
+            this.Btnregresar.Size = new System.Drawing.Size(56, 41);
+            this.Btnregresar.TabIndex = 5;
+            this.Btnregresar.UseVisualStyleBackColor = true;
+            this.Btnregresar.Click += new System.EventHandler(this.Btnregresar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(209, 7);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(247, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 26);
+            this.label2.Size = new System.Drawing.Size(313, 32);
             this.label2.TabIndex = 4;
             this.label2.Text = "Busqueda de Producto";
             // 
@@ -90,14 +107,15 @@
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(248, 113);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(638, 78);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 57);
+            this.button1.Size = new System.Drawing.Size(44, 37);
             this.button1.TabIndex = 3;
-            this.button1.Text = "BUSCAR";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -109,13 +127,13 @@
             this.Column3,
             this.Column4});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 192);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(723, 245);
             this.dataGridView1.TabIndex = 4;
             // 
             // Column1
@@ -148,6 +166,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label1);
@@ -156,20 +175,20 @@
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(660, 477);
+            this.panel2.Size = new System.Drawing.Size(847, 489);
             this.panel2.TabIndex = 5;
             // 
-            // FormConsultar
+            // ConsultarProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(660, 527);
+            this.ClientSize = new System.Drawing.Size(847, 539);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FormConsultar";
+            this.Name = "ConsultarProd";
             this.Text = "FormConsultar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -193,5 +212,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button Btnregresar;
     }
 }

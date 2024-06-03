@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarProducto));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSubirfoto = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -40,6 +42,7 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btnregresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -47,6 +50,8 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Controls.Add(this.btnSubirfoto);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtPrecio);
             this.panel2.Controls.Add(this.btnAgregar);
@@ -61,17 +66,30 @@
             this.panel2.Location = new System.Drawing.Point(0, 63);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(821, 451);
+            this.panel2.Size = new System.Drawing.Size(876, 480);
             this.panel2.TabIndex = 12;
+            // 
+            // btnSubirfoto
+            // 
+            this.btnSubirfoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubirfoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubirfoto.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirfoto.Image")));
+            this.btnSubirfoto.Location = new System.Drawing.Point(730, 37);
+            this.btnSubirfoto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubirfoto.Name = "btnSubirfoto";
+            this.btnSubirfoto.Size = new System.Drawing.Size(47, 48);
+            this.btnSubirfoto.TabIndex = 11;
+            this.btnSubirfoto.UseVisualStyleBackColor = true;
+            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(437, 208);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(646, 41);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 28);
+            this.label6.Size = new System.Drawing.Size(80, 32);
             this.label6.TabIndex = 10;
             this.label6.Text = "Foto:";
             // 
@@ -86,15 +104,16 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAgregar.BackColor = System.Drawing.Color.Gray;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(547, 286);
+            this.btnAgregar.Location = new System.Drawing.Point(629, 334);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(129, 54);
+            this.btnAgregar.Size = new System.Drawing.Size(148, 57);
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -102,44 +121,44 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(85, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 28);
+            this.label2.Size = new System.Drawing.Size(123, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(85, 45);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 28);
+            this.label3.Size = new System.Drawing.Size(156, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Referencia:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(86, 147);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 28);
+            this.label5.Size = new System.Drawing.Size(101, 32);
             this.label5.TabIndex = 7;
             this.label5.Text = "Precio:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(86, 208);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(285, 28);
+            this.label4.Size = new System.Drawing.Size(330, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "Descripcion del producto:";
             // 
@@ -172,14 +191,29 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.Btnregresar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(821, 63);
+            this.panel1.Size = new System.Drawing.Size(876, 63);
             this.panel1.TabIndex = 11;
+            // 
+            // Btnregresar
+            // 
+            this.Btnregresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btnregresar.FlatAppearance.BorderSize = 0;
+            this.Btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btnregresar.Image = ((System.Drawing.Image)(resources.GetObject("Btnregresar.Image")));
+            this.Btnregresar.Location = new System.Drawing.Point(9, 2);
+            this.Btnregresar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btnregresar.Name = "Btnregresar";
+            this.Btnregresar.Size = new System.Drawing.Size(62, 50);
+            this.Btnregresar.TabIndex = 2;
+            this.Btnregresar.UseVisualStyleBackColor = true;
+            this.Btnregresar.Click += new System.EventHandler(this.Btnregresar_Click);
             // 
             // label1
             // 
@@ -197,7 +231,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(821, 514);
+            this.ClientSize = new System.Drawing.Size(876, 543);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -227,5 +261,7 @@
         private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Btnregresar;
+        private System.Windows.Forms.Button btnSubirfoto;
     }
 }

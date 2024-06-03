@@ -15,10 +15,14 @@ namespace Presentacion
     public partial class AgregarProducto : Form
     {
         private ProductoService productoService = new ProductoService();
+        public event EventHandler OnRegresar;
         public AgregarProducto()
         {
             InitializeComponent();
             this.Shown += new EventHandler(FormRegistrar_Shown);
+            Btnregresar.Click += new EventHandler(Btnregresar_Click);
+            btnSubirfoto.Click += new EventHandler(btnSubirfoto_Click);
+
         }
 
         private void FormRegistrar_Shown(object sender, EventArgs e)
@@ -48,6 +52,31 @@ namespace Presentacion
             txtDescripcion.Clear();
             txtPrecio.Clear();
             //foto
+        }
+
+        private void Btnregresar_Click(object sender, EventArgs e)
+        {
+            OnRegresar?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void btnSubirfoto_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Obtener la ruta del archivo seleccionado
+                    string filePath = openFileDialog.FileName;
+
+                    // Mostrar la imagen en un PictureBox o realizar cualquier acción con la ruta del archivo
+                    MessageBox.Show("Imagen seleccionada: " + filePath);
+                }
+            }
         }
     }
 }
