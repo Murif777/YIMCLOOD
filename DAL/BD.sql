@@ -112,14 +112,21 @@ CREATE TABLE Registros (
     FOREIGN KEY (Miembro_Cedula) REFERENCES Miembros(cedula)
 );
 CREATE TABLE Categorias_Ejercicio (
-    Nombre NVARCHAR(100) PRIMARY KEY,
-    Descripcion NVARCHAR(255) NULL
+    Nombre NVARCHAR(100) PRIMARY KEY
 );
+
+CREATE TABLE Musculo_Ejercicio (
+    Nombre NVARCHAR(100) PRIMARY KEY
+);
+
 CREATE TABLE Ejercicios (
-    Nombre NVARCHAR(100) PRIMARY KEY,
+	Musculo NVARCHAR (100) NOT NULL,
+    Nombre NVARCHAR(100) PRIMARY KEY,   
     Descripcion NVARCHAR(255) NULL,
     Duracion TIME NULL,
     Repeticiones INT NULL,
+    Series INT NULL,
     Categoria_Nombre NVARCHAR(100) NOT NULL,
-    FOREIGN KEY (Categoria_Nombre) REFERENCES Categorias_Ejercicio(Nombre)
+	CONSTRAINT fk_categoria FOREIGN KEY (Categoria_Nombre) REFERENCES Categorias_Ejercicio(Nombre),
+    CONSTRAINT fk_musculo FOREIGN KEY (Musculo) REFERENCES Musculo_Ejercicio(Nombre)
 );

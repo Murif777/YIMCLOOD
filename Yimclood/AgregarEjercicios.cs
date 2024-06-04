@@ -21,6 +21,7 @@ namespace Presentacion
         public AgregarEjercicios()
         {
             InitializeComponent();
+            CargarEjercicios();
             btnEjercicios.Enabled = false; // Reactivar el botón cuando Ejercicios se cierre
             btnEjercicios.FlatAppearance.BorderSize = 1; // Restaurar borde
             btnEjercicios.FlatStyle = FlatStyle.Standard;
@@ -66,7 +67,7 @@ namespace Presentacion
 
         private void btnEjercicios_Click(object sender, EventArgs e)
         {
-        
+           
         }
 
         private void btnRutinas_Click(object sender, EventArgs e)
@@ -123,6 +124,27 @@ namespace Presentacion
             this.Hide();
             formRutinas.ShowDialog();
             this.Close();
+        }
+        private void CargarEjercicios()
+        {
+
+            EjercicioService ejercicioService = new EjercicioService();
+            List<Ejercicio> ejercicios = ejercicioService.ConsultarEjercicioMusculo("Hombros");
+            listaEjercicios.DataSource = ejercicios;
+            if (ejercicios != null && ejercicios.Count > 0)
+            {
+
+                // Asignar la lista de ejercicios al DataGridView
+                listaEjercicios.DataSource = ejercicios;
+                // Refrescar el DataGridView para que muestre los datos
+                listaEjercicios.Refresh();
+                MessageBox.Show("Si se encontraron ejercicios.");
+
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron ejercicios.");
+            }
         }
     }
 }

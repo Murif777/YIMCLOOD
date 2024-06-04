@@ -37,7 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listaEjercicios = new System.Windows.Forms.DataGridView();
             this.btnRutinaExistente = new Presentacion.botones.botones();
             this.btnNuevaRutina = new Presentacion.botones.botones();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
@@ -45,7 +45,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaEjercicios)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -179,16 +179,16 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
-            // dataGridView1
+            // listaEjercicios
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightYellow;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 71);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 450);
-            this.dataGridView1.TabIndex = 9;
+            this.listaEjercicios.BackgroundColor = System.Drawing.Color.LightYellow;
+            this.listaEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaEjercicios.Location = new System.Drawing.Point(35, 71);
+            this.listaEjercicios.Name = "listaEjercicios";
+            this.listaEjercicios.RowHeadersWidth = 51;
+            this.listaEjercicios.RowTemplate.Height = 24;
+            this.listaEjercicios.Size = new System.Drawing.Size(577, 450);
+            this.listaEjercicios.TabIndex = 9;
             // 
             // btnRutinaExistente
             // 
@@ -252,7 +252,7 @@
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.btnNuevaRutina);
             this.Controls.Add(this.btnRutinaExistente);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listaEjercicios);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -267,7 +267,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaEjercicios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,7 +281,7 @@
         private System.Windows.Forms.Button btnEjercicios;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView listaEjercicios;
         private botones.botones btnRutinaExistente;
         private botones.botones btnNuevaRutina;
         private System.Windows.Forms.VScrollBar vScrollBar1;

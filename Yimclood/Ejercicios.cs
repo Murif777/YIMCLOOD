@@ -68,6 +68,7 @@ namespace Presentacion
         {
             btnHombros.BackColor = Color.Red;
             musculos.Image = Properties.Resources.hombrosF; 
+
         }
 
         private void btnHombros_MouseLeave(object sender, EventArgs e)
