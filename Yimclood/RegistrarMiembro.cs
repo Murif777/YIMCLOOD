@@ -52,7 +52,6 @@ namespace Presentacion
             Miembro miembro = new Miembro(
                 cedula, nombre, apellido, telefono, sexo, correo, FechaNacimiento,
                 0, 0, imageBytes);
-
             MessageBox.Show(miembroService.Registrar(miembro));
             RegistrarMembresia(membresiaSeleccionada, registrarUsuario(miembro));
         }
@@ -67,6 +66,7 @@ namespace Presentacion
 
         private void RegistrarMembresia(Membresia membresia,Usuario usuario)
         {
+
             if (usuario != null)
             {
                 PerfilMembresia perfil = new PerfilMembresia();
@@ -75,6 +75,7 @@ namespace Presentacion
                 perfil.Pagado = true;
                 PMembresiaService PmembresiaService = new PMembresiaService();
                 MessageBox.Show(PmembresiaService.Registrar(perfil));
+                //PmembresiaService.VerificarMembresias(perfil);
             }
             else
             {

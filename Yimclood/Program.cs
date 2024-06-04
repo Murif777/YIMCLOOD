@@ -1,4 +1,5 @@
-﻿using Presentacion;
+﻿using BILL;
+using Presentacion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,10 @@ namespace Yimclood
             Application.Run(new MenuPrincipal());
 
 
+<<<<<<< HEAD
+=======
+            Application.Run(new RecuperarContraseña());
+>>>>>>> 1451879daa4631a30b669641ff7b2852794b512e
         }
     }
 }

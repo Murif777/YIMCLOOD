@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="CategoriaService.cs" />
     <Compile Include="EjercicioService.cs" />
+    <Compile Include="EmailService.cs" />
     <Compile Include="EntrenadorService.cs" />
     <Compile Include="EntrenamientoService.cs" />
     <Compile Include="FacturaService.cs" />
