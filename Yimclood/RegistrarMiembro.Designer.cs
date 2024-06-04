@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Btnregresar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.TiposMembresia = new System.Windows.Forms.ComboBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -89,17 +89,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(812, 565);
             this.panel1.TabIndex = 15;
-            // 
-            // fechaNacimiento
-            // 
-            this.fechaNacimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fechaNacimiento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.fechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaNacimiento.Location = new System.Drawing.Point(373, 322);
-            this.fechaNacimiento.Name = "fechaNacimiento";
-            this.fechaNacimiento.Size = new System.Drawing.Size(118, 22);
-            this.fechaNacimiento.TabIndex = 25;
             // 
             // panel2
             // 
@@ -155,7 +144,7 @@
             this.btnagregarfoto.Size = new System.Drawing.Size(90, 64);
             this.btnagregarfoto.TabIndex = 19;
             this.btnagregarfoto.UseVisualStyleBackColor = false;
-            this.btnagregarfoto.Click += new System.EventHandler(this.btnagregarfoto_Click_1);
+            this.btnagregarfoto.Click += new System.EventHandler(this.btnagregarfoto_Click);
             // 
             // label9
             // 
@@ -354,6 +343,17 @@
             this.label6.Size = new System.Drawing.Size(174, 22);
             this.label6.TabIndex = 6;
             this.label6.Text = "Tipo de Membresia:";
+            // 
+            // fechaNacimiento
+            // 
+            this.fechaNacimiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fechaNacimiento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.fechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaNacimiento.Location = new System.Drawing.Point(373, 322);
+            this.fechaNacimiento.Name = "fechaNacimiento";
+            this.fechaNacimiento.Size = new System.Drawing.Size(118, 22);
+            this.fechaNacimiento.TabIndex = 25;
             // 
             // Registrar
             // 

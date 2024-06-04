@@ -24,7 +24,8 @@ namespace Presentacion
             InitializeComponent();
             this.Shown += new EventHandler(FormRegistrar_Shown);
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
-            this.btnSubirfoto.Click += new EventHandler(this.btnSubirfoto_Click);
+            btnSubirfoto.Click += new EventHandler(btnSubirfoto_Click);
+
         }
 
         private void FormRegistrar_Shown(object sender, EventArgs e)
@@ -63,11 +64,6 @@ namespace Presentacion
 
         private void btnSubirfoto_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnSubirfoto_Click_1(object sender, EventArgs e)
-        {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
@@ -75,7 +71,6 @@ namespace Presentacion
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
-                //Asegúrate de que este diálogo solo se muestre una vez
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Obtener la ruta del archivo seleccionado
@@ -85,5 +80,7 @@ namespace Presentacion
                 }
             }
         }
+
+
     }
 }

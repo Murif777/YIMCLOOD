@@ -16,7 +16,8 @@ namespace Yimclood
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MetodoRutina ());
+            Application.Run(new MenuPrincipal());
+            //Application.Run(new ConsultarProd());
         }
     }
 }

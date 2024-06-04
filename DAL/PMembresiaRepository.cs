@@ -109,8 +109,6 @@ namespace DAL
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("error:" + ex.Message);
-
                 return null;
             }
             finally
@@ -141,7 +139,6 @@ namespace DAL
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("error:"+ex.Message);
                 return null;
             }
             finally

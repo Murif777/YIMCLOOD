@@ -170,7 +170,7 @@
             this.panel3.Controls.Add(this.btnRutinas);
             this.panel3.Controls.Add(this.btnEjercicios);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 745);
+            this.panel3.Location = new System.Drawing.Point(0, 668);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
             this.panel3.Size = new System.Drawing.Size(799, 120);
@@ -180,7 +180,7 @@
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(463, 122);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 9;
             // 
             // AgregarMedidas
@@ -188,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightYellow;
-            this.ClientSize = new System.Drawing.Size(799, 865);
+            this.ClientSize = new System.Drawing.Size(799, 788);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);

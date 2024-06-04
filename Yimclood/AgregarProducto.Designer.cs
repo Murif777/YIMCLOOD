@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarProducto));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnSubirfoto = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -46,6 +44,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Btnregresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,26 +73,6 @@
             this.panel2.Size = new System.Drawing.Size(876, 480);
             this.panel2.TabIndex = 12;
             // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(376, 169);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCantidad.Multiline = true;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(168, 28);
-            this.txtCantidad.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(84, 169);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 32);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Cantidad:";
-            // 
             // btnSubirfoto
             // 
             this.btnSubirfoto.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -104,7 +84,7 @@
             this.btnSubirfoto.Size = new System.Drawing.Size(47, 48);
             this.btnSubirfoto.TabIndex = 11;
             this.btnSubirfoto.UseVisualStyleBackColor = true;
-            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click_1);
+            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click);
             // 
             // label6
             // 
@@ -250,6 +230,26 @@
             this.label1.Size = new System.Drawing.Size(277, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Agregar Producto";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(376, 169);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCantidad.Multiline = true;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(168, 28);
+            this.txtCantidad.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(84, 169);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 32);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Cantidad:";
             // 
             // AgregarProducto
             // 

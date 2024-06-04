@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +17,6 @@ namespace Presentacion
      private EntrenadorService entrenadorService = new EntrenadorService();
      private UsuarioService usuarioService = new UsuarioService();
         public event EventHandler OnRegresar;
-        private byte[] imageBytes;
         public RegistrarEntrenador()
         {
             InitializeComponent();
@@ -88,11 +86,6 @@ namespace Presentacion
 
         private void btnsubirfoto_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnsubirfoto_Click_1(object sender, EventArgs e)
-        {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
@@ -100,12 +93,12 @@ namespace Presentacion
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
-                //Asegúrate de que este diálogo solo se muestre una vez
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Obtener la ruta del archivo seleccionado
                     string filePath = openFileDialog.FileName;
-                    imageBytes = File.ReadAllBytes(filePath);
+
+                    // Mostrar la imagen en un PictureBox o realizar cualquier acción con la ruta del archivo
                     MessageBox.Show("Imagen seleccionada: " + filePath);
                 }
             }

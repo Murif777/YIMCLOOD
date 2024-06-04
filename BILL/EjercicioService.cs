@@ -34,17 +34,5 @@ namespace BILL
                 return null;
             }
         }
-        public List<Ejercicio> ConsultarEjercicioMusculo(string musculo)
-        {
-            try
-            {
-                return e_repository.ConsultarEjercicioMusculo("Hombros");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error" + ex.Message);
-                return null;
-            }
-        }
     }
 }

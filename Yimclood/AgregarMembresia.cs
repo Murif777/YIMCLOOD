@@ -16,14 +16,12 @@ namespace Presentacion
     {
         EntrenadorService entrenadorService = new EntrenadorService();
         MembresiaService MembresiaService = new MembresiaService();
-        public event EventHandler OnRegresar;
         public AgregarMembresia()
         {
             InitializeComponent();
             ComboboxEntrenadores();
             cbEntrenadores.Hide();
             this.Shown += new EventHandler(FormRegistrar_Shown);
-            btnsalir.Click += new EventHandler(btnsalir_Click);
         }
 
         private void FormRegistrar_Shown(object sender, EventArgs e)
@@ -79,11 +77,6 @@ namespace Presentacion
             Entrenador entrenadorSeleccionado = listaEntrenadores.Find(entrenador => entrenador.Nombre == nombreSeleccionado);
 
             return entrenadorSeleccionado;
-        }
-
-        private void btnsalir_Click(object sender, EventArgs e)
-        {
-            OnRegresar?.Invoke(this, EventArgs.Empty);
         }
     }
 }

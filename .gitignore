@@ -1,2 +1,12 @@
 .vs/
+# Ignorar archivos binarios generados durante la compilación
+BILL/bin/
+DAL/bin/
+ENTITY/bin/
+Yimclood/bin/
 
+# Ignorar archivos temporales y de caché generados durante la compilación
+BILL/obj/
+DAL/obj/
+ENTITY/obj/
+Yimclood/obj/

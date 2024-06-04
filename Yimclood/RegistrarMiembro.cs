@@ -143,7 +143,24 @@ namespace Presentacion
 
         private void btnagregarfoto_Click(object sender, EventArgs e)
         {
-            
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                openFileDialog.FilterIndex = 1;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+
+                    imageBytes = File.ReadAllBytes(filePath);
+                    MessageBox.Show("Imagen seleccionada: " + filePath);
+                }
+                else
+                {
+                    return;
+                }
+            }
         }
 
         private void Btnregresar_Click(object sender, EventArgs e)
@@ -151,24 +168,5 @@ namespace Presentacion
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
 
-        private void btnagregarfoto_Click_1(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-                openFileDialog.FilterIndex = 1;
-                openFileDialog.RestoreDirectory = true;
-
-                //Asegúrate de que este diálogo solo se muestre una vez
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    // Obtener la ruta del archivo seleccionado
-                    string filePath = openFileDialog.FileName;
-                    imageBytes = File.ReadAllBytes(filePath);
-                    MessageBox.Show("Imagen seleccionada: " + filePath);
-                }
-            }
-        }
     }
 }

@@ -16,3 +16,9 @@ C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csp
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
+C:\Users\farid muriel\Videos\Captures\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
+C:\Users\farid muriel\Videos\Captures\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
+C:\Users\farid muriel\Videos\Captures\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
+C:\Users\farid muriel\Videos\Captures\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
+C:\Users\farid muriel\Videos\Captures\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
+C:\Users\farid muriel\Videos\Captures\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
