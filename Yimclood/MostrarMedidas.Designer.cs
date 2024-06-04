@@ -180,7 +180,7 @@
             this.panel3.Controls.Add(this.btnRutinas);
             this.panel3.Controls.Add(this.btnEjercicios);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 697);
+            this.panel3.Location = new System.Drawing.Point(0, 668);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
             this.panel3.Size = new System.Drawing.Size(798, 120);
@@ -192,7 +192,7 @@
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
             this.label1.Location = new System.Drawing.Point(3, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 51);
+            this.label1.Size = new System.Drawing.Size(113, 41);
             this.label1.TabIndex = 11;
             this.label1.Text = "Cuerpo";
             // 
@@ -212,7 +212,7 @@
             this.lblPeso.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblPeso.Location = new System.Drawing.Point(433, 297);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(45, 36);
+            this.lblPeso.Size = new System.Drawing.Size(37, 29);
             this.lblPeso.TabIndex = 14;
             this.lblPeso.Text = "Kg";
             // 
@@ -223,7 +223,7 @@
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
             this.lblFecha.Location = new System.Drawing.Point(434, 335);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(66, 29);
+            this.lblFecha.Size = new System.Drawing.Size(52, 23);
             this.lblFecha.TabIndex = 15;
             this.lblFecha.Text = "/2024";
             // 
@@ -342,7 +342,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightYellow;
-            this.ClientSize = new System.Drawing.Size(798, 817);
+            this.ClientSize = new System.Drawing.Size(798, 788);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSubir);
