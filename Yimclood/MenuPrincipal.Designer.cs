@@ -45,6 +45,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.deslizar = new System.Windows.Forms.PictureBox();
             this.panelsuperior = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Cerrar = new System.Windows.Forms.PictureBox();
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,22 +53,22 @@
             this.sliderbartransicion = new System.Windows.Forms.Timer(this.components);
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.consultarTransicion = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.agregarmembresia = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.ConsultarContenedor.SuspendLayout();
             this.Agregarcontenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deslizar)).BeginInit();
             this.panelsuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
-            this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.Agregarcontenedor);
+            this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.btnSalir);
             this.MenuVertical.Controls.Add(this.deslizar);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -196,14 +197,15 @@
             // Agregarcontenedor
             // 
             this.Agregarcontenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
+            this.Agregarcontenedor.Controls.Add(this.agregarmembresia);
             this.Agregarcontenedor.Controls.Add(this.btnAEntrenador);
             this.Agregarcontenedor.Controls.Add(this.menuanimacion);
             this.Agregarcontenedor.Controls.Add(this.AgregarUsuario);
             this.Agregarcontenedor.Controls.Add(this.BntAgregarporducto);
-            this.Agregarcontenedor.Location = new System.Drawing.Point(1, 180);
+            this.Agregarcontenedor.Location = new System.Drawing.Point(1, 176);
             this.Agregarcontenedor.Margin = new System.Windows.Forms.Padding(2);
             this.Agregarcontenedor.Name = "Agregarcontenedor";
-            this.Agregarcontenedor.Size = new System.Drawing.Size(299, 49);
+            this.Agregarcontenedor.Size = new System.Drawing.Size(299, 47);
             this.Agregarcontenedor.TabIndex = 1;
             // 
             // btnAEntrenador
@@ -333,6 +335,17 @@
             this.panelsuperior.TabIndex = 1;
             this.panelsuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.panelsuperior_Paint);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // Cerrar
             // 
             this.Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -398,16 +411,25 @@
             this.consultarTransicion.Interval = 10;
             this.consultarTransicion.Tick += new System.EventHandler(this.consultarTransicion_Tick_1);
             // 
-            // pictureBox3
+            // agregarmembresia
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.agregarmembresia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.agregarmembresia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.agregarmembresia.FlatAppearance.BorderSize = 0;
+            this.agregarmembresia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarmembresia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.agregarmembresia.ForeColor = System.Drawing.Color.Black;
+            this.agregarmembresia.Image = ((System.Drawing.Image)(resources.GetObject("agregarmembresia.Image")));
+            this.agregarmembresia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.agregarmembresia.Location = new System.Drawing.Point(1, 188);
+            this.agregarmembresia.Margin = new System.Windows.Forms.Padding(2);
+            this.agregarmembresia.Name = "agregarmembresia";
+            this.agregarmembresia.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.agregarmembresia.Size = new System.Drawing.Size(299, 47);
+            this.agregarmembresia.TabIndex = 9;
+            this.agregarmembresia.Text = "AGREGAR MEMBRESIA";
+            this.agregarmembresia.UseVisualStyleBackColor = false;
+            this.agregarmembresia.Click += new System.EventHandler(this.agregarmembresia_Click);
             // 
             // MenuPrincipal
             // 
@@ -423,15 +445,16 @@
             this.Name = "MenuPrincipal";
             this.Opacity = 0.95D;
             this.Text = "FormMenuR";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuPrincipal_MouseDown);
             this.MenuVertical.ResumeLayout(false);
             this.ConsultarContenedor.ResumeLayout(false);
             this.Agregarcontenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deslizar)).EndInit();
             this.panelsuperior.ResumeLayout(false);
             this.panelsuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,5 +484,6 @@
         private System.Windows.Forms.Timer consultarTransicion;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button agregarmembresia;
     }
 }

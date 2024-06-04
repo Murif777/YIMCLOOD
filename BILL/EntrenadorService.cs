@@ -35,5 +35,17 @@ namespace BILL
                 return null;
             }
         }
+        public Entrenador BuscarPorCedula(string cedula)
+        {
+            try
+            {
+                return en_repository.ObtenerEntrenadorPorCedu(cedula);
+            }
+            catch (Exception ex)
+            {
+               
+                return null;
+            }
+        }
     }
 }
