@@ -53,9 +53,7 @@
     <Compile Include="ICrud.cs" />
     <Compile Include="MembresiaService.cs" />
     <Compile Include="MiembroService.cs" />
-    <Compile Include="NotificacionService.cs" />
     <Compile Include="PMembresiaService.cs" />
-    <Compile Include="PNotificacionService.cs" />
     <Compile Include="ProductoService.cs" />
     <Compile Include="RegistroService.cs" />
     <Compile Include="RutinaService.cs" />
