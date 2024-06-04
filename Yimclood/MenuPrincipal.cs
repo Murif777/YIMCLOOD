@@ -233,20 +233,13 @@ namespace Presentacion
             var agregarmembresiaForm = new AgregarMembresia();
             agregarmembresiaForm.OnRegresar += RegistrarForm_OnRegresar;
             Abrirformpanel(agregarmembresiaForm);
-<<<<<<< HEAD
-=======
+
         }
 
         private void panelsuperior_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
->>>>>>> 5d83c2c37a81e287c3af764b8d670c63e5252885
         }
     }
 }

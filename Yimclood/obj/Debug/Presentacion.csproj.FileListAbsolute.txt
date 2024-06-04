@@ -173,3 +173,4 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Present
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
 >>>>>>> 1451879daa4631a30b669641ff7b2852794b512e
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
+C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
