@@ -11,12 +11,11 @@ namespace Yimclood
     public class Program
     {
         [STAThread]
-        static void Main()
+        public void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MenuPrincipal());
 
-            Application.Run(new Ejercicios());
+
         }
     }
 }
