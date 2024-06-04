@@ -77,34 +77,6 @@ C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.CoreCompi
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.ConsultarMiembro.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.ConsultarProd.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.RegistrarEntrenador.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.Login.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.MenuPrincipal.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.Properties.Resources.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.GenerateResource.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.exe.config
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.exe
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\Presentacion.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\BILL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\DAL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Memory.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\System.Buffers.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\BILL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\bin\Debug\DAL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.exe
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.AgregarProducto.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.AgregarMembresia.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.Registrar.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarProducto.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarMiembro.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarProd.resources
@@ -115,8 +87,6 @@ C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MenuPrincipal.re
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Registrar.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarFacturas.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarEntrenador.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarEntrenador.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarFacturas.resources
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarProducto.resources
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarEntrenador.resources
@@ -154,7 +124,6 @@ C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presenta
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MostrarMedidas.resources
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.PerfilPeso.resources
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Rutinas.resources
-<<<<<<< HEAD
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarEjercicios.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarMedidas.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Ejercicios.resources
@@ -162,15 +131,43 @@ C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MetodoRutina.res
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MostrarMedidas.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.PerfilPeso.resources
 C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Rutinas.resources
-=======
+C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
+C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe.config
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\ENTITY.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Memory.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Buffers.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\ENTITY.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarEjercicios.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarMedidas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarProducto.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarEntrenador.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarFacturas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarMiembro.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarProd.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarMembresia.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Ejercicios.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MetodoRutina.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MostrarMedidas.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.PerfilPeso.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RegistrarEntrenador.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Login.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MenuPrincipal.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Registrar.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Properties.Resources.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Rutinas.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
->>>>>>> 1451879daa4631a30b669641ff7b2852794b512e
-C:\Users\juann\Desktop\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
-C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb
