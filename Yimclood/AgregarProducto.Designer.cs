@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarProducto));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnSubirfoto = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -51,6 +53,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Controls.Add(this.txtCantidad);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.btnSubirfoto);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtPrecio);
@@ -69,6 +73,26 @@
             this.panel2.Size = new System.Drawing.Size(876, 480);
             this.panel2.TabIndex = 12;
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(376, 169);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCantidad.Multiline = true;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(168, 28);
+            this.txtCantidad.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(84, 169);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 32);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Cantidad:";
+            // 
             // btnSubirfoto
             // 
             this.btnSubirfoto.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -80,7 +104,7 @@
             this.btnSubirfoto.Size = new System.Drawing.Size(47, 48);
             this.btnSubirfoto.TabIndex = 11;
             this.btnSubirfoto.UseVisualStyleBackColor = true;
-            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click);
+            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click_1);
             // 
             // label6
             // 
@@ -95,7 +119,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(378, 147);
+            this.txtPrecio.Location = new System.Drawing.Point(377, 116);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Multiline = true;
             this.txtPrecio.Name = "txtPrecio";
@@ -117,12 +141,13 @@
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 92);
+            this.label2.Location = new System.Drawing.Point(84, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 32);
@@ -133,7 +158,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(85, 45);
+            this.label3.Location = new System.Drawing.Point(84, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 32);
@@ -144,7 +169,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(86, 147);
+            this.label5.Location = new System.Drawing.Point(85, 116);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 32);
@@ -155,7 +180,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(86, 208);
+            this.label4.Location = new System.Drawing.Point(85, 234);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(330, 32);
@@ -164,7 +189,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(377, 93);
+            this.txtNombre.Location = new System.Drawing.Point(376, 62);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -173,7 +198,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(91, 257);
+            this.txtDescripcion.Location = new System.Drawing.Point(90, 283);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -182,7 +207,7 @@
             // 
             // txtReferencia
             // 
-            this.txtReferencia.Location = new System.Drawing.Point(377, 45);
+            this.txtReferencia.Location = new System.Drawing.Point(376, 14);
             this.txtReferencia.Margin = new System.Windows.Forms.Padding(2);
             this.txtReferencia.Multiline = true;
             this.txtReferencia.Name = "txtReferencia";
@@ -263,5 +288,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btnregresar;
         private System.Windows.Forms.Button btnSubirfoto;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Label label7;
     }
 }

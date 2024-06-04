@@ -48,10 +48,8 @@
     <Compile Include="Entrenamiento.cs" />
     <Compile Include="Historial.cs" />
     <Compile Include="Membresia.cs" />
-    <Compile Include="Notificacion.cs" />
     <Compile Include="PerfilMembresia.cs" />
     <Compile Include="Miembro.cs" />
-    <Compile Include="PerfilNotificacion.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

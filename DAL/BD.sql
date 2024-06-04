@@ -9,6 +9,7 @@ CREATE TABLE Productos (
     Nombre VARCHAR(50) NOT NULL,
     Descripcion VARCHAR(255) NOT NULL,
     Valor INT NOT NULL,
+    Cantidad INT,
     Foto LONGBLOB NULL
 );
 

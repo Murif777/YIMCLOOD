@@ -117,17 +117,34 @@ namespace Presentacion
             if (UsuarioService.Login(usuario))
             {
                 MessageBox.Show("Acceso Exitoso");
-                AbrirMenu();
+                AbrirMenu(usuario);
             }
             else
             {
                 MessageBox.Show("Correo electronico o contraseña incorrectos");
             }
         }
-        private void AbrirMenu()
+        private void AbrirMenu(Usuario usuario)
         {
-            MenuPrincipal menuPrincipal = new MenuPrincipal();
-            menuPrincipal.Show();
+            if (usuario.CorreoElectronico=="admin@admin")
+            {
+                MenuPrincipal menuPrincipal = new MenuPrincipal();
+                menuPrincipal.Show();
+                this.Hide();
+            }
+            else
+            {
+                MetodoRutina metodoRutina = new MetodoRutina();
+                metodoRutina.Show();
+                this.Hide();
+            }
+            
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RecuperarContraseña recuperarContraseña = new RecuperarContraseña();
+            recuperarContraseña.Show();
             this.Hide();
         }
     }

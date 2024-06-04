@@ -31,20 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.Agregarcontenedor = new System.Windows.Forms.Panel();
+            this.agregarmembresia = new System.Windows.Forms.Button();
+            this.btnAEntrenador = new System.Windows.Forms.Button();
+            this.menuanimacion = new System.Windows.Forms.Button();
+            this.AgregarUsuario = new System.Windows.Forms.Button();
+            this.BntAgregarporducto = new System.Windows.Forms.Button();
             this.ConsultarContenedor = new System.Windows.Forms.Panel();
             this.bntconsultar = new System.Windows.Forms.Button();
             this.btnconsultarentrenador = new System.Windows.Forms.Button();
             this.btn_ConsultarUsuario = new System.Windows.Forms.Button();
             this.btnconsultarfacturas = new System.Windows.Forms.Button();
             this.bnt_ConsultarProducto = new System.Windows.Forms.Button();
-            this.Agregarcontenedor = new System.Windows.Forms.Panel();
-            this.btnAEntrenador = new System.Windows.Forms.Button();
-            this.menuanimacion = new System.Windows.Forms.Button();
-            this.AgregarUsuario = new System.Windows.Forms.Button();
-            this.BntAgregarporducto = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.deslizar = new System.Windows.Forms.PictureBox();
             this.panelsuperior = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Cerrar = new System.Windows.Forms.PictureBox();
             this.Minimizar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,22 +54,21 @@
             this.sliderbartransicion = new System.Windows.Forms.Timer(this.components);
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.consultarTransicion = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
-            this.ConsultarContenedor.SuspendLayout();
             this.Agregarcontenedor.SuspendLayout();
+            this.ConsultarContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deslizar)).BeginInit();
             this.panelsuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
-            this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.Agregarcontenedor);
+            this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.btnSalir);
             this.MenuVertical.Controls.Add(this.deslizar);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -77,6 +78,121 @@
             this.MenuVertical.Size = new System.Drawing.Size(300, 718);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
+            // 
+            // Agregarcontenedor
+            // 
+            this.Agregarcontenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
+            this.Agregarcontenedor.Controls.Add(this.agregarmembresia);
+            this.Agregarcontenedor.Controls.Add(this.btnAEntrenador);
+            this.Agregarcontenedor.Controls.Add(this.menuanimacion);
+            this.Agregarcontenedor.Controls.Add(this.AgregarUsuario);
+            this.Agregarcontenedor.Controls.Add(this.BntAgregarporducto);
+            this.Agregarcontenedor.Location = new System.Drawing.Point(1, 176);
+            this.Agregarcontenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.Agregarcontenedor.Name = "Agregarcontenedor";
+            this.Agregarcontenedor.Size = new System.Drawing.Size(299, 47);
+            this.Agregarcontenedor.TabIndex = 1;
+            // 
+            // agregarmembresia
+            // 
+            this.agregarmembresia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.agregarmembresia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.agregarmembresia.FlatAppearance.BorderSize = 0;
+            this.agregarmembresia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarmembresia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.agregarmembresia.ForeColor = System.Drawing.Color.Black;
+            this.agregarmembresia.Image = ((System.Drawing.Image)(resources.GetObject("agregarmembresia.Image")));
+            this.agregarmembresia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.agregarmembresia.Location = new System.Drawing.Point(1, 188);
+            this.agregarmembresia.Margin = new System.Windows.Forms.Padding(2);
+            this.agregarmembresia.Name = "agregarmembresia";
+            this.agregarmembresia.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.agregarmembresia.Size = new System.Drawing.Size(299, 47);
+            this.agregarmembresia.TabIndex = 9;
+            this.agregarmembresia.Text = "AGREGAR MEMBRESIA";
+            this.agregarmembresia.UseVisualStyleBackColor = false;
+            this.agregarmembresia.Click += new System.EventHandler(this.agregarmembresia_Click);
+            // 
+            // btnAEntrenador
+            // 
+            this.btnAEntrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.btnAEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAEntrenador.FlatAppearance.BorderSize = 0;
+            this.btnAEntrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAEntrenador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAEntrenador.ForeColor = System.Drawing.Color.Black;
+            this.btnAEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnAEntrenador.Image")));
+            this.btnAEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAEntrenador.Location = new System.Drawing.Point(0, 141);
+            this.btnAEntrenador.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAEntrenador.Name = "btnAEntrenador";
+            this.btnAEntrenador.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnAEntrenador.Size = new System.Drawing.Size(299, 47);
+            this.btnAEntrenador.TabIndex = 8;
+            this.btnAEntrenador.Text = "AGREGAR ENTRENADOR";
+            this.btnAEntrenador.UseVisualStyleBackColor = false;
+            this.btnAEntrenador.Click += new System.EventHandler(this.btnAEntrenador_Click);
+            // 
+            // menuanimacion
+            // 
+            this.menuanimacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuanimacion.FlatAppearance.BorderSize = 0;
+            this.menuanimacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuanimacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuanimacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuanimacion.Image = ((System.Drawing.Image)(resources.GetObject("menuanimacion.Image")));
+            this.menuanimacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuanimacion.Location = new System.Drawing.Point(2, 0);
+            this.menuanimacion.Margin = new System.Windows.Forms.Padding(2);
+            this.menuanimacion.Name = "menuanimacion";
+            this.menuanimacion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.menuanimacion.Size = new System.Drawing.Size(299, 47);
+            this.menuanimacion.TabIndex = 0;
+            this.menuanimacion.Text = "AGREGAR";
+            this.menuanimacion.UseVisualStyleBackColor = true;
+            this.menuanimacion.Click += new System.EventHandler(this.menuanimacion_Click);
+            // 
+            // AgregarUsuario
+            // 
+            this.AgregarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.AgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AgregarUsuario.FlatAppearance.BorderSize = 0;
+            this.AgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.AgregarUsuario.ForeColor = System.Drawing.Color.Black;
+            this.AgregarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("AgregarUsuario.Image")));
+            this.AgregarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AgregarUsuario.Location = new System.Drawing.Point(0, 50);
+            this.AgregarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.AgregarUsuario.Name = "AgregarUsuario";
+            this.AgregarUsuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.AgregarUsuario.Size = new System.Drawing.Size(299, 47);
+            this.AgregarUsuario.TabIndex = 4;
+            this.AgregarUsuario.Text = "AGREGAR USUARIO";
+            this.AgregarUsuario.UseVisualStyleBackColor = false;
+            this.AgregarUsuario.Click += new System.EventHandler(this.AgregarUsuario_Click);
+            // 
+            // BntAgregarporducto
+            // 
+            this.BntAgregarporducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.BntAgregarporducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BntAgregarporducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BntAgregarporducto.FlatAppearance.BorderSize = 0;
+            this.BntAgregarporducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BntAgregarporducto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.BntAgregarporducto.ForeColor = System.Drawing.Color.Black;
+            this.BntAgregarporducto.Image = ((System.Drawing.Image)(resources.GetObject("BntAgregarporducto.Image")));
+            this.BntAgregarporducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BntAgregarporducto.Location = new System.Drawing.Point(0, 95);
+            this.BntAgregarporducto.Margin = new System.Windows.Forms.Padding(2);
+            this.BntAgregarporducto.Name = "BntAgregarporducto";
+            this.BntAgregarporducto.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.BntAgregarporducto.Size = new System.Drawing.Size(299, 47);
+            this.BntAgregarporducto.TabIndex = 6;
+            this.BntAgregarporducto.Text = "AGREGAR PRODUCTO";
+            this.BntAgregarporducto.UseVisualStyleBackColor = false;
+            this.BntAgregarporducto.Click += new System.EventHandler(this.BntAgregarporducto_Click);
             // 
             // ConsultarContenedor
             // 
@@ -193,100 +309,6 @@
             this.bnt_ConsultarProducto.UseVisualStyleBackColor = false;
             this.bnt_ConsultarProducto.Click += new System.EventHandler(this.bnt_ConsultarProducto_Click);
             // 
-            // Agregarcontenedor
-            // 
-            this.Agregarcontenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
-            this.Agregarcontenedor.Controls.Add(this.btnAEntrenador);
-            this.Agregarcontenedor.Controls.Add(this.menuanimacion);
-            this.Agregarcontenedor.Controls.Add(this.AgregarUsuario);
-            this.Agregarcontenedor.Controls.Add(this.BntAgregarporducto);
-            this.Agregarcontenedor.Location = new System.Drawing.Point(1, 180);
-            this.Agregarcontenedor.Margin = new System.Windows.Forms.Padding(2);
-            this.Agregarcontenedor.Name = "Agregarcontenedor";
-            this.Agregarcontenedor.Size = new System.Drawing.Size(299, 49);
-            this.Agregarcontenedor.TabIndex = 1;
-            // 
-            // btnAEntrenador
-            // 
-            this.btnAEntrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
-            this.btnAEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAEntrenador.FlatAppearance.BorderSize = 0;
-            this.btnAEntrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAEntrenador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAEntrenador.ForeColor = System.Drawing.Color.Black;
-            this.btnAEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnAEntrenador.Image")));
-            this.btnAEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAEntrenador.Location = new System.Drawing.Point(0, 141);
-            this.btnAEntrenador.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAEntrenador.Name = "btnAEntrenador";
-            this.btnAEntrenador.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnAEntrenador.Size = new System.Drawing.Size(299, 47);
-            this.btnAEntrenador.TabIndex = 8;
-            this.btnAEntrenador.Text = "AGREGAR ENTRENADOR";
-            this.btnAEntrenador.UseVisualStyleBackColor = false;
-            this.btnAEntrenador.Click += new System.EventHandler(this.btnAEntrenador_Click);
-            // 
-            // menuanimacion
-            // 
-            this.menuanimacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuanimacion.FlatAppearance.BorderSize = 0;
-            this.menuanimacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuanimacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuanimacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.menuanimacion.Image = ((System.Drawing.Image)(resources.GetObject("menuanimacion.Image")));
-            this.menuanimacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuanimacion.Location = new System.Drawing.Point(2, 0);
-            this.menuanimacion.Margin = new System.Windows.Forms.Padding(2);
-            this.menuanimacion.Name = "menuanimacion";
-            this.menuanimacion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.menuanimacion.Size = new System.Drawing.Size(299, 47);
-            this.menuanimacion.TabIndex = 0;
-            this.menuanimacion.Text = "AGREGAR";
-            this.menuanimacion.UseVisualStyleBackColor = true;
-            this.menuanimacion.Click += new System.EventHandler(this.menuanimacion_Click);
-            // 
-            // AgregarUsuario
-            // 
-            this.AgregarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
-            this.AgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AgregarUsuario.FlatAppearance.BorderSize = 0;
-            this.AgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.AgregarUsuario.ForeColor = System.Drawing.Color.Black;
-            this.AgregarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("AgregarUsuario.Image")));
-            this.AgregarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarUsuario.Location = new System.Drawing.Point(0, 50);
-            this.AgregarUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.AgregarUsuario.Name = "AgregarUsuario";
-            this.AgregarUsuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.AgregarUsuario.Size = new System.Drawing.Size(299, 47);
-            this.AgregarUsuario.TabIndex = 4;
-            this.AgregarUsuario.Text = "AGREGAR USUARIO";
-            this.AgregarUsuario.UseVisualStyleBackColor = false;
-            this.AgregarUsuario.Click += new System.EventHandler(this.AgregarUsuario_Click);
-            // 
-            // BntAgregarporducto
-            // 
-            this.BntAgregarporducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
-            this.BntAgregarporducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BntAgregarporducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BntAgregarporducto.FlatAppearance.BorderSize = 0;
-            this.BntAgregarporducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BntAgregarporducto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.BntAgregarporducto.ForeColor = System.Drawing.Color.Black;
-            this.BntAgregarporducto.Image = ((System.Drawing.Image)(resources.GetObject("BntAgregarporducto.Image")));
-            this.BntAgregarporducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BntAgregarporducto.Location = new System.Drawing.Point(0, 95);
-            this.BntAgregarporducto.Margin = new System.Windows.Forms.Padding(2);
-            this.BntAgregarporducto.Name = "BntAgregarporducto";
-            this.BntAgregarporducto.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.BntAgregarporducto.Size = new System.Drawing.Size(299, 47);
-            this.BntAgregarporducto.TabIndex = 6;
-            this.BntAgregarporducto.Text = "AGREGAR PRODUCTO";
-            this.BntAgregarporducto.UseVisualStyleBackColor = false;
-            this.BntAgregarporducto.Click += new System.EventHandler(this.BntAgregarporducto_Click);
-            // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -332,6 +354,18 @@
             this.panelsuperior.Size = new System.Drawing.Size(867, 55);
             this.panelsuperior.TabIndex = 1;
             this.panelsuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.panelsuperior_Paint);
+            this.panelsuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelsuperior_MouseDown);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // Cerrar
             // 
@@ -392,22 +426,12 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(867, 663);
             this.panelContenedor.TabIndex = 2;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // consultarTransicion
             // 
             this.consultarTransicion.Interval = 10;
             this.consultarTransicion.Tick += new System.EventHandler(this.consultarTransicion_Tick_1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
             // 
             // MenuPrincipal
             // 
@@ -423,15 +447,16 @@
             this.Name = "MenuPrincipal";
             this.Opacity = 0.95D;
             this.Text = "FormMenuR";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuPrincipal_MouseDown);
             this.MenuVertical.ResumeLayout(false);
-            this.ConsultarContenedor.ResumeLayout(false);
             this.Agregarcontenedor.ResumeLayout(false);
+            this.ConsultarContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deslizar)).EndInit();
             this.panelsuperior.ResumeLayout(false);
             this.panelsuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,5 +486,6 @@
         private System.Windows.Forms.Timer consultarTransicion;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button agregarmembresia;
     }
 }

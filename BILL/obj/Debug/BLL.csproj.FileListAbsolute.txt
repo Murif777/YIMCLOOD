@@ -36,7 +36,6 @@ C:\Users\juann\Desktop\YIMCLOOD\BILL\bin\Debug\BILL.dll
 C:\Users\juann\Desktop\YIMCLOOD\BILL\bin\Debug\BILL.pdb
 C:\Users\juann\Desktop\YIMCLOOD\BILL\bin\Debug\DAL.dll
 C:\Users\juann\Desktop\YIMCLOOD\BILL\bin\Debug\ENTITY.dll
-C:\Users\juann\Desktop\YIMCLOOD\BILL\bin\Debug\MySql.Data.dll
 C:\Users\juann\Desktop\YIMCLOOD\BILL\bin\Debug\System.Memory.dll
 C:\Users\juann\Desktop\YIMCLOOD\BILL\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\juann\Desktop\YIMCLOOD\BILL\bin\Debug\System.Numerics.Vectors.dll

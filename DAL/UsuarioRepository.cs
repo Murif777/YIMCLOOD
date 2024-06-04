@@ -54,10 +54,41 @@ namespace DAL
             return null;
         }
 
-        public string ActualizaUsuarioBD(Usuario usuario)
+        public string ActualizaContraseña(Usuario usuario)
         {
-            return null;//agregar actualizar
+            string actualizarSql = "UPDATE Usuarios SET Clave = @NuevaClave WHERE Correo_Electronico = @CorreoElectronico";
+
+            using (var connection = conexion())
+            {
+                MySqlCommand actualizarComando = new MySqlCommand(actualizarSql, connection);
+                actualizarComando.Parameters.AddWithValue("@NuevaClave", usuario.Clave);
+                actualizarComando.Parameters.AddWithValue("@CorreoElectronico", usuario.CorreoElectronico);
+
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = actualizarComando.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        return "Contraseña actualizada exitosamente.";
+                    }
+                    else
+                    {
+                        return "Usuario no encontrado.";
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    throw new Exception("Error al actualizar la contraseña", ex);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
         }
+
 
         public bool Login(Usuario usuario)
         {

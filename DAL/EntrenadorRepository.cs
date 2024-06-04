@@ -143,6 +143,29 @@ namespace DAL
 
             return entrenador;
         }
+        public Entrenador ObtenerEntrenadorPorCedu(string cedula)
+        {
+            string ssql = "SELECT * FROM entrenadores WHERE Cedula = @Cedula";
+            using (var conexionBd = conexion())
+            {
+                try
+                {
+                    conexionBd.Open();
+                    MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
+                    comando.Parameters.AddWithValue("@Cedula", cedula);
+                    var reader = comando.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        return Map(reader);
+                    }
+                    return null;
+                }
+                catch (MySqlException)
+                {
+                    return null;
+                }
+            }
+        }
 
     }
 }

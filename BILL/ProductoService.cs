@@ -21,5 +21,32 @@ namespace BILL
                 return "Error al registrar: " + ex.Message;
             }
         }
+        public List<Producto> Consultar()
+        {
+            try
+            {
+                return pro_repository.Consultar();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al registrar: " + ex.Message);
+                return null;
+            }
+        }
+        public List<Producto> ConsultarRef(string referencia)
+        {
+            try
+            {
+                return pro_repository.ConsultarRef(referencia);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al registrar: " + ex.Message);
+                return null;
+            }
+        }
+
     }
 }

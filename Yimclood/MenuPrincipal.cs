@@ -129,7 +129,7 @@ namespace Presentacion
             {
                 Agregarcontenedor.Height += 10;
                 ConsultarContenedor.Top += 10;
-                if (Agregarcontenedor.Height >= 220)
+                if (Agregarcontenedor.Height >= 230)
                 {
                     menuTransicion.Stop();
                     menuExpandAgregar = true;
@@ -220,6 +220,33 @@ namespace Presentacion
             var consultarentrenadorForm = new ConsultarEntrenador();
             consultarentrenadorForm.OnRegresar += RegistrarForm_OnRegresar;
             Abrirformpanel(consultarentrenadorForm);
+        }
+
+        private void MenuPrincipal_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void agregarmembresia_Click(object sender, EventArgs e)
+        {
+            var agregarmembresiaForm = new AgregarMembresia();
+            agregarmembresiaForm.OnRegresar += RegistrarForm_OnRegresar;
+            Abrirformpanel(agregarmembresiaForm);
+<<<<<<< HEAD
+=======
+        }
+
+        private void panelsuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+>>>>>>> 5d83c2c37a81e287c3af764b8d670c63e5252885
         }
     }
 }

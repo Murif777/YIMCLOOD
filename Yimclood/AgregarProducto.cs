@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,13 +17,14 @@ namespace Presentacion
     {
         private ProductoService productoService = new ProductoService();
         public event EventHandler OnRegresar;
+        private byte[] imageBytes;
+
         public AgregarProducto()
         {
             InitializeComponent();
             this.Shown += new EventHandler(FormRegistrar_Shown);
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
-            btnSubirfoto.Click += new EventHandler(btnSubirfoto_Click);
-
+            this.btnSubirfoto.Click += new EventHandler(this.btnSubirfoto_Click);
         }
 
         private void FormRegistrar_Shown(object sender, EventArgs e)
@@ -40,10 +42,9 @@ namespace Presentacion
             string nombre = txtNombre.Text;
             string Descripcion = txtDescripcion.Text;
             int valor = int.Parse(txtPrecio.Text);
-            int cantidad=0;
-            byte[] foto = null;
+            int cantidad=int.Parse(txtCantidad.Text);
             Producto producto = new Producto(
-                Referencia, nombre, Descripcion, valor,cantidad,null);
+                Referencia, nombre, Descripcion, valor,cantidad,imageBytes);
             MessageBox.Show(productoService.Registrar(producto));
         }
         private void Limpiar_Campos()
@@ -52,7 +53,7 @@ namespace Presentacion
             txtNombre.Clear();
             txtDescripcion.Clear();
             txtPrecio.Clear();
-            //foto
+            txtCantidad.Clear();
         }
 
         private void Btnregresar_Click(object sender, EventArgs e)
@@ -62,6 +63,11 @@ namespace Presentacion
 
         private void btnSubirfoto_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnSubirfoto_Click_1(object sender, EventArgs e)
+        {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
@@ -69,12 +75,12 @@ namespace Presentacion
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
+                //Asegúrate de que este diálogo solo se muestre una vez
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Obtener la ruta del archivo seleccionado
                     string filePath = openFileDialog.FileName;
-
-                    // Mostrar la imagen en un PictureBox o realizar cualquier acción con la ruta del archivo
+                    imageBytes = File.ReadAllBytes(filePath);
                     MessageBox.Show("Imagen seleccionada: " + filePath);
                 }
             }
