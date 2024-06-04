@@ -140,5 +140,12 @@ namespace Presentacion
             }
             
         }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RecuperarContraseña recuperarContraseña = new RecuperarContraseña();
+            recuperarContraseña.Show();
+            this.Hide();
+        }
     }
 }

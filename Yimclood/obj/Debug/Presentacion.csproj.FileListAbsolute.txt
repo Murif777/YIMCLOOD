@@ -161,3 +161,4 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Present
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MostrarMedidas.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.PerfilPeso.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Rutinas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources

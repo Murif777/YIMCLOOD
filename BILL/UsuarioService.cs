@@ -30,7 +30,7 @@ namespace BILL
         {
             try
             {
-                return u_repository.ActualizaUsuarioBD(usuario);
+                return u_repository.ActualizaContraseña(usuario);
             }
             catch (Exception ex)
             {

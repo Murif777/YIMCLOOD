@@ -111,6 +111,12 @@
     <Compile Include="Ejercicios.Designer.cs">
       <DependentUpon>Ejercicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecuperarContraseña.Designer.cs">
+      <DependentUpon>RecuperarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetodoRutina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ejercicios.resx">
       <DependentUpon>Ejercicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecuperarContraseña.resx">
+      <DependentUpon>RecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MetodoRutina.resx">
       <DependentUpon>MetodoRutina.cs</DependentUpon>
