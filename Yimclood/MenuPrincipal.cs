@@ -232,6 +232,7 @@ namespace Presentacion
         {
             var agregarmembresiaForm = new AgregarMembresia();
             agregarmembresiaForm.OnRegresar += RegistrarForm_OnRegresar;
+            Abrirformpanel(agregarmembresiaForm);
         }
     }
 }
