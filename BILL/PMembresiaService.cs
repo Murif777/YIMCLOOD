@@ -12,6 +12,7 @@ namespace BILL
 {
     public class PMembresiaService : ICrud<PerfilMembresia>
     {
+        private EmailService emailService = new EmailService();
         private PMembresiaRepository PmembresiaRepository = new PMembresiaRepository();
 
         public string Registrar(PerfilMembresia perfil)
@@ -19,14 +20,14 @@ namespace BILL
             try
             {
                 var perfilCompleto = CrearPerfilCompleto(perfil);
+                VerificarMembresias();
                 return PmembresiaRepository.GuardarPMembresiaBD(perfilCompleto);
             }
             catch (Exception ex)
             {
-                return "rror al registrar: " + ex.Message;
+                return "Error al registrar: " + ex.Message;
             }
         }
-
         private PerfilMembresia CrearPerfilCompleto(PerfilMembresia perfil)
         {
             var perfilCompleto = new PerfilMembresia();
@@ -45,6 +46,94 @@ namespace BILL
             Console.WriteLine(perfilCompleto.DuracionAcumulada);
             Console.WriteLine(perfilCompleto.TiempoRestante);
             return perfilCompleto;
+        }
+        public void VerificarMembresias()
+        {
+            List<PerfilMembresia> membresias = PmembresiaRepository.ConsultarTodos();
+            DateTime hoy = DateTime.Now;
+
+            foreach (PerfilMembresia perfil in membresias)
+            {
+                if (perfil.Fechainicio.Date == hoy.Date)
+                {
+                    //Notificación de inicio de membresía
+                    string correo = perfil.DatosUsuario.CorreoElectronico;
+                    Console.WriteLine(perfil.Fechafinal);
+                    Console.WriteLine(correo);
+                    string subject = "Inicio de Membresía";
+                    string body = CrearCuerpoCorreoInicio(perfil);
+                    emailService.SendEmail(correo, subject, body);
+                }
+                else if (perfil.Fechafinal > hoy && perfil.Fechafinal <= hoy.AddDays(7))
+                {
+                    // Notificación de membresía próxima a caducar
+                    string correo = perfil.DatosUsuario.CorreoElectronico;
+                    string subject = "Membresía Próxima a Caducar";
+                    string body = CrearCuerpoCorreoProximoACaducar(perfil);
+                    emailService.SendEmail(correo, subject, body);
+                }
+                else if (perfil.Fechafinal <= hoy)
+                {
+                    // Notificación de membresía caducada
+                    string correo = perfil.DatosUsuario.CorreoElectronico;
+                    string subject = "Notificación de Membresía Caducada";
+                    string body = CrearCuerpoCorreoCaducado(perfil);
+                    emailService.SendEmail(correo, subject, body);
+                }
+            }
+        }
+
+        private string CrearCuerpoCorreoInicio(PerfilMembresia perfil)
+        {
+            return $@"
+        Estimado/a {perfil.DatosUsuario.DatosMiembro.Nombre},
+
+        Nos complace informarle que su membresía {perfil.TipoMembresia.Nombre} ha comenzado hoy, {perfil.Fechainicio:dd/MM/yyyy}. Su membresía es válida hasta el {perfil.Fechafinal:dd/MM/yyyy}.
+
+        Estamos encantados de tenerle con nosotros y esperamos que disfrute de todos los beneficios y servicios que ofrecemos.
+
+        Si tiene alguna pregunta o necesita asistencia adicional, no dude en ponerse en contacto con nosotros. Estamos aquí para ayudarle.
+
+        Atentamente,
+        YIMCLOOD
+        yimclood@gmail.com
+    ";
+        }
+
+        private string CrearCuerpoCorreoProximoACaducar(PerfilMembresia perfil)
+        {
+            return $@"
+        Estimado/a {perfil.DatosUsuario.DatosMiembro.Nombre},
+
+        Nos gustaría informarle que su membresía {perfil.TipoMembresia.Nombre} está próxima a caducar el día {perfil.Fechafinal:dd/MM/yyyy}. Le recomendamos renovarla a tiempo para seguir disfrutando de nuestros servicios sin interrupciones.
+
+        Puede realizar la renovación a través de nuestra página web o visitando nuestra oficina.
+
+        Si tiene alguna pregunta o necesita asistencia adicional, no dude en ponerse en contacto con nosotros.
+
+        Atentamente,
+        YIMCLOOD
+        yimclood@gmail.com
+    ";
+        }
+
+        private string CrearCuerpoCorreoCaducado(PerfilMembresia perfil)
+        {
+            return $@"
+        Estimado/a {perfil.DatosUsuario.DatosMiembro.Nombre},
+
+        Nos gustaría informarle que su membresía {perfil.TipoMembresia.Nombre} ha caducado el día {perfil.Fechafinal:dd/MM/yyyy}. Lamentamos que su acceso a los beneficios y servicios proporcionados por nuestra membresía haya llegado a su fin.
+
+        Para continuar disfrutando de nuestros servicios, le invitamos a renovar su membresía a la brevedad posible. Puede realizar la renovación a través de nuestra página web o visitando nuestra oficina.
+
+        Si tiene alguna pregunta o necesita asistencia adicional, no dude en ponerse en contacto con nosotros. Estamos aquí para ayudarle.
+
+        Gracias por su atención y esperamos poder seguir sirviéndole en el futuro.
+
+        Atentamente,
+        YIMCLOOD
+        yimclood@gmail.com
+    ";
         }
 
         private string DeterminarEstado(PerfilMembresia perfil)

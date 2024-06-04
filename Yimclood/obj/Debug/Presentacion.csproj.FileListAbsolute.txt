@@ -154,3 +154,10 @@ C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presenta
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MostrarMedidas.resources
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.PerfilPeso.resources
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Rutinas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarEjercicios.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarMedidas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Ejercicios.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MetodoRutina.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MostrarMedidas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.PerfilPeso.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Rutinas.resources

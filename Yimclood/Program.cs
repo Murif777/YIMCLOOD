@@ -1,4 +1,5 @@
-﻿using Presentacion;
+﻿using BILL;
+using Presentacion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Yimclood
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Ejercicios());
+            Application.Run(new MenuPrincipal());
         }
     }
 }
