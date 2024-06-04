@@ -354,6 +354,7 @@
             this.panelsuperior.Size = new System.Drawing.Size(867, 55);
             this.panelsuperior.TabIndex = 1;
             this.panelsuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.panelsuperior_Paint);
+            this.panelsuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelsuperior_MouseDown);
             // 
             // pictureBox3
             // 

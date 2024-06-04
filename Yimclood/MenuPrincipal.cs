@@ -129,7 +129,7 @@ namespace Presentacion
             {
                 Agregarcontenedor.Height += 10;
                 ConsultarContenedor.Top += 10;
-                if (Agregarcontenedor.Height >= 220)
+                if (Agregarcontenedor.Height >= 230)
                 {
                     menuTransicion.Stop();
                     menuExpandAgregar = true;
@@ -232,6 +232,13 @@ namespace Presentacion
         {
             var agregarmembresiaForm = new AgregarMembresia();
             agregarmembresiaForm.OnRegresar += RegistrarForm_OnRegresar;
+            Abrirformpanel(agregarmembresiaForm);
+        }
+
+        private void panelsuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

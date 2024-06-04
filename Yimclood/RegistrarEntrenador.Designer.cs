@@ -308,6 +308,7 @@
             // 
             // btnsubirfoto
             // 
+            this.btnsubirfoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsubirfoto.FlatAppearance.BorderSize = 0;
             this.btnsubirfoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsubirfoto.Image = ((System.Drawing.Image)(resources.GetObject("btnsubirfoto.Image")));
@@ -316,7 +317,7 @@
             this.btnsubirfoto.Size = new System.Drawing.Size(80, 78);
             this.btnsubirfoto.TabIndex = 28;
             this.btnsubirfoto.UseVisualStyleBackColor = true;
-            this.btnsubirfoto.Click += new System.EventHandler(this.btnsubirfoto_Click);
+            this.btnsubirfoto.Click += new System.EventHandler(this.btnsubirfoto_Click_1);
             // 
             // RegistrarEntrenador
             // 
