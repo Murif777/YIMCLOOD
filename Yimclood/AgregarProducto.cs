@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace Presentacion
     {
         private ProductoService productoService = new ProductoService();
         public event EventHandler OnRegresar;
+        private byte[] imageBytes;
+
         public AgregarProducto()
         {
             InitializeComponent();
@@ -40,10 +43,9 @@ namespace Presentacion
             string nombre = txtNombre.Text;
             string Descripcion = txtDescripcion.Text;
             int valor = int.Parse(txtPrecio.Text);
-            int cantidad=0;
-            byte[] foto = null;
+            int cantidad=int.Parse(txtCantidad.Text);
             Producto producto = new Producto(
-                Referencia, nombre, Descripcion, valor,cantidad,null);
+                Referencia, nombre, Descripcion, valor,cantidad,imageBytes);
             MessageBox.Show(productoService.Registrar(producto));
         }
         private void Limpiar_Campos()
@@ -52,7 +54,7 @@ namespace Presentacion
             txtNombre.Clear();
             txtDescripcion.Clear();
             txtPrecio.Clear();
-            //foto
+            txtCantidad.Clear();
         }
 
         private void Btnregresar_Click(object sender, EventArgs e)
@@ -73,13 +75,14 @@ namespace Presentacion
                 {
                     // Obtener la ruta del archivo seleccionado
                     string filePath = openFileDialog.FileName;
-
-                    // Mostrar la imagen en un PictureBox o realizar cualquier acción con la ruta del archivo
+                    imageBytes = File.ReadAllBytes(filePath);
                     MessageBox.Show("Imagen seleccionada: " + filePath);
                 }
             }
 
 
         }
+
+
     }
 }

@@ -43,7 +43,8 @@ namespace BILL
             }
             catch (Exception ex)
             {
-               
+                Console.WriteLine("error:" + ex.Message);
+
                 return null;
             }
         }

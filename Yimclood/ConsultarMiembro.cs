@@ -31,6 +31,7 @@ namespace Presentacion
         {
             string cedula = txtCedula.Text;
             Miembro miembro = miembroService.BuscarPorCedul(cedula);
+            if(miembro!=null)
             {
                 MostrarMiembroEnDataGridView(miembro);
             }
