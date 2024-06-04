@@ -78,6 +78,8 @@ namespace Presentacion
                     MessageBox.Show("Imagen seleccionada: " + filePath);
                 }
             }
+
+
         }
     }
 }

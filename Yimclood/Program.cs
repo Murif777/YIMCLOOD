@@ -12,15 +12,12 @@ namespace Yimclood
     public class Program
     {
         [STAThread]
-        public void Main()
+        static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MenuPrincipal());
 
-
-<<<<<<< HEAD
-=======
-            Application.Run(new RecuperarContraseña());
->>>>>>> 1451879daa4631a30b669641ff7b2852794b512e
         }
     }
 }
