@@ -78,8 +78,8 @@ namespace Presentacion
                 {
                     Image image = Image.FromStream(new MemoryStream(foto));
 
-                    int nuevoAncho = 150;
-                    int nuevoAlto = 150;
+                    int nuevoAncho = 175;
+                    int nuevoAlto = 175;
                     Image imagenRedimensionada = new Bitmap(image, nuevoAncho, nuevoAlto);
 
                     pbFoto.Image = imagenRedimensionada;

@@ -317,7 +317,7 @@
             this.btnsubirfoto.Size = new System.Drawing.Size(80, 78);
             this.btnsubirfoto.TabIndex = 28;
             this.btnsubirfoto.UseVisualStyleBackColor = true;
-            this.btnsubirfoto.Click += new System.EventHandler(this.btnsubirfoto_Click_1);
+            this.btnsubirfoto.Click += new System.EventHandler(this.btnsubirfoto_Click);
             // 
             // RegistrarEntrenador
             // 

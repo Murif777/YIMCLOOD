@@ -13,8 +13,8 @@ namespace DAL
     {
         public string GuardarUsuarioBD(Usuario usuario)
         {
-            string sql = "INSERT INTO usuarios(Correo_Electronico, Clave, Ced_Miembro) VALUES" +
-                "(@Correo,@Clave, @Ced_Miembro)";
+            string sql = "INSERT INTO usuarios(Correo_Electronico, Clave, Ced_Miembro,Ced_Entrenador) VALUES" +
+                "(@Correo,@Clave, @Ced_Miembro, @Ced_Entrenador)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -26,12 +26,15 @@ namespace DAL
                     comando.Parameters.AddWithValue("@Correo", usuario.CorreoElectronico);
                     comando.Parameters.AddWithValue("@Clave", usuario.Clave);
                     comando.Parameters.AddWithValue("@Ced_Miembro", usuario.DatosMiembro.Cedula);
+                    comando.Parameters.AddWithValue("@Ced_Entrenador", null);
                 }
                 if(usuario.DatosMiembro==null) 
                 {
                     comando.Parameters.AddWithValue("@Correo", usuario.CorreoElectronico);
                     comando.Parameters.AddWithValue("@Clave", usuario.Clave);
-                    comando.Parameters.AddWithValue("@Ced_Miembro", usuario.DatosEntrenador.Cedula);
+                    comando.Parameters.AddWithValue("@Ced_Miembro",null );
+                    comando.Parameters.AddWithValue("@Ced_Entrenador", usuario.DatosEntrenador.Cedula);
+
                 }
                 var res = comando.ExecuteNonQuery();
                 if (res == 0)

@@ -8,14 +8,13 @@ namespace ENTITY
 {
     public class Entrenador:Persona
     {
-        public Usuario DatosUsuario { get; set; }
         public byte[] Foto { get;  set; }
 
         public Entrenador() { }
         public Entrenador(
             string cedula, string nombre,
             string apellido, string telefono, string sexo,
-            string correo, DateTime fechaNacimiento,byte[] foto)
+            string correo, DateTime fechaNacimiento, byte[] foto)
             : base(cedula, nombre, apellido, telefono, sexo, correo, fechaNacimiento)
         {
             Foto = foto;

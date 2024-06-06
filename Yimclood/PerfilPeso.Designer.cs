@@ -193,7 +193,7 @@
             this.panel3.Controls.Add(this.btnRutinas);
             this.panel3.Controls.Add(this.btnEjercicios);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 697);
+            this.panel3.Location = new System.Drawing.Point(0, 668);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
             this.panel3.Size = new System.Drawing.Size(798, 120);
@@ -226,7 +226,7 @@
             this.panelInterfaz.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInterfaz.Location = new System.Drawing.Point(0, 0);
             this.panelInterfaz.Name = "panelInterfaz";
-            this.panelInterfaz.Size = new System.Drawing.Size(798, 817);
+            this.panelInterfaz.Size = new System.Drawing.Size(798, 788);
             this.panelInterfaz.TabIndex = 25;
             // 
             // label3
@@ -238,7 +238,7 @@
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
             this.label3.Location = new System.Drawing.Point(3, 535);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(209, 51);
+            this.label3.Size = new System.Drawing.Size(172, 41);
             this.label3.TabIndex = 40;
             this.label3.Text = "Diagnostico";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,7 +250,7 @@
             this.lblValorPesoIdeal.ForeColor = System.Drawing.Color.Black;
             this.lblValorPesoIdeal.Location = new System.Drawing.Point(595, 636);
             this.lblValorPesoIdeal.Name = "lblValorPesoIdeal";
-            this.lblValorPesoIdeal.Size = new System.Drawing.Size(66, 36);
+            this.lblValorPesoIdeal.Size = new System.Drawing.Size(55, 29);
             this.lblValorPesoIdeal.TabIndex = 46;
             this.lblValorPesoIdeal.Text = "X Kg";
             // 
@@ -261,7 +261,7 @@
             this.lbl59.ForeColor = System.Drawing.Color.Black;
             this.lbl59.Location = new System.Drawing.Point(357, 595);
             this.lbl59.Name = "lbl59";
-            this.lbl59.Size = new System.Drawing.Size(95, 41);
+            this.lbl59.Size = new System.Drawing.Size(77, 33);
             this.lbl59.TabIndex = 45;
             this.lbl59.Text = "Grasa";
             // 
@@ -272,7 +272,7 @@
             this.lblValorGrasa.ForeColor = System.Drawing.Color.Black;
             this.lblValorGrasa.Location = new System.Drawing.Point(395, 636);
             this.lblValorGrasa.Name = "lblValorGrasa";
-            this.lblValorGrasa.Size = new System.Drawing.Size(55, 36);
+            this.lblValorGrasa.Size = new System.Drawing.Size(46, 29);
             this.lblValorGrasa.TabIndex = 44;
             this.lblValorGrasa.Text = "X %";
             // 
@@ -283,7 +283,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(189, 595);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 41);
+            this.label9.Size = new System.Drawing.Size(53, 33);
             this.label9.TabIndex = 43;
             this.label9.Text = "BMI";
             // 
@@ -294,7 +294,7 @@
             this.lbl5.ForeColor = System.Drawing.Color.Black;
             this.lbl5.Location = new System.Drawing.Point(558, 595);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(135, 36);
+            this.lbl5.Size = new System.Drawing.Size(107, 29);
             this.lbl5.TabIndex = 42;
             this.lbl5.Text = "Peso ideal";
             // 
@@ -305,7 +305,7 @@
             this.lblValorBMI.ForeColor = System.Drawing.Color.Black;
             this.lblValorBMI.Location = new System.Drawing.Point(211, 636);
             this.lblValorBMI.Name = "lblValorBMI";
-            this.lblValorBMI.Size = new System.Drawing.Size(29, 36);
+            this.lblValorBMI.Size = new System.Drawing.Size(25, 29);
             this.lblValorBMI.TabIndex = 41;
             this.lblValorBMI.Text = "X";
             // 
@@ -344,7 +344,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(588, 474);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 36);
+            this.label7.Size = new System.Drawing.Size(53, 29);
             this.label7.TabIndex = 37;
             this.label7.Text = "+ Kg";
             // 
@@ -355,7 +355,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.label6.Location = new System.Drawing.Point(413, 474);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 36);
+            this.label6.Size = new System.Drawing.Size(37, 29);
             this.label6.TabIndex = 36;
             this.label6.Text = "Kg";
             // 
@@ -366,7 +366,7 @@
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
             this.label2.Location = new System.Drawing.Point(217, 474);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 36);
+            this.label2.Size = new System.Drawing.Size(37, 29);
             this.label2.TabIndex = 35;
             this.label2.Text = "Kg";
             // 
@@ -376,7 +376,7 @@
             this.rbtDiferencia.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.rbtDiferencia.Location = new System.Drawing.Point(491, 426);
             this.rbtDiferencia.Name = "rbtDiferencia";
-            this.rbtDiferencia.Size = new System.Drawing.Size(176, 45);
+            this.rbtDiferencia.Size = new System.Drawing.Size(142, 37);
             this.rbtDiferencia.TabIndex = 26;
             this.rbtDiferencia.TabStop = true;
             this.rbtDiferencia.Text = "Diferencia";
@@ -389,7 +389,7 @@
             this.rbtObjetivo.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.rbtObjetivo.Location = new System.Drawing.Point(328, 426);
             this.rbtObjetivo.Name = "rbtObjetivo";
-            this.rbtObjetivo.Size = new System.Drawing.Size(147, 45);
+            this.rbtObjetivo.Size = new System.Drawing.Size(118, 37);
             this.rbtObjetivo.TabIndex = 25;
             this.rbtObjetivo.TabStop = true;
             this.rbtObjetivo.Text = "Objetivo";
@@ -402,7 +402,7 @@
             this.rbtnActual.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.rbtnActual.Location = new System.Drawing.Point(154, 426);
             this.rbtnActual.Name = "rbtnActual";
-            this.rbtnActual.Size = new System.Drawing.Size(124, 45);
+            this.rbtnActual.Size = new System.Drawing.Size(101, 37);
             this.rbtnActual.TabIndex = 24;
             this.rbtnActual.TabStop = true;
             this.rbtnActual.Text = "Actual";
@@ -476,7 +476,7 @@
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
             this.lblFecha.Location = new System.Drawing.Point(431, 331);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(66, 29);
+            this.lblFecha.Size = new System.Drawing.Size(52, 23);
             this.lblFecha.TabIndex = 31;
             this.lblFecha.Text = "/2024";
             // 
@@ -487,7 +487,7 @@
             this.lblPeso.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblPeso.Location = new System.Drawing.Point(430, 293);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(45, 36);
+            this.lblPeso.Size = new System.Drawing.Size(37, 29);
             this.lblPeso.TabIndex = 30;
             this.lblPeso.Text = "Kg";
             // 
@@ -497,7 +497,7 @@
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
             this.label1.Location = new System.Drawing.Point(0, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 51);
+            this.label1.Size = new System.Drawing.Size(113, 41);
             this.label1.TabIndex = 27;
             this.label1.Text = "Cuerpo";
             // 
@@ -515,7 +515,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightYellow;
-            this.ClientSize = new System.Drawing.Size(798, 817);
+            this.ClientSize = new System.Drawing.Size(798, 788);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelInterfaz);

@@ -37,9 +37,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnVer = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -150,26 +150,6 @@
             this.panel2.Size = new System.Drawing.Size(847, 489);
             this.panel2.TabIndex = 5;
             // 
-            // pbFoto
-            // 
-            this.pbFoto.Location = new System.Drawing.Point(631, 16);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(188, 175);
-            this.pbFoto.TabIndex = 5;
-            this.pbFoto.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(186, 216);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(248, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "*Seleccione un producto para ver su imagen";
-            // 
             // btnVer
             // 
             this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -185,6 +165,26 @@
             this.btnVer.TabIndex = 7;
             this.btnVer.UseVisualStyleBackColor = true;
             this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(186, 216);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(248, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "*Seleccione un producto para ver su imagen";
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.Location = new System.Drawing.Point(631, 16);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(175, 175);
+            this.pbFoto.TabIndex = 5;
+            this.pbFoto.TabStop = false;
             // 
             // ConsultarProd
             // 

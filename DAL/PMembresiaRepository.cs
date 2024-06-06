@@ -122,7 +122,37 @@ namespace DAL
         public List<PerfilMembresia> ConsultarTodos()
         {
             List<PerfilMembresia> perfiles = new List<PerfilMembresia>();
-            string sql = "SELECT * FROM Membresias_Usuarios";
+
+            string sql = @"
+    SELECT 
+        mu.Correo_Usuario,
+        mu.Nombre_Membresia,
+        mu.Estado,
+        mu.Fecha_Inicio,
+        mu.Fecha_Final,
+        mu.Saldo_Debe,
+        mu.Pagado,
+        mu.Duracion_Acumulada,
+        mu.Tiempo_Restante,
+        u.Clave,
+        m.Cedula AS MiembroCedula,
+        m.Nombre AS MiembroNombre,
+        m.Apellido AS MiembroApellido,
+        m.Telefono AS MiembroTelefono,
+        m.Sexo AS MiembroSexo,
+        m.Fecha_Nacimiento AS MiembroFechaNacimiento,
+        m.Correo_Electronico AS MiembroCorreoElectronico,
+        m.Peso AS MiembroPeso,
+        m.Estatura AS MiembroEstatura,
+        m.Foto AS MiembroFoto,
+        mem.Nombre AS MembresiaNombre,
+        mem.Descripcion AS MembresiaDescripcion,
+        mem.Valor AS MembresiaValor,
+        mem.Duracion AS MembresiaDuracion
+    FROM Membresias_Usuarios mu
+    JOIN Usuarios u ON mu.Correo_Usuario = u.Correo_Electronico
+    JOIN Miembros m ON u.Ced_Miembro = m.Cedula
+    JOIN Membresias mem ON mu.Nombre_Membresia = mem.Nombre";
 
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
@@ -136,35 +166,127 @@ namespace DAL
                     {
                         perfiles.Add(Map(reader));
                     }
+                    Console.WriteLine("melocaramelo");
+
                     return perfiles;
                 }
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("error:"+ex.Message);
+                Console.WriteLine("error: " + ex.Message);
                 return null;
             }
             finally
             {
                 conexionBd.Close();
-
             }
         }
+        public List<PerfilMembresia> ConsultarCed(string cedula)
+        {
+            List<PerfilMembresia> perfiles = new List<PerfilMembresia>();
 
+            string sql = @"
+                SELECT 
+                    mu.Correo_Usuario,
+                    mu.Nombre_Membresia,
+                    mu.Estado,
+                    mu.Fecha_Inicio,
+                    mu.Fecha_Final,
+                    mu.Saldo_Debe,
+                    mu.Pagado,
+                    mu.Duracion_Acumulada,
+                    mu.Tiempo_Restante,
+                    u.Clave,
+                    m.Cedula AS MiembroCedula,
+                    m.Nombre AS MiembroNombre,
+                    m.Apellido AS MiembroApellido,
+                    m.Telefono AS MiembroTelefono,
+                    m.Sexo AS MiembroSexo,
+                    m.Fecha_Nacimiento AS MiembroFechaNacimiento,
+                    m.Correo_Electronico AS MiembroCorreoElectronico,
+                    m.Peso AS MiembroPeso,
+                    m.Estatura AS MiembroEstatura,
+                    m.Foto AS MiembroFoto,
+                    mem.Nombre AS MembresiaNombre,
+                    mem.Descripcion AS MembresiaDescripcion,
+                    mem.Valor AS MembresiaValor,
+                    mem.Duracion AS MembresiaDuracion
+                FROM Membresias_Usuarios mu
+                JOIN Usuarios u ON mu.Correo_Usuario = u.Correo_Electronico
+                JOIN Miembros m ON u.Ced_Miembro = m.Cedula
+                JOIN Membresias mem ON mu.Nombre_Membresia = mem.Nombre
+                WHERE m.Cedula = @Cedula";
+
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
+            try
+            {
+                conexionBd.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                comando.Parameters.AddWithValue("@Cedula", cedula);
+                using (var reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        perfiles.Add(Map(reader));
+                    }
+                    Console.WriteLine("melocaramelo");
+
+                    return perfiles;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
         private PerfilMembresia Map(MySqlDataReader reader)
         {
-            PerfilMembresia perfil = new PerfilMembresia
-            {
-                DatosUsuario = new Usuario { CorreoElectronico = reader.GetString("Correo_Usuario") }, // Supone que tienes una clase Usuario con esta propiedad
-                TipoMembresia = new Membresia { Nombre = reader.GetString("Nombre_Membresia") }, // Supone que tienes una clase Membresia con esta propiedad
-                Estado = reader.GetString("Estado"),
-                Fechainicio = reader.GetDateTime("Fecha_Inicio"),
-                Fechafinal = reader.GetDateTime("Fecha_Final"),
-                SaldoDebe = reader.GetInt32("Saldo_Debe"),
-                Pagado = reader.GetBoolean("Pagado"),
-                DuracionAcumulada = reader.GetInt32("Duracion_Acumulada"),
-                TiempoRestante = reader.GetInt32("Tiempo_Restante")
-            };
+            // Verificación de nulos y obtención de datos del miembro
+            string miembroCedula = reader.GetString("MiembroCedula");
+            string miembroNombre = reader.GetString("MiembroNombre");
+            string miembroApellido = reader.GetString("MiembroApellido");
+            string miembroTelefono = reader.GetString("MiembroTelefono");
+            string miembroSexo = reader.GetString("MiembroSexo");
+            string miembroCorreoElectronico = reader.GetString("MiembroCorreoElectronico");
+            DateTime miembroFechaNacimiento = reader.GetDateTime("MiembroFechaNacimiento");
+            int miembroPeso = reader.GetInt32("MiembroPeso");
+            int miembroEstatura = reader.GetInt32("MiembroEstatura");
+            byte[] miembroFoto = reader.IsDBNull(reader.GetOrdinal("MiembroFoto")) ? null : (byte[])reader["MiembroFoto"];
+
+            // Creación del objeto Miembro
+            Miembro miembro = new Miembro(miembroCedula, miembroNombre, miembroApellido, miembroTelefono, miembroSexo, miembroCorreoElectronico, miembroFechaNacimiento, miembroPeso, miembroEstatura, miembroFoto);
+
+            // Creación del objeto Usuario
+            Usuario usuario = new Usuario(miembro);
+
+            // Verificación de nulos y obtención de datos de la membresía
+            string membresiaNombre = reader.GetString("MembresiaNombre");
+            string membresiaDescripcion = reader.GetString("MembresiaDescripcion");
+            int membresiaValor = reader.GetInt32("MembresiaValor");
+            TimeSpan membresiaDuracion = TimeSpan.FromDays(reader.GetInt32("MembresiaDuracion"));
+
+            // Creación del objeto Membresia
+            Membresia membresia = new Membresia(membresiaNombre, membresiaDescripcion, membresiaValor, membresiaDuracion, null);
+
+            // Creación del objeto PerfilMembresia con todos los datos requeridos
+            PerfilMembresia perfil = new PerfilMembresia(
+                usuario,
+                membresia,
+                reader.GetString("Estado"),
+                reader.GetDateTime("Fecha_Inicio"),
+                reader.GetDateTime("Fecha_Final"),
+                reader.GetInt32("Saldo_Debe"),
+                reader.GetBoolean("Pagado"),
+                reader.GetInt32("Duracion_Acumulada"),
+                reader.GetInt32("Tiempo_Restante")
+            );
+
             return perfil;
         }
     }

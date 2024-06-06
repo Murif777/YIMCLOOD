@@ -29,37 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarMiembro));
-            this.dataGridViewMiembro = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.Btnregresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TELEFONO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CORREO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMiembro)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.btnVer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridViewMiembro
-            // 
-            this.dataGridViewMiembro.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.dataGridViewMiembro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMiembro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.IDENTIFICACION,
-            this.TELEFONO,
-            this.CORREO});
-            this.dataGridViewMiembro.Location = new System.Drawing.Point(68, 235);
-            this.dataGridViewMiembro.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewMiembro.Name = "dataGridViewMiembro";
-            this.dataGridViewMiembro.RowHeadersWidth = 51;
-            this.dataGridViewMiembro.RowTemplate.Height = 24;
-            this.dataGridViewMiembro.Size = new System.Drawing.Size(679, 161);
-            this.dataGridViewMiembro.TabIndex = 2;
             // 
             // btnBuscar
             // 
@@ -69,7 +52,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(579, 117);
+            this.btnBuscar.Location = new System.Drawing.Point(523, 119);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(52, 37);
@@ -113,7 +96,7 @@
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(368, 119);
+            this.txtCedula.Location = new System.Drawing.Point(312, 119);
             this.txtCedula.Multiline = true;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(206, 31);
@@ -123,35 +106,62 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(118, 124);
+            this.label2.Location = new System.Drawing.Point(213, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 26);
+            this.label2.Size = new System.Drawing.Size(93, 26);
             this.label2.TabIndex = 6;
-            this.label2.Text = "IDENTIFICACION:";
+            this.label2.Text = "Cedula:";
             // 
-            // Column1
+            // dataGridView1
             // 
-            this.Column1.HeaderText = "NOMBRE";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView1.Location = new System.Drawing.Point(18, 283);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(742, 174);
+            this.dataGridView1.TabIndex = 11;
             // 
-            // IDENTIFICACION
+            // label3
             // 
-            this.IDENTIFICACION.HeaderText = "IDENNTIFICACION";
-            this.IDENTIFICACION.Name = "IDENTIFICACION";
-            this.IDENTIFICACION.Width = 150;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(17, 262);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(259, 15);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "*Seleccione un entrenador para ver su imagen";
             // 
-            // TELEFONO
+            // pbFoto
             // 
-            this.TELEFONO.HeaderText = "TELEFONO";
-            this.TELEFONO.Name = "TELEFONO";
+            this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(625, 69);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(175, 175);
+            this.pbFoto.TabIndex = 12;
+            this.pbFoto.TabStop = false;
             // 
-            // CORREO
+            // btnVer
             // 
-            this.CORREO.HeaderText = "CORREO";
-            this.CORREO.Name = "CORREO";
-            this.CORREO.Width = 250;
+            this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVer.FlatAppearance.BorderSize = 0;
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVer.Image = ((System.Drawing.Image)(resources.GetObject("btnVer.Image")));
+            this.btnVer.Location = new System.Drawing.Point(716, 249);
+            this.btnVer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(44, 37);
+            this.btnVer.TabIndex = 13;
+            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // ConsultarMiembro
             // 
@@ -159,34 +169,37 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(812, 483);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pbFoto);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridViewMiembro);
             this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnVer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConsultarMiembro";
             this.Text = "FormCnsultarUsuario";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMiembro)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridViewMiembro;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button Btnregresar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDENTIFICACION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CORREO;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Button btnVer;
     }
 }

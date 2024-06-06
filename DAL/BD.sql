@@ -47,7 +47,6 @@ CREATE TABLE Miembros (
     Estatura INT NOT NULL DEFAULT 0,
     Tipo_Membresia VARCHAR(20),
     Foto LONGBLOB NULL
-	##FOREIGN KEY (Tipo_Membresia) REFERENCES Membresias(Nombre),
 );
 CREATE TABLE Entrenadores (
     Cedula VARCHAR(20) PRIMARY KEY,
@@ -57,7 +56,6 @@ CREATE TABLE Entrenadores (
     Sexo VARCHAR(10) NOT NULL,
     Correo_Electronico VARCHAR(50) UNIQUE NOT NULL,
     Fecha_Nacimiento DATE NOT NULL,
-    Tipo_Membresia VARCHAR(20) NULL,
     Foto LONGBLOB NULL
 );
 CREATE TABLE Facturas_Membresias(

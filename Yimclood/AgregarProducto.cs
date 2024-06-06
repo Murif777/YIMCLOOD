@@ -54,6 +54,7 @@ namespace Presentacion
             txtDescripcion.Clear();
             txtPrecio.Clear();
             txtCantidad.Clear();
+            imageBytes = null;
         }
 
         private void Btnregresar_Click(object sender, EventArgs e)

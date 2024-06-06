@@ -35,11 +35,11 @@ namespace BILL
                 return null;
             }
         }
-        public Entrenador BuscarPorCedula(string cedula)
+        public List<Entrenador> ConsultarCed(string cedula)
         {
             try
             {
-                return en_repository.ObtenerEntrenadorPorCedu(cedula);
+                return en_repository.ConsultarCed(cedula);
             }
             catch (Exception ex)
             {
