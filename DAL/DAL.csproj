@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriaRepository.cs" />
     <Compile Include="ConexionBD.cs" />
     <Compile Include="EjercicioRepository.cs" />
     <Compile Include="EntrenamientoRepository.cs" />

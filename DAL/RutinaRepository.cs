@@ -12,40 +12,46 @@ namespace DAL
     {
         public string GuardarRutinaBD(Rutina rutina)
         {
-            string sql = "INSERT INTO rutinas(Nombre,Descripcion,Ejercicios) " +
-                  "VALUES (@Nombre, @Descripcion, @Ejercicios)";
+            string sqlRutina = "INSERT INTO rutinas(IdMiembro, Nombre, Descripcion, Personalizada) " +
+                  "VALUES (IdMiembro, @Nombre, @Descripcion, @Personalizada)";
+            string sqlRutinaEjercicio = "INSERT INTO Rutina_Ejercicios(id_rutina, Nombre_ejercicio) " +
+                                "VALUES (@IdRutina, @NombreEjercicio)";
+
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
             {
                 //AbrirConexion();
                 conexionBd.Open();
-                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                MySqlCommand comando = new MySqlCommand(sqlRutina, conexionBd);
+                comando.Parameters.AddWithValue("@IdMiembro", rutina.Miembro);
                 comando.Parameters.AddWithValue("@Nombre", rutina.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", rutina.Descripcion);
-                comando.Parameters.AddWithValue("@Ejercicios", rutina.Ejercicios);
-                var res = comando.ExecuteNonQuery();
-                if (res == 0)
+
+                MySqlCommand comandoRutina = new MySqlCommand(sqlRutinaEjercicio, conexionBd);
+                string idRutina = comandoRutina.LastInsertedId.ToString();
+
+                // Guardar los ejercicios asociados a la rutina
+                foreach (var ejercicio in rutina.Ejercicios)
                 {
-                    return "Rutina no guardada";
+                    MySqlCommand comandoRutinaEjercicio = new MySqlCommand(sqlRutinaEjercicio, conexionBd);
+                    comandoRutinaEjercicio.Parameters.AddWithValue("@IdRutina", idRutina);
+                    comandoRutinaEjercicio.Parameters.AddWithValue("@NombreEjercicio", ejercicio.Nombre);
+                    comandoRutinaEjercicio.ExecuteNonQuery();
                 }
-                if (res != 0)
-                {
-                    return "Rutina guardada";
-                }
+                return "Rutina guardada";
             }
             catch (MySqlException ex)
             {
-                return "Error al guardar" + ex.Message;
+                return "Error al guardar rutina" + ex.Message;
             }
             finally
             {
                 conexionBd.Close();
                 //CerrarConexion();
             }
-            return null;
-
         }
+       
         //faltan metodos buscar eliminar y actualizar
     }
 }

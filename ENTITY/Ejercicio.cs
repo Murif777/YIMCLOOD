@@ -12,26 +12,29 @@ namespace ENTITY
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public TimeSpan? Duracion { get; set; }
+        public string Categoria { get;  set; }
+        public byte[] Foto { get;  set; }
         public int? Repeticiones { get; set; }
         public int? Series { get; set; }
-        public CategoriaEjercicio Categoria { get; set; }
         public Ejercicio() { }
-        public Ejercicio(string musculo, string nombre, string descripcion,CategoriaEjercicio categoria, TimeSpan duracion)
+        public Ejercicio(string nombre, string descripcion, TimeSpan duracion, string musculo, string categoria, byte[] foto)
         {
             Musculo = musculo;
             Nombre = nombre;
             Descripcion = descripcion;
-            Categoria = categoria;
             Duracion = duracion;
+            Categoria = categoria;
+            Foto = foto;
         }
-        public Ejercicio(string musculo, string nombre, string descripcion, CategoriaEjercicio categoria, int repeticiones, int series)
+        public Ejercicio(string nombre, string descripcion, int repeticiones, int series, string musculo, string categoria, byte[] foto)
         {
             Musculo = musculo;
             Nombre = nombre;
             Descripcion = descripcion;
-            Categoria = categoria;
             Repeticiones = repeticiones;
             Series = series;
+            Categoria = categoria;
+            Foto = Foto;
         }
     }
 

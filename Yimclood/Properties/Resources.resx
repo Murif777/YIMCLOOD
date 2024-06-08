@@ -136,6 +136,12 @@
   <data name="hombrosF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\hombrosF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="maximizarVentana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\maxMin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizarVentana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\minimizarVentana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Musculos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Musculos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

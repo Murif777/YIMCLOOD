@@ -49,5 +49,18 @@ namespace BILL
                 return false;
             }
         }
+
+        public Miembro DatosMiembro(Usuario usuario)
+        {
+            try
+            {
+                return u_repository.DatosMiembro(usuario);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("ERROR: " + ex.Message);
+                return null;
+            }
+        }
     }
 }

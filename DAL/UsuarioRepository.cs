@@ -115,5 +115,55 @@ namespace DAL
             }
         }
 
+        public Miembro DatosMiembro(Usuario usuario)
+        {
+            string sql = "SELECT * FROM Miembros WHERE Correo_Electronico = @CorreoElectronico";
+
+            using (MySqlConnection conexionBd = conexion())
+            {
+
+                try
+                {
+                    conexionBd.Open();
+                    MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                    comando.Parameters.AddWithValue("@CorreoElectronico", usuario.CorreoElectronico);
+
+
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return MapMiembro(reader);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine("Error al buscar el miembro por cédula: " + ex.Message);
+                    return null;
+                }
+            }
+        }
+        private Miembro MapMiembro(MySqlDataReader reader)
+        {
+            return new Miembro
+            {
+                Cedula = reader.GetString("Cedula"),
+                Nombre = reader.GetString("Nombre"),
+                Apellido = reader.GetString("Apellido"),
+                Telefono = reader.GetString("Telefono"),
+                Sexo = reader.GetString("Sexo"),
+                Correo = reader.GetString("Correo_Electronico"),
+                FechaNacimiento = reader.GetDateTime("Fecha_Nacimiento"),
+                Peso = reader.GetInt32("Peso"),
+                Estatura = reader.GetInt32("Estatura"),
+                Foto = (byte[])reader["Foto"]
+            };
+        }
+
     }
 }

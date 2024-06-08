@@ -38,7 +38,7 @@ namespace BILL
         {
             try
             {
-                return e_repository.ConsultarEjercicioMusculo("Hombros");
+                return e_repository.ConsultarEjercicioMusculo(musculo);
             }
             catch (Exception ex)
             {

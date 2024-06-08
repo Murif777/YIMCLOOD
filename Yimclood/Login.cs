@@ -17,6 +17,7 @@ namespace Presentacion
     public partial class Login : Form
     {
         private UsuarioService UsuarioService = new UsuarioService();
+
         public Login()
         {
             InitializeComponent();
@@ -101,6 +102,7 @@ namespace Presentacion
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             login();
+            DatosPerfil();
         }
 
         private void registrar() 
@@ -109,7 +111,7 @@ namespace Presentacion
             //UsuarioService.Conexion(txtUsuario.Text,txtContrasena.Text);
         }
 
-        private void login()
+        private Usuario login()
         {
             string correo= txtUsuario.Text;
             string clave = txtContrasena.Text;
@@ -118,10 +120,12 @@ namespace Presentacion
             {
                 MessageBox.Show("Acceso Exitoso");
                 AbrirMenu(usuario);
+                return usuario;
             }
             else
             {
                 MessageBox.Show("Correo electronico o contraseña incorrectos");
+                return null;
             }
         }
         private void AbrirMenu(Usuario usuario)
@@ -133,12 +137,22 @@ namespace Presentacion
                 this.Hide();
             }
             else
-            {
-                MetodoRutina metodoRutina = new MetodoRutina();
-                metodoRutina.Show();
+            {               
+                UsuarioMenuPrincipal usuarioMenuPrincipal = new UsuarioMenuPrincipal();
+                usuarioMenuPrincipal.Show();
                 this.Hide();
             }
             
+        }
+
+        public Miembro DatosPerfil()
+        {
+            string correo = txtUsuario.Text;
+            string clave = txtContrasena.Text;
+            Usuario usuario = new Usuario(correo, clave);
+            //Usuario usuario = login();
+            Miembro miembro = UsuarioService.DatosMiembro(usuario);
+            return miembro;
         }
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
