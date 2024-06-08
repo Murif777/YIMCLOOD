@@ -59,6 +59,7 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+<<<<<<< HEAD
 C:\Users\Dario\OneDrive\Escritorio\clone\YIMCLOOD\BILL\bin\Debug\BILL.dll
 C:\Users\Dario\OneDrive\Escritorio\clone\YIMCLOOD\BILL\bin\Debug\BILL.pdb
 C:\Users\Dario\OneDrive\Escritorio\clone\YIMCLOOD\BILL\bin\Debug\DAL.dll
@@ -89,3 +90,20 @@ C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompil
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\BILL\obj\Debug\BILL.dll
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+=======
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\BILL.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\BILL.pdb
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\DAL.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\ENTITY.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\System.Memory.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\System.Buffers.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\DAL.pdb
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\ENTITY.pdb
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BILL.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+>>>>>>> fc5c7bd3396603a996161aff6a9d308050c4baba

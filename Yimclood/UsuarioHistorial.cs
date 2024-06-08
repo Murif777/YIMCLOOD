@@ -70,6 +70,12 @@ namespace Presentacion
             this.pnlPadre.Controls.Add(formHijo);
             this.pnlPadre.Tag = formHijo;
             formHijo.Show();
+
+            //AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
+            //this.Hide();
+            //formAgregarEjercicios.ShowDialog();
+            //this.Close();
+
         }
 
         //Eventos

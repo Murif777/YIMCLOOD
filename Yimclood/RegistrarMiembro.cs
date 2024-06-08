@@ -24,8 +24,9 @@ namespace Presentacion
             InitializeComponent();
             ComboboxMembresias();
             this.Shown += new EventHandler(FormRegistrar_Shown);
-            btnagregarfoto.Click += btnagregarfoto_Click;
+            //btnagregarfoto.Click += btnagregarfoto_Click_1;
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
+            InitializeDateTimePicker();
         }
 
         private void FormRegistrar_Shown(object sender, EventArgs e)
@@ -74,6 +75,7 @@ namespace Presentacion
                 perfil.TipoMembresia = membresia;
                 perfil.Pagado = true;
                 PMembresiaService PmembresiaService = new PMembresiaService();
+                //PmembresiaService.consultartodo();
                 MessageBox.Show(PmembresiaService.Registrar(perfil));
                 //PmembresiaService.VerificarMembresias(perfil);
             }
@@ -84,8 +86,7 @@ namespace Presentacion
         }
         private Membresia ObtenerMembresia()
         {
-            MembresiaService membresiaService = new MembresiaService();
-            List<Membresia> listaMembresias = membresiaService.ConsultarTodo();
+            List<Membresia> listaMembresias = MembresiaService.ConsultarTodo();
 
             if (listaMembresias != null && listaMembresias.Count > 0 && TiposMembresia.SelectedItem != null)
             {
@@ -134,24 +135,44 @@ namespace Presentacion
             }
             else
             {
-                membresias.Insert(0, new Membresia { Nombre = "Ninguno" }); 
+                membresias.Insert(0, new Membresia { Nombre = "Ninguno" });
+                TiposMembresia.DropDownStyle = ComboBoxStyle.DropDownList;
+                TiposMembresia.DataSource = membresias;
+                TiposMembresia.DisplayMember = "Nombre";
             }
-            TiposMembresia.DataSource = membresias;
-            TiposMembresia.DisplayMember = "Nombre";
         }
-
-
-        private void btnagregarfoto_Click(object sender, EventArgs e)
+        private void InitializeDateTimePicker()
         {
-            
+            fechaNacimiento.Format = DateTimePickerFormat.Custom;
+            fechaNacimiento.CustomFormat = " ";
+            fechaNacimiento.ShowCheckBox = true;
+            fechaNacimiento.Checked = false;
+            fechaNacimiento.ValueChanged += new EventHandler(fechaNacimiento_ValueChanged);
         }
 
+        private void fechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+            if (fechaNacimiento.Checked)
+            {
+                fechaNacimiento.Format = DateTimePickerFormat.Short;
+            }
+            else
+            {
+                fechaNacimiento.Format = DateTimePickerFormat.Custom;
+                fechaNacimiento.CustomFormat = " ";
+            }
+        }
         private void Btnregresar_Click(object sender, EventArgs e)
         {
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
 
         private void btnagregarfoto_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnagregarfoto_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -160,7 +181,7 @@ namespace Presentacion
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
-                //Asegúrate de que este diálogo solo se muestre una vez
+                // Asegúrate de que este diálogo solo se muestre una vez
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Obtener la ruta del archivo seleccionado

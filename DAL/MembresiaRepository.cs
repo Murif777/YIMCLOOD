@@ -55,50 +55,90 @@ namespace DAL
         {
             List<Membresia> membresias = new List<Membresia>();
 
-            string ssql = "SELECT * FROM membresias";
+            string ssql = @"
+            SELECT 
+                m.Nombre AS MembresiaNombre,
+                m.Descripcion AS MembresiaDescripcion,
+                m.Valor AS MembresiaValor,
+                m.Duracion AS MembresiaDuracion,
+                e.Cedula AS EntrenadorCedula,
+                e.Nombre AS EntrenadorNombre,
+                e.Apellido AS EntrenadorApellido,
+                e.Telefono AS EntrenadorTelefono,
+                e.Sexo AS EntrenadorSexo,
+                e.Correo_Electronico AS EntrenadorCorreoElectronico,
+                e.Fecha_Nacimiento AS EntrenadorFechaNacimiento,
+                e.Foto AS EntrenadorFoto
+            FROM 
+                membresias m
+            LEFT JOIN 
+                entrenadores e ON m.Ced_Entrenador = e.Cedula";
 
-            MySqlConnection conexionBd = conexion();
-
-            try
+            using (MySqlConnection conexionBd = conexion())
             {
-                MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
-
-                using (var reader = comando.ExecuteReader())
+                try
                 {
-                    while (reader.Read())
-                    {
-                        membresias.Add(Map(reader));
-                    }
-                }
+                    MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
+                    conexionBd.Open();
 
-                return membresias;
-            }
-            catch (MySqlException ex)
-            {
-                // Manejar el error o registrar los detalles del error
-                Console.WriteLine("Error al consultar membresias: " + ex.Message);
-                return null;
-            }
-            finally
-            {
-                conexionBd.Close();
+                    using (var reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            membresias.Add(Map(reader));
+                        }
+                    }
+
+                    return membresias;
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine("Error al consultar membresias: " + ex.Message);
+                    return null;
+                }
             }
         }
-
 
         private Membresia Map(MySqlDataReader reader)
         {
-            EntrenadorRepository EntrenadorRepository = new EntrenadorRepository();
-            Membresia membresia = new Membresia();
-            membresia.Nombre = reader.GetString(0);
-            membresia.Descripcion = reader.GetString(1);
-            membresia.Valor = reader.GetInt32(2);
-            membresia.Duracion = TimeSpan.FromDays(reader.GetUInt32(3)); // Usamos GetUInt32 para evitar valores negativos
-            membresia.Entrenador = EntrenadorRepository.ObtenerEntrenadorPorCed(reader.GetString(4));
+            Membresia membresia = new Membresia
+            {
+                Nombre = reader.GetString("MembresiaNombre"),
+                Descripcion = reader.GetString("MembresiaDescripcion"),
+                Valor = reader.GetInt32("MembresiaValor"),
+                Duracion = TimeSpan.FromDays(reader.GetInt32("MembresiaDuracion"))
+            };
+
+            if (!reader.IsDBNull(reader.GetOrdinal("EntrenadorCedula")))
+            {
+                Entrenador entrenador = new Entrenador
+                {
+                    Cedula = reader.GetString("EntrenadorCedula"),
+                    Nombre = reader.GetString("EntrenadorNombre"),
+                    Apellido = reader.GetString("EntrenadorApellido"),
+                    Telefono = reader.GetString("EntrenadorTelefono"),
+                    Sexo = reader.GetString("EntrenadorSexo"),
+                    Correo= reader.GetString("EntrenadorCorreoElectronico"),
+                    FechaNacimiento = reader.GetDateTime("EntrenadorFechaNacimiento")
+                };
+
+                if (!reader.IsDBNull(reader.GetOrdinal("EntrenadorFoto")))
+                {
+                    long length = reader.GetBytes(reader.GetOrdinal("EntrenadorFoto"), 0, null, 0, 0);
+                    byte[] foto = new byte[length];
+                    reader.GetBytes(reader.GetOrdinal("EntrenadorFoto"), 0, foto, 0, (int)length);
+                    entrenador.Foto = foto;
+                }
+
+                membresia.Entrenador = entrenador;
+            }
+            else
+            {
+                membresia.Entrenador = null;
+            }
+
             return membresia;
         }
-
 
     }
 }

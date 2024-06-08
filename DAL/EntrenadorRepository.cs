@@ -88,28 +88,12 @@ namespace DAL
             }
         }
 
-        private Entrenador Map(MySqlDataReader reader)
+        public List<Entrenador> ConsultarCed(string cedula)
         {
-            Entrenador entrenador = new Entrenador();
-            entrenador.Cedula = reader.GetString(0);
-            entrenador.Nombre = reader.GetString(1);
-            entrenador.Apellido = reader.GetString(2);
-            entrenador.Telefono = reader.GetString(3);
-            entrenador.Sexo = reader.GetString(4);
-            entrenador.Correo = reader.GetString(5);
-            string fechaNacimientoString = reader.GetString(6);
-            DateTime fechaNacimiento;
-            if (DateTime.TryParseExact(fechaNacimientoString, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaNacimiento))
-            {
-                entrenador.FechaNacimiento = fechaNacimiento;
-            }
-            return entrenador;
-        }
-        public Entrenador ObtenerEntrenadorPorCed(string  Cedula)
-        {
-            Entrenador entrenador = null;
-            string ssql = $"SELECT * FROM entrenadores WHERE Cedula = {Cedula}";
 
+            List<Entrenador> entrenadores = new List<Entrenador>();
+
+            string ssql = $"SELECT * FROM entrenadores WHERE Cedula = {cedula}";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
 
@@ -118,21 +102,18 @@ namespace DAL
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
                 conexionBd.Open();
                 var reader = comando.ExecuteReader();
-                if (reader.Read())
+                while (reader.Read())
                 {
-                    entrenador = new Entrenador
-                    {
-                        Cedula = reader.GetString(0),
-                        Nombre = reader.GetString(1),
-                        Apellido = reader.GetString(2),
-                        Telefono = reader.GetString(3),
-                        Sexo = reader.GetString(4),
-                        Correo = reader.GetString(5),
-                        FechaNacimiento = reader.GetDateTime(6)
-                    };
+                    entrenadores.Add(Map(reader));
                 }
+                if (entrenadores == null)
+                {
+                    Console.WriteLine("lista vacia");
+                    return null;
+                }
+                return entrenadores;
             }
-            catch (MySqlException )
+            catch (MySqlException)
             {
                 return null;
             }
@@ -140,32 +121,98 @@ namespace DAL
             {
                 conexionBd.Close();
             }
+        }
+        private Entrenador Map(MySqlDataReader reader)
+        {
+            Entrenador entrenador = new Entrenador();
+            entrenador.Cedula = reader.GetString(reader.GetOrdinal("Cedula"));
+            entrenador.Nombre = reader.GetString(reader.GetOrdinal("Nombre"));
+            entrenador.Apellido = reader.GetString(reader.GetOrdinal("Apellido"));
+            entrenador.Telefono = reader.GetString(reader.GetOrdinal("Telefono"));
+            entrenador.Sexo = reader.GetString(reader.GetOrdinal("Sexo"));
+            entrenador.Correo = reader.GetString(reader.GetOrdinal("Correo_Electronico"));
+            entrenador.FechaNacimiento = reader.GetDateTime(reader.GetOrdinal("Fecha_Nacimiento"));
+
+            if (!reader.IsDBNull(reader.GetOrdinal("Foto")))
+            {
+                entrenador.Foto = (byte[])reader["Foto"];
+            }
+            else
+            {
+                entrenador.Foto = null;
+            }
 
             return entrenador;
         }
-        public Entrenador ObtenerEntrenadorPorCedu(string cedula)
+        public string EliminarEntrenador(string cedulaEntrenador)
         {
-            string ssql = "SELECT * FROM entrenadores WHERE Cedula = @Cedula";
-            using (var conexionBd = conexion())
+            string sql = "DELETE FROM Entrenadores WHERE Cedula = @Cedula";
+
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
+            try
             {
-                try
+                conexionBd.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                comando.Parameters.AddWithValue("@Cedula", cedulaEntrenador);
+                var res = comando.ExecuteNonQuery();
+
+                if (res == 0)
                 {
-                    conexionBd.Open();
-                    MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                    comando.Parameters.AddWithValue("@Cedula", cedula);
-                    var reader = comando.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        return Map(reader);
-                    }
-                    return null;
+                    return "Entrenador no encontrado";
                 }
-                catch (MySqlException)
+                else
                 {
-                    return null;
+                    return "Entrenador eliminado correctamente";
+                }
+            }
+            catch (MySqlException ex)
+            {
+                return "Error al eliminar el entrenador: " + ex.Message;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
+        public void ActualizarEntrenador(Entrenador entrenador)
+        {
+            string query = "UPDATE Entrenadores SET Nombre=@Nombre, Apellido=@Apellido, Telefono=@Telefono," +
+                " Sexo=@Sexo, Correo_Electronico=@Correo, " +
+                "Fecha_Nacimiento=@FechaNacimiento, Foto=@Foto WHERE Cedula=@Cedula";
+
+            using (MySqlConnection conexionBd = conexion())
+            {
+                conexionBd.Open();
+                using (MySqlTransaction transaction = conexionBd.BeginTransaction())
+                {
+                    try
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand(query, conexionBd, transaction))
+                        {
+                            cmd.Parameters.AddWithValue("@Cedula", entrenador.Cedula);
+                            cmd.Parameters.AddWithValue("@Nombre", entrenador.Nombre);
+                            cmd.Parameters.AddWithValue("@Apellido", entrenador.Apellido);
+                            cmd.Parameters.AddWithValue("@Telefono", entrenador.Telefono);
+                            cmd.Parameters.AddWithValue("@Sexo", entrenador.Sexo);
+                            cmd.Parameters.AddWithValue("@Correo", entrenador.Correo);
+                            cmd.Parameters.AddWithValue("@FechaNacimiento", entrenador.FechaNacimiento);
+                            cmd.Parameters.AddWithValue("@Foto", entrenador.Foto);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                        transaction.Commit();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Error al intentar actualizar el entrenador: " + ex.Message);
+                    }
                 }
             }
         }
+
+
 
     }
 }
