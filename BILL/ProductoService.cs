@@ -47,6 +47,23 @@ namespace BILL
                 return null;
             }
         }
+        public string EliminarProducto(string referenciaProducto)
+        {
+            return pro_repository.EliminarProducto(referenciaProducto);
+        }
 
+        public void ActualizarProducto(Producto producto)
+        {
+            pro_repository.ActualizarProducto(producto);
+        }
+        public string ObtenerCantidadDisponiblePorReferencia(string referencia)
+        {
+            int cantidad = pro_repository.ObtenerCantidadPorReferencia(referencia);
+            return cantidad.ToString();
+        }
+        public string ObtenerPrecioUnitarioPorReferencia(string referenciaProducto)
+        {
+            return pro_repository.ObtenerPrecioUnitarioPorReferencia(referenciaProducto).ToString("F2");
+        }
     }
 }

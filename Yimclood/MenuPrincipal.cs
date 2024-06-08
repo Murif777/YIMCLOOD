@@ -16,6 +16,9 @@ namespace Presentacion
         public MenuPrincipal()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -43,6 +46,7 @@ namespace Presentacion
             this.panelContenedor.Tag = formHijo;
             formHijo.Show();
         }
+
 
         private void AgregarUsuario_Click(object sender, EventArgs e)
         {
@@ -240,6 +244,11 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void bntMaximizar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

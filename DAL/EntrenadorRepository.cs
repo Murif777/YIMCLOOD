@@ -144,7 +144,74 @@ namespace DAL
 
             return entrenador;
         }
-      
+        public string EliminarEntrenador(string cedulaEntrenador)
+        {
+            string sql = "DELETE FROM Entrenadores WHERE Cedula = @Cedula";
+
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
+            try
+            {
+                conexionBd.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                comando.Parameters.AddWithValue("@Cedula", cedulaEntrenador);
+                var res = comando.ExecuteNonQuery();
+
+                if (res == 0)
+                {
+                    return "Entrenador no encontrado";
+                }
+                else
+                {
+                    return "Entrenador eliminado correctamente";
+                }
+            }
+            catch (MySqlException ex)
+            {
+                return "Error al eliminar el entrenador: " + ex.Message;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
+        public void ActualizarEntrenador(Entrenador entrenador)
+        {
+            string query = "UPDATE Entrenadores SET Nombre=@Nombre, Apellido=@Apellido, Telefono=@Telefono," +
+                " Sexo=@Sexo, Correo_Electronico=@Correo, " +
+                "Fecha_Nacimiento=@FechaNacimiento, Foto=@Foto WHERE Cedula=@Cedula";
+
+            using (MySqlConnection conexionBd = conexion())
+            {
+                conexionBd.Open();
+                using (MySqlTransaction transaction = conexionBd.BeginTransaction())
+                {
+                    try
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand(query, conexionBd, transaction))
+                        {
+                            cmd.Parameters.AddWithValue("@Cedula", entrenador.Cedula);
+                            cmd.Parameters.AddWithValue("@Nombre", entrenador.Nombre);
+                            cmd.Parameters.AddWithValue("@Apellido", entrenador.Apellido);
+                            cmd.Parameters.AddWithValue("@Telefono", entrenador.Telefono);
+                            cmd.Parameters.AddWithValue("@Sexo", entrenador.Sexo);
+                            cmd.Parameters.AddWithValue("@Correo", entrenador.Correo);
+                            cmd.Parameters.AddWithValue("@FechaNacimiento", entrenador.FechaNacimiento);
+                            cmd.Parameters.AddWithValue("@Foto", entrenador.Foto);
+
+                            cmd.ExecuteNonQuery();
+                        }
+                        transaction.Commit();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("Error al intentar actualizar el entrenador: " + ex.Message);
+                    }
+                }
+            }
+        }
+
 
 
     }

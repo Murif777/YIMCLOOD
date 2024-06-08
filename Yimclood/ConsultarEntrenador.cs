@@ -110,5 +110,49 @@ namespace Presentacion
             MostrarTabla();
 
         }
+
+        private void btnEliminarEntrenador_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                try
+                {
+                    // Obtener la cédula del entrenador
+                    string cedulaEntrenador = selectedRow.Cells[1].Value.ToString();
+
+                    // Mostrar mensaje de confirmación
+                    DialogResult dialogResult = MessageBox.Show("¿Está seguro de que desea eliminar este entrenador?",
+                                                                "Confirmación de eliminación",
+                                                                MessageBoxButtons.YesNo,
+                                                                MessageBoxIcon.Warning);
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        // Eliminar entrenador
+                        string resultado = entrenadorService.EliminarEntrenador(cedulaEntrenador);
+                        MessageBox.Show(resultado);
+
+                        // Actualizar el DataGridView después de la eliminación
+                        MostrarBusqueda();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al intentar eliminar el entrenador: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un dato de la tabla");
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

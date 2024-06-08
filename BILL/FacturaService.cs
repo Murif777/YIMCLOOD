@@ -22,5 +22,17 @@ namespace BILL
                 return "Error al registrar: " + ex.Message;
             }
         }
+        public string RegistrarFactura(Factura factura)
+        {
+            try
+            {
+                return f_repository.GuardarFacturaBD(factura);
+            }
+            catch (Exception ex)
+            {
+                return "Error al registrar la factura: " + ex.Message;
+            }
+        }
     }
+
 }

@@ -214,7 +214,7 @@ namespace Presentacion
 
         private void btnHombros_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -222,7 +222,7 @@ namespace Presentacion
 
         private void btnPecho_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -230,7 +230,7 @@ namespace Presentacion
 
         private void btnBiceps_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -238,7 +238,7 @@ namespace Presentacion
 
         private void btnAbdominales_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -246,7 +246,7 @@ namespace Presentacion
 
         private void btnPiernas_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -254,7 +254,7 @@ namespace Presentacion
 
         private void btnEspalda_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -262,7 +262,7 @@ namespace Presentacion
 
         private void btnTriceps_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -270,7 +270,7 @@ namespace Presentacion
 
         private void btnAntebrazos_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -278,7 +278,7 @@ namespace Presentacion
 
         private void btnGluteos_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
@@ -286,10 +286,15 @@ namespace Presentacion
 
         private void btnPantorrillas_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();
+        }
+
+        private void musculos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

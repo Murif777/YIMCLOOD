@@ -196,7 +196,7 @@
             // 
             // ConsultarContenedor
             // 
-            this.ConsultarContenedor.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConsultarContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ConsultarContenedor.Controls.Add(this.bntconsultar);
             this.ConsultarContenedor.Controls.Add(this.btnconsultarentrenador);
             this.ConsultarContenedor.Controls.Add(this.btn_ConsultarUsuario);
@@ -386,7 +386,7 @@
             this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(1020, 7);
+            this.Minimizar.Location = new System.Drawing.Point(1019, 7);
             this.Minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(59, 52);
@@ -443,7 +443,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuPrincipal";
-            this.Opacity = 0.95D;
             this.Text = "FormMenuR";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuPrincipal_MouseDown);
             this.MenuVertical.ResumeLayout(false);
