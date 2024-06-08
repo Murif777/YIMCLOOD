@@ -10,13 +10,6 @@ C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csp
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
 C:\Users\Dario\OneDrive\Escritorio\Yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
-<<<<<<< HEAD
 C:\Users\Dario\OneDrive\Escritorio\clone\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
 C:\Users\Dario\OneDrive\Escritorio\clone\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
 C:\Users\Dario\OneDrive\Escritorio\clone\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
@@ -29,11 +22,15 @@ C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.Assem
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
-=======
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
->>>>>>> fc5c7bd3396603a996161aff6a9d308050c4baba
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb

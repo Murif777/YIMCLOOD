@@ -44,6 +44,8 @@ namespace Presentacion
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlPerfil = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblValorPesoIdeal = new System.Windows.Forms.Label();
             this.lbl59 = new System.Windows.Forms.Label();
@@ -64,8 +66,6 @@ namespace Presentacion
             this.lblPeso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.fotoPerfil = new System.Windows.Forms.PictureBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnlPadre.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,8 +79,9 @@ namespace Presentacion
             this.pnlPadre.Controls.Add(this.panel1);
             this.pnlPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPadre.Location = new System.Drawing.Point(0, 0);
+            this.pnlPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlPadre.Name = "pnlPadre";
-            this.pnlPadre.Size = new System.Drawing.Size(1332, 911);
+            this.pnlPadre.Size = new System.Drawing.Size(1066, 630);
             this.pnlPadre.TabIndex = 10;
             // 
             // panel1
@@ -88,8 +89,9 @@ namespace Presentacion
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1332, 911);
+            this.panel1.Size = new System.Drawing.Size(1066, 630);
             this.panel1.TabIndex = 11;
             // 
             // panel2
@@ -97,8 +99,9 @@ namespace Presentacion
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1332, 911);
+            this.panel2.Size = new System.Drawing.Size(1066, 630);
             this.panel2.TabIndex = 11;
             // 
             // panel3
@@ -107,8 +110,9 @@ namespace Presentacion
             this.panel3.Controls.Add(this.pnlPerfil);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1332, 911);
+            this.panel3.Size = new System.Drawing.Size(1066, 630);
             this.panel3.TabIndex = 0;
             // 
             // pnlPerfil
@@ -137,10 +141,30 @@ namespace Presentacion
             this.pnlPerfil.Controls.Add(this.fotoPerfil);
             this.pnlPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPerfil.Location = new System.Drawing.Point(0, 0);
+            this.pnlPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlPerfil.Name = "pnlPerfil";
-            this.pnlPerfil.Size = new System.Drawing.Size(1332, 911);
+            this.pnlPerfil.Size = new System.Drawing.Size(1066, 630);
             this.pnlPerfil.TabIndex = 26;
             this.pnlPerfil.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPerfil_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(142, 126);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Nombre:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(191, 126);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(0, 13);
+            this.lblNombre.TabIndex = 47;
             // 
             // label3
             // 
@@ -149,9 +173,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
-            this.label3.Location = new System.Drawing.Point(12, 711);
+            this.label3.Location = new System.Drawing.Point(10, 569);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(209, 51);
+            this.label3.Size = new System.Drawing.Size(172, 41);
             this.label3.TabIndex = 40;
             this.label3.Text = "Diagnostico";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,9 +186,10 @@ namespace Presentacion
             this.lblValorPesoIdeal.AutoSize = true;
             this.lblValorPesoIdeal.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblValorPesoIdeal.ForeColor = System.Drawing.Color.Black;
-            this.lblValorPesoIdeal.Location = new System.Drawing.Point(1130, 836);
+            this.lblValorPesoIdeal.Location = new System.Drawing.Point(904, 669);
+            this.lblValorPesoIdeal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValorPesoIdeal.Name = "lblValorPesoIdeal";
-            this.lblValorPesoIdeal.Size = new System.Drawing.Size(76, 41);
+            this.lblValorPesoIdeal.Size = new System.Drawing.Size(61, 33);
             this.lblValorPesoIdeal.TabIndex = 46;
             this.lblValorPesoIdeal.Text = "X Kg";
             this.lblValorPesoIdeal.Click += new System.EventHandler(this.lblValorPesoIdeal_Click);
@@ -173,9 +199,10 @@ namespace Presentacion
             this.lbl59.AutoSize = true;
             this.lbl59.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
             this.lbl59.ForeColor = System.Drawing.Color.Black;
-            this.lbl59.Location = new System.Drawing.Point(865, 795);
+            this.lbl59.Location = new System.Drawing.Point(692, 636);
+            this.lbl59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl59.Name = "lbl59";
-            this.lbl59.Size = new System.Drawing.Size(112, 48);
+            this.lbl59.Size = new System.Drawing.Size(90, 39);
             this.lbl59.TabIndex = 45;
             this.lbl59.Text = "Grasa";
             this.lbl59.Click += new System.EventHandler(this.lbl59_Click);
@@ -185,9 +212,10 @@ namespace Presentacion
             this.lblValorGrasa.AutoSize = true;
             this.lblValorGrasa.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblValorGrasa.ForeColor = System.Drawing.Color.Black;
-            this.lblValorGrasa.Location = new System.Drawing.Point(908, 836);
+            this.lblValorGrasa.Location = new System.Drawing.Point(726, 669);
+            this.lblValorGrasa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValorGrasa.Name = "lblValorGrasa";
-            this.lblValorGrasa.Size = new System.Drawing.Size(64, 41);
+            this.lblValorGrasa.Size = new System.Drawing.Size(51, 33);
             this.lblValorGrasa.TabIndex = 44;
             this.lblValorGrasa.Text = "X %";
             this.lblValorGrasa.Click += new System.EventHandler(this.lblValorGrasa_Click);
@@ -197,9 +225,10 @@ namespace Presentacion
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(697, 795);
+            this.label9.Location = new System.Drawing.Point(558, 636);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 48);
+            this.label9.Size = new System.Drawing.Size(62, 39);
             this.label9.TabIndex = 43;
             this.label9.Text = "BMI";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -209,9 +238,10 @@ namespace Presentacion
             this.lbl5.AutoSize = true;
             this.lbl5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
             this.lbl5.ForeColor = System.Drawing.Color.Black;
-            this.lbl5.Location = new System.Drawing.Point(1066, 795);
+            this.lbl5.Location = new System.Drawing.Point(853, 636);
+            this.lbl5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(178, 48);
+            this.lbl5.Size = new System.Drawing.Size(145, 39);
             this.lbl5.TabIndex = 42;
             this.lbl5.Text = "Peso ideal";
             this.lbl5.Click += new System.EventHandler(this.lbl5_Click);
@@ -221,9 +251,10 @@ namespace Presentacion
             this.lblValorBMI.AutoSize = true;
             this.lblValorBMI.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblValorBMI.ForeColor = System.Drawing.Color.Black;
-            this.lblValorBMI.Location = new System.Drawing.Point(719, 836);
+            this.lblValorBMI.Location = new System.Drawing.Point(575, 669);
+            this.lblValorBMI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValorBMI.Name = "lblValorBMI";
-            this.lblValorBMI.Size = new System.Drawing.Size(34, 41);
+            this.lblValorBMI.Size = new System.Drawing.Size(28, 33);
             this.lblValorBMI.TabIndex = 41;
             this.lblValorBMI.Text = "X";
             this.lblValorBMI.Click += new System.EventHandler(this.lblValorBMI_Click);
@@ -239,9 +270,10 @@ namespace Presentacion
             this.btnSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubir.ForeColor = System.Drawing.Color.White;
             this.btnSubir.Image = ((System.Drawing.Image)(resources.GetObject("btnSubir.Image")));
-            this.btnSubir.Location = new System.Drawing.Point(1043, 346);
+            this.btnSubir.Location = new System.Drawing.Point(834, 277);
+            this.btnSubir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubir.Name = "btnSubir";
-            this.btnSubir.Size = new System.Drawing.Size(53, 56);
+            this.btnSubir.Size = new System.Drawing.Size(42, 45);
             this.btnSubir.TabIndex = 29;
             this.btnSubir.TextColor = System.Drawing.Color.White;
             this.btnSubir.UseVisualStyleBackColor = false;
@@ -252,9 +284,10 @@ namespace Presentacion
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(1110, 609);
+            this.label7.Location = new System.Drawing.Point(888, 487);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 41);
+            this.label7.Size = new System.Drawing.Size(60, 33);
             this.label7.TabIndex = 37;
             this.label7.Text = "+ Kg";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -264,9 +297,10 @@ namespace Presentacion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label6.Location = new System.Drawing.Point(933, 609);
+            this.label6.Location = new System.Drawing.Point(746, 487);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 41);
+            this.label6.Size = new System.Drawing.Size(42, 33);
             this.label6.TabIndex = 36;
             this.label6.Text = "Kg";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -276,9 +310,10 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(736, 609);
+            this.label2.Location = new System.Drawing.Point(589, 487);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 41);
+            this.label2.Size = new System.Drawing.Size(42, 33);
             this.label2.TabIndex = 35;
             this.label2.Text = "Kg";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -287,9 +322,10 @@ namespace Presentacion
             // 
             this.rbtDiferencia.AutoSize = true;
             this.rbtDiferencia.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.rbtDiferencia.Location = new System.Drawing.Point(1010, 561);
+            this.rbtDiferencia.Location = new System.Drawing.Point(808, 449);
+            this.rbtDiferencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtDiferencia.Name = "rbtDiferencia";
-            this.rbtDiferencia.Size = new System.Drawing.Size(201, 52);
+            this.rbtDiferencia.Size = new System.Drawing.Size(162, 43);
             this.rbtDiferencia.TabIndex = 26;
             this.rbtDiferencia.TabStop = true;
             this.rbtDiferencia.Text = "Diferencia";
@@ -300,9 +336,10 @@ namespace Presentacion
             // 
             this.rbtObjetivo.AutoSize = true;
             this.rbtObjetivo.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.rbtObjetivo.Location = new System.Drawing.Point(847, 561);
+            this.rbtObjetivo.Location = new System.Drawing.Point(678, 449);
+            this.rbtObjetivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtObjetivo.Name = "rbtObjetivo";
-            this.rbtObjetivo.Size = new System.Drawing.Size(168, 52);
+            this.rbtObjetivo.Size = new System.Drawing.Size(136, 43);
             this.rbtObjetivo.TabIndex = 25;
             this.rbtObjetivo.TabStop = true;
             this.rbtObjetivo.Text = "Objetivo";
@@ -313,9 +350,10 @@ namespace Presentacion
             // 
             this.rbtnActual.AutoSize = true;
             this.rbtnActual.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.rbtnActual.Location = new System.Drawing.Point(673, 561);
+            this.rbtnActual.Location = new System.Drawing.Point(538, 449);
+            this.rbtnActual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnActual.Name = "rbtnActual";
-            this.rbtnActual.Size = new System.Drawing.Size(141, 52);
+            this.rbtnActual.Size = new System.Drawing.Size(113, 43);
             this.rbtnActual.TabIndex = 24;
             this.rbtnActual.TabStop = true;
             this.rbtnActual.Text = "Actual";
@@ -333,9 +371,10 @@ namespace Presentacion
             this.btnMedidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMedidas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnMedidas.ForeColor = System.Drawing.Color.White;
-            this.btnMedidas.Location = new System.Drawing.Point(920, 492);
+            this.btnMedidas.Location = new System.Drawing.Point(736, 394);
+            this.btnMedidas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMedidas.Name = "btnMedidas";
-            this.btnMedidas.Size = new System.Drawing.Size(252, 63);
+            this.btnMedidas.Size = new System.Drawing.Size(202, 50);
             this.btnMedidas.TabIndex = 33;
             this.btnMedidas.Text = "Medidas";
             this.btnMedidas.TextColor = System.Drawing.Color.White;
@@ -353,9 +392,10 @@ namespace Presentacion
             this.btnPeso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnPeso.ForeColor = System.Drawing.Color.White;
-            this.btnPeso.Location = new System.Drawing.Point(673, 492);
+            this.btnPeso.Location = new System.Drawing.Point(538, 394);
+            this.btnPeso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPeso.Name = "btnPeso";
-            this.btnPeso.Size = new System.Drawing.Size(255, 63);
+            this.btnPeso.Size = new System.Drawing.Size(204, 50);
             this.btnPeso.TabIndex = 32;
             this.btnPeso.Text = "Peso";
             this.btnPeso.TextColor = System.Drawing.Color.White;
@@ -367,9 +407,10 @@ namespace Presentacion
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(1005, 444);
+            this.lblFecha.Location = new System.Drawing.Point(804, 355);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(93, 41);
+            this.lblFecha.Size = new System.Drawing.Size(74, 33);
             this.lblFecha.TabIndex = 31;
             this.lblFecha.Text = "/2024";
             this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
@@ -379,9 +420,10 @@ namespace Presentacion
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblPeso.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPeso.Location = new System.Drawing.Point(1004, 405);
+            this.lblPeso.Location = new System.Drawing.Point(803, 324);
+            this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(52, 41);
+            this.lblPeso.Size = new System.Drawing.Size(42, 33);
             this.lblPeso.TabIndex = 30;
             this.lblPeso.Text = "Kg";
             this.lblPeso.Click += new System.EventHandler(this.lblPeso_Click);
@@ -390,45 +432,30 @@ namespace Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
-            this.label1.Location = new System.Drawing.Point(0, 37);
+            this.label1.Location = new System.Drawing.Point(0, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 51);
+            this.label1.Size = new System.Drawing.Size(113, 41);
             this.label1.TabIndex = 27;
             this.label1.Text = "Cuerpo";
             // 
             // fotoPerfil
             // 
             this.fotoPerfil.BackColor = System.Drawing.Color.White;
-            this.fotoPerfil.Location = new System.Drawing.Point(761, 102);
+            this.fotoPerfil.Location = new System.Drawing.Point(609, 82);
+            this.fotoPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fotoPerfil.Name = "fotoPerfil";
-            this.fotoPerfil.Size = new System.Drawing.Size(340, 303);
+            this.fotoPerfil.Size = new System.Drawing.Size(272, 242);
             this.fotoPerfil.TabIndex = 28;
             this.fotoPerfil.TabStop = false;
             this.fotoPerfil.Click += new System.EventHandler(this.fotoPerfil_Click);
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(239, 158);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(0, 16);
-            this.lblNombre.TabIndex = 47;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(177, 158);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 16);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Nombre:";
-            // 
             // UsuarioPerfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1332, 911);
+            this.ClientSize = new System.Drawing.Size(1066, 630);
             this.Controls.Add(this.pnlPadre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);

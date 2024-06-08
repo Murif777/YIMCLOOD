@@ -122,7 +122,7 @@ namespace Presentacion
             this.pnlInferior.Controls.Add(this.btnEjercicios, 0, 0);
             this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlInferior.Location = new System.Drawing.Point(0, 500);
-            this.pnlInferior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlInferior.Margin = new System.Windows.Forms.Padding(2);
             this.pnlInferior.Name = "pnlInferior";
             this.pnlInferior.RowCount = 1;
             this.pnlInferior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -212,15 +212,14 @@ namespace Presentacion
             // 
             // pnlPadre
             // 
-            this.pnlPadre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPadre.Location = new System.Drawing.Point(0, 60);
-            this.pnlPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPadre.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPadre.Name = "pnlPadre";
             this.pnlPadre.Size = new System.Drawing.Size(937, 440);
             this.pnlPadre.TabIndex = 10;
             this.pnlPadre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlPadre_MouseDown);
             // 
-            // Cliente
+            // UsuarioMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -231,7 +230,7 @@ namespace Presentacion
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Cliente";
+            this.Name = "UsuarioMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormInterfaz";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

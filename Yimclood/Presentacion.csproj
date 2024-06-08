@@ -57,7 +57,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="ActualizarMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,13 +75,6 @@
     <Compile Include="AgregarFactura.Designer.cs">
       <DependentUpon>AgregarFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarMedidas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarMedidas.Designer.cs">
-      <DependentUpon>AgregarMedidas.cs</DependentUpon>
-    </Compile>
-
     <Compile Include="AgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,7 +205,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-
     <EmbeddedResource Include="ActualizarMiembro.resx">
       <DependentUpon>ActualizarMiembro.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,10 +214,6 @@
     <EmbeddedResource Include="AgregarFactura.resx">
       <DependentUpon>AgregarFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarMedidas.resx">
-      <DependentUpon>AgregarMedidas.cs</DependentUpon>
-    </EmbeddedResource>
-
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>

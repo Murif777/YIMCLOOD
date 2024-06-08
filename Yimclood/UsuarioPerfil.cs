@@ -38,7 +38,7 @@ namespace Presentacion
             Miembro miembro = login.DatosPerfil();
             lblNombre.Text = miembro.Nombre;
         }
-
+       
         private void pnlPerfil_Paint(object sender, PaintEventArgs e)
         {
 
