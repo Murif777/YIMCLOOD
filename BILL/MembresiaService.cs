@@ -12,6 +12,7 @@ namespace BILL
     public class MembresiaService : ICrud<Membresia>
     {
         MembresiaRepository me_repository = new MembresiaRepository();
+        private MiembroRepository miembroRepository = new MiembroRepository();
         public string Registrar(Membresia membresia)
         {
             try
@@ -35,5 +36,6 @@ namespace BILL
                 return null;
             }
         }
+      
     }
 }

@@ -167,6 +167,11 @@ namespace Presentacion
 
         private void btnsubirfoto_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnsubirfoto_Click_1(object sender, EventArgs e)
+        {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
@@ -174,7 +179,7 @@ namespace Presentacion
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
-                //Asegúrate de que este diálogo solo se muestre una vez
+                // Asegúrate de que este diálogo solo se muestre una vez
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Obtener la ruta del archivo seleccionado

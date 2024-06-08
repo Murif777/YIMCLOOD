@@ -48,5 +48,14 @@ namespace BILL
                 return null;
             }
         }
+        public string EliminarEntrenador(string cedulaEntrenador)
+        {
+            return en_repository.EliminarEntrenador(cedulaEntrenador);
+        }
+
+        public void ActualizarEntrenador(Entrenador entrenador)
+        {
+           en_repository.ActualizarEntrenador(entrenador);
+        }
     }
 }

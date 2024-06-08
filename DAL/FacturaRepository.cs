@@ -162,6 +162,40 @@ namespace DAL
                 };
             return factura;
         }
+        //public string GuardarFacturaBD(Factura factura)
+        //{
+        //    string sql = "INSERT INTO facturas (Miembro, FechaFactura, Membresia, Productos) " +
+        //          "VALUES (@Miembro, @FechaFactura, @Membresia, @Productos)";
+        //    MySqlConnection conexionBd = conexion();
+
+        //    try
+        //    {
+        //        conexionBd.Open();
+        //        MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+        //        comando.Parameters.AddWithValue("@Miembro", factura.Miembro);
+        //        comando.Parameters.AddWithValue("@FechaFactura", factura.FechaFactura);
+        //        comando.Parameters.AddWithValue("@Membresia", factura.Membresia);
+        //        comando.Parameters.AddWithValue("@Productos", factura.Productos);
+        //        int res = comando.ExecuteNonQuery();
+
+        //        if (res == 0)
+        //        {
+        //            return "La factura no fue guardada";
+        //        }
+        //        else
+        //        {
+        //            return "La factura fue guardada exitosamente";
+        //        }
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        return "Error al guardar la factura: " + ex.Message;
+        //    }
+        //    finally
+        //    {
+        //        conexionBd.Close();
+        //    }
+        //}
 
     }
 }

@@ -30,5 +30,23 @@ namespace BILL
             // Llamar al método BuscarPorCedula definido en MiembroRepository
             return miembroRepository.BuscarPorCedula(cedula);
         }
+
+        public string EliminarMiembro(string cedula)
+        {
+            return miembroRepository.EliminarMiembroBD(cedula);
+        }
+
+        public string ActualizarMiembro(Miembro miembro)
+        {
+            try
+            {
+                return miembroRepository.ActualizarMiembroBD(miembro);
+            }
+            catch (Exception ex)
+            {
+                return "Error al actualizar: " + ex.Message;
+            }
+        }
     }
+
 }

@@ -136,7 +136,7 @@
   <data name="Btnregresar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAHdElNRQfoBgIUMRWjJeaRAAAA
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADrwAAA68AZW8ckkAAAAHdElNRQfoBgIUMRWjJeaRAAAA
         GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABNVJREFUWEe9lu9rW1Ucxs8ShvOtnS9W
         CqIgKOqr4Qv/B98MhwqCL/yBA/G1oAiC4g82NyjtOlxRFERwTUbbJM3atHa2s6vDzRrbpW1S06Rd0mR0
         +mKrezG+Ps+5Se+9yWl6b5rmwKdN7j3n+3xy7znnXrVrS2VNdIJj4DS4DHLgLnhQgZ95jOfOAPblGHed
@@ -164,13 +164,23 @@
   <data name="btnVer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAWlJREFUWEftlj1Ow0AQRt1QcQO4ATScgi4FiBOQc5CGjgNQpYAKbkBLgQQHgAvA
+        vQAADr0BR/uQrQAAAWlJREFUWEftlj1Ow0AQRt1QcQO4ATScgi4FiBOQc5CGjgNQpYAKbkBLgQQHgAvA
         ASIQouLve9YOGlaD4zhYq0h+0otWuzOzztpebzUwsEqsy5E8kVfyXj4madPHGDHE/hs78ky+yq+WEksO
         uZ3ZkBfyQ0aTtJFcalBrIQ7kTEZFTZb+Okk7ijGpRc1WHMlPGRV6l1O5JXPoY4yYKJea1G7kWEbJ+CJ3
         5TyIeZZRDWSOkEPZ9M/zyTflfpK2h9imlRjLX7B8bzJKQJbWWJOn0k9Amz7GDHJ8DS9zbcsfbmQUaPp7
         zkRRDDJmkBPFmMxZsyejAJMn3GCp/1paZMzfjnlvB7evunUdkbxmBglRjLcumiA3ijHvZP0TDZq9X0Dx
         WwBFH0Io/hoCm0Oxjcho2orZXvOLiCCm01Zs9PkxmshWFP0cGxwiLuWyBxJqLHwg8XQ9kp3LpY5kOfmh
         9EE+JWn3digdGOiRqvoGZJCN1znaGgIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnEliminarEntrenador.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAgCAYAAAD5VeO1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVEhL7dbNCgFhFMbxsWSl7G1dhHILUhZuQMnKwooN
+        O+UarCTXYMFNYGNnKQulEPLxf2cynWbUO18l9T71q3M08yzOZlgmUZNBTsgikdSww0bYYozYmaDijG5S
+        ODhj8FTR81hi6vlNOaOLjtBEGr6U8MQrpiF8Ube9JECd8TdR5xlEUIc2bXy7pc4c2sjyEdZi7+Modvls
+        6PIGFmIvYi/2gphNububcpspt5lyN/9b3sLnhTseYr9BfmevYp5BmzxWOIWg/teUYRIklvUGZcwTSxCq
+        qyQAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

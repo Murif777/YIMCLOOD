@@ -388,12 +388,13 @@
             // 
             this.musculos.BackColor = System.Drawing.Color.Transparent;
             this.musculos.Image = ((System.Drawing.Image)(resources.GetObject("musculos.Image")));
-            this.musculos.Location = new System.Drawing.Point(196, 6);
+            this.musculos.Location = new System.Drawing.Point(214, 54);
             this.musculos.Name = "musculos";
             this.musculos.Size = new System.Drawing.Size(560, 597);
             this.musculos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.musculos.TabIndex = 9;
             this.musculos.TabStop = false;
+            this.musculos.Click += new System.EventHandler(this.musculos_Click);
             this.musculos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.musculos_MouseDown);
             // 
             // btnPecho

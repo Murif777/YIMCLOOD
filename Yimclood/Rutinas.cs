@@ -54,7 +54,7 @@ namespace Presentacion
         }
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            AgregarEjercicios formAgregarEjercicios = new AgregarEjercicios();
+            AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
             this.Hide();
             formAgregarEjercicios.ShowDialog();
             this.Close();

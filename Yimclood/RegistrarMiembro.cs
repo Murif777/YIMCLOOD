@@ -24,7 +24,7 @@ namespace Presentacion
             InitializeComponent();
             ComboboxMembresias();
             this.Shown += new EventHandler(FormRegistrar_Shown);
-            btnagregarfoto.Click += btnagregarfoto_Click_1;
+            //btnagregarfoto.Click += btnagregarfoto_Click_1;
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
             InitializeDateTimePicker();
         }
@@ -169,6 +169,11 @@ namespace Presentacion
 
         private void btnagregarfoto_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnagregarfoto_Click(object sender, EventArgs e)
+        {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
@@ -176,7 +181,7 @@ namespace Presentacion
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
-                //Asegúrate de que este diálogo solo se muestre una vez
+                // Asegúrate de que este diálogo solo se muestre una vez
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Obtener la ruta del archivo seleccionado

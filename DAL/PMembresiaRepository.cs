@@ -289,5 +289,52 @@ namespace DAL
 
             return perfil;
         }
+        public string ActualizarPMembresiaBD(PerfilMembresia perfil)
+        {
+            string query = "UPDATE membresias_usuarios " +
+                           "SET Estado = @Estado, " +
+                           "Fecha_Inicio = @Fecha_Inicio, " +
+                           "Fecha_final = @Fecha_final, " +
+                           "Saldo_Debe = @Saldo_Debe, " +
+                           "Pagado = @Pagado, " +
+                           "Duracion_Acumulada = @Duracion_Acumulada, " +
+                           "Tiempo_Restante = @Tiempo_Restante " +
+                           "WHERE Correo_Usuario = @Correo_Usuario AND Nombre_Membresia = @Nombre_Membresia";
+
+            using (MySqlConnection conexionBd = conexion())
+            {
+                try
+                {
+                    conexionBd.Open();
+                    MySqlCommand comando = new MySqlCommand(query, conexionBd);
+                    comando.Parameters.AddWithValue("@Estado", perfil.Estado);
+                    comando.Parameters.AddWithValue("@Fecha_Inicio", perfil.Fechainicio);
+                    comando.Parameters.AddWithValue("@Fecha_final", perfil.Fechafinal);
+                    comando.Parameters.AddWithValue("@Saldo_Debe", perfil.SaldoDebe);
+                    comando.Parameters.AddWithValue("@Pagado", perfil.Pagado);
+                    comando.Parameters.AddWithValue("@Duracion_Acumulada", perfil.DuracionAcumulada);
+                    comando.Parameters.AddWithValue("@Tiempo_Restante", perfil.TiempoRestante);
+                    comando.Parameters.AddWithValue("@Correo_Usuario", perfil.DatosUsuario.CorreoElectronico);
+                    comando.Parameters.AddWithValue("@Nombre_Membresia", perfil.TipoMembresia.Nombre);
+
+                    int filasAfectadas = comando.ExecuteNonQuery();
+                    if (filasAfectadas > 0)
+                    {
+                        return "Perfil de membresía actualizado exitosamente.";
+                    }
+                    else
+                    {
+                        return "No se encontró el perfil de membresía para actualizar.";
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    return "Error al actualizar el perfil de membresía: " + ex.Message;
+                }
+            }
+        }
+
+
+
     }
 }
