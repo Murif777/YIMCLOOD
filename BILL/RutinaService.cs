@@ -22,5 +22,29 @@ namespace BILL
                 return "Error al registrar: " + ex.Message;
             }
         }
+        public List<Rutina> ConsultarTodo()
+        {
+            try
+            {
+                return ru_repository.ConsultarTodo();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+                return null;
+            }
+        }
+        public List<Rutina> ConsultarPersonalizadas(string cedula)
+        {
+            try
+            {
+                return ru_repository.ConsultarPersonalizadas(cedula);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+                return null;
+            }
+        }
     }
 }

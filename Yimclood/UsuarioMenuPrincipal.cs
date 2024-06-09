@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Text;
+using ENTITY;
 
 
 
@@ -18,23 +19,18 @@ namespace Presentacion
 {
     public partial class UsuarioMenuPrincipal : Form
     {
-        public UsuarioMenuPrincipal()
+        private Miembro Miembro;
+        public UsuarioMenuPrincipal(Miembro miembro)
         {
             InitializeComponent();
             btnMaxRes.Image = Properties.Resources.minimizarVentana;
-
+            this.Miembro = miembro;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-        //Funciones
-        private void FormInterfaz_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void arrastrarElemento()
         {
@@ -63,12 +59,12 @@ namespace Presentacion
             Application.Exit();
         }
 
-        private void Abrirformpanel(Form formHijo)
+        public void Abrirformpanel(Form formHijo)
         {
             if (this.pnlPadre.Controls.Count > 0)
                 this.pnlPadre.Controls.RemoveAt(0);
             formHijo.TopLevel = false;
-            formHijo.Dock = DockStyle.Fill;
+            //formHijo.Dock = DockStyle.Fill;
             this.pnlPadre.Controls.Add(formHijo);
             this.pnlPadre.Tag = formHijo;
             formHijo.Show();
@@ -111,25 +107,25 @@ namespace Presentacion
 
         private void btnEjercicios_Click(object sender, EventArgs e)
         {
-            UsuarioEjercicios rutinasRecomendadas = new UsuarioEjercicios();
+            UsuarioEjercicios rutinasRecomendadas = new UsuarioEjercicios(this, Miembro);
             Abrirformpanel(rutinasRecomendadas);
+
         }
 
         private void btnRutinas_Click(object sender, EventArgs e)
         {
-            UsuarioMisRutinas usuarioMisRutinas = new UsuarioMisRutinas();
+            UsuarioMisRutinas usuarioMisRutinas = new UsuarioMisRutinas(Miembro);
             Abrirformpanel(usuarioMisRutinas);
         }
-
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            UsuarioHistorial historial = new UsuarioHistorial();
+            UsuarioHistorial historial = new UsuarioHistorial(Miembro);
             Abrirformpanel(historial);
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            UsuarioPerfil perfilPesoCliente = new UsuarioPerfil();
+            UsuarioPerfil perfilPesoCliente = new UsuarioPerfil(Miembro);
             Abrirformpanel(perfilPesoCliente);
         }
     }

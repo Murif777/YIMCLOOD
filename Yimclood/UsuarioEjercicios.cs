@@ -14,6 +14,7 @@ using System.Drawing.Text;
 using BILL;
 using ENTITY;
 using System.Net.NetworkInformation;
+using System.IO;
 
 
 
@@ -22,9 +23,13 @@ namespace Presentacion
     public partial class UsuarioEjercicios : Form
     {
         private EjercicioService ejercicioService = new EjercicioService();
-        public UsuarioEjercicios()
+        private UsuarioMenuPrincipal _usuarioMenuPrincipal;
+        private Miembro miembro;
+        public UsuarioEjercicios(UsuarioMenuPrincipal usuarioMenuPrincipal, Miembro miembro)
         {
             InitializeComponent();
+            _usuarioMenuPrincipal = usuarioMenuPrincipal;
+            this.miembro = miembro;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -41,14 +46,22 @@ namespace Presentacion
                 string musculo = clickedButton.Text;
                 cargarEjercicio(musculo);
             }
-        }  
+        }
 
 
         private void cargarEjercicio(string musculo)
         {
             var ejercicios = ejercicioService.ConsultarEjercicioMusculo(musculo);
-            if (ejercicios != null && ejercicios.Count > 0)
+            if (ejercicios == null)
             {
+                MessageBox.Show("Vacia mi negro");
+                return;
+            }
+
+            if (ejercicios.Count > 0)
+            {
+                listEjercicios.Columns.Clear();
+
                 var viewList = ejercicios.Select(p => new
                 {
                     Foto = p.Foto,
@@ -59,26 +72,51 @@ namespace Presentacion
                     Series = p.Series,
                     Musculo = p.Musculo,
                     Categoria = p.Categoria
-                    
                 }).ToList();
 
-                listEjercicios.DataSource = viewList; ejercicioService.ConsultarEjercicioMusculo(musculo);
+                listEjercicios.DataSource = viewList;
 
-                // Configurar las columnas para mostrar en el orden deseado
-                listEjercicios.Columns["Foto"].DisplayIndex = 0;
+                // Create and add the custom DataGridViewImageColumn
+                DataGridViewImageColumn imgColumn = new DataGridViewImageColumn
+                {
+                    HeaderText = "Foto",
+                    Name = "Foto"
+                };
+                listEjercicios.Columns.Insert(0, imgColumn);
+
+                // Adjust the other columns
                 listEjercicios.Columns["Nombre"].DisplayIndex = 1;
                 listEjercicios.Columns["Descripcion"].DisplayIndex = 2;
                 listEjercicios.Columns["Duracion"].DisplayIndex = 3;
                 listEjercicios.Columns["Repeticiones"].DisplayIndex = 4;
                 listEjercicios.Columns["Series"].DisplayIndex = 5;
                 listEjercicios.Columns["Musculo"].DisplayIndex = 6;
-                listEjercicios.Columns["Categoria"].DisplayIndex = 7;               
+                listEjercicios.Columns["Categoria"].DisplayIndex = 7;
+
+                // Populate the DataGridView with data
+                for (int i = 0; i < listEjercicios.Rows.Count; i++)
+                {
+                    byte[] imageBytes = (byte[])viewList[i].Foto;
+                    if (imageBytes != null)
+                    {
+                        using (MemoryStream ms = new MemoryStream(imageBytes))
+                        {
+                            Image gifImage = Image.FromStream(ms);
+                            DataGridViewGifCell cell = new DataGridViewGifCell
+                            {
+                                GifImage = gifImage
+                            };
+                            listEjercicios.Rows[i].Cells["Foto"] = cell;
+                        }
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Lista vacia");
             }
         }
+
 
 
         private void MusculoButton_MouseEnter(object sender, EventArgs e)
@@ -161,10 +199,12 @@ namespace Presentacion
 
         private void btnPreestablecidas_Click(object sender, EventArgs e)
         {
-            UsuarioRutinasPrees rutinasPersonalizadas=new UsuarioRutinasPrees();
-            rutinasPersonalizadas.Show();
+            VerRutinasPrees();
         }
-
+        private void VerRutinasPrees()
+        {
+            _usuarioMenuPrincipal.Abrirformpanel(new UsuarioRutinasPrees(miembro));
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 

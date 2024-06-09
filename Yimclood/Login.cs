@@ -21,6 +21,7 @@ namespace Presentacion
         public Login()
         {
             InitializeComponent();
+            metododeprueba();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -28,17 +29,7 @@ namespace Presentacion
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_Enter(object sender, EventArgs e)
+        private void txt_Enter(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "USUARIO")
             {
@@ -47,17 +38,12 @@ namespace Presentacion
 
             }
         }
-
-        private void txtUsuario_Leave(object sender, EventArgs e)
+        private void metododeprueba()
         {
-            if (txtUsuario.Text == "")
-            {
-                txtUsuario.Text = "USUARIO";
-                txtUsuario.ForeColor = Color.LightGray;
-            }
+            txtUsuario.Text= "faridmuriel777@gmail.com";
+            txtContrasena.Text = "3124";
         }
-
-        private void txtContrasena_Enter(object sender, EventArgs e)
+        private void txtContra_Enter(object sender, EventArgs e)
         {
             if (txtContrasena.Text == "CONTRASEÑA")
             {
@@ -66,9 +52,16 @@ namespace Presentacion
                 txtContrasena.UseSystemPasswordChar = true;
             }
         }
-
-        private void txtContrasena_Leave(object sender, EventArgs e)
+        private void txt_Leave(object sender, EventArgs e)
         {
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "USUARIO";
+                txtUsuario.ForeColor = Color.LightGray;
+            }
+        }
+        private void txtContra_Leave(object sender, EventArgs e)
+        { 
             if (txtContrasena.Text == "")
             {
                 txtContrasena.Text = "CONTRASEÑA";
@@ -76,7 +69,6 @@ namespace Presentacion
                 txtContrasena.UseSystemPasswordChar = false;
             }
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -86,14 +78,7 @@ namespace Presentacion
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void FormLogin_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void _MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -102,13 +87,6 @@ namespace Presentacion
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             login();
-            DatosPerfil();
-        }
-
-        private void registrar() 
-        {
-            
-            //UsuarioService.Conexion(txtUsuario.Text,txtContrasena.Text);
         }
 
         private Usuario login()
@@ -118,8 +96,8 @@ namespace Presentacion
             Usuario usuario = new Usuario(correo,clave);
             if (UsuarioService.Login(usuario))
             {
-                MessageBox.Show("Acceso Exitoso");
                 AbrirMenu(usuario);
+                //MessageBox.Show("Acceso Exitoso");
                 return usuario;
             }
             else
@@ -137,20 +115,20 @@ namespace Presentacion
                 this.Hide();
             }
             else
-            {               
-                UsuarioMenuPrincipal usuarioMenuPrincipal = new UsuarioMenuPrincipal();
+            {
+                Miembro miembro = DatosPerfil();
+                UsuarioMenuPrincipal usuarioMenuPrincipal = new UsuarioMenuPrincipal(miembro);
                 usuarioMenuPrincipal.Show();
                 this.Hide();
             }
             
         }
 
-        public Miembro DatosPerfil()
+        private Miembro DatosPerfil()
         {
             string correo = txtUsuario.Text;
             string clave = txtContrasena.Text;
-            Usuario usuario = new Usuario(correo, clave);
-            //Usuario usuario = login();
+            Usuario usuario =new Usuario(correo,clave);
             Miembro miembro = UsuarioService.DatosMiembro(usuario);
             return miembro;
         }

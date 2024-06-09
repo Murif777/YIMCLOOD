@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Text;
+using BILL;
+using ENTITY;
 
 
 
@@ -18,9 +20,112 @@ namespace Presentacion
 {
     public partial class UsuarioRutinasPrees : Form
     {
-        public UsuarioRutinasPrees()
+        private RutinaService rutinaService = new RutinaService();
+        private Miembro miembro;
+        public UsuarioRutinasPrees(Miembro miembro)
         {
             InitializeComponent();
+            this.miembro= miembro;
+            ComboboxRutinas();
+        }
+        private void ComboboxRutinas()
+        {
+            List<Rutina> rutinas = rutinaService.ConsultarTodo();
+            if (rutinas == null)
+            {
+                MessageBox.Show("Lista vacia");
+            }
+            else
+            {
+                rutinas.Insert(0, new Rutina { Nombre = "Ninguno" });
+                cbRutinas.DropDownStyle = ComboBoxStyle.DropDownList;
+                cbRutinas.DataSource = rutinas;
+                cbRutinas.DisplayMember = "Nombre";
+            }
+        }
+        private void mostrarEjerciciosTabla()
+        {
+            Rutina rutinaSeleccionada = cbRutinas.SelectedItem as Rutina;
+            lblNombre.Text = rutinaSeleccionada.Nombre;
+            lblDescripcion.Text= rutinaSeleccionada.Descripcion;
+            if (rutinaSeleccionada != null)
+            {
+                List<Ejercicio> ejercicios = rutinaSeleccionada.Ejercicios;
+
+                if (ejercicios != null && ejercicios.Count > 0)
+                {
+                    var viewList = ejercicios.Select(p => new
+                    {
+                        Foto = p.Foto,
+                        Nombre = p.Nombre,
+                        Descripcion = p.Descripcion,
+                        Duracion = p.Duracion,
+                        Repeticiones = p.Repeticiones,
+                        Series = p.Series,
+                        Musculo = p.Musculo,
+                        Categoria = p.Categoria
+
+                    }).ToList();
+
+                    tablaEjercicios.DataSource = viewList;
+                    tablaEjercicios.Columns["Foto"].DisplayIndex = 0;
+                    tablaEjercicios.Columns["Nombre"].DisplayIndex = 1;
+                    tablaEjercicios.Columns["Descripcion"].DisplayIndex = 2;
+                    tablaEjercicios.Columns["Duracion"].DisplayIndex = 3;
+                    tablaEjercicios.Columns["Repeticiones"].DisplayIndex = 4;
+                    tablaEjercicios.Columns["Series"].DisplayIndex = 5;
+                    tablaEjercicios.Columns["Musculo"].DisplayIndex = 6;
+                    tablaEjercicios.Columns["Categoria"].DisplayIndex = 7;
+                }
+                else
+                {
+                    MessageBox.Show("La rutina seleccionada no contiene ejercicios.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ninguna rutina.");
+            }
+        }
+        private void AgregarMisRutinas()
+        {
+            Rutina rutinaSeleccionada = cbRutinas.SelectedItem as Rutina;
+            Console.WriteLine(miembro.Cedula);
+            List<Rutina> Rutinas = rutinaService.ConsultarPersonalizadas(miembro.Cedula);
+            if (Rutinas == null)
+            {
+                MessageBox.Show("Vacio mi negro");
+            }
+            if (!Rutinas.Contains(rutinaSeleccionada))
+            {
+                GuardarBD(rutinaSeleccionada);
+            }
+            else
+            {
+                MessageBox.Show("La rutina seleccionada ya ha sido agregada.");
+            }
+            limpiarCampos();
+        }
+        private void GuardarBD(Rutina rutina)
+        {
+            Console.WriteLine(rutina.Id ); 
+
+        }
+        private void limpiarCampos()
+        {
+            lblDescripcion.Text = "";
+            lblNombre.Text="";
+            cbRutinas.SelectedIndex=0;
+        }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarMisRutinas();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            mostrarEjerciciosTabla();
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -28,55 +133,15 @@ namespace Presentacion
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        //Funciones
-        private void FormInterfaz_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void arrastrarElemento()
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void minimizarFormulario()
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
-
-        private void maiximizarVentana()
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void restaurarVentana()
-        {
-            this.WindowState = FormWindowState.Normal;
-        }
-
-        private void cerrarApp()
-        {
-            Application.Exit();
-        }
-
-        private void Abrirformpanel(Form formHijo)
-        {
-            if (this.pnlPadre.Controls.Count > 0)
-                this.pnlPadre.Controls.RemoveAt(0);
-            formHijo.TopLevel = false;
-            formHijo.Dock = DockStyle.Fill;
-            this.pnlPadre.Controls.Add(formHijo);
-            this.pnlPadre.Tag = formHijo;
-            formHijo.Show();
-        }
-
-        //Eventos
-     
         private void pnlPadre_MouseDown(object sender, MouseEventArgs e)
         {
             arrastrarElemento();
-        }                 
+        }
+
     }
 }

@@ -56,7 +56,7 @@ namespace Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 260);
             this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
             // 
             // pictureBox3
             // 
@@ -81,8 +81,8 @@ namespace Presentacion
             this.txtContrasena.Size = new System.Drawing.Size(326, 20);
             this.txtContrasena.TabIndex = 2;
             this.txtContrasena.Text = "CONTRASEÑA";
-            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
-            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
+            this.txtContrasena.Enter += new System.EventHandler(this.txtContra_Enter);
+            this.txtContrasena.Leave += new System.EventHandler(this.txtContra_Leave);
             // 
             // txtUsuario
             // 
@@ -96,8 +96,8 @@ namespace Presentacion
             this.txtUsuario.Size = new System.Drawing.Size(326, 20);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "USUARIO";
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
+            this.txtUsuario.Enter += new System.EventHandler(this.txt_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txt_Leave);
             // 
             // label1
             // 
@@ -188,8 +188,7 @@ namespace Presentacion
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormLogin_MouseDown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();

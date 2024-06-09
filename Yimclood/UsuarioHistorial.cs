@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Text;
+using ENTITY;
 
 
 
@@ -18,9 +19,11 @@ namespace Presentacion
 {
     public partial class UsuarioHistorial : Form
     {
-        public UsuarioHistorial()
+        private Miembro Miembro;
+        public UsuarioHistorial(Miembro Miembro)
         {
             InitializeComponent();
+            this.Miembro = Miembro;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

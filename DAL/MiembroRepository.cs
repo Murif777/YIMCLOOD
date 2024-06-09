@@ -92,7 +92,7 @@ namespace DAL
 
         private Miembro MapMiembro(MySqlDataReader reader)
         {
-            return new Miembro
+            Miembro miembro= new Miembro
             {
                 Cedula = reader.GetString("Cedula"),
                 Nombre = reader.GetString("Nombre"),
@@ -102,9 +102,13 @@ namespace DAL
                 Correo = reader.GetString("Correo_Electronico"),
                 FechaNacimiento = reader.GetDateTime("Fecha_Nacimiento"),
                 Peso = reader.GetInt32("Peso"),
-                Estatura = reader.GetInt32("Estatura"),
-                Foto = (byte[])reader["Foto"]
-            };
+                Estatura = reader.GetInt32("Estatura")
+             };
+            if (!reader.IsDBNull(reader.GetOrdinal("Foto")))
+            {
+                miembro.Foto = (byte[])reader["Foto"];
+            }
+            return miembro;
         }
         public string EliminarMiembroBD(string cedula)
         {
