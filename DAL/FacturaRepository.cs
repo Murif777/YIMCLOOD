@@ -13,189 +13,216 @@ namespace DAL
     {
         public string GuardarFacturaBD(Factura factura)
         {
-            UsuarioRepository usuarioRepository = new UsuarioRepository();
-            string sql = "INSERT INTO facturas(Id, Miembro, FechaFactura, Membresia, Productos) " +
-                  "VALUES (@Id, @Miembro, @FechaFactura, @Membresia, @Productos)";
+            string sqlFactura = "INSERT INTO Facturas(Cedula_Miembro, Fecha_Factura,Precio_Total) " +
+                                "VALUES (@Cedula_Miembro, @Fecha_Factura,@Precio_Total); SELECT LAST_INSERT_ID();";
+
+            string sqlFacturaProducto = "INSERT INTO Facturas_Productos(Id_Factura, Referencia_Producto, Cantidad, Precio_Total) " +
+                                        "VALUES (@Id_Factura, @Referencia_Producto, @Cantidad, @Precio_Total)";
+
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
+            MySqlTransaction transaction = null;
+
+            try
+            {
+                conexionBd.Open();
+                transaction = conexionBd.BeginTransaction();
+
+                // Insertar en la tabla Facturas y obtener el ID generado
+                MySqlCommand comandoFactura = new MySqlCommand(sqlFactura, conexionBd, transaction);
+                comandoFactura.Parameters.AddWithValue("@Cedula_Miembro", factura.Miembro.Cedula);
+                comandoFactura.Parameters.AddWithValue("@Fecha_Factura", factura.FechaFactura);
+                comandoFactura.Parameters.AddWithValue("@Precio_Total", factura.Precio_Total);
+                int facturaId = Convert.ToInt32(comandoFactura.ExecuteScalar());
+
+                // Insertar en la tabla Facturas_Productos
+                foreach (var producto in factura.Productos)
+                {
+                    MySqlCommand comandoFacturaProducto = new MySqlCommand(sqlFacturaProducto, conexionBd, transaction);
+                    comandoFacturaProducto.Parameters.AddWithValue("@Id_Factura", facturaId);
+                    comandoFacturaProducto.Parameters.AddWithValue("@Referencia_Producto", producto.Referencia);
+                    comandoFacturaProducto.Parameters.AddWithValue("@Cantidad", producto.CantidadDisponible);
+                    comandoFacturaProducto.Parameters.AddWithValue("@Precio_Total", producto.Valor);
+
+                    comandoFacturaProducto.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+                return "Factura guardada con éxito";
+            }
+            catch (MySqlException ex)
+            {
+                if (transaction != null)
+                {
+                    transaction.Rollback();
+                }
+                return "Error al guardar la factura: " + ex.Message;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
+        public List<Factura> ConsultarTodo()
+        {
+            List<Factura> facturas = new List<Factura>();
+            string sql = @"
+        SELECT 
+            f.Id AS FacturaId, 
+            f.Cedula_Miembro, 
+            f.Fecha_Factura, 
+            f.Precio_Total AS FacturaPrecioTotal,
+            m.Cedula, 
+            m.Nombre, 
+            m.Apellido, 
+            m.Telefono, 
+            m.Sexo, 
+            m.Fecha_Nacimiento, 
+            m.Correo_Electronico, 
+            m.Peso, 
+            m.Estatura, 
+            m.Foto AS MiembroFoto,
+            fp.Referencia_Producto, 
+            fp.Cantidad, 
+            fp.Precio_Total AS ProductoPrecioTotal,
+            p.Nombre AS ProductoNombre, 
+            p.Descripcion, 
+            p.Valor, 
+            p.Cantidad_Disponible, 
+            p.Foto AS ProductoFoto
+        FROM Facturas f
+        JOIN Miembros m ON f.Cedula_Miembro = m.Cedula
+        JOIN Facturas_Productos fp ON f.Id = fp.Id_Factura
+        JOIN Productos p ON fp.Referencia_Producto = p.Referencia";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
             {
-                //AbrirConexion();
                 conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-                comando.Parameters.AddWithValue("@Id", factura.Id);
-                comando.Parameters.AddWithValue("@Miembro", factura.Miembro);
-                comando.Parameters.AddWithValue("@FechaFactura", factura.FechaFactura);
-                comando.Parameters.AddWithValue("@Membresia", factura.Membresia);
-                comando.Parameters.AddWithValue("@Productos", factura.Productos);
-                var res = comando.ExecuteNonQuery();
-                if (res == 0)
+
+                using (MySqlDataReader reader = comando.ExecuteReader())
                 {
-                    return "Factura no guardada";
-                }
-                if (res != 0)
-                {
-                    return "Factura guardada";
+                    while (reader.Read())
+                    {
+                        MapearDatosFactura(reader, facturas);
+                    }
+                    return facturas;
+
                 }
             }
             catch (MySqlException ex)
             {
-                return "Error al guardar" + ex.Message;
-            }
-            finally
-            {
-                conexionBd.Close();
-            }
-            return null;
-
-        }
-        public List<Factura> ConsultarFacturasMembresia()
-        {
-            List<Factura> Facturas = new List<Factura>();
-
-            string ssql = $"select * from facturas_membresias";
-
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
-
-            try
-            {
-                MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
-                var reader = comando.ExecuteReader();
-                while (reader.Read())
-                {
-                    Facturas.Add(MapMembresia(reader));
-                }
-                return Facturas;
-            }
-            catch (MySqlException)
-            {
+                Console.WriteLine("error "+ex.Message);
                 return null;
             }
-            finally
-            {
-                conexionBd.Close();
-            }
         }
-
-        private Factura MapMembresia(MySqlDataReader reader)
+        public List<Factura> ConsultarCed(string cedula)
         {
-            Factura Factura = new Factura();
-            Factura.Id = int.Parse(reader.GetString(0));
-            Factura.FechaFactura =DateTime.Parse(reader.GetString(1));
-            Factura.Miembro.Correo = reader.GetString(2);
-            return Factura;
-        }
-        public List<Factura> ConsultarFacturasProductos()
-        {
-            List<Factura> Facturas = new List<Factura>();
-            Dictionary<int, Factura> facturaDict = new Dictionary<int, Factura>();
-
-            string sql = @"SELECT f.Id, f.Cedula_Miembro, f.Fecha_Factura, fp.Referencia_Producto, fp.Cantidad, p.Nombre, p.Descripcion, p.Valor
-                   FROM Factura f
-                   JOIN Facturas_Productos fp ON f.Id = fp.Id_Factura
-                   JOIN Productos p ON fp.Referencia_Producto = p.Referencia";
-
-            using (MySqlConnection conexionBd = conexion())
+            List<Factura> facturas = new List<Factura>();
+            string sql = @"
+        SELECT 
+            f.Id AS FacturaId, 
+            f.Cedula_Miembro, 
+            f.Fecha_Factura, 
+            f.Precio_Total AS FacturaPrecioTotal,
+            m.Cedula, 
+            m.Nombre, 
+            m.Apellido, 
+            m.Telefono, 
+            m.Sexo, 
+            m.Fecha_Nacimiento, 
+            m.Correo_Electronico, 
+            m.Peso, 
+            m.Estatura, 
+            m.Foto AS MiembroFoto,
+            fp.Referencia_Producto, 
+            fp.Cantidad, 
+            fp.Precio_Total AS ProductoPrecioTotal,
+            p.Nombre AS ProductoNombre, 
+            p.Descripcion, 
+            p.Valor, 
+            p.Cantidad_Disponible, 
+            p.Foto AS ProductoFoto
+        FROM Facturas f
+        JOIN Miembros m ON f.Cedula_Miembro = m.Cedula
+        JOIN Facturas_Productos fp ON f.Id = fp.Id_Factura
+        JOIN Productos p ON fp.Referencia_Producto = p.Referencia
+        WHERE m.Cedula = @Cedula";
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
+            try
             {
-                try
+                conexionBd.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                comando.Parameters.AddWithValue("@Cedula", cedula);
+
+                using (MySqlDataReader reader = comando.ExecuteReader())
                 {
-                    MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-                    conexionBd.Open();
-                    using (var reader = comando.ExecuteReader())
+                    while (reader.Read())
                     {
-                        while (reader.Read())
-                        {
-                            int idFactura = reader.GetInt32("Id");
-                            if (!facturaDict.TryGetValue(idFactura, out var factura))
-                            {
-                                factura = new Factura();
-
-                                factura.Id = idFactura;
-                                factura.Miembro.Cedula = reader.GetString("Cedula_Miembro"); // Asegúrate de que esto es correcto según tu estructura Miembro
-                                factura.FechaFactura = reader.GetDateTime("Fecha_Factura");
-                                factura.Productos = new List<Producto>();
-                                
-                                facturaDict[idFactura] = factura;
-                                Facturas.Add(factura);
-                            }
-
-                            Producto producto = new Producto
-                            {
-                                Referencia = reader.GetString("Referencia_Producto"),
-                                Nombre = reader.GetString("Nombre"),
-                                Descripcion = reader.GetString("Descripcion"),
-                                Valor = reader.GetInt32("Valor"),
-                                Cantidad = reader.GetInt32("Cantidad")
-                            };
-
-                            factura.Productos.Add(producto);
-                        }
+                        MapearDatosFactura(reader, facturas);
                     }
-                    return Facturas;
+                    return facturas;
+
                 }
-                catch (MySqlException ex)
-                {
-                    
-                    Console.WriteLine("Error: " + ex.Message);
-                    return null;
-                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("error " + ex.Message);
+                return null;
+            }
+        }
+        private void MapearDatosFactura(MySqlDataReader reader, List<Factura> facturas)
+        {
+            int facturaId = Convert.ToInt32(reader["FacturaId"]);
+
+            // Obtener la información del miembro
+            Miembro miembro = new Miembro
+            {
+                Cedula = reader["Cedula"].ToString(),
+                Nombre = reader["Nombre"].ToString(),
+                Apellido = reader["Apellido"].ToString(),
+                Telefono = reader["Telefono"].ToString(),
+                Sexo = reader["Sexo"].ToString(),
+                FechaNacimiento = Convert.ToDateTime(reader["Fecha_Nacimiento"]),
+                Correo= reader["Correo_Electronico"].ToString(),
+                Peso = Convert.ToInt32(reader["Peso"]),
+                Estatura = Convert.ToInt32(reader["Estatura"]),
+                Foto = reader["MiembroFoto"] as byte[]
+            };
+
+            // Obtener la información del producto
+            Producto producto = new Producto
+            {
+                Referencia = reader["Referencia_Producto"].ToString(),
+                Nombre = reader["ProductoNombre"].ToString(),
+                Descripcion = reader["Descripcion"].ToString(),
+                Valor = Convert.ToInt32(reader["Valor"]),
+                CantidadDisponible = Convert.ToInt32(reader["Cantidad"]),
+                Foto = reader["ProductoFoto"] as byte[]
+            };
+
+            // Verificar si la factura ya existe en la lista
+            Factura factura = facturas.FirstOrDefault(f => f.Id == facturaId);
+            if (factura == null)
+            {
+                factura = new Factura(
+                    facturaId,
+                    miembro,
+                    Convert.ToDateTime(reader["Fecha_Factura"]),
+                    new List<Producto> { producto },
+                    Convert.ToDouble(reader["FacturaPrecioTotal"])
+                );
+                facturas.Add(factura);
+            }
+            else
+            {
+                factura.Productos.Add(producto);
             }
         }
 
-        private Factura MapProducto(MySqlDataReader reader)
-        {
-            var factura = new Factura();
 
-            factura.Id = int.Parse(reader.GetString("Id"));
-            factura.Miembro.Cedula = reader.GetString("Cedula_Miembro"); // Asegúrate de que esto es correcto según tu estructura Miembro
-            factura.FechaFactura = DateTime.Parse(reader.GetString("Fecha_Factura"));
-            factura.Productos = new List<Producto>();
-                new Producto
-                {
-                    Referencia = reader.GetString("Referencia_Producto"),
-                    Nombre = reader.GetString("Nombre"),
-                    Descripcion = reader.GetString("Descripcion"),
-                    Valor = int.Parse(reader.GetString("Valor")),
-                    Cantidad = int.Parse(reader.GetString("Cantidad"))
-                };
-            return factura;
-        }
-        //public string GuardarFacturaBD(Factura factura)
-        //{
-        //    string sql = "INSERT INTO facturas (Miembro, FechaFactura, Membresia, Productos) " +
-        //          "VALUES (@Miembro, @FechaFactura, @Membresia, @Productos)";
-        //    MySqlConnection conexionBd = conexion();
-
-        //    try
-        //    {
-        //        conexionBd.Open();
-        //        MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-        //        comando.Parameters.AddWithValue("@Miembro", factura.Miembro);
-        //        comando.Parameters.AddWithValue("@FechaFactura", factura.FechaFactura);
-        //        comando.Parameters.AddWithValue("@Membresia", factura.Membresia);
-        //        comando.Parameters.AddWithValue("@Productos", factura.Productos);
-        //        int res = comando.ExecuteNonQuery();
-
-        //        if (res == 0)
-        //        {
-        //            return "La factura no fue guardada";
-        //        }
-        //        else
-        //        {
-        //            return "La factura fue guardada exitosamente";
-        //        }
-        //    }
-        //    catch (MySqlException ex)
-        //    {
-        //        return "Error al guardar la factura: " + ex.Message;
-        //    }
-        //    finally
-        //    {
-        //        conexionBd.Close();
-        //    }
-        //}
 
     }
 }

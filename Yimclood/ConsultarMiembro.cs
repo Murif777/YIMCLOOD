@@ -221,5 +221,10 @@ namespace Presentacion
                 MessageBox.Show("Seleccione un miembro para actualizar.");
             }
         }
+
+        private void btnActualizarBD_Click(object sender, EventArgs e)
+        {
+            PMembresiaService.ActualizarBD();
+        }
     }
 }

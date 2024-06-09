@@ -47,6 +47,19 @@ namespace BILL
                 return null;
             }
         }
+        public string ActualizarCantidadDisponible(Producto producto)
+        {
+            try
+            {
+               return pro_repository.ActualizarCantidadDisponible(producto);
+
+            }
+            catch (Exception ex)
+            {
+              
+                return "Error al registrar: " + ex.Message;
+            }
+        }
         public string EliminarProducto(string referenciaProducto)
         {
             return pro_repository.EliminarProducto(referenciaProducto);

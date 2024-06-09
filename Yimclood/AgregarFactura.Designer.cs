@@ -44,10 +44,10 @@
             this.btnRegistrarFactura = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.lblPrecioTotal = new System.Windows.Forms.Label();
-            this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.lblCantidadDisp = new System.Windows.Forms.Label();
+            this.lblPrecioUnitario = new System.Windows.Forms.Label();
+            this.lblPrecioTotal = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -133,6 +133,7 @@
             this.btnAgregarProducto.TabIndex = 25;
             this.btnAgregarProducto.Text = "agregar Producto";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // label1
             // 
@@ -199,6 +200,7 @@
             this.btnRegistrarFactura.TabIndex = 27;
             this.btnRegistrarFactura.Text = "GENERAR FACTURA";
             this.btnRegistrarFactura.UseVisualStyleBackColor = true;
+            this.btnRegistrarFactura.Click += new System.EventHandler(this.btnRegistrarFactura_Click);
             // 
             // btnsalir
             // 
@@ -238,28 +240,15 @@
             this.panel1.Size = new System.Drawing.Size(1284, 671);
             this.panel1.TabIndex = 28;
             // 
-            // dataGridView2
+            // lblCantidadDisp
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView2.Location = new System.Drawing.Point(528, 300);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(540, 245);
-            this.dataGridView2.TabIndex = 29;
-            // 
-            // lblPrecioTotal
-            // 
-            this.lblPrecioTotal.AutoSize = true;
-            this.lblPrecioTotal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioTotal.Location = new System.Drawing.Point(863, 177);
-            this.lblPrecioTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPrecioTotal.Name = "lblPrecioTotal";
-            this.lblPrecioTotal.Size = new System.Drawing.Size(0, 26);
-            this.lblPrecioTotal.TabIndex = 30;
+            this.lblCantidadDisp.AutoSize = true;
+            this.lblCantidadDisp.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadDisp.Location = new System.Drawing.Point(963, 11);
+            this.lblCantidadDisp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCantidadDisp.Name = "lblCantidadDisp";
+            this.lblCantidadDisp.Size = new System.Drawing.Size(0, 26);
+            this.lblCantidadDisp.TabIndex = 32;
             // 
             // lblPrecioUnitario
             // 
@@ -272,15 +261,28 @@
             this.lblPrecioUnitario.Size = new System.Drawing.Size(0, 26);
             this.lblPrecioUnitario.TabIndex = 31;
             // 
-            // lblCantidadDisp
+            // lblPrecioTotal
             // 
-            this.lblCantidadDisp.AutoSize = true;
-            this.lblCantidadDisp.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadDisp.Location = new System.Drawing.Point(963, 11);
-            this.lblCantidadDisp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCantidadDisp.Name = "lblCantidadDisp";
-            this.lblCantidadDisp.Size = new System.Drawing.Size(0, 26);
-            this.lblCantidadDisp.TabIndex = 32;
+            this.lblPrecioTotal.AutoSize = true;
+            this.lblPrecioTotal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioTotal.Location = new System.Drawing.Point(863, 177);
+            this.lblPrecioTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecioTotal.Name = "lblPrecioTotal";
+            this.lblPrecioTotal.Size = new System.Drawing.Size(0, 26);
+            this.lblPrecioTotal.TabIndex = 30;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView2.Location = new System.Drawing.Point(528, 300);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(540, 245);
+            this.dataGridView2.TabIndex = 29;
             // 
             // AgregarFactura
             // 

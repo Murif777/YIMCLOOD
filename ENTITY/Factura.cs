@@ -11,19 +11,11 @@ namespace ENTITY
         public int Id { get; set; }
         public Miembro Miembro { get; set; }
         public DateTime FechaFactura { get; set; }
-        public PerfilMembresia Membresia { get; set; }
         public List<Producto> Productos { get; set; }
-        public int Precio_Total { get;  set; }
+        public double Precio_Total { get;  set; }
 
         public Factura() { }
-        public Factura(int id,Miembro miembro,DateTime fechafactura, PerfilMembresia membresia)
-        {
-            Id = id;
-            Miembro = miembro;
-            FechaFactura = fechafactura;
-            Membresia = membresia;
-        }
-        public Factura(int id, Miembro miembro, DateTime fechafactura, List<Producto> productos, int precio_Total)
+        public Factura(int id, Miembro miembro, DateTime fechafactura, List<Producto> productos, double precio_Total)
         {
             Id = id;
             Miembro = miembro;

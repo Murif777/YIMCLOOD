@@ -19,6 +19,12 @@ namespace Presentacion
         private PMembresiaService PMembresiaService = new PMembresiaService();
         public event EventHandler OnRegresar;
         private ProductoService productoService = new ProductoService();
+        private List<Producto> productosSeleccionados = new List<Producto>();
+        private Miembro miembroSeleccionado;
+        private bool productosNoGuardados = false;
+        private FacturaService facturaService = new FacturaService();
+
+
         public AgregarFactura()
         {
             InitializeComponent();
@@ -53,14 +59,6 @@ namespace Presentacion
                     Nombre = p.DatosUsuario.DatosMiembro.Nombre,
                     Apellido = p.DatosUsuario.DatosMiembro.Apellido,
                     Correo = p.DatosUsuario.DatosMiembro.Correo,
-                    Membresia = p.TipoMembresia.Nombre,
-                    Estado = p.Estado,
-                    SaldoDebe = p.SaldoDebe,
-                    FechaInicio = p.Fechainicio,
-                    FechaFinal = p.Fechafinal,
-                    DuracionAcumulada = p.DuracionAcumulada,
-                    TiempoRestante = p.TiempoRestante,
-                    Pagado = p.Pagado
                 }).ToList();
 
                 dataGridView1.DataSource = viewList;
@@ -71,17 +69,6 @@ namespace Presentacion
                 dataGridView1.Columns["Nombre"].DisplayIndex = 2;
                 dataGridView1.Columns["Apellido"].DisplayIndex = 3;
                 dataGridView1.Columns["Correo"].DisplayIndex = 4;
-                dataGridView1.Columns["Membresia"].DisplayIndex = 5;
-                dataGridView1.Columns["Estado"].DisplayIndex = 6;
-                dataGridView1.Columns["SaldoDebe"].DisplayIndex = 7;
-                dataGridView1.Columns["FechaInicio"].DisplayIndex = 8;
-                dataGridView1.Columns["FechaFinal"].DisplayIndex = 9;
-                dataGridView1.Columns["DuracionAcumulada"].DisplayIndex = 10;
-                dataGridView1.Columns["TiempoRestante"].DisplayIndex = 11;
-                dataGridView1.Columns["Pagado"].DisplayIndex = 12;
-
-                int primeraColumna = 0;
-                dataGridView1.Columns[primeraColumna].Visible = false;
             }
             else
             {
@@ -90,64 +77,124 @@ namespace Presentacion
         }
         private void MostrarTablaProductos()
         {
-            var productos = productoService.Consultar();
-            if (productos != null && productos.Count > 0)
-            {
-                var viewList = productos.Select(p => new
+            string referencia = comboBoxProductos.SelectedValue.ToString();
+            List<Producto> productos = productoService.ConsultarRef(referencia);
+            Producto productoSeleccionado = productos.First();
+
+            // Modificar la cantidad del producto seleccionado
+            productoSeleccionado.CantidadDisponible = (int)numericUpDownCantidad.Value;
+
+            // Modificar el valor total del producto multiplicando su valor unitario por la cantidad
+            productoSeleccionado.Valor = productoSeleccionado.Valor * productoSeleccionado.CantidadDisponible;
+
+            // Agregar el producto modificado a la lista de productos seleccionados
+            productosSeleccionados.Add(productoSeleccionado);
+            productosNoGuardados = true; // Marcar como no guardado cuando se añade un producto
+            if (productosSeleccionados != null && productosSeleccionados.Count > 0)
                 {
-                    Foto = p.Foto,
-                    Referencia = p.Referencia,
-                    Nombre = p.Nombre,
-                    Precio = p.Valor
-                }).ToList();
-                dataGridView1.DataSource = viewList;
-                dataGridView1.Columns["Foto"].DisplayIndex = 0;
-                dataGridView1.Columns["Referencia"].DisplayIndex = 1;
-                dataGridView1.Columns["Nombre"].DisplayIndex = 2;
-                dataGridView1.Columns["Precio"].DisplayIndex = 3;
-                //int primeraColumna = 0;
-                //dataGridView1.Columns[primeraColumna].Visible = false;
+                    var viewList = productosSeleccionados.Select(p => new
+                    {
+                        Foto = p.Foto,
+                        Referencia = p.Referencia,
+                        Nombre = p.Nombre,
+                        Precio = p.Valor,
+                        Cantidad =p.CantidadDisponible
+                    }).ToList();
+                    dataGridView2.DataSource = viewList;
+                    // Configurar las columnas para mostrar en el orden deseado
+                    dataGridView2.Columns["Foto"].DisplayIndex = 0;
+                    dataGridView2.Columns["Referencia"].DisplayIndex = 1;
+                    dataGridView2.Columns["Nombre"].DisplayIndex = 2;
+                    dataGridView2.Columns["Precio"].DisplayIndex = 3;
+                    dataGridView2.Columns["Cantidad"].DisplayIndex = 4;
+                }
+                else
+                {
+                    MessageBox.Show("Producto no encontrado");
+                }
+
+        }
+        private void GenerarFactura()
+        {
+            Factura factura = new Factura();
+
+            if (miembroSeleccionado != null)
+            {
+                factura.Miembro = miembroSeleccionado;
             }
             else
             {
-                MessageBox.Show("Lista vacía");
+                MessageBox.Show("No hay miembro seleccionado.");
+                return;
+            }
+            factura.FechaFactura=DateTime.Now;
+            factura.Productos = productosSeleccionados;
+            double precioTotal = productosSeleccionados.Sum(p => p.Valor);
+            factura.Precio_Total = precioTotal;
+            Console.WriteLine(factura.FechaFactura.ToString(), factura.Precio_Total);
+            facturaService.RegistrarFacturaProducto(factura);
+            actualizarBD();
+            limpiarcampos();
+        }
+        private void actualizarBD()
+        {
+            foreach (var producto in productosSeleccionados)
+            {
+                int cantidadDisponibleActual =int.Parse( productoService.ObtenerCantidadDisponiblePorReferencia(producto.Referencia));
+                int nuevaCantidadDisponible = cantidadDisponibleActual - producto.CantidadDisponible;
+                producto.CantidadDisponible = nuevaCantidadDisponible;
+                productoService.ActualizarCantidadDisponible(producto);
             }
         }
-        //private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        //{
-        //    if (dataGridView1.SelectedRows.Count > 0)
-        //    {
-        //        DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
-        //        int fotoColumnIndex = 0;
 
-        //        byte[] foto = (byte[])selectedRow.Cells[fotoColumnIndex].Value;
-
-        //        if (foto != null)
-        //        {
-        //            Image image = Image.FromStream(new MemoryStream(foto));
-
-        //            int nuevoAncho = 175;
-        //            int nuevoAlto = 175;
-        //            Image imagenRedimensionada = new Bitmap(image, nuevoAncho, nuevoAlto);
-
-        //            pbFoto.Image = imagenRedimensionada;
-        //        }
-
-        //        else
-        //        {
-        //            pbFoto.Image = null;
-        //        }
-        //    }
-        //}
+        private void limpiarcampos()
+        {
+            comboBoxProductos.SelectedIndex = 0;
+            productosSeleccionados.Clear();
+            productosNoGuardados = false;
+            dataGridView2.DataSource = null;
+        }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            if (productosNoGuardados)
+            {
+                var result = MessageBox.Show("Tiene productos seleccionados que no han sido guardados. ¿Está seguro que desea cambiar de miembro y perder los productos seleccionados?", "Confirmar cambio de miembro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.No)
+                {
+                    // Cancelar la selección y mantener la selección anterior
+                    dataGridView1.SelectionChanged -= dataGridView1_SelectionChanged;
+                    dataGridView1.ClearSelection();
+                    dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
+                    return;
+                }
+                else
+                {
+                    // Borrar la lista de productos seleccionados
+                    productosSeleccionados.Clear();
+                    productosNoGuardados = false;
+                    dataGridView2.DataSource = null; // Actualizar la tabla de productos seleccionados
+                }
+            }
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 LlenarComboBoxProductos();
                 comboBoxProductos.Enabled = true;
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                string cedulaMiembro = selectedRow.Cells["Cedula"].Value.ToString();
+
+                miembroSeleccionado = new Miembro(
+                    selectedRow.Cells["Cedula"].Value.ToString(),
+                    selectedRow.Cells["Nombre"].Value.ToString(),
+                    selectedRow.Cells["Apellido"].Value.ToString(),
+                    "", // Suponiendo que no tienes el teléfono en el DataGridView
+                    "", // Suponiendo que no tienes el sexo en el DataGridView
+                    selectedRow.Cells["Correo"].Value.ToString(),
+                    DateTime.MinValue, // Suponiendo que no tienes la fecha de nacimiento en el DataGridView
+                    0, // Suponiendo que no tienes el peso en el DataGridView
+                    0, // Suponiendo que no tienes la estatura en el DataGridView
+                    selectedRow.Cells["Foto"].Value as byte[]
+                );
+
             }
             else
             {
@@ -155,6 +202,15 @@ namespace Presentacion
                 comboBoxProductos.Enabled = false;
             }
 
+        }
+        private void btnRegistrarFactura_Click(object sender, EventArgs e)
+        {
+            GenerarFactura();
+        }
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            MostrarTablaProductos();
+            Console.WriteLine("precio:"+lblPrecioTotal.Text);
         }
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
@@ -166,9 +222,12 @@ namespace Presentacion
             var productos = productoService.Consultar();
             if (productos != null && productos.Count > 0)
             {
+                //productos.Insert(0, new Producto { Nombre = "Ninguno" });
                 comboBoxProductos.DataSource = productos;
                 comboBoxProductos.DisplayMember = "Nombre";  
-                comboBoxProductos.ValueMember = "Referencia"; 
+                comboBoxProductos.ValueMember = "Referencia";
+                comboBoxProductos.DropDownStyle = ComboBoxStyle.DropDownList; // Hacer que el ComboBox sea solo de selección
+                comboBoxProductos.SelectedIndex = 0; // Seleccionar "Ninguno" por defecto
 
             }
             else
@@ -176,19 +235,19 @@ namespace Presentacion
                 MessageBox.Show("No hay productos disponibles.");
             }
         }
-
         private void comboBoxProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxProductos.SelectedItem != null)
+            if (comboBoxProductos.SelectedItem != null )
             {
                 string referenciaProducto = comboBoxProductos.SelectedValue.ToString();
+
                 string cantidadDisponible = productoService.ObtenerCantidadDisponiblePorReferencia(referenciaProducto);
                 lblCantidadDisp.Text = cantidadDisponible;
 
                 string precioUnitario = productoService.ObtenerPrecioUnitarioPorReferencia(referenciaProducto);
                 numericUpDownCantidad.Maximum = int.Parse(cantidadDisponible);
                 numericUpDownCantidad.Value= 0;
-                lblPrecioUnitario.Text = precioUnitario; 
+                lblPrecioUnitario.Text = precioUnitario;
                 CalcularPrecioTotal();
             }
         }
@@ -205,32 +264,10 @@ namespace Presentacion
                 lblPrecioTotal.Text = precioTotal.ToString("F2"); 
             }
         }
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBoxProductos.Enabled = false; 
             LlenarComboBoxProductos();
-        }
-
-        private void btnAgregarProducto_Click(object sender, EventArgs e)
-        {
-            if (comboBoxProductos.SelectedItem != null && int.TryParse(lblCantidadDisp.Text, out int cantidadDisponible) &&
-            decimal.TryParse(lblPrecioUnitario.Text, out decimal precioUnitario) && (int)numericUpDownCantidad.Value <= cantidadDisponible)
-            {
-                string referenciaProducto = comboBoxProductos.SelectedValue.ToString();
-                string nombreProducto = comboBoxProductos.Text;
-                int cantidad = (int)numericUpDownCantidad.Value;
-                numericUpDownCantidad.Maximum = cantidad;
-                decimal precioTotal = precioUnitario * cantidad;
-                dataGridView1.Rows.Add(referenciaProducto, nombreProducto, cantidad, precioUnitario, precioTotal);
-                int nuevaCantidadDisponible = cantidadDisponible - cantidad;
-                lblCantidadDisp.Text = nuevaCantidadDisponible.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Cantidad no disponible.");
-            }
         }
 
 

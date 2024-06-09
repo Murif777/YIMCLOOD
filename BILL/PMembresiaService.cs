@@ -20,7 +20,8 @@ namespace BILL
             try
             {
                 var perfilCompleto = CrearPerfilCompleto(perfil);
-                //VerificarMembresias();
+                VerificarMembresias();
+
                 return PmembresiaRepository.GuardarPMembresiaBD(perfilCompleto);
             }
             catch (Exception ex)
@@ -40,23 +41,21 @@ namespace BILL
                 return null;
             }
         }
-        public string Actualizar(PerfilMembresia perfil)
-        {
-            try
-            {
-                // Crear el perfil completo si es necesario
-                var perfilCompleto = CrearPerfilCompleto(perfil);
+        //public string Actualizar(PerfilMembresia perfil)
+        //{
+        //    try
+        //    {
+        //        // Crear el perfil completo si es necesario
+        //        var perfilCompleto = CrearPerfilCompleto(perfil);
 
-                // Llamar al método de actualización en el repositorio y obtener el resultado
-                return PmembresiaRepository.ActualizarPMembresiaBD(perfilCompleto);
-            }
-            catch (Exception ex)
-            {
-                return "Error al actualizar: " + ex.Message;
-            }
-        }
-
-
+        //        // Llamar al método de actualización en el repositorio y obtener el resultado
+        //        return PmembresiaRepository.ActualizarPMembresiaBD(perfilCompleto);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return "Error al actualizar: " + ex.Message;
+        //    }
+        //}
 
         public List<PerfilMembresia> consultartodo()
         {
@@ -89,44 +88,78 @@ namespace BILL
             Console.WriteLine(perfilCompleto.TiempoRestante);
             return perfilCompleto;
         }
-        //public void VerificarMembresias()
-        //{
-        //    List<PerfilMembresia> membresias = PmembresiaRepository.ConsultarTodos();
-        //    if (membresias == null)
-        //    {
-        //        Console.WriteLine("no esta leyendo los datos");
-        //    }
-        //    DateTime hoy = DateTime.Now;
-        //    foreach (PerfilMembresia perfil in membresias)
-        //    {
-        //        if (perfil.Fechainicio.Date == hoy.Date)
-        //        {
-        //            //Notificación de inicio de membresía
-        //            string correo = perfil.DatosUsuario.DatosMiembro.Correo;
-        //            Console.WriteLine(perfil.Fechafinal);
-        //            Console.WriteLine(correo);
-        //            string subject = "Inicio de Membresía";
-        //            string body = CrearCuerpoCorreoInicio(perfil);
-        //            emailService.SendEmail(correo, subject, body);
-        //        }
-        //        else if (perfil.Fechafinal > hoy && perfil.Fechafinal <= hoy.AddDays(7))
-        //        {
-        //            // Notificación de membresía próxima a caducar
-        //            string correo = perfil.DatosUsuario.CorreoElectronico;
-        //            string subject = "Membresía Próxima a Caducar";
-        //            string body = CrearCuerpoCorreoProximoACaducar(perfil);
-        //            emailService.SendEmail(correo, subject, body);
-        //        }
-        //        else if (perfil.Fechafinal <= hoy)
-        //        {
-        //            // Notificación de membresía caducada
-        //            string correo = perfil.DatosUsuario.CorreoElectronico;
-        //            string subject = "Notificación de Membresía Caducada";
-        //            string body = CrearCuerpoCorreoCaducado(perfil);
-        //            emailService.SendEmail(correo, subject, body);
-        //        }
-        //    }
-        //}
+        public void VerificarMembresias()
+        {
+            List<PerfilMembresia> membresias = PmembresiaRepository.ConsultarTodos();
+            if (membresias == null)
+            {
+                Console.WriteLine("no esta leyendo los datos");
+            }
+            DateTime hoy = DateTime.Now;
+            foreach (PerfilMembresia perfil in membresias)
+            {
+                if (perfil.Fechainicio.Date == hoy.Date)
+                {
+                    //Notificación de inicio de membresía
+                    string correo = perfil.DatosUsuario.DatosMiembro.Correo;
+                    Console.WriteLine(perfil.Fechafinal);
+                    Console.WriteLine(correo);
+                    string subject = "Inicio de Membresía";
+                    string body = CrearCuerpoCorreoInicio(perfil);
+                    emailService.SendEmail(correo, subject, body);
+                }
+                else if (perfil.Fechafinal > hoy && perfil.Fechafinal <= hoy.AddDays(7))
+                {
+                    // Notificación de membresía próxima a caducar
+                    string correo = perfil.DatosUsuario.CorreoElectronico;
+                    string subject = "Membresía Próxima a Caducar";
+                    string body = CrearCuerpoCorreoProximoACaducar(perfil);
+                    emailService.SendEmail(correo, subject, body);
+                }
+                else if (perfil.Fechafinal <= hoy)
+                {
+                    // Notificación de membresía caducada
+                    string correo = perfil.DatosUsuario.CorreoElectronico;
+                    string subject = "Notificación de Membresía Caducada";
+                    string body = CrearCuerpoCorreoCaducado(perfil);
+                    emailService.SendEmail(correo, subject, body);
+                }
+            }
+        }
+
+
+        public string ActualizarBD()
+        {
+            try
+            {
+                List<PerfilMembresia> membresias = PmembresiaRepository.ConsultarTodos();
+                if (membresias == null)
+                {
+                    return "No se encontraron membresías para actualizar.";
+                }
+
+                DateTime hoy = DateTime.Now;
+
+                foreach (PerfilMembresia perfil in membresias)
+                {
+                    // Calcular la duración acumulada y el tiempo restante
+                    perfil.DuracionAcumulada = CalcularDuracionAcumulada(perfil.Fechainicio, hoy, perfil.TipoMembresia.Duracion);
+                    perfil.TiempoRestante = CalcularTiempoRestante(perfil.Fechafinal);
+
+                    // Calcular el saldo debe y el estado
+                    perfil.SaldoDebe = CalcularSaldoDebe(perfil);
+                    perfil.Estado = DeterminarEstado(perfil); 
+                    // Actualizar los datos en la base de datos
+                    Console.WriteLine(PmembresiaRepository.ActualizarPMembresiaBD(perfil));
+                }
+                
+                return "Actualización de membresías completada.";
+            }
+            catch (Exception ex)
+            {
+                return "Error al actualizar la base de datos: " + ex.Message;
+            }
+        }
 
         //public void VerificarMembresias(PerfilMembresia perfil)
         //{

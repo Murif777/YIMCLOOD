@@ -150,12 +150,6 @@
     <Compile Include="UsuarioMenuPrincipal.Designer.cs">
       <DependentUpon>UsuarioMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hombros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hombros.Designer.cs">
-      <DependentUpon>Hombros.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="RecuperarContraseña.cs">
       <SubType>Form</SubType>
@@ -249,9 +243,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioMenuPrincipal.resx">
       <DependentUpon>UsuarioMenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hombros.resx">
-      <DependentUpon>Hombros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecuperarContraseña.resx">
       <DependentUpon>RecuperarContraseña.cs</DependentUpon>

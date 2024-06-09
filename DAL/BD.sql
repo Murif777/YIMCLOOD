@@ -9,7 +9,7 @@ CREATE TABLE Productos (
     Nombre VARCHAR(50) NOT NULL,
     Descripcion VARCHAR(255) NOT NULL,
     Valor INT NOT NULL,
-    Cantidad INT,
+    Cantidad_Disponible INT,
     Foto LONGBLOB NULL
 );
 
@@ -45,7 +45,6 @@ CREATE TABLE Miembros (
     Correo_Electronico VARCHAR(50) UNIQUE NOT NULL,
     Peso INT NOT NULL DEFAULT 0,
     Estatura INT NOT NULL DEFAULT 0,
-    Tipo_Membresia VARCHAR(20),
     Foto LONGBLOB NULL
 );
 CREATE TABLE Entrenadores (
@@ -58,29 +57,22 @@ CREATE TABLE Entrenadores (
     Fecha_Nacimiento DATE NOT NULL,
     Foto LONGBLOB NULL
 );
-
-CREATE TABLE Facturas_Membresias(
-    Id INT AUTO_INCREMENT PRIMARY KEY,
-    Fecha_Factura DATE,
-    Correo_Usuario VARCHAR(50),
-    FOREIGN KEY (Correo_Usuario) REFERENCES membresias_usuarios(Correo_Usuario)
-);
-
-CREATE TABLE Factura (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
-    Cedula_Miembro VARCHAR(50),
-    Fecha_Factura DATE,
-    FOREIGN KEY (Cedula_Miembro) REFERENCES Miembros(cedula)
-);
-
 CREATE TABLE Facturas_Productos (
     Id_Factura INT,
     Referencia_Producto VARCHAR(50),
     Cantidad INT,
+    Precio_Total double,
     PRIMARY KEY (Id_Factura, Referencia_Producto),
-    FOREIGN KEY (Id_Factura) REFERENCES Factura(Id),
+    FOREIGN KEY (Id_Factura) REFERENCES Facturas(Id),
     FOREIGN KEY (Referencia_Producto) REFERENCES Productos(Referencia)
 );
+CREATE TABLE Facturas (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Cedula_Miembro VARCHAR(50),
+    Fecha_Factura DATE,
+	Precio_Total double,
+    FOREIGN KEY (Cedula_Miembro) REFERENCES Miembros(cedula)
+);	
 
 CREATE TABLE Historiales (
     Id INT AUTO_INCREMENT PRIMARY KEY,
@@ -120,13 +112,12 @@ CREATE TABLE Musculo_Ejercicio (
 );
 
 CREATE TABLE Ejercicios (
-	Musculo NVARCHAR (100) NOT NULL,
-    Nombre NVARCHAR(100) PRIMARY KEY,   
-    Descripcion NVARCHAR(255) NULL,
+    Nombre VARCHAR(20) PRIMARY KEY,   
+    Descripcion VARCHAR(20) NULL,
     Duracion TIME NULL,
     Repeticiones INT NULL,
     Series INT NULL,
-    Categoria_Nombre NVARCHAR(100) NOT NULL,
-	CONSTRAINT fk_categoria FOREIGN KEY (Categoria_Nombre) REFERENCES Categorias_Ejercicio(Nombre),
-    CONSTRAINT fk_musculo FOREIGN KEY (Musculo) REFERENCES Musculo_Ejercicio(Nombre)
+	Musculo VARCHAR (20) NOT NULL,
+    Categoria VARCHAR(100) NOT NULL,
+    Foto LONGBLOB
 );

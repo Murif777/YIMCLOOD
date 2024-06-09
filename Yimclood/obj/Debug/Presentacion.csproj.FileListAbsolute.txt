@@ -286,7 +286,6 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Present
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarProd.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarMembresia.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioMenuPrincipal.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Hombros.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RegistrarEntrenador.resources
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Login.resources

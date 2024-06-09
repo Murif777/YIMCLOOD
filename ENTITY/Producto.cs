@@ -13,7 +13,7 @@ namespace ENTITY
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int Valor { get; set; }
-        public int Cantidad { get; set; }
+        public int CantidadDisponible { get; set; }
         public byte[] Foto { get; set; }
 
         public Producto() { }
@@ -26,7 +26,7 @@ namespace ENTITY
             Nombre = nombre;
             Descripcion = descripcion;
             Valor = valor;
-            Cantidad = cantidad;
+            CantidadDisponible= cantidad;
             Foto = foto;
         }
     }

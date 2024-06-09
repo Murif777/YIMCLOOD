@@ -33,15 +33,20 @@
             this.Btnregresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnVer = new System.Windows.Forms.Button();
             this.txtCedula = new System.Windows.Forms.TextBox();
+            this.TablaFacturas = new System.Windows.Forms.DataGridView();
+            this.pnlProductos = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Cerrar = new System.Windows.Forms.PictureBox();
+            this.TablaProductos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaFacturas)).BeginInit();
+            this.pnlProductos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,35 +87,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(9, 237);
+            this.label3.Location = new System.Drawing.Point(148, 192);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(259, 15);
             this.label3.TabIndex = 19;
             this.label3.Text = "*Seleccione un entrenador para ver su imagen";
-            // 
-            // pbFoto
-            // 
-            this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Location = new System.Drawing.Point(613, 75);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(175, 175);
-            this.pbFoto.TabIndex = 18;
-            this.pbFoto.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 278);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 174);
-            this.dataGridView1.TabIndex = 17;
             // 
             // label2
             // 
@@ -136,6 +118,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(52, 37);
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnVer
             // 
@@ -145,12 +128,13 @@
             this.btnVer.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnVer.Image = ((System.Drawing.Image)(resources.GetObject("btnVer.Image")));
-            this.btnVer.Location = new System.Drawing.Point(710, 247);
+            this.btnVer.Location = new System.Drawing.Point(684, 170);
             this.btnVer.Margin = new System.Windows.Forms.Padding(2);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(44, 37);
             this.btnVer.TabIndex = 20;
             this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // txtCedula
             // 
@@ -160,27 +144,81 @@
             this.txtCedula.Size = new System.Drawing.Size(206, 31);
             this.txtCedula.TabIndex = 21;
             // 
+            // TablaFacturas
+            // 
+            this.TablaFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaFacturas.Location = new System.Drawing.Point(151, 212);
+            this.TablaFacturas.Name = "TablaFacturas";
+            this.TablaFacturas.Size = new System.Drawing.Size(553, 183);
+            this.TablaFacturas.TabIndex = 22;
+            // 
+            // pnlProductos
+            // 
+            this.pnlProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlProductos.Controls.Add(this.TablaProductos);
+            this.pnlProductos.Controls.Add(this.Cerrar);
+            this.pnlProductos.Controls.Add(this.label4);
+            this.pnlProductos.Location = new System.Drawing.Point(126, 115);
+            this.pnlProductos.Name = "pnlProductos";
+            this.pnlProductos.Size = new System.Drawing.Size(620, 314);
+            this.pnlProductos.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label4.Location = new System.Drawing.Point(240, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 37);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Productos";
+            // 
+            // Cerrar
+            // 
+            this.Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrar.Image")));
+            this.Cerrar.Location = new System.Drawing.Point(561, 3);
+            this.Cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Cerrar.Name = "Cerrar";
+            this.Cerrar.Size = new System.Drawing.Size(53, 41);
+            this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Cerrar.TabIndex = 3;
+            this.Cerrar.TabStop = false;
+            this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
+            // 
+            // TablaProductos
+            // 
+            this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaProductos.Location = new System.Drawing.Point(46, 49);
+            this.TablaProductos.Name = "TablaProductos";
+            this.TablaProductos.Size = new System.Drawing.Size(519, 238);
+            this.TablaProductos.TabIndex = 4;
+            // 
             // ConsultarFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(800, 471);
+            this.Controls.Add(this.pnlProductos);
+            this.Controls.Add(this.TablaFacturas);
             this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.btnVer);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pbFoto);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnVer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultarFacturas";
             this.Text = "ConsultarFacturas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaFacturas)).EndInit();
+            this.pnlProductos.ResumeLayout(false);
+            this.pnlProductos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,11 +230,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btnregresar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pbFoto;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.DataGridView TablaFacturas;
+        private System.Windows.Forms.Panel pnlProductos;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox Cerrar;
+        private System.Windows.Forms.DataGridView TablaProductos;
     }
 }

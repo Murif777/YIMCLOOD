@@ -291,40 +291,34 @@ namespace DAL
         }
         public string ActualizarPMembresiaBD(PerfilMembresia perfil)
         {
-            string query = "UPDATE membresias_usuarios " +
-                           "SET Estado = @Estado, " +
-                           "Fecha_Inicio = @Fecha_Inicio, " +
-                           "Fecha_final = @Fecha_final, " +
-                           "Saldo_Debe = @Saldo_Debe, " +
-                           "Pagado = @Pagado, " +
-                           "Duracion_Acumulada = @Duracion_Acumulada, " +
-                           "Tiempo_Restante = @Tiempo_Restante " +
-                           "WHERE Correo_Usuario = @Correo_Usuario AND Nombre_Membresia = @Nombre_Membresia";
+            string sql = "UPDATE membresias_usuarios SET " +
+                 "Duracion_Acumulada = @DuracionAcumulada, " +
+                 "Tiempo_Restante = @TiempoRestante, " +
+                 "Saldo_Debe = @SaldoDebe, " +
+                 "Estado = @Estado " +
+                 "WHERE Correo_Usuario = @Correo_Usuario";
 
             using (MySqlConnection conexionBd = conexion())
             {
                 try
                 {
                     conexionBd.Open();
-                    MySqlCommand comando = new MySqlCommand(query, conexionBd);
+                    MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                    comando.Parameters.AddWithValue("@DuracionAcumulada", perfil.DuracionAcumulada);
+                    comando.Parameters.AddWithValue("@TiempoRestante", perfil.TiempoRestante);
+                    comando.Parameters.AddWithValue("@SaldoDebe", perfil.SaldoDebe);
                     comando.Parameters.AddWithValue("@Estado", perfil.Estado);
-                    comando.Parameters.AddWithValue("@Fecha_Inicio", perfil.Fechainicio);
-                    comando.Parameters.AddWithValue("@Fecha_final", perfil.Fechafinal);
-                    comando.Parameters.AddWithValue("@Saldo_Debe", perfil.SaldoDebe);
-                    comando.Parameters.AddWithValue("@Pagado", perfil.Pagado);
-                    comando.Parameters.AddWithValue("@Duracion_Acumulada", perfil.DuracionAcumulada);
-                    comando.Parameters.AddWithValue("@Tiempo_Restante", perfil.TiempoRestante);
                     comando.Parameters.AddWithValue("@Correo_Usuario", perfil.DatosUsuario.CorreoElectronico);
-                    comando.Parameters.AddWithValue("@Nombre_Membresia", perfil.TipoMembresia.Nombre);
 
-                    int filasAfectadas = comando.ExecuteNonQuery();
-                    if (filasAfectadas > 0)
+                    int resultado = comando.ExecuteNonQuery();
+
+                    if (resultado > 0)
                     {
-                        return "Perfil de membresía actualizado exitosamente.";
+                        return "Actualización exitosa";
                     }
                     else
                     {
-                        return "No se encontró el perfil de membresía para actualizar.";
+                        return "No se pudo actualizar la membresía";
                     }
                 }
                 catch (MySqlException ex)
