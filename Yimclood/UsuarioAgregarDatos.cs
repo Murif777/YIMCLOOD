@@ -11,55 +11,46 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Text;
+using ENTITY;
 
 
 
 namespace Presentacion
 {
-    public partial class UsuarioMisRutinas : Form
+    public partial class UsuarioAgregarDatos : Form
     {
-        public UsuarioMisRutinas()
+        private Login login = new Login();
+
+
+        public UsuarioAgregarDatos()
         {
             InitializeComponent();
+            DatosMiembro();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-        private void arrastrarElemento()
+                
+        private void DatosMiembro()
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }           
+            //Miembro miembro = login.DatosPerfil();
+            //lblNombre.Text = miembro.Nombre;
+        }
+       
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblFecha_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void cbPeso_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lblNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAgregarRutinas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbRutinas_SelectedIndexChanged(object sender, EventArgs e)
+        private void lblPeso_Click(object sender, EventArgs e)
         {
 
         }

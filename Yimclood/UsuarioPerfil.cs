@@ -35,25 +35,22 @@ namespace Presentacion
                 
         private void DatosMiembro()
         {
-            Miembro miembro = login.DatosPerfil();
-            lblNombre.Text = miembro.Nombre;
+            //Miembro miembro = login.DatosPerfil();
+            //lblNombre.Text = miembro.Nombre;
         }
+        private void Abrirformpanel(Form formHijo)
+        {
+            if (this.pnlPadre.Controls.Count > 0)
+                this.pnlPadre.Controls.RemoveAt(0);
+            formHijo.TopLevel = false;
+            formHijo.Dock = DockStyle.Fill;
+            this.pnlPadre.Controls.Add(formHijo);
+            this.pnlPadre.Tag = formHijo;
+            formHijo.Show();
+        }
+
+
        
-        private void pnlPerfil_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFecha_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void rbtnActual_CheckedChanged(object sender, EventArgs e)
         {
 

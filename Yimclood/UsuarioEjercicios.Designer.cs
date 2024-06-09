@@ -39,17 +39,16 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioEjercicios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelBotones = new System.Windows.Forms.TableLayoutPanel();
             this.musculos = new System.Windows.Forms.PictureBox();
             this.listEjercicios = new System.Windows.Forms.DataGridView();
-            this.pnlRutina = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlGimnasio = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -68,7 +67,6 @@ namespace Presentacion
             this.panelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listEjercicios)).BeginInit();
-            this.pnlRutina.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlGimnasio.SuspendLayout();
@@ -141,17 +139,18 @@ namespace Presentacion
             this.panelBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.panelBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.panelBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.panelBotones.Size = new System.Drawing.Size(339, 440);
+            this.panelBotones.Size = new System.Drawing.Size(208, 611);
             this.panelBotones.TabIndex = 0;
             // 
             // musculos
             // 
             this.musculos.BackColor = System.Drawing.Color.Transparent;
+            this.musculos.Dock = System.Windows.Forms.DockStyle.Left;
             this.musculos.Image = ((System.Drawing.Image)(resources.GetObject("musculos.Image")));
-            this.musculos.Location = new System.Drawing.Point(337, 0);
+            this.musculos.Location = new System.Drawing.Point(208, 0);
             this.musculos.Margin = new System.Windows.Forms.Padding(2);
             this.musculos.Name = "musculos";
-            this.musculos.Size = new System.Drawing.Size(426, 440);
+            this.musculos.Size = new System.Drawing.Size(435, 611);
             this.musculos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.musculos.TabIndex = 10;
             this.musculos.TabStop = false;
@@ -164,82 +163,81 @@ namespace Presentacion
             this.listEjercicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listEjercicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.listEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listEjercicios.DefaultCellStyle = dataGridViewCellStyle2;
-            this.listEjercicios.Location = new System.Drawing.Point(756, 0);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listEjercicios.DefaultCellStyle = dataGridViewCellStyle1;
+            this.listEjercicios.Location = new System.Drawing.Point(645, 0);
             this.listEjercicios.Margin = new System.Windows.Forms.Padding(2);
             this.listEjercicios.Name = "listEjercicios";
             this.listEjercicios.ReadOnly = true;
             this.listEjercicios.RowHeadersWidth = 51;
             this.listEjercicios.RowTemplate.Height = 24;
-            this.listEjercicios.Size = new System.Drawing.Size(619, 356);
+            this.listEjercicios.Size = new System.Drawing.Size(355, 426);
             this.listEjercicios.TabIndex = 12;
-            // 
-            // pnlRutina
-            // 
-            this.pnlRutina.Controls.Add(this.panel3);
-            this.pnlRutina.Controls.Add(this.pnlGimnasio);
-            this.pnlRutina.Location = new System.Drawing.Point(522, 134);
-            this.pnlRutina.Name = "pnlRutina";
-            this.pnlRutina.Size = new System.Drawing.Size(721, 372);
-            this.pnlRutina.TabIndex = 13;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.btnCrearRutina);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(103, 187);
+            this.panel3.Location = new System.Drawing.Point(645, 518);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(590, 140);
+            this.panel3.Size = new System.Drawing.Size(355, 94);
             this.panel3.TabIndex = 31;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 30F);
-            this.label2.Location = new System.Drawing.Point(10, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(441, 48);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Crear rutina personalizada";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(392, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(277, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(198, 140);
+            this.pictureBox2.Size = new System.Drawing.Size(78, 94);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 16F);
+            this.label2.Location = new System.Drawing.Point(4, 4);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(298, 33);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Crear rutina personalizada";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // pnlGimnasio
             // 
-            this.pnlGimnasio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.pnlGimnasio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pnlGimnasio.Controls.Add(this.btnPreestablecidas);
             this.pnlGimnasio.Controls.Add(this.label1);
             this.pnlGimnasio.Controls.Add(this.pictureBox1);
-            this.pnlGimnasio.Location = new System.Drawing.Point(106, 18);
+            this.pnlGimnasio.Location = new System.Drawing.Point(645, 424);
+            this.pnlGimnasio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlGimnasio.Name = "pnlGimnasio";
-            this.pnlGimnasio.Size = new System.Drawing.Size(587, 140);
+            this.pnlGimnasio.Size = new System.Drawing.Size(355, 94);
             this.pnlGimnasio.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 30F);
-            this.label1.Location = new System.Drawing.Point(36, 3);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 16F);
+            this.label1.Location = new System.Drawing.Point(4, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(415, 48);
+            this.label1.Size = new System.Drawing.Size(282, 33);
             this.label1.TabIndex = 2;
             this.label1.Text = "Rutinas preestableciadas";
             // 
@@ -247,9 +245,10 @@ namespace Presentacion
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(389, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(277, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 140);
+            this.pictureBox1.Size = new System.Drawing.Size(78, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -265,9 +264,10 @@ namespace Presentacion
             this.btnCrearRutina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearRutina.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14F);
             this.btnCrearRutina.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearRutina.Location = new System.Drawing.Point(178, 77);
+            this.btnCrearRutina.Location = new System.Drawing.Point(70, 49);
+            this.btnCrearRutina.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrearRutina.Name = "btnCrearRutina";
-            this.btnCrearRutina.Size = new System.Drawing.Size(196, 54);
+            this.btnCrearRutina.Size = new System.Drawing.Size(160, 39);
             this.btnCrearRutina.TabIndex = 4;
             this.btnCrearRutina.Text = "Crear";
             this.btnCrearRutina.TextColor = System.Drawing.Color.Black;
@@ -284,9 +284,10 @@ namespace Presentacion
             this.btnPreestablecidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPreestablecidas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14F);
             this.btnPreestablecidas.ForeColor = System.Drawing.Color.Black;
-            this.btnPreestablecidas.Location = new System.Drawing.Point(178, 77);
+            this.btnPreestablecidas.Location = new System.Drawing.Point(70, 48);
+            this.btnPreestablecidas.Margin = new System.Windows.Forms.Padding(4);
             this.btnPreestablecidas.Name = "btnPreestablecidas";
-            this.btnPreestablecidas.Size = new System.Drawing.Size(196, 58);
+            this.btnPreestablecidas.Size = new System.Drawing.Size(160, 39);
             this.btnPreestablecidas.TabIndex = 4;
             this.btnPreestablecidas.Text = "Ver ";
             this.btnPreestablecidas.TextColor = System.Drawing.Color.Black;
@@ -305,10 +306,10 @@ namespace Presentacion
             this.btnPantorrillas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPantorrillas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnPantorrillas.ForeColor = System.Drawing.Color.Black;
-            this.btnPantorrillas.Location = new System.Drawing.Point(2, 398);
+            this.btnPantorrillas.Location = new System.Drawing.Point(2, 551);
             this.btnPantorrillas.Margin = new System.Windows.Forms.Padding(2);
             this.btnPantorrillas.Name = "btnPantorrillas";
-            this.btnPantorrillas.Size = new System.Drawing.Size(335, 40);
+            this.btnPantorrillas.Size = new System.Drawing.Size(204, 58);
             this.btnPantorrillas.TabIndex = 26;
             this.btnPantorrillas.Text = "Pantorrillas";
             this.btnPantorrillas.TextColor = System.Drawing.Color.Black;
@@ -329,10 +330,10 @@ namespace Presentacion
             this.btnGluteos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGluteos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnGluteos.ForeColor = System.Drawing.Color.Black;
-            this.btnGluteos.Location = new System.Drawing.Point(2, 354);
+            this.btnGluteos.Location = new System.Drawing.Point(2, 490);
             this.btnGluteos.Margin = new System.Windows.Forms.Padding(2);
             this.btnGluteos.Name = "btnGluteos";
-            this.btnGluteos.Size = new System.Drawing.Size(335, 40);
+            this.btnGluteos.Size = new System.Drawing.Size(204, 57);
             this.btnGluteos.TabIndex = 25;
             this.btnGluteos.Text = "Gluteos";
             this.btnGluteos.TextColor = System.Drawing.Color.Black;
@@ -353,10 +354,10 @@ namespace Presentacion
             this.btnAntebrazos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAntebrazos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnAntebrazos.ForeColor = System.Drawing.Color.Black;
-            this.btnAntebrazos.Location = new System.Drawing.Point(2, 310);
+            this.btnAntebrazos.Location = new System.Drawing.Point(2, 429);
             this.btnAntebrazos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAntebrazos.Name = "btnAntebrazos";
-            this.btnAntebrazos.Size = new System.Drawing.Size(335, 40);
+            this.btnAntebrazos.Size = new System.Drawing.Size(204, 57);
             this.btnAntebrazos.TabIndex = 24;
             this.btnAntebrazos.Text = "Antebrazos";
             this.btnAntebrazos.TextColor = System.Drawing.Color.Black;
@@ -377,10 +378,10 @@ namespace Presentacion
             this.btnEspalda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEspalda.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnEspalda.ForeColor = System.Drawing.Color.Black;
-            this.btnEspalda.Location = new System.Drawing.Point(2, 222);
+            this.btnEspalda.Location = new System.Drawing.Point(2, 307);
             this.btnEspalda.Margin = new System.Windows.Forms.Padding(2);
             this.btnEspalda.Name = "btnEspalda";
-            this.btnEspalda.Size = new System.Drawing.Size(335, 40);
+            this.btnEspalda.Size = new System.Drawing.Size(204, 57);
             this.btnEspalda.TabIndex = 22;
             this.btnEspalda.Text = "Espalda";
             this.btnEspalda.TextColor = System.Drawing.Color.Black;
@@ -401,10 +402,10 @@ namespace Presentacion
             this.btnTriceps.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTriceps.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnTriceps.ForeColor = System.Drawing.Color.Black;
-            this.btnTriceps.Location = new System.Drawing.Point(2, 266);
+            this.btnTriceps.Location = new System.Drawing.Point(2, 368);
             this.btnTriceps.Margin = new System.Windows.Forms.Padding(2);
             this.btnTriceps.Name = "btnTriceps";
-            this.btnTriceps.Size = new System.Drawing.Size(335, 40);
+            this.btnTriceps.Size = new System.Drawing.Size(204, 57);
             this.btnTriceps.TabIndex = 23;
             this.btnTriceps.Text = "Triceps";
             this.btnTriceps.TextColor = System.Drawing.Color.Black;
@@ -425,10 +426,10 @@ namespace Presentacion
             this.btnPiernas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPiernas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnPiernas.ForeColor = System.Drawing.Color.Black;
-            this.btnPiernas.Location = new System.Drawing.Point(2, 178);
+            this.btnPiernas.Location = new System.Drawing.Point(2, 246);
             this.btnPiernas.Margin = new System.Windows.Forms.Padding(2);
             this.btnPiernas.Name = "btnPiernas";
-            this.btnPiernas.Size = new System.Drawing.Size(335, 40);
+            this.btnPiernas.Size = new System.Drawing.Size(204, 57);
             this.btnPiernas.TabIndex = 22;
             this.btnPiernas.Text = "Piernas";
             this.btnPiernas.TextColor = System.Drawing.Color.Black;
@@ -449,10 +450,10 @@ namespace Presentacion
             this.btnPecho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPecho.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnPecho.ForeColor = System.Drawing.Color.Black;
-            this.btnPecho.Location = new System.Drawing.Point(2, 46);
+            this.btnPecho.Location = new System.Drawing.Point(2, 63);
             this.btnPecho.Margin = new System.Windows.Forms.Padding(2);
             this.btnPecho.Name = "btnPecho";
-            this.btnPecho.Size = new System.Drawing.Size(335, 40);
+            this.btnPecho.Size = new System.Drawing.Size(204, 57);
             this.btnPecho.TabIndex = 18;
             this.btnPecho.Text = "Pecho";
             this.btnPecho.TextColor = System.Drawing.Color.Black;
@@ -473,10 +474,10 @@ namespace Presentacion
             this.btnAbdominales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbdominales.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnAbdominales.ForeColor = System.Drawing.Color.Black;
-            this.btnAbdominales.Location = new System.Drawing.Point(2, 134);
+            this.btnAbdominales.Location = new System.Drawing.Point(2, 185);
             this.btnAbdominales.Margin = new System.Windows.Forms.Padding(2);
             this.btnAbdominales.Name = "btnAbdominales";
-            this.btnAbdominales.Size = new System.Drawing.Size(335, 40);
+            this.btnAbdominales.Size = new System.Drawing.Size(204, 57);
             this.btnAbdominales.TabIndex = 21;
             this.btnAbdominales.Text = "Abdominales";
             this.btnAbdominales.TextColor = System.Drawing.Color.Black;
@@ -500,7 +501,7 @@ namespace Presentacion
             this.btnHombros.Location = new System.Drawing.Point(2, 2);
             this.btnHombros.Margin = new System.Windows.Forms.Padding(2);
             this.btnHombros.Name = "btnHombros";
-            this.btnHombros.Size = new System.Drawing.Size(335, 40);
+            this.btnHombros.Size = new System.Drawing.Size(204, 57);
             this.btnHombros.TabIndex = 19;
             this.btnHombros.Text = "Hombros";
             this.btnHombros.TextColor = System.Drawing.Color.Black;
@@ -521,10 +522,10 @@ namespace Presentacion
             this.btnBiceps.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBiceps.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnBiceps.ForeColor = System.Drawing.Color.Black;
-            this.btnBiceps.Location = new System.Drawing.Point(2, 90);
+            this.btnBiceps.Location = new System.Drawing.Point(2, 124);
             this.btnBiceps.Margin = new System.Windows.Forms.Padding(2);
             this.btnBiceps.Name = "btnBiceps";
-            this.btnBiceps.Size = new System.Drawing.Size(335, 40);
+            this.btnBiceps.Size = new System.Drawing.Size(204, 57);
             this.btnBiceps.TabIndex = 20;
             this.btnBiceps.Text = "Biceps";
             this.btnBiceps.TextColor = System.Drawing.Color.Black;
@@ -535,11 +536,12 @@ namespace Presentacion
             // 
             // UsuarioEjercicios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(937, 440);
-            this.Controls.Add(this.pnlRutina);
+            this.ClientSize = new System.Drawing.Size(1000, 611);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlGimnasio);
             this.Controls.Add(this.listEjercicios);
             this.Controls.Add(this.musculos);
             this.Controls.Add(this.panelBotones);
@@ -552,7 +554,6 @@ namespace Presentacion
             this.panelBotones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.musculos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listEjercicios)).EndInit();
-            this.pnlRutina.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -580,7 +581,6 @@ namespace Presentacion
         private botones.botones btnPantorrillas;
         private PictureBox musculos;
         private DataGridView listEjercicios;
-        private Panel pnlRutina;
         private Panel pnlGimnasio;
         private botones.botones btnPreestablecidas;
         private Label label1;

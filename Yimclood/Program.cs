@@ -16,7 +16,7 @@ namespace Yimclood
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AgregarFactura());
+            Application.Run(new UsuarioAgregarDatos());
         }
     }
 }

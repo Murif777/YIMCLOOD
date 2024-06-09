@@ -84,6 +84,12 @@
     <Compile Include="botones\botones.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UsuarioAgregarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioAgregarDatos.Designer.cs">
+      <DependentUpon>UsuarioAgregarDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioAgregarDatos.resx">
+      <DependentUpon>UsuarioAgregarDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioPerfil.resx">
       <DependentUpon>UsuarioPerfil.cs</DependentUpon>

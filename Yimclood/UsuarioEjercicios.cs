@@ -164,5 +164,10 @@ namespace Presentacion
             UsuarioRutinasPrees rutinasPersonalizadas=new UsuarioRutinasPrees();
             rutinasPersonalizadas.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

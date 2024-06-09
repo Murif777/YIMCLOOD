@@ -39,307 +39,79 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioPerfil));
-            this.pnlPadre = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlPerfil = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblValorPesoIdeal = new System.Windows.Forms.Label();
-            this.lbl59 = new System.Windows.Forms.Label();
-            this.lblValorGrasa = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbl5 = new System.Windows.Forms.Label();
-            this.lblValorBMI = new System.Windows.Forms.Label();
-            this.btnSubir = new Presentacion.botones.botones();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.rbtDiferencia = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
             this.rbtObjetivo = new System.Windows.Forms.RadioButton();
             this.rbtnActual = new System.Windows.Forms.RadioButton();
-            this.btnMedidas = new Presentacion.botones.botones();
-            this.btnPeso = new Presentacion.botones.botones();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAgregarDatos = new Presentacion.botones.botones();
             this.fotoPerfil = new System.Windows.Forms.PictureBox();
-            this.pnlPadre.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.pnlPerfil.SuspendLayout();
+            this.pnlPadre = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlPadre
-            // 
-            this.pnlPadre.Controls.Add(this.panel1);
-            this.pnlPadre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPadre.Location = new System.Drawing.Point(0, 0);
-            this.pnlPadre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlPadre.Name = "pnlPadre";
-            this.pnlPadre.Size = new System.Drawing.Size(1066, 630);
-            this.pnlPadre.TabIndex = 10;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1066, 630);
-            this.panel1.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 630);
-            this.panel2.TabIndex = 11;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Controls.Add(this.pnlPerfil);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1066, 630);
-            this.panel3.TabIndex = 0;
-            // 
-            // pnlPerfil
-            // 
-            this.pnlPerfil.Controls.Add(this.label5);
-            this.pnlPerfil.Controls.Add(this.lblNombre);
-            this.pnlPerfil.Controls.Add(this.label3);
-            this.pnlPerfil.Controls.Add(this.lblValorPesoIdeal);
-            this.pnlPerfil.Controls.Add(this.lbl59);
-            this.pnlPerfil.Controls.Add(this.lblValorGrasa);
-            this.pnlPerfil.Controls.Add(this.label9);
-            this.pnlPerfil.Controls.Add(this.lbl5);
-            this.pnlPerfil.Controls.Add(this.lblValorBMI);
-            this.pnlPerfil.Controls.Add(this.btnSubir);
-            this.pnlPerfil.Controls.Add(this.label7);
-            this.pnlPerfil.Controls.Add(this.label6);
-            this.pnlPerfil.Controls.Add(this.label2);
-            this.pnlPerfil.Controls.Add(this.rbtDiferencia);
-            this.pnlPerfil.Controls.Add(this.rbtObjetivo);
-            this.pnlPerfil.Controls.Add(this.rbtnActual);
-            this.pnlPerfil.Controls.Add(this.btnMedidas);
-            this.pnlPerfil.Controls.Add(this.btnPeso);
-            this.pnlPerfil.Controls.Add(this.lblFecha);
-            this.pnlPerfil.Controls.Add(this.lblPeso);
-            this.pnlPerfil.Controls.Add(this.label1);
-            this.pnlPerfil.Controls.Add(this.fotoPerfil);
-            this.pnlPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPerfil.Location = new System.Drawing.Point(0, 0);
-            this.pnlPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlPerfil.Name = "pnlPerfil";
-            this.pnlPerfil.Size = new System.Drawing.Size(1066, 630);
-            this.pnlPerfil.TabIndex = 26;
-            this.pnlPerfil.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPerfil_Paint);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(142, 126);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Nombre:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(191, 126);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(0, 13);
-            this.lblNombre.TabIndex = 47;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
-            this.label3.Location = new System.Drawing.Point(10, 569);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 41);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Diagnostico";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblValorPesoIdeal
-            // 
-            this.lblValorPesoIdeal.AutoSize = true;
-            this.lblValorPesoIdeal.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblValorPesoIdeal.ForeColor = System.Drawing.Color.Black;
-            this.lblValorPesoIdeal.Location = new System.Drawing.Point(904, 669);
-            this.lblValorPesoIdeal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValorPesoIdeal.Name = "lblValorPesoIdeal";
-            this.lblValorPesoIdeal.Size = new System.Drawing.Size(61, 33);
-            this.lblValorPesoIdeal.TabIndex = 46;
-            this.lblValorPesoIdeal.Text = "X Kg";
-            this.lblValorPesoIdeal.Click += new System.EventHandler(this.lblValorPesoIdeal_Click);
-            // 
-            // lbl59
-            // 
-            this.lbl59.AutoSize = true;
-            this.lbl59.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.lbl59.ForeColor = System.Drawing.Color.Black;
-            this.lbl59.Location = new System.Drawing.Point(692, 636);
-            this.lbl59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl59.Name = "lbl59";
-            this.lbl59.Size = new System.Drawing.Size(90, 39);
-            this.lbl59.TabIndex = 45;
-            this.lbl59.Text = "Grasa";
-            this.lbl59.Click += new System.EventHandler(this.lbl59_Click);
-            // 
-            // lblValorGrasa
-            // 
-            this.lblValorGrasa.AutoSize = true;
-            this.lblValorGrasa.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblValorGrasa.ForeColor = System.Drawing.Color.Black;
-            this.lblValorGrasa.Location = new System.Drawing.Point(726, 669);
-            this.lblValorGrasa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValorGrasa.Name = "lblValorGrasa";
-            this.lblValorGrasa.Size = new System.Drawing.Size(51, 33);
-            this.lblValorGrasa.TabIndex = 44;
-            this.lblValorGrasa.Text = "X %";
-            this.lblValorGrasa.Click += new System.EventHandler(this.lblValorGrasa_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(558, 636);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 39);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "BMI";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // lbl5
-            // 
-            this.lbl5.AutoSize = true;
-            this.lbl5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.lbl5.ForeColor = System.Drawing.Color.Black;
-            this.lbl5.Location = new System.Drawing.Point(853, 636);
-            this.lbl5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(145, 39);
-            this.lbl5.TabIndex = 42;
-            this.lbl5.Text = "Peso ideal";
-            this.lbl5.Click += new System.EventHandler(this.lbl5_Click);
-            // 
-            // lblValorBMI
-            // 
-            this.lblValorBMI.AutoSize = true;
-            this.lblValorBMI.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblValorBMI.ForeColor = System.Drawing.Color.Black;
-            this.lblValorBMI.Location = new System.Drawing.Point(575, 669);
-            this.lblValorBMI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblValorBMI.Name = "lblValorBMI";
-            this.lblValorBMI.Size = new System.Drawing.Size(28, 33);
-            this.lblValorBMI.TabIndex = 41;
-            this.lblValorBMI.Text = "X";
-            this.lblValorBMI.Click += new System.EventHandler(this.lblValorBMI_Click);
-            // 
-            // btnSubir
-            // 
-            this.btnSubir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSubir.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnSubir.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSubir.BorderRadius = 20;
-            this.btnSubir.BorderSize = 0;
-            this.btnSubir.FlatAppearance.BorderSize = 0;
-            this.btnSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubir.ForeColor = System.Drawing.Color.White;
-            this.btnSubir.Image = ((System.Drawing.Image)(resources.GetObject("btnSubir.Image")));
-            this.btnSubir.Location = new System.Drawing.Point(834, 277);
-            this.btnSubir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSubir.Name = "btnSubir";
-            this.btnSubir.Size = new System.Drawing.Size(42, 45);
-            this.btnSubir.TabIndex = 29;
-            this.btnSubir.TextColor = System.Drawing.Color.White;
-            this.btnSubir.UseVisualStyleBackColor = false;
-            this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(888, 487);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 33);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "+ Kg";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label6.Location = new System.Drawing.Point(746, 487);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 33);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Kg";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(589, 487);
+            this.label2.Location = new System.Drawing.Point(233, 555);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 33);
+            this.label2.Size = new System.Drawing.Size(52, 41);
             this.label2.TabIndex = 35;
             this.label2.Text = "Kg";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.label6.Location = new System.Drawing.Point(429, 555);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 41);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Kg";
             // 
             // rbtDiferencia
             // 
             this.rbtDiferencia.AutoSize = true;
             this.rbtDiferencia.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.rbtDiferencia.Location = new System.Drawing.Point(808, 449);
-            this.rbtDiferencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtDiferencia.Location = new System.Drawing.Point(528, 507);
+            this.rbtDiferencia.Margin = new System.Windows.Forms.Padding(2);
             this.rbtDiferencia.Name = "rbtDiferencia";
-            this.rbtDiferencia.Size = new System.Drawing.Size(162, 43);
+            this.rbtDiferencia.Size = new System.Drawing.Size(201, 52);
             this.rbtDiferencia.TabIndex = 26;
             this.rbtDiferencia.TabStop = true;
             this.rbtDiferencia.Text = "Diferencia";
             this.rbtDiferencia.UseVisualStyleBackColor = true;
             this.rbtDiferencia.CheckedChanged += new System.EventHandler(this.rbtDiferencia_CheckedChanged);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(628, 555);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 41);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "+ Kg";
+            // 
             // rbtObjetivo
             // 
             this.rbtObjetivo.AutoSize = true;
             this.rbtObjetivo.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.rbtObjetivo.Location = new System.Drawing.Point(678, 449);
-            this.rbtObjetivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtObjetivo.Location = new System.Drawing.Point(345, 507);
+            this.rbtObjetivo.Margin = new System.Windows.Forms.Padding(2);
             this.rbtObjetivo.Name = "rbtObjetivo";
-            this.rbtObjetivo.Size = new System.Drawing.Size(136, 43);
+            this.rbtObjetivo.Size = new System.Drawing.Size(168, 52);
             this.rbtObjetivo.TabIndex = 25;
             this.rbtObjetivo.TabStop = true;
             this.rbtObjetivo.Text = "Objetivo";
@@ -350,157 +122,134 @@ namespace Presentacion
             // 
             this.rbtnActual.AutoSize = true;
             this.rbtnActual.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 24F);
-            this.rbtnActual.Location = new System.Drawing.Point(538, 449);
-            this.rbtnActual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnActual.Location = new System.Drawing.Point(169, 507);
+            this.rbtnActual.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnActual.Name = "rbtnActual";
-            this.rbtnActual.Size = new System.Drawing.Size(113, 43);
+            this.rbtnActual.Size = new System.Drawing.Size(141, 52);
             this.rbtnActual.TabIndex = 24;
             this.rbtnActual.TabStop = true;
             this.rbtnActual.Text = "Actual";
             this.rbtnActual.UseVisualStyleBackColor = true;
             this.rbtnActual.CheckedChanged += new System.EventHandler(this.rbtnActual_CheckedChanged);
             // 
-            // btnMedidas
-            // 
-            this.btnMedidas.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnMedidas.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnMedidas.BorderColor = System.Drawing.Color.Black;
-            this.btnMedidas.BorderRadius = 10;
-            this.btnMedidas.BorderSize = 3;
-            this.btnMedidas.FlatAppearance.BorderSize = 0;
-            this.btnMedidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMedidas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.btnMedidas.ForeColor = System.Drawing.Color.White;
-            this.btnMedidas.Location = new System.Drawing.Point(736, 394);
-            this.btnMedidas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMedidas.Name = "btnMedidas";
-            this.btnMedidas.Size = new System.Drawing.Size(202, 50);
-            this.btnMedidas.TabIndex = 33;
-            this.btnMedidas.Text = "Medidas";
-            this.btnMedidas.TextColor = System.Drawing.Color.White;
-            this.btnMedidas.UseVisualStyleBackColor = false;
-            this.btnMedidas.Click += new System.EventHandler(this.btnMedidas_Click);
-            // 
-            // btnPeso
-            // 
-            this.btnPeso.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnPeso.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnPeso.BorderColor = System.Drawing.Color.Black;
-            this.btnPeso.BorderRadius = 10;
-            this.btnPeso.BorderSize = 3;
-            this.btnPeso.FlatAppearance.BorderSize = 0;
-            this.btnPeso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.btnPeso.ForeColor = System.Drawing.Color.White;
-            this.btnPeso.Location = new System.Drawing.Point(538, 394);
-            this.btnPeso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnPeso.Name = "btnPeso";
-            this.btnPeso.Size = new System.Drawing.Size(204, 50);
-            this.btnPeso.TabIndex = 32;
-            this.btnPeso.Text = "Peso";
-            this.btnPeso.TextColor = System.Drawing.Color.White;
-            this.btnPeso.UseVisualStyleBackColor = false;
-            this.btnPeso.Click += new System.EventHandler(this.btnPeso_Click);
-            // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(804, 355);
+            this.lblFecha.Location = new System.Drawing.Point(490, 398);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(74, 33);
+            this.lblFecha.Size = new System.Drawing.Size(93, 41);
             this.lblFecha.TabIndex = 31;
             this.lblFecha.Text = "/2024";
-            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblPeso.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPeso.Location = new System.Drawing.Point(803, 324);
+            this.lblPeso.Location = new System.Drawing.Point(478, 359);
             this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(42, 33);
+            this.lblPeso.Size = new System.Drawing.Size(52, 41);
             this.lblPeso.TabIndex = 30;
             this.lblPeso.Text = "Kg";
-            this.lblPeso.Click += new System.EventHandler(this.lblPeso_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
-            this.label1.Location = new System.Drawing.Point(0, 30);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 35F);
+            this.label1.Location = new System.Drawing.Point(2, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 41);
+            this.label1.Size = new System.Drawing.Size(159, 71);
             this.label1.TabIndex = 27;
-            this.label1.Text = "Cuerpo";
+            this.label1.Text = "Datos";
+            // 
+            // btnAgregarDatos
+            // 
+            this.btnAgregarDatos.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAgregarDatos.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAgregarDatos.BorderColor = System.Drawing.Color.Black;
+            this.btnAgregarDatos.BorderRadius = 17;
+            this.btnAgregarDatos.BorderSize = 3;
+            this.btnAgregarDatos.FlatAppearance.BorderSize = 0;
+            this.btnAgregarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarDatos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 30F);
+            this.btnAgregarDatos.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarDatos.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDatos.Image")));
+            this.btnAgregarDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarDatos.Location = new System.Drawing.Point(742, 507);
+            this.btnAgregarDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarDatos.Name = "btnAgregarDatos";
+            this.btnAgregarDatos.Size = new System.Drawing.Size(192, 89);
+            this.btnAgregarDatos.TabIndex = 48;
+            this.btnAgregarDatos.Text = "Datos";
+            this.btnAgregarDatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarDatos.TextColor = System.Drawing.Color.White;
+            this.btnAgregarDatos.UseVisualStyleBackColor = false;
             // 
             // fotoPerfil
             // 
             this.fotoPerfil.BackColor = System.Drawing.Color.White;
-            this.fotoPerfil.Location = new System.Drawing.Point(609, 82);
-            this.fotoPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fotoPerfil.Location = new System.Drawing.Point(314, 91);
+            this.fotoPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.fotoPerfil.Name = "fotoPerfil";
-            this.fotoPerfil.Size = new System.Drawing.Size(272, 242);
+            this.fotoPerfil.Size = new System.Drawing.Size(302, 265);
             this.fotoPerfil.TabIndex = 28;
             this.fotoPerfil.TabStop = false;
-            this.fotoPerfil.Click += new System.EventHandler(this.fotoPerfil_Click);
+            // 
+            // pnlPadre
+            // 
+            this.pnlPadre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPadre.Location = new System.Drawing.Point(0, 0);
+            this.pnlPadre.Name = "pnlPadre";
+            this.pnlPadre.Size = new System.Drawing.Size(992, 764);
+            this.pnlPadre.TabIndex = 49;
             // 
             // UsuarioPerfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1066, 630);
+            this.ClientSize = new System.Drawing.Size(992, 764);
+            this.Controls.Add(this.btnAgregarDatos);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.fotoPerfil);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblPeso);
+            this.Controls.Add(this.rbtDiferencia);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.rbtObjetivo);
+            this.Controls.Add(this.rbtnActual);
             this.Controls.Add(this.pnlPadre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UsuarioPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormInterfaz";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.pnlPadre.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.pnlPerfil.ResumeLayout(false);
-            this.pnlPerfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Panel pnlPadre;
-        private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
-        private Panel pnlPerfil;
-        private Label label3;
-        private Label lblValorPesoIdeal;
-        private Label lbl59;
-        private Label lblValorGrasa;
-        private Label label9;
-        private Label lbl5;
-        private Label lblValorBMI;
-        private botones.botones btnSubir;
-        private Label label7;
-        private Label label6;
+
         private Label label2;
+        private Label label6;
         private RadioButton rbtDiferencia;
+        private Label label7;
         private RadioButton rbtObjetivo;
         private RadioButton rbtnActual;
-        private botones.botones btnMedidas;
-        private botones.botones btnPeso;
         private Label lblFecha;
         private Label lblPeso;
-        private Label label1;
         private PictureBox fotoPerfil;
-        private Label label5;
-        private Label lblNombre;
+        private Label label1;
+        private botones.botones btnAgregarDatos;
+        private Panel pnlPadre;
     }
 }
