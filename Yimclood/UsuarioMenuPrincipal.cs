@@ -117,8 +117,8 @@ namespace Presentacion
 
         private void btnRutinas_Click(object sender, EventArgs e)
         {
-            UsuarioRutinasPrees rutinasPersonalizadas = new UsuarioRutinasPrees();
-            Abrirformpanel(rutinasPersonalizadas);
+            UsuarioMisRutinas usuarioMisRutinas = new UsuarioMisRutinas();
+            Abrirformpanel(usuarioMisRutinas);
         }
 
         private void btnHistorial_Click(object sender, EventArgs e)
