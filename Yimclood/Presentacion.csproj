@@ -92,6 +92,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBlank.Designer.cs">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDays.Designer.cs">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioActualizarMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,17 +122,23 @@
     <Compile Include="UsuarioAgregarMedidas.Designer.cs">
       <DependentUpon>UsuarioAgregarMedidas.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioPerfil.cs">
+    <Compile Include="UsuarioConsultarMedidas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioPerfil.Designer.cs">
-      <DependentUpon>UsuarioPerfil.cs</DependentUpon>
+    <Compile Include="UsuarioConsultarMedidas.Designer.cs">
+      <DependentUpon>UsuarioConsultarMedidas.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioHistorial.Designer.cs">
       <DependentUpon>UsuarioHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioPerfil.Designer.cs">
+      <DependentUpon>UsuarioPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioMisRutinas.cs">
       <SubType>Form</SubType>
@@ -235,6 +253,10 @@
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBlank.resx" />
+    <EmbeddedResource Include="UserControlDays.resx">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuarioActualizarMiembro.resx">
       <DependentUpon>UsuarioActualizarMiembro.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,11 +266,14 @@
     <EmbeddedResource Include="UsuarioAgregarMedidas.resx">
       <DependentUpon>UsuarioAgregarMedidas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioPerfil.resx">
-      <DependentUpon>UsuarioPerfil.cs</DependentUpon>
+    <EmbeddedResource Include="UsuarioConsultarMedidas.resx">
+      <DependentUpon>UsuarioConsultarMedidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioHistorial.resx">
       <DependentUpon>UsuarioHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioPerfil.resx">
+      <DependentUpon>UsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioMisRutinas.resx">
       <DependentUpon>UsuarioMisRutinas.cs</DependentUpon>
