@@ -44,11 +44,12 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.fotoPerfil = new System.Windows.Forms.PictureBox();
             this.pnlPadre = new System.Windows.Forms.Panel();
-            this.lblNombreApellido = new System.Windows.Forms.Label();
-            this.lblPeso = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
             this.lblEstatura = new System.Windows.Forms.Label();
             this.btnAgregarDatos = new Presentacion.botones.botones();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblPeso = new System.Windows.Forms.Label();
+            this.lblNombreApellido = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
             this.pnlPadre.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +59,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(388, 418);
+            this.label2.Location = new System.Drawing.Point(400, 418);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 33);
@@ -102,6 +103,7 @@ namespace Presentacion
             // 
             // pnlPadre
             // 
+            this.pnlPadre.Controls.Add(this.label3);
             this.pnlPadre.Controls.Add(this.fotoPerfil);
             this.pnlPadre.Controls.Add(this.lblEstatura);
             this.pnlPadre.Controls.Add(this.btnAgregarDatos);
@@ -117,43 +119,6 @@ namespace Presentacion
             this.pnlPadre.Name = "pnlPadre";
             this.pnlPadre.Size = new System.Drawing.Size(794, 611);
             this.pnlPadre.TabIndex = 49;
-            // 
-            // lblNombreApellido
-            // 
-            this.lblNombreApellido.AutoSize = true;
-            this.lblNombreApellido.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombreApellido.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblNombreApellido.Location = new System.Drawing.Point(358, 285);
-            this.lblNombreApellido.Name = "lblNombreApellido";
-            this.lblNombreApellido.Size = new System.Drawing.Size(26, 33);
-            this.lblNombreApellido.TabIndex = 3;
-            this.lblNombreApellido.Text = "-";
-            this.lblNombreApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblPeso
-            // 
-            this.lblPeso.AutoSize = true;
-            this.lblPeso.BackColor = System.Drawing.Color.Transparent;
-            this.lblPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblPeso.Location = new System.Drawing.Point(357, 418);
-            this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(26, 33);
-            this.lblPeso.TabIndex = 38;
-            this.lblPeso.Text = "-";
-            this.lblPeso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.lblCorreo.Location = new System.Drawing.Point(358, 318);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(26, 33);
-            this.lblCorreo.TabIndex = 39;
-            this.lblCorreo.Text = "-";
-            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEstatura
             // 
@@ -190,6 +155,56 @@ namespace Presentacion
             this.btnAgregarDatos.UseVisualStyleBackColor = false;
             this.btnAgregarDatos.Click += new System.EventHandler(this.btnAgregarDatos_Click);
             // 
+            // lblCorreo
+            // 
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblCorreo.ForeColor = System.Drawing.Color.Black;
+            this.lblCorreo.Location = new System.Drawing.Point(358, 318);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(26, 33);
+            this.lblCorreo.TabIndex = 39;
+            this.lblCorreo.Text = "-";
+            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPeso
+            // 
+            this.lblPeso.AutoSize = true;
+            this.lblPeso.BackColor = System.Drawing.Color.Transparent;
+            this.lblPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblPeso.Location = new System.Drawing.Point(357, 418);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(26, 33);
+            this.lblPeso.TabIndex = 38;
+            this.lblPeso.Text = "-";
+            this.lblPeso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblNombreApellido
+            // 
+            this.lblNombreApellido.AutoSize = true;
+            this.lblNombreApellido.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreApellido.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblNombreApellido.Location = new System.Drawing.Point(358, 285);
+            this.lblNombreApellido.Name = "lblNombreApellido";
+            this.lblNombreApellido.Size = new System.Drawing.Size(26, 33);
+            this.lblNombreApellido.TabIndex = 3;
+            this.lblNombreApellido.Text = "-";
+            this.lblNombreApellido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(400, 383);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 33);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "Cm";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UsuarioPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -221,5 +236,6 @@ namespace Presentacion
         private Label lblPeso;
         private Label lblCorreo;
         private Label lblEstatura;
+        private Label label3;
     }
 }

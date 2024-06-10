@@ -33,11 +33,11 @@ namespace BILL
                 return "Error al registrar: " + ex.Message;
             }
         }
-        public List<Rutina> ConsultarTodo()
+        public List<Rutina> ConsultarPrees()
         {
             try
             {
-                return ru_repository.ConsultarTodo();
+                return ru_repository.ConsultarPrees();
             }
             catch (Exception ex)
             {

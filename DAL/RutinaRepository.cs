@@ -56,13 +56,13 @@ namespace DAL
                 MySqlCommand comandoRutinas = new MySqlCommand(sqlRutinas, conexionBd);
                 comandoRutinas.Parameters.AddWithValue("@Nombre", rutina.Nombre);
                 comandoRutinas.Parameters.AddWithValue("@Descripcion", rutina.Descripcion);
-                comandoRutinas.Parameters.AddWithValue("@EsPredefinida", true);
+                comandoRutinas.Parameters.AddWithValue("@EsPredefinida", false);
                 comandoRutinas.ExecuteNonQuery();
 
                 // Obtener el ID de la última rutina insertada
                 int lastInsertedId = (int)comandoRutinas.LastInsertedId;
 
-                // Insertar en la tabla Rutinas_Miembro
+                //Insertar en la tabla Rutinas_Miembro
                 string sqlRutinasMiembro = "INSERT INTO Rutinas_Miembro (Id_Rutina, Miembro_Cedula) " +
                                            "VALUES (@Id_Rutina, @Miembro_Cedula)";
                 MySqlCommand comandoRutinasMiembro = new MySqlCommand(sqlRutinasMiembro, conexionBd);
@@ -94,17 +94,18 @@ namespace DAL
         }
 
 
-        public List<Rutina> ConsultarTodo()
+        public List<Rutina> ConsultarPrees()
         {
             List<Rutina> rutinas = new List<Rutina>();
 
             string ssql = "SELECT r.Id AS RutinaId, r.Nombre AS RutinaNombre, r.Descripcion AS RutinaDescripcion, " +
-               "re.Ejercicio_Nombre AS EjercicioNombre, e.Descripcion AS EjercicioDescripcion, e.Duracion AS EjercicioDuracion, " +
-               "e.Repeticiones AS EjercicioRepeticiones, e.Series AS EjercicioSeries, e.Musculo AS EjercicioMusculo, " +
-               "e.Categoria AS EjercicioCategoria, e.Foto AS EjercicioFoto " +
-               "FROM Rutinas r " +
-               "INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Rutina_Id " +
-               "INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre";
+              "re.Ejercicio_Nombre AS EjercicioNombre, e.Descripcion AS EjercicioDescripcion, e.Duracion AS EjercicioDuracion, " +
+              "e.Repeticiones AS EjercicioRepeticiones, e.Series AS EjercicioSeries, e.Musculo AS EjercicioMusculo, " +
+              "e.Categoria AS EjercicioCategoria, e.Foto AS EjercicioFoto " +
+              "FROM Rutinas r " +
+              "INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Id_Rutina " +
+              "INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre " +
+              "WHERE r.EsPredefinida = TRUE;";
             MySqlConnection conexionBd = conexion();
 
             try
@@ -151,10 +152,9 @@ namespace DAL
               "FROM Rutinas r " +
               "INNER JOIN Rutinas_Miembro rm ON r.Id = rm.Id_Rutina " +
               "INNER JOIN Miembros m ON rm.Miembro_Cedula = m.Cedula " +
-              "INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Rutina_Id " +
+              "INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Id_Rutina " +
               "INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre " +
-              "WHERE rm.Miembro_Cedula = @Cedula AND";
-            //ARREGLAR
+              "WHERE rm.Miembro_Cedula = @Cedula";
 
             MySqlConnection conexionBd = conexion();
 
