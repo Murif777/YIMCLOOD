@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Text;
+using MySqlX.XDevAPI.Relational;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Globalization;
 using ENTITY;
 
 
@@ -19,11 +22,14 @@ namespace Presentacion
 {
     public partial class UsuarioHistorial : Form
     {
-        private Miembro Miembro;
-        public UsuarioHistorial(Miembro Miembro)
+        private Miembro miembro;
+        int month, year;
+        //CREATE A STATIC VARIABLE THAT WE CAN PASS TO ANOTHER FORM FOR MOTH AND YEAR
+        public static int static_month,static_year;
+        public UsuarioHistorial(Miembro miembro)
         {
             InitializeComponent();
-            this.Miembro = Miembro;
+            this.miembro = miembro;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -31,61 +37,104 @@ namespace Presentacion
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        //Funciones
-        private void FormInterfaz_Load(object sender, EventArgs e)
+       
+        private void UsuarioHistorial_Load(object sender, EventArgs e)
         {
+            displayDays();
+        }
+        private void displayDays()
+        {            
+            DateTime now= DateTime.Now;
+            month = now.Month;
+            year = now.Year;
+            String monthname=DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            LBDATE.Text = monthname+" | "+year;
 
+            static_month = month;
+            static_year = year;
+
+            //GET FIRST DAY OF THE MONTH.
+            DateTime startOfTheMonth = new DateTime(year,month,1);
+            //GET THE COUNT OF DAYS OF THE MONTH.
+            int days = DateTime.DaysInMonth(year,month);
+            //CONVERT THE STARTOFTHEMONTH TO INTEGER
+            int dayoftheweek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d")) + 1;
+            //FIRST LESTS CREATE  BLANK USERCONTROL
+            for (int i = 1; i < dayoftheweek; i++)
+            {
+                UserControlBlank ucblank = new UserControlBlank();
+                daycontainer.Controls.Add(ucblank);
+            }
+            //NOW LETS CREATE USERCONTROL FOR DAYS
+            for (int i = 1; i <= days; i++)
+            {
+                UserControlDays ucdays= new UserControlDays();
+                ucdays.days(i);
+                daycontainer.Controls.Add((ucdays));
+            }
+        }   
+       
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            //CLEAR CONTAINER
+            daycontainer.Controls.Clear();
+            month--;
+            static_month = month;
+            static_year = year;
+
+            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            LBDATE.Text = monthname + " | " + year;
+
+            DateTime startOfTheMonth = new DateTime(year, month, 1);
+            //GET THE COUNT OF DAYS OF THE MONTH.
+            int days = DateTime.DaysInMonth(year, month);
+            //CONVERT THE STARTOFTHEMONTH TO INTEGER
+            int dayoftheweek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d")) + 1;
+            //FIRST LESTS CREATE  BLANK USERCONTROL
+            for (int i = 1; i < dayoftheweek; i++)
+            {
+                UserControlBlank ucblank = new UserControlBlank();
+                daycontainer.Controls.Add(ucblank);
+            }
+            //NOW LETS CREATE USERCONTROL FOR DAYS
+            for (int i = 1; i <= days; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.days(i);
+                daycontainer.Controls.Add((ucdays));
+            }
         }
 
-        private void arrastrarElemento()
+        private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            //CLEAR CONTAINER
+            daycontainer.Controls.Clear();
+            month++;
+            static_month = month;
+            static_year = year;
+
+            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            LBDATE.Text = monthname + " | " + year;
+
+            DateTime startOfTheMonth = new DateTime(year, month, 1);
+            //GET THE COUNT OF DAYS OF THE MONTH.
+            int days = DateTime.DaysInMonth(year, month);
+            //CONVERT THE STARTOFTHEMONTH TO INTEGER
+            int dayoftheweek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d")) + 1;
+            //FIRST LESTS CREATE  BLANK USERCONTROL
+            for (int i = 1; i < dayoftheweek; i++)
+            {
+                UserControlBlank ucblank = new UserControlBlank();
+                daycontainer.Controls.Add(ucblank);
+            }
+            //NOW LETS CREATE USERCONTROL FOR DAYS
+            for (int i = 1; i <= days; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.days(i);
+                daycontainer.Controls.Add((ucdays));
+            }
         }
-
-        private void minimizarFormulario()
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
-
-        private void maiximizarVentana()
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void restaurarVentana()
-        {
-            this.WindowState = FormWindowState.Normal;
-        }
-
-        private void cerrarApp()
-        {
-            Application.Exit();
-        }
-
-        private void Abrirformpanel(Form formHijo)
-        {
-            if (this.pnlPadre.Controls.Count > 0)
-                this.pnlPadre.Controls.RemoveAt(0);
-            formHijo.TopLevel = false;
-            formHijo.Dock = DockStyle.Fill;
-            this.pnlPadre.Controls.Add(formHijo);
-            this.pnlPadre.Tag = formHijo;
-            formHijo.Show();
-
-            //AgregarEjercicio formAgregarEjercicios = new AgregarEjercicio();
-            //this.Hide();
-            //formAgregarEjercicios.ShowDialog();
-            //this.Close();
-
-        }
-
-        //Eventos
-     
-        private void pnlPadre_MouseDown(object sender, MouseEventArgs e)
-        {
-            arrastrarElemento();
-        }                 
     }
 }

@@ -66,17 +66,17 @@ namespace Presentacion
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(1000, 65);
+            this.pnlSuperior.Size = new System.Drawing.Size(1500, 81);
             this.pnlSuperior.TabIndex = 8;
             this.pnlSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlSuperior_MouseDown);
             // 
             // btnMaxRes
             // 
             this.btnMaxRes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaxRes.Location = new System.Drawing.Point(852, 2);
+            this.btnMaxRes.Location = new System.Drawing.Point(1315, 2);
             this.btnMaxRes.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaxRes.Name = "btnMaxRes";
-            this.btnMaxRes.Size = new System.Drawing.Size(73, 59);
+            this.btnMaxRes.Size = new System.Drawing.Size(91, 74);
             this.btnMaxRes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaxRes.TabIndex = 11;
             this.btnMaxRes.TabStop = false;
@@ -86,10 +86,10 @@ namespace Presentacion
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(776, 2);
+            this.btnMinimizar.Location = new System.Drawing.Point(1220, 2);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(73, 59);
+            this.btnMinimizar.Size = new System.Drawing.Size(91, 74);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.TabStop = false;
@@ -99,10 +99,10 @@ namespace Presentacion
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(928, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(1410, 2);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(72, 57);
+            this.btnCerrar.Size = new System.Drawing.Size(90, 71);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.TabStop = false;
@@ -121,12 +121,12 @@ namespace Presentacion
             this.pnlInferior.Controls.Add(this.btnRutinas, 1, 0);
             this.pnlInferior.Controls.Add(this.btnEjercicios, 0, 0);
             this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInferior.Location = new System.Drawing.Point(0, 676);
+            this.pnlInferior.Location = new System.Drawing.Point(0, 845);
             this.pnlInferior.Margin = new System.Windows.Forms.Padding(2);
             this.pnlInferior.Name = "pnlInferior";
             this.pnlInferior.RowCount = 1;
             this.pnlInferior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlInferior.Size = new System.Drawing.Size(1000, 124);
+            this.pnlInferior.Size = new System.Drawing.Size(1500, 155);
             this.pnlInferior.TabIndex = 9;
             // 
             // btnPerfil
@@ -138,11 +138,11 @@ namespace Presentacion
             this.btnPerfil.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 17F);
             this.btnPerfil.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(750, 0);
+            this.btnPerfil.Location = new System.Drawing.Point(1125, 0);
             this.btnPerfil.Margin = new System.Windows.Forms.Padding(0);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnPerfil.Size = new System.Drawing.Size(250, 124);
+            this.btnPerfil.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnPerfil.Size = new System.Drawing.Size(375, 155);
             this.btnPerfil.TabIndex = 9;
             this.btnPerfil.UseVisualStyleBackColor = false;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
@@ -157,11 +157,11 @@ namespace Presentacion
             this.btnHistorial.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnHistorial.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorial.Image")));
             this.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHistorial.Location = new System.Drawing.Point(500, 0);
+            this.btnHistorial.Location = new System.Drawing.Point(750, 0);
             this.btnHistorial.Margin = new System.Windows.Forms.Padding(0);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnHistorial.Size = new System.Drawing.Size(250, 124);
+            this.btnHistorial.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnHistorial.Size = new System.Drawing.Size(375, 155);
             this.btnHistorial.TabIndex = 8;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -178,11 +178,11 @@ namespace Presentacion
             this.btnRutinas.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnRutinas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutinas.Image")));
             this.btnRutinas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRutinas.Location = new System.Drawing.Point(250, 0);
+            this.btnRutinas.Location = new System.Drawing.Point(375, 0);
             this.btnRutinas.Margin = new System.Windows.Forms.Padding(0);
             this.btnRutinas.Name = "btnRutinas";
-            this.btnRutinas.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnRutinas.Size = new System.Drawing.Size(250, 124);
+            this.btnRutinas.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnRutinas.Size = new System.Drawing.Size(375, 155);
             this.btnRutinas.TabIndex = 7;
             this.btnRutinas.Text = "Mis rutinas";
             this.btnRutinas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -202,8 +202,8 @@ namespace Presentacion
             this.btnEjercicios.Location = new System.Drawing.Point(0, 0);
             this.btnEjercicios.Margin = new System.Windows.Forms.Padding(0);
             this.btnEjercicios.Name = "btnEjercicios";
-            this.btnEjercicios.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.btnEjercicios.Size = new System.Drawing.Size(250, 124);
+            this.btnEjercicios.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnEjercicios.Size = new System.Drawing.Size(375, 155);
             this.btnEjercicios.TabIndex = 6;
             this.btnEjercicios.Text = "Ejercicios";
             this.btnEjercicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -213,19 +213,17 @@ namespace Presentacion
             // pnlPadre
             // 
             this.pnlPadre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPadre.Location = new System.Drawing.Point(0, 65);
+            this.pnlPadre.Location = new System.Drawing.Point(0, 81);
             this.pnlPadre.Margin = new System.Windows.Forms.Padding(0);
             this.pnlPadre.Name = "pnlPadre";
-            this.pnlPadre.Size = new System.Drawing.Size(1000, 611);
+            this.pnlPadre.Size = new System.Drawing.Size(1500, 764);
             this.pnlPadre.TabIndex = 10;
             this.pnlPadre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlPadre_MouseDown);
             // 
             // UsuarioMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1000, 800);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1500, 1000);
             this.Controls.Add(this.pnlPadre);
             this.Controls.Add(this.pnlInferior);
             this.Controls.Add(this.pnlSuperior);

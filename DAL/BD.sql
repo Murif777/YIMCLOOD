@@ -2,8 +2,11 @@ CREATE TABLE Usuarios (
     Correo_Electronico VARCHAR(50) PRIMARY KEY NOT NULL,
     Clave VARCHAR(20) NOT NULL,
     Ced_Miembro VARCHAR(20)UNIQUE,
-	FOREIGN KEY (Ced_Miembro) REFERENCES Miembros(Cedula)
+    Ced_Entrenador VARCHAR(20)UNIQUE,
+    FOREIGN KEY (Ced_Miembro) REFERENCES Miembros(Cedula),
+    FOREIGN KEY (Ced_Entrenador) REFERENCES entrenadores(Cedula)
 );
+
 CREATE TABLE Productos (
     Referencia VARCHAR(50) PRIMARY KEY NOT NULL,
     Nombre VARCHAR(50) NOT NULL,
