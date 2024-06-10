@@ -48,17 +48,20 @@
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.lblPrecioTotal = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(808, 82);
+            this.label3.Location = new System.Drawing.Point(967, 244);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 15);
@@ -67,7 +70,7 @@
             // 
             // numericUpDownCantidad
             // 
-            this.numericUpDownCantidad.Location = new System.Drawing.Point(974, 83);
+            this.numericUpDownCantidad.Location = new System.Drawing.Point(1136, 241);
             this.numericUpDownCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownCantidad.Name = "numericUpDownCantidad";
             this.numericUpDownCantidad.Size = new System.Drawing.Size(63, 20);
@@ -82,7 +85,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(808, 186);
+            this.label4.Location = new System.Drawing.Point(1191, 579);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 15);
@@ -93,7 +96,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(808, 142);
+            this.label5.Location = new System.Drawing.Point(967, 289);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 15);
@@ -104,7 +107,7 @@
             // 
             this.lblCantidadDisponible.AutoSize = true;
             this.lblCantidadDisponible.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadDisponible.Location = new System.Drawing.Point(808, 16);
+            this.lblCantidadDisponible.Location = new System.Drawing.Point(967, 192);
             this.lblCantidadDisponible.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidadDisponible.Name = "lblCantidadDisponible";
             this.lblCantidadDisponible.Size = new System.Drawing.Size(151, 15);
@@ -115,23 +118,26 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 300);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 323);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(481, 228);
+            this.dataGridView1.Size = new System.Drawing.Size(611, 228);
             this.dataGridView1.TabIndex = 12;
             // 
             // btnAgregarProducto
             // 
-            this.btnAgregarProducto.Location = new System.Drawing.Point(811, 247);
+            this.btnAgregarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarProducto.FlatAppearance.BorderSize = 0;
+            this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarProducto.Image")));
+            this.btnAgregarProducto.Location = new System.Drawing.Point(1278, 323);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(104, 49);
+            this.btnAgregarProducto.Size = new System.Drawing.Size(42, 42);
             this.btnAgregarProducto.TabIndex = 25;
-            this.btnAgregarProducto.Text = "agregar Producto";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
@@ -149,7 +155,7 @@
             // comboBoxProductos
             // 
             this.comboBoxProductos.FormattingEnabled = true;
-            this.comboBoxProductos.Location = new System.Drawing.Point(641, 222);
+            this.comboBoxProductos.Location = new System.Drawing.Point(821, 273);
             this.comboBoxProductos.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxProductos.Name = "comboBoxProductos";
             this.comboBoxProductos.Size = new System.Drawing.Size(97, 21);
@@ -184,7 +190,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(463, 213);
+            this.label2.Location = new System.Drawing.Point(643, 264);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 26);
@@ -193,33 +199,40 @@
             // 
             // btnRegistrarFactura
             // 
-            this.btnRegistrarFactura.Location = new System.Drawing.Point(1072, 382);
+            this.btnRegistrarFactura.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnRegistrarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarFactura.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarFactura.Location = new System.Drawing.Point(913, 590);
             this.btnRegistrarFactura.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarFactura.Name = "btnRegistrarFactura";
-            this.btnRegistrarFactura.Size = new System.Drawing.Size(146, 63);
+            this.btnRegistrarFactura.Size = new System.Drawing.Size(127, 36);
             this.btnRegistrarFactura.TabIndex = 27;
             this.btnRegistrarFactura.Text = "GENERAR FACTURA";
-            this.btnRegistrarFactura.UseVisualStyleBackColor = true;
+            this.btnRegistrarFactura.UseVisualStyleBackColor = false;
             this.btnRegistrarFactura.Click += new System.EventHandler(this.btnRegistrarFactura_Click);
             // 
             // btnsalir
             // 
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsalir.FlatAppearance.BorderSize = 0;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
-            this.btnsalir.Location = new System.Drawing.Point(10, 11);
+            this.btnsalir.Location = new System.Drawing.Point(12, 12);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(82, 42);
             this.btnsalir.TabIndex = 28;
             this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblCantidadDisp);
             this.panel1.Controls.Add(this.lblPrecioUnitario);
             this.panel1.Controls.Add(this.lblPrecioTotal);
             this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.btnsalir);
             this.panel1.Controls.Add(this.btnRegistrarFactura);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnBuscar);
@@ -237,14 +250,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1284, 671);
+            this.panel1.Size = new System.Drawing.Size(1354, 671);
             this.panel1.TabIndex = 28;
             // 
             // lblCantidadDisp
             // 
             this.lblCantidadDisp.AutoSize = true;
             this.lblCantidadDisp.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadDisp.Location = new System.Drawing.Point(963, 11);
+            this.lblCantidadDisp.Location = new System.Drawing.Point(1122, 187);
             this.lblCantidadDisp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidadDisp.Name = "lblCantidadDisp";
             this.lblCantidadDisp.Size = new System.Drawing.Size(0, 26);
@@ -254,7 +267,7 @@
             // 
             this.lblPrecioUnitario.AutoSize = true;
             this.lblPrecioUnitario.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioUnitario.Location = new System.Drawing.Point(946, 133);
+            this.lblPrecioUnitario.Location = new System.Drawing.Point(1107, 287);
             this.lblPrecioUnitario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecioUnitario.Name = "lblPrecioUnitario";
             this.lblPrecioUnitario.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -265,7 +278,7 @@
             // 
             this.lblPrecioTotal.AutoSize = true;
             this.lblPrecioTotal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioTotal.Location = new System.Drawing.Point(863, 177);
+            this.lblPrecioTotal.Location = new System.Drawing.Point(1246, 570);
             this.lblPrecioTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecioTotal.Name = "lblPrecioTotal";
             this.lblPrecioTotal.Size = new System.Drawing.Size(0, 26);
@@ -275,20 +288,41 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView2.Location = new System.Drawing.Point(528, 300);
+            this.dataGridView2.Location = new System.Drawing.Point(706, 323);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(540, 245);
+            this.dataGridView2.Size = new System.Drawing.Size(568, 245);
             this.dataGridView2.TabIndex = 29;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.btnsalir);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1354, 68);
+            this.panel2.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(516, 23);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(290, 31);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "AGREGAR FACTURA";
             // 
             // AgregarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 671);
+            this.ClientSize = new System.Drawing.Size(1354, 671);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -299,6 +333,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -324,5 +360,7 @@
         private System.Windows.Forms.Label lblPrecioTotal;
         private System.Windows.Forms.Label lblPrecioUnitario;
         private System.Windows.Forms.Label lblCantidadDisp;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }

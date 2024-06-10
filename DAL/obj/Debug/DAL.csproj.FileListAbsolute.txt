@@ -100,3 +100,17 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\DAL\obj\Debug\DAL.csproj.C
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\DAL\obj\Debug\DAL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\DAL\obj\Debug\DAL.pdb
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\DAL.dll
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\DAL.pdb
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\ENTITY.dll
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\System.Memory.dll
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\System.Buffers.dll
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\ENTITY.pdb
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\bin\Debug\MySql.Data.xml
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\obj\Debug\DAL.dll
+C:\Users\juann\Desktop\yimc\YIMCLOOD\DAL\obj\Debug\DAL.pdb

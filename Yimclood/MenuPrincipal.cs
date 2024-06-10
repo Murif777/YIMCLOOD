@@ -136,7 +136,7 @@ namespace Presentacion
             {
                 Agregarcontenedor.Height += 10;
                 ConsultarContenedor.Top += 10;
-                if (Agregarcontenedor.Height >= 230)
+                if (Agregarcontenedor.Height >= 330)
                 {
                     menuTransicion.Stop();
                     menuExpandAgregar = true;
@@ -252,6 +252,20 @@ namespace Presentacion
         private void bntMaximizar_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void AgregarFactura_Click(object sender, EventArgs e)
+        {
+            var agregarfacturaForm = new AgregarFactura();
+            agregarfacturaForm.OnRegresar += RegistrarForm_OnRegresar;
+            Abrirformpanel(agregarfacturaForm);
+        }
+
+        private void AgregarEjercicio_Click(object sender, EventArgs e)
+        {
+            var agregarejercicioForm = new AgregarEjercicio();
+            agregarejercicioForm.OnRegresar += RegistrarForm_OnRegresar;
+            Abrirformpanel(agregarejercicioForm);
         }
     }
 }

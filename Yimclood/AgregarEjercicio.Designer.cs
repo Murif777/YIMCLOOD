@@ -132,7 +132,11 @@
             // 
             // NumSeries
             // 
+<<<<<<< HEAD
             this.NumSeries.Location = new System.Drawing.Point(648, 251);
+=======
+            this.NumSeries.Location = new System.Drawing.Point(699, 248);
+>>>>>>> d15130fe4426b04dfff90b3a982d27a9c7996df8
             this.NumSeries.Margin = new System.Windows.Forms.Padding(2);
             this.NumSeries.Name = "NumSeries";
             this.NumSeries.Size = new System.Drawing.Size(63, 20);
@@ -218,6 +222,7 @@
             this.Btnregresar.Size = new System.Drawing.Size(76, 44);
             this.Btnregresar.TabIndex = 7;
             this.Btnregresar.UseVisualStyleBackColor = true;
+            this.Btnregresar.Click += new System.EventHandler(this.Btnregresar_Click);
             // 
             // numDuracion
             // 
@@ -287,6 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1024, 536);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.nmRepeticiones);
