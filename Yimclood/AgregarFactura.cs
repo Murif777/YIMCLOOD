@@ -11,6 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+
 
 namespace Presentacion
 {
@@ -98,20 +102,22 @@ namespace Presentacion
                         Referencia = p.Referencia,
                         Nombre = p.Nombre,
                         Precio = p.Valor,
-                        Cantidad =p.CantidadDisponible
+                        Cantidad =p.CantidadDisponible,
+                        valor = p.Valor
                     }).ToList();
                     dataGridView2.DataSource = viewList;
                     // Configurar las columnas para mostrar en el orden deseado
                     dataGridView2.Columns["Foto"].DisplayIndex = 0;
                     dataGridView2.Columns["Referencia"].DisplayIndex = 1;
                     dataGridView2.Columns["Nombre"].DisplayIndex = 2;
-                    dataGridView2.Columns["Precio"].DisplayIndex = 3;
-                    dataGridView2.Columns["Cantidad"].DisplayIndex = 4;
-                }
-                else
-                {
-                    MessageBox.Show("Producto no encontrado");
-                }
+                    dataGridView2.Columns["Cantidad"].DisplayIndex = 3;
+                    dataGridView2.Columns["Precio"].DisplayIndex = 4;
+                    dataGridView2.Columns["Total * Producto"].DisplayIndex = 5;
+            }
+            else
+            {
+                MessageBox.Show("Producto no encontrado");
+            }
 
         }
         private void GenerarFactura()
@@ -135,7 +141,64 @@ namespace Presentacion
             facturaService.RegistrarFacturaProducto(factura);
             actualizarBD();
             limpiarcampos();
-        }
+
+
+            //hacer en factura service
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+
+
+            //esto es para usarlo y obteenr el dato de el datagridvew
+            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+
+            string nombre = selectedRow.Cells["Nombre"].Value.ToString();
+            string cedula = selectedRow.Cells["Cedula"].Value.ToString();
+
+
+            string paginahtml_texto = Properties.Resources.plantillaFactura.ToString();
+            paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", nombre);
+            paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", cedula);
+            paginahtml_texto = paginahtml_texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+
+
+            string filas = string.Empty;
+            decimal total = 0;
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                filas += "<tr>";
+                filas += "<td>" + row.Cells["Referencia"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Nombre"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + " </td>";
+                filas += "<td>" + row.Cells["Precio"].Value.ToString() + "</td>";
+                filas += "</tr>";
+                total += decimal.Parse(row.Cells["Total * Producto"].Value.ToString());
+            }
+            paginahtml_texto = paginahtml_texto.Replace("@FILAS", filas);
+            paginahtml_texto = paginahtml_texto.Replace("@TOTAL", total.ToString());
+
+
+            if (guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.LETTER, 25, 25, 25, 25);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase (""));
+
+                    using (StringReader sr = new StringReader(paginahtml_texto))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+            }
+
+
+        }      
         private void actualizarBD()
         {
             foreach (var producto in productosSeleccionados)
@@ -270,6 +333,9 @@ namespace Presentacion
             LlenarComboBoxProductos();
         }
 
-
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            OnRegresar?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

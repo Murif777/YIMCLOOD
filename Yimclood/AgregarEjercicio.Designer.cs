@@ -69,7 +69,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(204, 139);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(199, 28);
@@ -89,7 +89,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(75, 271);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(228, 129);
@@ -131,7 +131,7 @@
             // NumSeries
             // 
             this.NumSeries.Location = new System.Drawing.Point(699, 248);
-            this.NumSeries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NumSeries.Margin = new System.Windows.Forms.Padding(2);
             this.NumSeries.Name = "NumSeries";
             this.NumSeries.Size = new System.Drawing.Size(63, 20);
             this.NumSeries.TabIndex = 22;
@@ -167,7 +167,7 @@
             // 
             this.cbCategorias.FormattingEnabled = true;
             this.cbCategorias.Location = new System.Drawing.Point(684, 318);
-            this.cbCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategorias.Name = "cbCategorias";
             this.cbCategorias.Size = new System.Drawing.Size(137, 21);
             this.cbCategorias.TabIndex = 27;
@@ -175,7 +175,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(594, 389);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(110, 59);
             this.btnRegistrar.TabIndex = 28;
@@ -189,7 +189,7 @@
             this.panel1.Controls.Add(this.Btnregresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 47);
             this.panel1.TabIndex = 29;
@@ -216,6 +216,7 @@
             this.Btnregresar.Size = new System.Drawing.Size(76, 44);
             this.Btnregresar.TabIndex = 7;
             this.Btnregresar.UseVisualStyleBackColor = true;
+            this.Btnregresar.Click += new System.EventHandler(this.Btnregresar_Click);
             // 
             // numDuracion
             // 
@@ -275,6 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1024, 536);
             this.Controls.Add(this.nmRepeticiones);
             this.Controls.Add(this.btnSubirfoto);
@@ -295,7 +297,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarEjercicio";
             this.Text = "AgregarEjercicio";
             ((System.ComponentModel.ISupportInitialize)(this.NumSeries)).EndInit();

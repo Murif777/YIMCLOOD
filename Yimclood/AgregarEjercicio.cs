@@ -17,6 +17,7 @@ namespace Presentacion
     {
         private byte[] imageBytes;
         private EjercicioService ejercicioService = new EjercicioService();
+        public event EventHandler OnRegresar;
         public AgregarEjercicio()
         {
             InitializeComponent();
@@ -117,7 +118,10 @@ namespace Presentacion
             }
         }
 
-
+        private void Btnregresar_Click(object sender, EventArgs e)
+        {
+            OnRegresar?.Invoke(this, EventArgs.Empty);
+        }
     }
 
 
