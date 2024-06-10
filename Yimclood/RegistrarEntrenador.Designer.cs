@@ -54,8 +54,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnsubirfoto = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -319,12 +321,23 @@
             this.btnsubirfoto.UseVisualStyleBackColor = true;
             this.btnsubirfoto.Click += new System.EventHandler(this.btnsubirfoto_Click_1);
             // 
+            // pbFoto
+            // 
+            this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(574, 280);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(175, 175);
+            this.pbFoto.TabIndex = 29;
+            this.pbFoto.TabStop = false;
+            // 
             // RegistrarEntrenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(807, 635);
+            this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.btnsubirfoto);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -353,6 +366,7 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,5 +399,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button Btnregresar;
         private System.Windows.Forms.Button btnsubirfoto;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

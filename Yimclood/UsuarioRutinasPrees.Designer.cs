@@ -45,7 +45,6 @@ namespace Presentacion
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.tablaEjercicios = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.cbRutinas = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,7 +82,6 @@ namespace Presentacion
             this.panel2.Controls.Add(this.lblDescripcion);
             this.panel2.Controls.Add(this.lblNombre);
             this.panel2.Controls.Add(this.tablaEjercicios);
-            this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Controls.Add(this.cbRutinas);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -128,16 +126,6 @@ namespace Presentacion
             this.tablaEjercicios.Name = "tablaEjercicios";
             this.tablaEjercicios.Size = new System.Drawing.Size(424, 282);
             this.tablaEjercicios.TabIndex = 5;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(384, 58);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cbRutinas
             // 
@@ -204,7 +192,6 @@ namespace Presentacion
         private Label label2;
         private Label label1;
         private ComboBox cbRutinas;
-        private Button btnBuscar;
         private Label lblDescripcion;
         private Label lblNombre;
         private DataGridView tablaEjercicios;

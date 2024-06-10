@@ -39,13 +39,11 @@
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.TablaFacturas = new System.Windows.Forms.DataGridView();
             this.pnlProductos = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Cerrar = new System.Windows.Forms.PictureBox();
             this.TablaProductos = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaFacturas)).BeginInit();
             this.pnlProductos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,12 +154,19 @@
             // 
             this.pnlProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlProductos.Controls.Add(this.TablaProductos);
-            this.pnlProductos.Controls.Add(this.Cerrar);
             this.pnlProductos.Controls.Add(this.label4);
             this.pnlProductos.Location = new System.Drawing.Point(126, 115);
             this.pnlProductos.Name = "pnlProductos";
             this.pnlProductos.Size = new System.Drawing.Size(620, 314);
             this.pnlProductos.TabIndex = 23;
+            // 
+            // TablaProductos
+            // 
+            this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaProductos.Location = new System.Drawing.Point(46, 49);
+            this.TablaProductos.Name = "TablaProductos";
+            this.TablaProductos.Size = new System.Drawing.Size(519, 238);
+            this.TablaProductos.TabIndex = 4;
             // 
             // label4
             // 
@@ -172,28 +177,6 @@
             this.label4.Size = new System.Drawing.Size(161, 37);
             this.label4.TabIndex = 1;
             this.label4.Text = "Productos";
-            // 
-            // Cerrar
-            // 
-            this.Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrar.Image")));
-            this.Cerrar.Location = new System.Drawing.Point(561, 3);
-            this.Cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.Cerrar.Name = "Cerrar";
-            this.Cerrar.Size = new System.Drawing.Size(53, 41);
-            this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Cerrar.TabIndex = 3;
-            this.Cerrar.TabStop = false;
-            this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
-            // 
-            // TablaProductos
-            // 
-            this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaProductos.Location = new System.Drawing.Point(46, 49);
-            this.TablaProductos.Name = "TablaProductos";
-            this.TablaProductos.Size = new System.Drawing.Size(519, 238);
-            this.TablaProductos.TabIndex = 4;
             // 
             // ConsultarFacturas
             // 
@@ -212,12 +195,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultarFacturas";
             this.Text = "ConsultarFacturas";
+            this.Click += new System.EventHandler(this.ConsultarFacturas_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaFacturas)).EndInit();
             this.pnlProductos.ResumeLayout(false);
             this.pnlProductos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,7 +220,6 @@
         private System.Windows.Forms.DataGridView TablaFacturas;
         private System.Windows.Forms.Panel pnlProductos;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox Cerrar;
         private System.Windows.Forms.DataGridView TablaProductos;
     }
 }

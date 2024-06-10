@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Text;
 using ENTITY;
+using BILL;
 
 
 
@@ -20,9 +21,11 @@ namespace Presentacion
     public partial class UsuarioMenuPrincipal : Form
     {
         private Miembro Miembro;
+        private PMembresiaService MembresiaService = new PMembresiaService();
         public UsuarioMenuPrincipal(Miembro miembro)
         {
             InitializeComponent();
+            MembresiaService.ActualizarBD();
             btnMaxRes.Image = Properties.Resources.minimizarVentana;
             this.Miembro = miembro;
         }

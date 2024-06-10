@@ -31,7 +31,22 @@ namespace Presentacion
             _usuarioMenuPrincipal = usuarioMenuPrincipal;
             this.miembro = miembro;
         }
-
+        private void VerRutinasPrestablecidas()
+        {
+            _usuarioMenuPrincipal.Abrirformpanel(new UsuarioRutinasPrees(miembro));
+        }
+        private void VerRutinasPersonalizadas()
+        {
+            _usuarioMenuPrincipal.Abrirformpanel(new UsuarioRutinaPerso(miembro));
+        }
+        private void btnCrearRutina_Click(object sender, EventArgs e)
+        {
+            VerRutinasPersonalizadas();
+        }
+        private void btnPreestablecidas_Click(object sender, EventArgs e)
+        {
+            VerRutinasPrestablecidas();
+        }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -47,7 +62,6 @@ namespace Presentacion
                 cargarEjercicio(musculo);
             }
         }
-
 
         private void cargarEjercicio(string musculo)
         {
@@ -75,16 +89,7 @@ namespace Presentacion
                 }).ToList();
 
                 listEjercicios.DataSource = viewList;
-
-                // Create and add the custom DataGridViewImageColumn
-                DataGridViewImageColumn imgColumn = new DataGridViewImageColumn
-                {
-                    HeaderText = "Foto",
-                    Name = "Foto"
-                };
-                listEjercicios.Columns.Insert(0, imgColumn);
-
-                // Adjust the other columns
+                listEjercicios.Columns["Foto"].DisplayIndex = 0;
                 listEjercicios.Columns["Nombre"].DisplayIndex = 1;
                 listEjercicios.Columns["Descripcion"].DisplayIndex = 2;
                 listEjercicios.Columns["Duracion"].DisplayIndex = 3;
@@ -92,32 +97,18 @@ namespace Presentacion
                 listEjercicios.Columns["Series"].DisplayIndex = 5;
                 listEjercicios.Columns["Musculo"].DisplayIndex = 6;
                 listEjercicios.Columns["Categoria"].DisplayIndex = 7;
-
-                // Populate the DataGridView with data
-                for (int i = 0; i < listEjercicios.Rows.Count; i++)
+                foreach (DataGridViewRow row in listEjercicios.Rows)
                 {
-                    byte[] imageBytes = (byte[])viewList[i].Foto;
-                    if (imageBytes != null)
-                    {
-                        using (MemoryStream ms = new MemoryStream(imageBytes))
-                        {
-                            Image gifImage = Image.FromStream(ms);
-                            DataGridViewGifCell cell = new DataGridViewGifCell
-                            {
-                                GifImage = gifImage
-                            };
-                            listEjercicios.Rows[i].Cells["Foto"] = cell;
-                        }
-                    }
+                    row.Height = 100; 
                 }
+                DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)listEjercicios.Columns["Foto"];
+                imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
             }
             else
             {
                 MessageBox.Show("Lista vacia");
             }
         }
-
-
 
         private void MusculoButton_MouseEnter(object sender, EventArgs e)
         {
@@ -189,25 +180,14 @@ namespace Presentacion
             }
         }
 
-       
-
         private void CambiarEstiloBotonYImagen(Button boton, Color color, Image imagen)
         {
             boton.BackColor = color;
             musculos.Image = imagen;
         }      
 
-        private void btnPreestablecidas_Click(object sender, EventArgs e)
-        {
-            VerRutinasPrees();
-        }
-        private void VerRutinasPrees()
-        {
-            _usuarioMenuPrincipal.Abrirformpanel(new UsuarioRutinasPrees(miembro));
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
     }
 }

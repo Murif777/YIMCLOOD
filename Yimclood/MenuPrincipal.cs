@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BILL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ namespace Presentacion
 {
     public partial class MenuPrincipal : Form
     {
+        private PMembresiaService MembresiaService = new PMembresiaService();
         public MenuPrincipal()
         {
             InitializeComponent();
+            MembresiaService.ActualizarBD();
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
 
@@ -50,7 +53,7 @@ namespace Presentacion
 
         private void AgregarUsuario_Click(object sender, EventArgs e)
         {
-            var registrarForm = new Registrar();
+            var registrarForm = new Registrar(null);
             registrarForm.OnRegresar += RegistrarForm_OnRegresar;
             Abrirformpanel(registrarForm);
         }

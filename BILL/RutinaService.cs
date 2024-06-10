@@ -11,6 +11,17 @@ namespace BILL
     public class RutinaService : ICrud<Rutina>
     {
         RutinaRepository ru_repository = new RutinaRepository();
+        public string RegistrarPersonalizada(Rutina rutina)
+        {
+            try
+            {
+                return ru_repository.GuardarRutinaPersoBD(rutina);
+            }
+            catch (Exception ex)
+            {
+                return "Error al registrar: " + ex.Message;
+            }
+        }
         public string Registrar(Rutina rutina)
         {
             try

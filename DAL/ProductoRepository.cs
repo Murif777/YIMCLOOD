@@ -14,7 +14,7 @@ namespace DAL
     {
         public string GuardarProductoBD(Producto producto)
         {
-            string sql = "INSERT INTO productos(Referencia, Nombre, Descripcion, Valor,Cantidad, Foto) " +
+            string sql = "INSERT INTO productos(Referencia, Nombre, Descripcion, Valor,Cantidad_Disponible, Foto) " +
                   "VALUES (@Referencia, @Nombre, @Descripcion, @Valor,@Cantidad, @Foto)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();

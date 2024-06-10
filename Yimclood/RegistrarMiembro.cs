@@ -16,17 +16,19 @@ namespace Presentacion
         private UsuarioService usuarioService = new UsuarioService();
         private MembresiaService MembresiaService = new MembresiaService();
         private byte[] imageBytes;
-
+        private PerfilMembresia MiembroRecibido;
         public event EventHandler OnRegresar;
 
-        public Registrar()
+        public Registrar(PerfilMembresia miembro)
         {
             InitializeComponent();
+            btnActualizar.Visible = false;
             ComboboxMembresias();
             this.Shown += new EventHandler(FormRegistrar_Shown);
             //btnagregarfoto.Click += btnagregarfoto_Click_1;
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
             InitializeDateTimePicker();
+            MiembroRecibido = miembro;
         }
 
         private void FormRegistrar_Shown(object sender, EventArgs e)
@@ -64,7 +66,21 @@ namespace Presentacion
             MessageBox.Show(resultado);
             return usuario;
         }
-
+        private void ActualizarMiembroBD()
+        {
+            string cedula = txtCedula.Text;
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string telefono = txtTelefono.Text;
+            string sexo = Sexo();
+            string correo = txtCorreo.Text;
+            DateTime FechaNacimiento = fechaNacimiento.Value;
+            Membresia membresiaSeleccionada = ObtenerMembresia();
+            Miembro miembro = new Miembro(
+                cedula, nombre, apellido, telefono, sexo, correo, FechaNacimiento,
+                0, 0, imageBytes);
+            MessageBox.Show(miembroService.ActualizarMiembro(miembro));
+        }
         private void RegistrarMembresia(Membresia membresia,Usuario usuario)
         {
 
@@ -141,6 +157,56 @@ namespace Presentacion
                 TiposMembresia.DisplayMember = "Nombre";
             }
         }
+        
+        public void Asignar_Campos()
+        {
+            txtCedula.Text = MiembroRecibido.DatosUsuario.DatosMiembro.Cedula;
+            txtCedula.Enabled = false;
+            txtNombre.Text= MiembroRecibido.DatosUsuario.DatosMiembro.Nombre;
+            txtApellido.Text= MiembroRecibido.DatosUsuario.DatosMiembro.Apellido;
+            txtTelefono.Text = MiembroRecibido.DatosUsuario.DatosMiembro.Telefono;
+            txtCorreo.Text= MiembroRecibido.DatosUsuario.DatosMiembro.Correo;
+            if (MiembroRecibido.DatosUsuario.DatosMiembro.Sexo == "Hombre")
+            {
+                rdbtnHombre.Checked=true;
+            }
+            else
+            {
+                rdbtnMujer.Checked = true;
+            }
+            fechaNacimiento.Value = MiembroRecibido.DatosUsuario.DatosMiembro.FechaNacimiento;
+            if (MiembroRecibido.TipoMembresia.Nombre == "NORMAL")
+            {
+                TiposMembresia.SelectedIndex = 2;
+            }
+            if (MiembroRecibido.TipoMembresia.Nombre == "VIP")
+            {
+                TiposMembresia.SelectedIndex = 3;
+            }
+            if (MiembroRecibido.TipoMembresia.Nombre == "ENTRENADOR")
+            {
+                TiposMembresia.SelectedIndex = 1;
+            }
+            if (MiembroRecibido.Fechafinal<= DateTime.Now)
+            {
+                TiposMembresia.Enabled = false;
+            }
+            byte[]foto=MiembroRecibido.DatosUsuario.DatosMiembro.Foto;
+            if (foto != null)
+            {
+                Image image = Image.FromStream(new MemoryStream(foto));
+
+                int nuevoAncho = 175;
+                int nuevoAlto = 175;
+                Image imagenRedimensionada = new Bitmap(image, nuevoAncho, nuevoAlto);
+
+                pbFoto.Image = imagenRedimensionada;
+            }
+            else
+            {
+                pbFoto.Image = null;
+            }
+        }
         private void InitializeDateTimePicker()
         {
             fechaNacimiento.Format = DateTimePickerFormat.Custom;
@@ -149,7 +215,10 @@ namespace Presentacion
             fechaNacimiento.Checked = false;
             fechaNacimiento.ValueChanged += new EventHandler(fechaNacimiento_ValueChanged);
         }
-
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarMiembroBD();
+        }
         private void fechaNacimiento_ValueChanged(object sender, EventArgs e)
         {
             if (fechaNacimiento.Checked)
@@ -166,12 +235,6 @@ namespace Presentacion
         {
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
-
-        private void btnagregarfoto_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnagregarfoto_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -190,6 +253,23 @@ namespace Presentacion
                     MessageBox.Show("Imagen seleccionada: " + filePath);
                 }
             }
+            byte[] foto =imageBytes;
+            if (foto != null)
+            {
+                Image image = Image.FromStream(new MemoryStream(foto));
+
+                int nuevoAncho = 175;
+                int nuevoAlto = 175;
+                Image imagenRedimensionada = new Bitmap(image, nuevoAncho, nuevoAlto);
+
+                pbFoto.Image = imagenRedimensionada;
+            }
+            else
+            {
+                pbFoto.Image = null;
+            }
         }
+
+       
     }
 }

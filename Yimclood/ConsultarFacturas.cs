@@ -128,5 +128,10 @@ namespace Presentacion
         {
             pnlProductos.Visible =false;
         }
+
+        private void ConsultarFacturas_Click(object sender, EventArgs e)
+        {
+            this.pnlProductos.Visible =false;
+        }
     }
 }

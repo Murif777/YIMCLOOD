@@ -11,7 +11,7 @@ CREATE TABLE Productos (
     Valor INT NOT NULL,
     Cantidad_Disponible INT,
     Foto LONGBLOB NULL
-);
+);	
 
 CREATE TABLE Membresias	 (
     Nombre VARCHAR(20) PRIMARY KEY NOT NULL,
@@ -124,11 +124,15 @@ CREATE TABLE Ejercicios (
 CREATE TABLE Rutinas (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(50) NOT NULL,
-    Descripcion VARCHAR(255) NOT NULL,
+    Descripcion VARCHAR(255) NOT NULL
+);
+CREATE TABLE Rutinas_Miembro (
+    Id_Rutina INT,
     Miembro_Cedula VARCHAR(20),
+    PRIMARY KEY (Id_Rutina, Miembro_Cedula),
+	FOREIGN KEY (Id_Rutina) REFERENCES Rutinas(Id),
     FOREIGN KEY (Miembro_Cedula) REFERENCES Miembros(Cedula)
 );
-
 CREATE TABLE Rutinas_Ejercicios (
     Rutina_Id INT,
     Ejercicio_Nombre VARCHAR(50),
@@ -136,13 +140,23 @@ CREATE TABLE Rutinas_Ejercicios (
     FOREIGN KEY (Rutina_Id) REFERENCES Rutinas(Id),
     FOREIGN KEY (Ejercicio_Nombre) REFERENCES Ejercicios(Nombre)
 );
-SELECT r.Id AS RutinaId, r.Nombre AS RutinaNombre, r.Descripcion AS RutinaDescripcion, 
-    r.Miembro_Cedula AS RutinaMiembroCedula, m.Nombre AS MiembroNombre, m.Apellido AS MiembroApellido, 
-    e.Nombre AS EjercicioNombre, e.Descripcion AS EjercicioDescripcion, e.Duracion AS EjercicioDuracion, 
-    e.Repeticiones AS EjercicioRepeticiones, e.Series AS EjercicioSeries, e.Musculo AS EjercicioMusculo, 
-    e.Categoria AS EjercicioCategoria, e.Foto AS EjercicioFoto
-FROM Rutinas r 
-INNER JOIN Miembros m ON r.Miembro_Cedula = m.Cedula 
-INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Rutina_Id 
-INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre
-WHERE m.Cedula = 3124
+SELECT 
+    r.Id AS RutinaId, 
+    r.Nombre AS RutinaNombre, 
+    r.Descripcion AS RutinaDescripcion, 
+    re.Ejercicio_Nombre AS EjercicioNombre, 
+    e.Descripcion AS EjercicioDescripcion, 
+    e.Duracion AS EjercicioDuracion, 
+    e.Repeticiones AS EjercicioRepeticiones, 
+    e.Series AS EjercicioSeries, 
+    e.Musculo AS EjercicioMusculo, 
+    e.Categoria AS EjercicioCategoria, 
+    e.Foto AS EjercicioFoto 
+FROM 
+    Rutinas r 
+INNER JOIN 
+    Rutinas_Ejercicios re ON r.Id = re.Rutina_Id 
+INNER JOIN 
+    Ejercicios e ON re.Ejercicio_Nombre = e.Nombre;
+
+

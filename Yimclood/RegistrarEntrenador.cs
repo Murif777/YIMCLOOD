@@ -188,6 +188,21 @@ namespace Presentacion
                     MessageBox.Show("Imagen seleccionada: " + filePath);
                 }
             }
+            byte[] foto = imageBytes;
+            if (foto != null)
+            {
+                Image image = Image.FromStream(new MemoryStream(foto));
+
+                int nuevoAncho = 175;
+                int nuevoAlto = 175;
+                Image imagenRedimensionada = new Bitmap(image, nuevoAncho, nuevoAlto);
+
+                pbFoto.Image = imagenRedimensionada;
+            }
+            else
+            {
+                pbFoto.Image = null;
+            }
         }
     }
 }

@@ -32,7 +32,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnSubirfoto = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -44,15 +43,19 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btnregresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSubirfoto = new System.Windows.Forms.Button();
+            this.Btnregresar = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Controls.Add(this.pbFoto);
             this.panel2.Controls.Add(this.txtCantidad);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.btnSubirfoto);
@@ -92,19 +95,6 @@
             this.label7.Size = new System.Drawing.Size(139, 32);
             this.label7.TabIndex = 12;
             this.label7.Text = "Cantidad:";
-            // 
-            // btnSubirfoto
-            // 
-            this.btnSubirfoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubirfoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubirfoto.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirfoto.Image")));
-            this.btnSubirfoto.Location = new System.Drawing.Point(730, 37);
-            this.btnSubirfoto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSubirfoto.Name = "btnSubirfoto";
-            this.btnSubirfoto.Size = new System.Drawing.Size(47, 48);
-            this.btnSubirfoto.TabIndex = 11;
-            this.btnSubirfoto.UseVisualStyleBackColor = true;
-            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click_1);
             // 
             // label6
             // 
@@ -226,6 +216,30 @@
             this.panel1.Size = new System.Drawing.Size(876, 63);
             this.panel1.TabIndex = 11;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(268, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(277, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Agregar Producto";
+            // 
+            // btnSubirfoto
+            // 
+            this.btnSubirfoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubirfoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubirfoto.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirfoto.Image")));
+            this.btnSubirfoto.Location = new System.Drawing.Point(730, 37);
+            this.btnSubirfoto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubirfoto.Name = "btnSubirfoto";
+            this.btnSubirfoto.Size = new System.Drawing.Size(47, 48);
+            this.btnSubirfoto.TabIndex = 11;
+            this.btnSubirfoto.UseVisualStyleBackColor = true;
+            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click_1);
+            // 
             // Btnregresar
             // 
             this.Btnregresar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -240,16 +254,15 @@
             this.Btnregresar.UseVisualStyleBackColor = true;
             this.Btnregresar.Click += new System.EventHandler(this.Btnregresar_Click);
             // 
-            // label1
+            // pbFoto
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(268, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Agregar Producto";
+            this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(642, 116);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(175, 175);
+            this.pbFoto.TabIndex = 28;
+            this.pbFoto.TabStop = false;
             // 
             // AgregarProducto
             // 
@@ -267,6 +280,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +304,6 @@
         private System.Windows.Forms.Button btnSubirfoto;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

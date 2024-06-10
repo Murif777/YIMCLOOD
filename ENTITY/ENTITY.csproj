@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataGridViewGifCell.cs" />
     <Compile Include="Ejercicio.cs" />
     <Compile Include="Entrenador.cs" />
     <Compile Include="Factura.cs" />

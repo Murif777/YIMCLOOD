@@ -38,48 +38,42 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioMisRutinas));
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.cbRutinas = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.btnAgregarRutinas = new Presentacion.botones.botones();
+            this.tablaEjercicios = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicios)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.lblDescripcion.Location = new System.Drawing.Point(472, 97);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescripcion.Location = new System.Drawing.Point(509, 88);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(145, 30);
+            this.lblDescripcion.Size = new System.Drawing.Size(0, 24);
             this.lblDescripcion.TabIndex = 7;
-            this.lblDescripcion.Text = "DESCRIPCION";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.lblNombre.Location = new System.Drawing.Point(160, 97);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(259, 88);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(97, 30);
+            this.lblNombre.Size = new System.Drawing.Size(0, 24);
             this.lblNombre.TabIndex = 6;
-            this.lblNombre.Text = "NOMBRE";
             // 
             // cbRutinas
             // 
             this.cbRutinas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14F);
             this.cbRutinas.FormattingEnabled = true;
-            this.cbRutinas.Location = new System.Drawing.Point(528, 34);
-            this.cbRutinas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbRutinas.Location = new System.Drawing.Point(422, 27);
             this.cbRutinas.Name = "cbRutinas";
-            this.cbRutinas.Size = new System.Drawing.Size(192, 36);
+            this.cbRutinas.Size = new System.Drawing.Size(154, 31);
             this.cbRutinas.TabIndex = 3;
             this.cbRutinas.SelectedIndexChanged += new System.EventHandler(this.cbRutinas_SelectedIndexChanged);
             // 
@@ -87,10 +81,9 @@ namespace Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label3.Location = new System.Drawing.Point(290, 89);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(363, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 41);
+            this.label3.Size = new System.Drawing.Size(143, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Descripcion:";
             // 
@@ -98,10 +91,9 @@ namespace Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 30F);
-            this.label2.Location = new System.Drawing.Point(199, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(159, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 60);
+            this.label2.Size = new System.Drawing.Size(258, 48);
             this.label2.TabIndex = 1;
             this.label2.Text = "Elija una rutina";
             // 
@@ -110,55 +102,28 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label1.Location = new System.Drawing.Point(29, 89);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(154, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 41);
+            this.label1.Size = new System.Drawing.Size(98, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // listView1
+            // tablaEjercicios
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(209, 169);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(511, 401);
-            this.listView1.TabIndex = 9;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // btnAgregarRutinas
-            // 
-            this.btnAgregarRutinas.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAgregarRutinas.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAgregarRutinas.BorderColor = System.Drawing.Color.Black;
-            this.btnAgregarRutinas.BorderRadius = 10;
-            this.btnAgregarRutinas.BorderSize = 2;
-            this.btnAgregarRutinas.FlatAppearance.BorderSize = 0;
-            this.btnAgregarRutinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarRutinas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.btnAgregarRutinas.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarRutinas.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarRutinas.Image")));
-            this.btnAgregarRutinas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarRutinas.Location = new System.Drawing.Point(773, 260);
-            this.btnAgregarRutinas.Name = "btnAgregarRutinas";
-            this.btnAgregarRutinas.Size = new System.Drawing.Size(187, 54);
-            this.btnAgregarRutinas.TabIndex = 10;
-            this.btnAgregarRutinas.Text = "Mis rutinas";
-            this.btnAgregarRutinas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarRutinas.TextColor = System.Drawing.Color.White;
-            this.btnAgregarRutinas.UseVisualStyleBackColor = false;
-            this.btnAgregarRutinas.Click += new System.EventHandler(this.btnAgregarRutinas_Click);
+            this.tablaEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaEjercicios.Location = new System.Drawing.Point(30, 117);
+            this.tablaEjercicios.Name = "tablaEjercicios";
+            this.tablaEjercicios.Size = new System.Drawing.Size(729, 309);
+            this.tablaEjercicios.TabIndex = 11;
             // 
             // UsuarioMisRutinas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(992, 590);
-            this.Controls.Add(this.btnAgregarRutinas);
+            this.ClientSize = new System.Drawing.Size(794, 472);
+            this.Controls.Add(this.tablaEjercicios);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.cbRutinas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNombre);
@@ -170,6 +135,7 @@ namespace Presentacion
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormInterfaz";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,7 +148,6 @@ namespace Presentacion
         private ComboBox cbRutinas;
         private Label lblDescripcion;
         private Label lblNombre;
-        private ListView listView1;
-        private botones.botones btnAgregarRutinas;
+        private DataGridView tablaEjercicios;
     }
 }

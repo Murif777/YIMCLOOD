@@ -12,6 +12,8 @@ using System.Runtime.InteropServices;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Text;
 using ENTITY;
+using System.Data.SqlTypes;
+using System.IO;
 
 
 
@@ -35,7 +37,33 @@ namespace Presentacion
 
        private void datosperfil()
         {
-            lblNombre.Text=Miembro.Nombre;
+            string NombreyApellido= $"{Miembro.Nombre} {Miembro.Apellido}";
+            int peso = Miembro.Peso;
+            string correo = Miembro.Correo;
+            DateTime fecha = Miembro.FechaNacimiento;
+            int estatura = Miembro.Estatura;
+            byte[] foto = Miembro.Foto;
+
+            if (foto != null)
+            {
+                Image image = Image.FromStream(new MemoryStream(foto));
+
+                int nuevoAncho = 242;
+                int nuevoAlto =  212;
+                Image imagenRedimensionada = new Bitmap(image, nuevoAncho, nuevoAlto);
+
+                fotoPerfil.Image = imagenRedimensionada;
+            }
+
+            else
+            {
+                fotoPerfil.Image = null;
+            }
+            lblNombreApellido.Text=NombreyApellido;
+            lblCorreo.Text=correo;
+            lblPeso.Text= peso.ToString();
+            lblEstatura.Text= estatura.ToString();
+            lblFecha.Text= fecha.ToString("dd-MM-yyyy   ");
         }
         private void rbtnActual_CheckedChanged(object sender, EventArgs e)
         {
@@ -53,5 +81,14 @@ namespace Presentacion
 
         }
 
+        private void btnAgregarDatos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

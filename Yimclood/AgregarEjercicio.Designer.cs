@@ -49,10 +49,12 @@
             this.btnSubirfoto = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.nmRepeticiones = new System.Windows.Forms.NumericUpDown();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.NumSeries)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDuracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmRepeticiones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +71,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(204, 139);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(199, 28);
@@ -89,7 +91,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(75, 271);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(228, 129);
@@ -121,7 +123,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(580, 237);
+            this.label5.Location = new System.Drawing.Point(529, 240);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 26);
@@ -130,8 +132,8 @@
             // 
             // NumSeries
             // 
-            this.NumSeries.Location = new System.Drawing.Point(699, 248);
-            this.NumSeries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NumSeries.Location = new System.Drawing.Point(648, 251);
+            this.NumSeries.Margin = new System.Windows.Forms.Padding(2);
             this.NumSeries.Name = "NumSeries";
             this.NumSeries.Size = new System.Drawing.Size(63, 20);
             this.NumSeries.TabIndex = 22;
@@ -156,7 +158,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(504, 318);
+            this.label7.Location = new System.Drawing.Point(468, 316);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(176, 26);
@@ -166,8 +168,8 @@
             // cbCategorias
             // 
             this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(684, 318);
-            this.cbCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCategorias.Location = new System.Drawing.Point(648, 316);
+            this.cbCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategorias.Name = "cbCategorias";
             this.cbCategorias.Size = new System.Drawing.Size(137, 21);
             this.cbCategorias.TabIndex = 27;
@@ -175,7 +177,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(594, 389);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(110, 59);
             this.btnRegistrar.TabIndex = 28;
@@ -189,7 +191,7 @@
             this.panel1.Controls.Add(this.Btnregresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 47);
             this.panel1.TabIndex = 29;
@@ -271,11 +273,22 @@
             this.nmRepeticiones.Size = new System.Drawing.Size(63, 20);
             this.nmRepeticiones.TabIndex = 34;
             // 
+            // pbFoto
+            // 
+            this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(822, 251);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(175, 175);
+            this.pbFoto.TabIndex = 35;
+            this.pbFoto.TabStop = false;
+            // 
             // AgregarEjercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 536);
+            this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.nmRepeticiones);
             this.Controls.Add(this.btnSubirfoto);
             this.Controls.Add(this.label9);
@@ -295,7 +308,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarEjercicio";
             this.Text = "AgregarEjercicio";
             ((System.ComponentModel.ISupportInitialize)(this.NumSeries)).EndInit();
@@ -303,6 +316,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDuracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmRepeticiones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +344,6 @@
         private System.Windows.Forms.Button btnSubirfoto;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown nmRepeticiones;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

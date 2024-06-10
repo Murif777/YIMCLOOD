@@ -41,7 +41,7 @@
             this.btnVer = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnActualizarBD = new System.Windows.Forms.Button();
+            this.pnlActualizar = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -56,7 +56,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.Location = new System.Drawing.Point(383, 125);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(52, 37);
             this.btnBuscar.TabIndex = 3;
@@ -70,7 +70,7 @@
             this.Btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnregresar.Image = ((System.Drawing.Image)(resources.GetObject("Btnregresar.Image")));
             this.Btnregresar.Location = new System.Drawing.Point(18, 6);
-            this.Btnregresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btnregresar.Margin = new System.Windows.Forms.Padding(2);
             this.Btnregresar.Name = "Btnregresar";
             this.Btnregresar.Size = new System.Drawing.Size(56, 40);
             this.Btnregresar.TabIndex = 0;
@@ -120,7 +120,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.Location = new System.Drawing.Point(18, 283);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -159,7 +159,7 @@
             this.btnVer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnVer.Image = ((System.Drawing.Image)(resources.GetObject("btnVer.Image")));
             this.btnVer.Location = new System.Drawing.Point(721, 248);
-            this.btnVer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVer.Margin = new System.Windows.Forms.Padding(2);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(44, 37);
             this.btnVer.TabIndex = 13;
@@ -172,7 +172,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(688, 248);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(34, 34);
             this.btnEliminar.TabIndex = 15;
@@ -185,22 +185,20 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.Location = new System.Drawing.Point(658, 248);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(34, 34);
             this.btnActualizar.TabIndex = 16;
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // btnActualizarBD
+            // pnlActualizar
             // 
-            this.btnActualizarBD.Location = new System.Drawing.Point(658, 139);
-            this.btnActualizarBD.Name = "btnActualizarBD";
-            this.btnActualizarBD.Size = new System.Drawing.Size(139, 23);
-            this.btnActualizarBD.TabIndex = 17;
-            this.btnActualizarBD.Text = "Actualizar base de datos";
-            this.btnActualizarBD.UseVisualStyleBackColor = true;
-            this.btnActualizarBD.Click += new System.EventHandler(this.btnActualizarBD_Click);
+            this.pnlActualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlActualizar.Location = new System.Drawing.Point(18, 60);
+            this.pnlActualizar.Name = "pnlActualizar";
+            this.pnlActualizar.Size = new System.Drawing.Size(812, 565);
+            this.pnlActualizar.TabIndex = 17;
             // 
             // ConsultarMiembro
             // 
@@ -208,7 +206,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(812, 483);
-            this.Controls.Add(this.btnActualizarBD);
+            this.Controls.Add(this.pnlActualizar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label3);
@@ -220,9 +218,10 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnVer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConsultarMiembro";
             this.Text = "FormCnsultarUsuario";
+            this.Click += new System.EventHandler(this.ConsultarMiembro_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -245,6 +244,6 @@
         private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnActualizarBD;
+        private System.Windows.Forms.Panel pnlActualizar;
     }
 }

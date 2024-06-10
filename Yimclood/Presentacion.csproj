@@ -57,12 +57,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActualizarMiembro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ActualizarMiembro.Designer.cs">
-      <DependentUpon>ActualizarMiembro.cs</DependentUpon>
-    </Compile>
     <Compile Include="AgregarEjercicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +101,12 @@
     </Compile>
     <Compile Include="UsuarioMisRutinas.Designer.cs">
       <DependentUpon>UsuarioMisRutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioRutinaPerso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioRutinaPerso.Designer.cs">
+      <DependentUpon>UsuarioRutinaPerso.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioRutinasPrees.cs">
       <SubType>Form</SubType>
@@ -205,9 +205,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ActualizarMiembro.resx">
-      <DependentUpon>ActualizarMiembro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AgregarEjercicio.resx">
       <DependentUpon>AgregarEjercicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioMisRutinas.resx">
       <DependentUpon>UsuarioMisRutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioRutinaPerso.resx">
+      <DependentUpon>UsuarioRutinaPerso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioRutinasPrees.resx">
       <DependentUpon>UsuarioRutinasPrees.cs</DependentUpon>

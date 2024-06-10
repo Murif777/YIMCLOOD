@@ -144,8 +144,9 @@ namespace DAL
         public string ActualizarMiembroBD(Miembro miembro)
         {
             string sql = "UPDATE Miembros SET Nombre=@Nombre, Apellido=@Apellido, " +
-                "Telefono=@Telefono, Sexo=@Sexo, Fecha_Nacimiento=@FechaNacimiento, " +
-                "Correo_Electronico=@Correo, Peso=@Peso, Estatura=@Estatura, Foto=@Foto WHERE Cedula=@Cedula";
+                         "Telefono=@Telefono, Sexo=@Sexo, Fecha_Nacimiento=@FechaNacimiento, " +
+                         "Correo_Electronico=@Correo, Peso=@Peso, Estatura=@Estatura, Foto=@Foto " +
+                         "WHERE Cedula=@Cedula";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -166,24 +167,20 @@ namespace DAL
                 int res = comando.ExecuteNonQuery();
                 if (res == 0)
                 {
-                  
                     return "Miembro no actualizado";
                 }
-
-               
                 return "Miembro actualizado exitosamente";
             }
             catch (MySqlException ex)
             {
-                return "Error al actualizar " + ex.Message;
+                return "Error al actualizar: " + ex.Message;
             }
             finally
             {
                 conexionBd.Close();
-                //CerrarConexion();
             }
-            return null;
         }
+
 
     }
 

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,7 @@ namespace Presentacion
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             MostrarTabla();
+            pnlActualizar.Visible = false;
         }
 
         private void Btnregresar_Click(object sender, EventArgs e)
@@ -49,7 +51,10 @@ namespace Presentacion
                     Cedula = p.DatosUsuario.DatosMiembro.Cedula,
                     Nombre = p.DatosUsuario.DatosMiembro.Nombre,
                     Apellido = p.DatosUsuario.DatosMiembro.Apellido,
-                    Correo= p.DatosUsuario.DatosMiembro.Correo,
+                    Correo = p.DatosUsuario.DatosMiembro.Correo,
+                    Telefono = p.DatosUsuario.DatosMiembro.Telefono,
+                    Sexo = p.DatosUsuario.DatosMiembro.Sexo,
+                    FechaNacimiento = p.DatosUsuario.DatosMiembro.FechaNacimiento,
                     Membresia = p.TipoMembresia.Nombre,
                     Estado = p.Estado,
                     SaldoDebe = p.SaldoDebe,
@@ -68,14 +73,17 @@ namespace Presentacion
                 dataGridView1.Columns["Nombre"].DisplayIndex = 2;
                 dataGridView1.Columns["Apellido"].DisplayIndex = 3;
                 dataGridView1.Columns["Correo"].DisplayIndex = 4;
-                dataGridView1.Columns["Membresia"].DisplayIndex = 5;
-                dataGridView1.Columns["Estado"].DisplayIndex = 6;
-                dataGridView1.Columns["SaldoDebe"].DisplayIndex = 7;
-                dataGridView1.Columns["FechaInicio"].DisplayIndex = 8;
-                dataGridView1.Columns["FechaFinal"].DisplayIndex = 9;
-                dataGridView1.Columns["DuracionAcumulada"].DisplayIndex = 10;
-                dataGridView1.Columns["TiempoRestante"].DisplayIndex = 11;
-                dataGridView1.Columns["Pagado"].DisplayIndex = 12;
+                dataGridView1.Columns["Telefono"].DisplayIndex = 5;
+                dataGridView1.Columns["Sexo"].DisplayIndex = 6;
+                dataGridView1.Columns["FechaNacimiento"].DisplayIndex = 7;
+                dataGridView1.Columns["Membresia"].DisplayIndex = 8;
+                dataGridView1.Columns["Estado"].DisplayIndex = 9;
+                dataGridView1.Columns["SaldoDebe"].DisplayIndex = 10;
+                dataGridView1.Columns["FechaInicio"].DisplayIndex = 11;
+                dataGridView1.Columns["FechaFinal"].DisplayIndex = 12;
+                dataGridView1.Columns["DuracionAcumulada"].DisplayIndex = 13;
+                dataGridView1.Columns["TiempoRestante"].DisplayIndex = 14;
+                dataGridView1.Columns["Pagado"].DisplayIndex = 15;
 
                 int primeraColumna = 0;
                 dataGridView1.Columns[primeraColumna].Visible = false;
@@ -134,6 +142,7 @@ namespace Presentacion
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
@@ -159,7 +168,80 @@ namespace Presentacion
                 }
             }
         }
+        private PerfilMembresia AsignaciondeValores()
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
+                string cedula = selectedRow.Cells["Cedula"].Value.ToString();
+                string nombre = selectedRow.Cells["Nombre"].Value.ToString();
+                string apellido = selectedRow.Cells["Apellido"].Value.ToString();
+                string telefono = selectedRow.Cells["Telefono"].Value.ToString();
+                string correo = selectedRow.Cells["Correo"].Value.ToString();
+                string fechanacimiento = selectedRow.Cells["FechaNacimiento"].Value.ToString();
+                string sexo = selectedRow.Cells["Sexo"].Value.ToString();
+                byte[] foto = (byte[])selectedRow.Cells["Foto"].Value;
+                string nombreMembresia = selectedRow.Cells["Membresia"].Value.ToString();
+                string fechafinal = selectedRow.Cells["FechaNacimiento"].Value.ToString();
+                Miembro miembro = new Miembro();
+
+                miembro.Cedula = cedula;
+                miembro.Nombre = nombre;
+                miembro.Apellido = apellido;
+                miembro.Telefono = telefono;
+                miembro.Correo = correo;
+                miembro.FechaNacimiento = Convert.ToDateTime(fechanacimiento);
+                miembro.Sexo = sexo;
+                miembro.Foto = foto;
+
+                Membresia membresia = new Membresia();
+                membresia.Nombre = nombreMembresia;
+
+                Usuario usuario = new Usuario();
+                usuario.DatosMiembro = miembro;
+                PerfilMembresia perfil = new PerfilMembresia();
+
+                perfil.DatosUsuario = usuario;
+                perfil.TipoMembresia = membresia;
+                perfil.Fechafinal = Convert.ToDateTime(fechafinal);
+                return perfil;
+            }
+            MessageBox.Show("Seleccione un usuario de la tabla");
+            return null; 
+        }
+        private void Abrirformpanel(Form formHijo)
+        {
+            if (this.pnlActualizar.Controls.Count > 0)
+                this.pnlActualizar.Controls.RemoveAt(0);
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill; // Ajusta el formulario al tamaño del panel
+            formHijo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right; // Ancla el formulario al panel
+            this.pnlActualizar.Controls.Add(formHijo);
+            this.pnlActualizar.Tag = formHijo;
+            formHijo.Show();
+
+            if (formHijo is Registrar)
+            {
+                Registrar registrarForm = (Registrar)formHijo;
+                registrarForm.btnRegistrar.Visible = false;
+                registrarForm.Btnregresar.Visible = false;
+                registrarForm.btnActualizar.Visible = true;
+                registrarForm.Asignar_Campos();
+            }
+        }
+
+        private void FormActualizar()
+        {
+            PerfilMembresia miembro = AsignaciondeValores();
+            if (miembro != null)
+            {
+                pnlActualizar.Visible = true;
+                Registrar registrar = new Registrar(miembro);
+                Abrirformpanel(registrar);
+            }
+        }
         private void btnVer_Click(object sender, EventArgs e)
         {
             MostrarTabla();
@@ -204,27 +286,11 @@ namespace Presentacion
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                DataGridViewRow row = dataGridView1.SelectedRows[0];
-                string cedula = row.Cells["Cedula"].Value.ToString();
-
-                // Crear el formulario de actualización y pasarle la cédula
-                ActualizarMiembro formActualizar = new ActualizarMiembro(cedula);
-                formActualizar.ShowDialog();
-
-                // Opcional: Recargar datos en el DataGridView después de la actualización
-                //CargarDatosDataGridView();
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un miembro para actualizar.");
-            }
+            FormActualizar();
         }
-
-        private void btnActualizarBD_Click(object sender, EventArgs e)
+        private void ConsultarMiembro_Click(object sender, EventArgs e)
         {
-            PMembresiaService.ActualizarBD();
+            this.pnlActualizar.Visible=false;
         }
     }
 }

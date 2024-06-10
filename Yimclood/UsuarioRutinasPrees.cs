@@ -27,6 +27,10 @@ namespace Presentacion
             InitializeComponent();
             this.miembro= miembro;
             ComboboxRutinas();
+            cbRutinas.SelectedIndexChanged += (sender, e) =>
+            {
+                mostrarEjerciciosTabla();
+            };
         }
         private void ComboboxRutinas()
         {
@@ -46,6 +50,11 @@ namespace Presentacion
         private void mostrarEjerciciosTabla()
         {
             Rutina rutinaSeleccionada = cbRutinas.SelectedItem as Rutina;
+            if (rutinaSeleccionada != null && rutinaSeleccionada.Nombre == "Ninguno")
+            {
+                limpiarCampos();
+                return;
+            }
             lblNombre.Text = rutinaSeleccionada.Nombre;
             lblDescripcion.Text= rutinaSeleccionada.Descripcion;
             if (rutinaSeleccionada != null)
@@ -76,6 +85,12 @@ namespace Presentacion
                     tablaEjercicios.Columns["Series"].DisplayIndex = 5;
                     tablaEjercicios.Columns["Musculo"].DisplayIndex = 6;
                     tablaEjercicios.Columns["Categoria"].DisplayIndex = 7;
+                    foreach (DataGridViewRow row in tablaEjercicios.Rows)
+                    {
+                        row.Height = 100; // Establece la altura deseada para cada fila
+                    }
+                    DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)tablaEjercicios.Columns["Foto"];
+                    imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 }
                 else
                 {
@@ -90,12 +105,11 @@ namespace Presentacion
         private void AgregarMisRutinas()
         {
             Rutina rutinaSeleccionada = cbRutinas.SelectedItem as Rutina;
-            Console.WriteLine(miembro.Cedula);
-            List<Rutina> Rutinas = rutinaService.ConsultarPersonalizadas(miembro.Cedula);
-            if (Rutinas == null)
+            foreach (var item in rutinaSeleccionada.Ejercicios)
             {
-                MessageBox.Show("Vacio mi negro");
+                Console.WriteLine(item.Descripcion);
             }
+            List<Rutina> Rutinas = rutinaService.ConsultarPersonalizadas(miembro.Cedula);
             if (!Rutinas.Contains(rutinaSeleccionada))
             {
                 GuardarBD(rutinaSeleccionada);
@@ -104,28 +118,24 @@ namespace Presentacion
             {
                 MessageBox.Show("La rutina seleccionada ya ha sido agregada.");
             }
-            limpiarCampos();
+            //limpiarCampos();
         }
-        private void GuardarBD(Rutina rutina)
+        private void GuardarBD(Rutina rutinaseleccionada)
         {
-            Console.WriteLine(rutina.Id ); 
-
+            Rutina rutina = new Rutina();
+            rutina.Id =rutinaseleccionada.Id;
+            rutina.Miembro = miembro;
+            MessageBox.Show(rutinaService.RegistrarPersonalizada(rutina));
         }
         private void limpiarCampos()
         {
             lblDescripcion.Text = "";
             lblNombre.Text="";
-            cbRutinas.SelectedIndex=0;
+            tablaEjercicios.DataSource = null;
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             AgregarMisRutinas();
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            mostrarEjerciciosTabla();
-
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
