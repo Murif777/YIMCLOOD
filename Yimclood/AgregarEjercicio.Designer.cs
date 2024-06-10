@@ -132,11 +132,8 @@
             // 
             // NumSeries
             // 
-<<<<<<< HEAD
-            this.NumSeries.Location = new System.Drawing.Point(648, 251);
-=======
+
             this.NumSeries.Location = new System.Drawing.Point(699, 248);
->>>>>>> d15130fe4426b04dfff90b3a982d27a9c7996df8
             this.NumSeries.Margin = new System.Windows.Forms.Padding(2);
             this.NumSeries.Name = "NumSeries";
             this.NumSeries.Size = new System.Drawing.Size(63, 20);

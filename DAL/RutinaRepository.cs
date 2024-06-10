@@ -51,11 +51,12 @@ namespace DAL
                 conexionBd.Open();
 
                 // Insertar en la tabla Rutinas
-                string sqlRutinas = "INSERT INTO Rutinas (Nombre, Descripcion) " +
-                                    "VALUES (@Nombre, @Descripcion)";
+                string sqlRutinas = "INSERT INTO Rutinas (Nombre, Descripcion,EsPredefinida ) " +
+                                    "VALUES (@Nombre, @Descripcion,@EsPredefinida )";
                 MySqlCommand comandoRutinas = new MySqlCommand(sqlRutinas, conexionBd);
                 comandoRutinas.Parameters.AddWithValue("@Nombre", rutina.Nombre);
                 comandoRutinas.Parameters.AddWithValue("@Descripcion", rutina.Descripcion);
+                comandoRutinas.Parameters.AddWithValue("@EsPredefinida", true);
                 comandoRutinas.ExecuteNonQuery();
 
                 // Obtener el ID de la última rutina insertada
@@ -72,7 +73,7 @@ namespace DAL
                 // Insertar en la tabla Rutinas_Ejercicios
                 foreach (Ejercicio ejercicio in rutina.Ejercicios)
                 {
-                    string sqlRutinasEjercicios = "INSERT INTO Rutinas_Ejercicios (Rutina_Id, Ejercicio_Nombre) " +
+                    string sqlRutinasEjercicios = "INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) " +
                                                    "VALUES (@Rutina_Id, @Ejercicio_Nombre)";
                     MySqlCommand comandoRutinasEjercicios = new MySqlCommand(sqlRutinasEjercicios, conexionBd);
                     comandoRutinasEjercicios.Parameters.AddWithValue("@Rutina_Id", lastInsertedId);
@@ -152,8 +153,8 @@ namespace DAL
               "INNER JOIN Miembros m ON rm.Miembro_Cedula = m.Cedula " +
               "INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Rutina_Id " +
               "INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre " +
-              "WHERE rm.Miembro_Cedula = @Cedula";
-
+              "WHERE rm.Miembro_Cedula = @Cedula AND";
+            //ARREGLAR
 
             MySqlConnection conexionBd = conexion();
 

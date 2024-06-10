@@ -128,7 +128,7 @@ namespace Presentacion
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            UsuarioPerfil perfilPesoCliente = new UsuarioPerfil(Miembro);
+            UsuarioPerfil perfilPesoCliente = new UsuarioPerfil(this,Miembro);
             Abrirformpanel(perfilPesoCliente);
         }
     }

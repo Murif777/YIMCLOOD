@@ -26,13 +26,13 @@ namespace Presentacion
         {
             InitializeComponent();
             this.miembro= miembro;
-            ComboboxRutinas();
+            ComboboxRutinasPrees();
             cbRutinas.SelectedIndexChanged += (sender, e) =>
             {
                 mostrarEjerciciosTabla();
             };
         }
-        private void ComboboxRutinas()
+        private void ComboboxRutinasPrees()
         {
             List<Rutina> rutinas = rutinaService.ConsultarTodo();
             if (rutinas == null)
@@ -122,8 +122,7 @@ namespace Presentacion
         }
         private void GuardarBD(Rutina rutinaseleccionada)
         {
-            Rutina rutina = new Rutina();
-            rutina.Id =rutinaseleccionada.Id;
+            Rutina rutina = rutinaseleccionada;
             rutina.Miembro = miembro;
             MessageBox.Show(rutinaService.RegistrarPersonalizada(rutina));
         }

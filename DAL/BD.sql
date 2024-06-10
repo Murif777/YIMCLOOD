@@ -124,22 +124,24 @@ CREATE TABLE Ejercicios (
 CREATE TABLE Rutinas (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(50) NOT NULL,
-    Descripcion VARCHAR(255) NOT NULL
+    Descripcion VARCHAR(255) NOT NULL,
+    EsPredefinida BOOLEAN NOT NULL DEFAULT FALSE
+);
+CREATE TABLE Rutinas_Ejercicios (
+    Id_Rutina INT,
+    Ejercicio_Nombre VARCHAR(50),
+    PRIMARY KEY (Id_Rutina, Ejercicio_Nombre),
+    FOREIGN KEY (Id_Rutina) REFERENCES Rutinas(Id),
+    FOREIGN KEY (Ejercicio_Nombre) REFERENCES Ejercicios(Nombre)
 );
 CREATE TABLE Rutinas_Miembro (
     Id_Rutina INT,
-    Miembro_Cedula VARCHAR(20),
+    Miembro_Cedula VARCHAR(50),
     PRIMARY KEY (Id_Rutina, Miembro_Cedula),
-	FOREIGN KEY (Id_Rutina) REFERENCES Rutinas(Id),
-    FOREIGN KEY (Miembro_Cedula) REFERENCES Miembros(Cedula)
+    FOREIGN KEY (Id_Rutina) REFERENCES Rutinas(Id),
+    FOREIGN KEY (Miembro_Cedula) REFERENCES Miembros(cedula)
 );
-CREATE TABLE Rutinas_Ejercicios (
-    Rutina_Id INT,
-    Ejercicio_Nombre VARCHAR(50),
-    PRIMARY KEY (Rutina_Id, Ejercicio_Nombre),
-    FOREIGN KEY (Rutina_Id) REFERENCES Rutinas(Id),
-    FOREIGN KEY (Ejercicio_Nombre) REFERENCES Ejercicios(Nombre)
-);
+
 SELECT 
     r.Id AS RutinaId, 
     r.Nombre AS RutinaNombre, 

@@ -4,7 +4,10 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +17,7 @@ namespace BILL
     {
         private EmailService emailService = new EmailService();
         private PMembresiaRepository PmembresiaRepository = new PMembresiaRepository();
-
+        private FacturaService facturaService = new FacturaService();
         public string Registrar(PerfilMembresia perfil)
         {
             try
@@ -125,8 +128,8 @@ namespace BILL
                     emailService.SendEmail(correo, subject, body);
                 }
             }
-        }
 
+        }
 
         public string ActualizarBD()
         {

@@ -11,9 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.tool.xml;
 
 
 namespace Presentacion
@@ -73,6 +70,12 @@ namespace Presentacion
                 dataGridView1.Columns["Nombre"].DisplayIndex = 2;
                 dataGridView1.Columns["Apellido"].DisplayIndex = 3;
                 dataGridView1.Columns["Correo"].DisplayIndex = 4;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    row.Height = 200; // Establece la altura deseada para cada fila
+                }
+                DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)dataGridView1.Columns["Foto"];
+                imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
             }
             else
             {
@@ -84,16 +87,10 @@ namespace Presentacion
             string referencia = comboBoxProductos.SelectedValue.ToString();
             List<Producto> productos = productoService.ConsultarRef(referencia);
             Producto productoSeleccionado = productos.First();
-
-            // Modificar la cantidad del producto seleccionado
             productoSeleccionado.CantidadDisponible = (int)numericUpDownCantidad.Value;
-
-            // Modificar el valor total del producto multiplicando su valor unitario por la cantidad
             productoSeleccionado.Valor = productoSeleccionado.Valor * productoSeleccionado.CantidadDisponible;
-
-            // Agregar el producto modificado a la lista de productos seleccionados
             productosSeleccionados.Add(productoSeleccionado);
-            productosNoGuardados = true; // Marcar como no guardado cuando se añade un producto
+            productosNoGuardados = true;
             if (productosSeleccionados != null && productosSeleccionados.Count > 0)
                 {
                     var viewList = productosSeleccionados.Select(p => new
@@ -112,7 +109,13 @@ namespace Presentacion
                     dataGridView2.Columns["Nombre"].DisplayIndex = 2;
                     dataGridView2.Columns["Cantidad"].DisplayIndex = 3;
                     dataGridView2.Columns["Precio"].DisplayIndex = 4;
-                    dataGridView2.Columns["Total * Producto"].DisplayIndex = 5;
+                    dataGridView2.Columns["Valor"].DisplayIndex = 5;
+                    foreach (DataGridViewRow row in dataGridView2.Rows)
+                    {
+                        row.Height = 100; // Establece la altura deseada para cada fila
+                    }
+                    DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)dataGridView2.Columns["Foto"];
+                    imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
             }
             else
             {
@@ -138,66 +141,10 @@ namespace Presentacion
             double precioTotal = productosSeleccionados.Sum(p => p.Valor);
             factura.Precio_Total = precioTotal;
             Console.WriteLine(factura.FechaFactura.ToString(), factura.Precio_Total);
-            facturaService.RegistrarFacturaProducto(factura);
+            MessageBox.Show(facturaService.RegistrarFacturaProducto(factura));
+            generarPDF(factura);
             actualizarBD();
             limpiarcampos();
-
-
-            //hacer en factura service
-            SaveFileDialog guardar = new SaveFileDialog();
-            guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
-
-
-            //esto es para usarlo y obteenr el dato de el datagridvew
-            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
-
-            string nombre = selectedRow.Cells["Nombre"].Value.ToString();
-            string cedula = selectedRow.Cells["Cedula"].Value.ToString();
-
-
-            string paginahtml_texto = Properties.Resources.plantillaFactura.ToString();
-            paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", nombre);
-            paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", cedula);
-            paginahtml_texto = paginahtml_texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
-
-
-            string filas = string.Empty;
-            decimal total = 0;
-            foreach (DataGridViewRow row in dataGridView2.Rows)
-            {
-                filas += "<tr>";
-                filas += "<td>" + row.Cells["Referencia"].Value.ToString() + "</td>";
-                filas += "<td>" + row.Cells["Nombre"].Value.ToString() + "</td>";
-                filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + " </td>";
-                filas += "<td>" + row.Cells["Precio"].Value.ToString() + "</td>";
-                filas += "</tr>";
-                total += decimal.Parse(row.Cells["Total * Producto"].Value.ToString());
-            }
-            paginahtml_texto = paginahtml_texto.Replace("@FILAS", filas);
-            paginahtml_texto = paginahtml_texto.Replace("@TOTAL", total.ToString());
-
-
-            if (guardar.ShowDialog() == DialogResult.OK)
-            {
-                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
-                {
-                    Document pdfDoc = new Document(PageSize.LETTER, 25, 25, 25, 25);
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-                    pdfDoc.Open();
-                    pdfDoc.Add(new Phrase (""));
-
-                    using (StringReader sr = new StringReader(paginahtml_texto))
-                    {
-                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-                    }
-
-                    pdfDoc.Close();
-                    stream.Close();
-                }
-            }
-
-
         }      
         private void actualizarBD()
         {
@@ -209,7 +156,16 @@ namespace Presentacion
                 productoService.ActualizarCantidadDisponible(producto);
             }
         }
+        private void generarPDF(Factura factura)
+        {
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
 
+            if (guardar.ShowDialog() == DialogResult.OK)
+            {
+                facturaService.GenerarYEnviarPDF(factura, guardar.FileName);
+            }
+        }
 
         private void limpiarcampos()
         {
@@ -310,6 +266,7 @@ namespace Presentacion
                 string precioUnitario = productoService.ObtenerPrecioUnitarioPorReferencia(referenciaProducto);
                 numericUpDownCantidad.Maximum = int.Parse(cantidadDisponible);
                 numericUpDownCantidad.Value= 0;
+
                 lblPrecioUnitario.Text = precioUnitario;
                 CalcularPrecioTotal();
             }

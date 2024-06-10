@@ -22,10 +22,12 @@ namespace Presentacion
     public partial class UsuarioPerfil : Form
     {
         private Miembro Miembro;
-        public UsuarioPerfil(Miembro miembro)
+        private UsuarioMenuPrincipal _usuarioMenuPrincipal;
+        public UsuarioPerfil(UsuarioMenuPrincipal usuarioMenuPrincipal,Miembro miembro)
         {
             InitializeComponent();
             this.Miembro = miembro;
+            _usuarioMenuPrincipal = usuarioMenuPrincipal;
             datosperfil();
         }
 
@@ -65,27 +67,11 @@ namespace Presentacion
             lblEstatura.Text= estatura.ToString();
             lblFecha.Text= fecha.ToString("dd-MM-yyyy   ");
         }
-        private void rbtnActual_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void rbtDiferencia_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtObjetivo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnAgregarDatos_Click(object sender, EventArgs e)
         {
-
+            _usuarioMenuPrincipal.Abrirformpanel(new UsuarioActualizarMiembro(Miembro));
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 

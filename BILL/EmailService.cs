@@ -9,15 +9,21 @@ using System.Net.Mail;
 
 namespace BILL
 {
-
     public class EmailService
     {
-        private string smtpServer = "smtp.gmail.com"; 
-        private int smtpPort = 587; 
-        private string smtpUser = "yimclood@gmail.com"; 
-        private string smtpPass = "vxpz ujky ojtg rnyl"; 
+        private string smtpServer = "smtp.gmail.com";
+        private int smtpPort = 587;
+        private string smtpUser = "yimclood@gmail.com";
+        private string smtpPass = "vxpz ujky ojtg rnyl";
 
+        // Método existente sin archivo adjunto
         public void SendEmail(string toEmail, string subject, string body)
+        {
+            SendEmail(toEmail, subject, body, null);
+        }
+
+        // Método sobrecargado con archivo adjunto
+        public void SendEmail(string toEmail, string subject, string body, string attachmentPath)
         {
             using (MailMessage mail = new MailMessage())
             {
@@ -26,6 +32,12 @@ namespace BILL
                 mail.Subject = subject;
                 mail.Body = body;
                 mail.IsBodyHtml = true;
+
+                if (!string.IsNullOrEmpty(attachmentPath))
+                {
+                    Attachment attachment = new Attachment(attachmentPath);
+                    mail.Attachments.Add(attachment);
+                }
 
                 using (SmtpClient smtp = new SmtpClient(smtpServer, smtpPort))
                 {
@@ -36,5 +48,4 @@ namespace BILL
             }
         }
     }
-
 }

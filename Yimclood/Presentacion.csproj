@@ -87,11 +87,28 @@
     <Compile Include="botones\botones.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioActualizarMiembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioActualizarMiembro.Designer.cs">
+      <DependentUpon>UsuarioActualizarMiembro.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioAgregarDatos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioAgregarDatos.Designer.cs">
       <DependentUpon>UsuarioAgregarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAgregarMedidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioAgregarMedidas.Designer.cs">
+      <DependentUpon>UsuarioAgregarMedidas.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioPerfil.cs">
       <SubType>Form</SubType>
@@ -197,11 +214,6 @@
       <DependentUpon>RegistrarMiembro.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BILL\BLL.csproj">
@@ -223,8 +235,14 @@
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioActualizarMiembro.resx">
+      <DependentUpon>UsuarioActualizarMiembro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuarioAgregarDatos.resx">
       <DependentUpon>UsuarioAgregarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioAgregarMedidas.resx">
+      <DependentUpon>UsuarioAgregarMedidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioPerfil.resx">
       <DependentUpon>UsuarioPerfil.cs</DependentUpon>
