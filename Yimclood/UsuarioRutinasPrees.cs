@@ -35,6 +35,7 @@ namespace Presentacion
         private void ComboboxRutinasPrees()
         {
             List<Rutina> rutinas = rutinaService.ConsultarPrees();
+            
             if (rutinas == null)
             {
                 MessageBox.Show("Lista vacia");

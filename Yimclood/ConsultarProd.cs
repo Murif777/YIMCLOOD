@@ -60,13 +60,16 @@ namespace Presentacion
                     Foto = p.Foto, 
                     Referencia = p.Referencia,
                     Nombre = p.Nombre,
-                    Precio = p.Valor
+                    Precio = p.Valor,
+                    Cantidad = p.CantidadDisponible
                 }).ToList();
                 dataGridView1.DataSource = viewList;
                 dataGridView1.Columns["Foto"].DisplayIndex = 0;
                 dataGridView1.Columns["Referencia"].DisplayIndex = 1;
                 dataGridView1.Columns["Nombre"].DisplayIndex = 2;
                 dataGridView1.Columns["Precio"].DisplayIndex = 3;
+                dataGridView1.Columns["Cantidad"].DisplayIndex = 4;
+
                 int primeraColumna = 0;
                 dataGridView1.Columns[primeraColumna].Visible = false;
             }
@@ -87,7 +90,8 @@ namespace Presentacion
                     Foto = p.Foto, 
                     Referencia = p.Referencia,
                     Nombre = p.Nombre,
-                    Precio = p.Valor
+                    Precio = p.Valor,
+                    Cantidad= p.CantidadDisponible
                 }).ToList();
                 dataGridView1.DataSource = viewList;
                 // Configurar las columnas para mostrar en el orden deseado
@@ -95,6 +99,7 @@ namespace Presentacion
                 dataGridView1.Columns["Referencia"].DisplayIndex = 1;
                 dataGridView1.Columns["Nombre"].DisplayIndex = 2;
                 dataGridView1.Columns["Precio"].DisplayIndex = 3;
+                dataGridView1.Columns["Cantidad"].DisplayIndex = 4;
                 int primeraColumna = 0;
                 dataGridView1.Columns[primeraColumna].Visible = false;
             }

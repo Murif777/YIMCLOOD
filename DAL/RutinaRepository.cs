@@ -93,19 +93,19 @@ namespace DAL
             }
         }
 
-
         public List<Rutina> ConsultarPrees()
         {
             List<Rutina> rutinas = new List<Rutina>();
 
-            string ssql = "SELECT r.Id AS RutinaId, r.Nombre AS RutinaNombre, r.Descripcion AS RutinaDescripcion, " +
-              "re.Ejercicio_Nombre AS EjercicioNombre, e.Descripcion AS EjercicioDescripcion, e.Duracion AS EjercicioDuracion, " +
-              "e.Repeticiones AS EjercicioRepeticiones, e.Series AS EjercicioSeries, e.Musculo AS EjercicioMusculo, " +
-              "e.Categoria AS EjercicioCategoria, e.Foto AS EjercicioFoto " +
-              "FROM Rutinas r " +
-              "INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Id_Rutina " +
-              "INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre " +
-              "WHERE r.EsPredefinida = TRUE;";
+            string ssql = @"SELECT r.Id AS RutinaId, r.Nombre AS RutinaNombre, r.Descripcion AS RutinaDescripcion,
+               re.Ejercicio_Nombre AS EjercicioNombre, e.Descripcion AS EjercicioDescripcion, e.Duracion AS EjercicioDuracion,
+               e.Repeticiones AS EjercicioRepeticiones, e.Series AS EjercicioSeries, e.Musculo AS EjercicioMusculo,
+               e.Categoria AS EjercicioCategoria, e.Foto AS EjercicioFoto
+               FROM Rutinas r
+               INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Id_Rutina
+               INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre
+               WHERE r.EsPredefinida = TRUE;";
+
             MySqlConnection conexionBd = conexion();
 
             try
@@ -127,7 +127,10 @@ namespace DAL
                     Ejercicio ejercicio = MapEjercicio(reader);
                     rutina.Ejercicios.Add(ejercicio);
                 }
-                //Console.WriteLine("se está llenando");
+                foreach (var item in rutinas)
+                {
+                    Console.WriteLine(item.Nombre);
+                }
                 return rutinas;
             }
             catch (MySqlException ex)
@@ -187,6 +190,38 @@ namespace DAL
             {
                 Console.WriteLine("Lista vacía ERROR: " + ex.Message);
                 return null;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
+        public string EliminarRutinaPersonalizada(string nombre)
+        {
+            string sqlDeleteRutina = "DELETE FROM Rutinas WHERE Nombre = @Nombre AND EsPredefinida = FALSE ";
+            MySqlConnection conexionBd = conexion();
+
+            try
+            {
+                using (MySqlCommand comando = new MySqlCommand(sqlDeleteRutina, conexionBd))
+                {
+                    conexionBd.Open();
+                    comando.Parameters.AddWithValue("@Nombre", nombre);
+                    int rowsAffected = comando.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        return "Rutina personalizada eliminada exitosamente.";
+                    }
+                    else
+                    {
+                        return "No se encontró ninguna rutina personalizada con ese nombre.";
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                return "Error al intentar eliminar la rutina personalizada: " + ex.Message;
             }
             finally
             {

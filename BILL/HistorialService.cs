@@ -22,5 +22,17 @@ namespace BILL
                 return "Error al registrar: " + ex.Message;
             }
         }
+        public List<Historial> ConsultarCed(string cedula)
+        {
+            try
+            {
+                return h_repository.ConsultarCed(cedula);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error: "+ ex.Message);
+                return null;
+            }
+        }
     }
 }

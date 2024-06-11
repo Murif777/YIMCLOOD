@@ -40,8 +40,8 @@ namespace Presentacion
         }
         private void metododeprueba()
         {
-            txtUsuario.Text= "faridmuriel777@gmail.com";
-            txtContrasena.Text = "3124";
+            txtUsuario.Text= "faridelcapo0107@gmail.com";
+            txtContrasena.Text = "1021667065";
         }
         private void txtContra_Enter(object sender, EventArgs e)
         {

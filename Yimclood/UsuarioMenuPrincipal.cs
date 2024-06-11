@@ -122,7 +122,7 @@ namespace Presentacion
         }
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            UsuarioHistorial historial = new UsuarioHistorial(Miembro);
+            UsuarioHistorial historial = new UsuarioHistorial(this,Miembro);
             Abrirformpanel(historial);
         }
 

@@ -310,58 +310,6 @@ C:\Users\juann\Desktop\yimc\YIMCLOOD\Yimclood\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\juann\Desktop\yimc\YIMCLOOD\Yimclood\bin\Debug\itextsharp.dll
 C:\Users\juann\Desktop\yimc\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xmlworker.dll
 C:\Users\juann\Desktop\yimc\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xml
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe.config
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarEjercicio.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarFactura.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarProducto.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioAgregarDatos.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioPerfil.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioHistorial.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioMisRutinas.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioRutinaPerso.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioRutinasPrees.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioEjercicios.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarEntrenador.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarFacturas.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarMiembro.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarProd.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarMembresia.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioMenuPrincipal.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RegistrarEntrenador.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Login.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MenuPrincipal.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Registrar.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.GenerateResource.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Properties.Resources.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe.config
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xmlworker.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Memory.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Buffers.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.dll.config
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xml
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioActualizarMiembro.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioAgregarMedidas.resources
 C:\Users\Dario\OneDrive\Escritorio\CLONE\Programming-project-3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\Dario\OneDrive\Escritorio\CLONE\Programming-project-3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
 C:\Users\Dario\OneDrive\Escritorio\CLONE\Programming-project-3\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe.config
@@ -417,3 +365,58 @@ C:\Users\Dario\OneDrive\Escritorio\CLONE\Programming-project-3\YIMCLOOD\Yimclood
 C:\Users\Dario\OneDrive\Escritorio\CLONE\Programming-project-3\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Dario\OneDrive\Escritorio\CLONE\Programming-project-3\YIMCLOOD\Yimclood\bin\Debug\DAL.pdb
 C:\Users\Dario\OneDrive\Escritorio\CLONE\Programming-project-3\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe.config
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarEjercicio.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarFactura.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarProducto.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UserControlBlank.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UserControlDays.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioActualizarMiembro.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioAgregarDatos.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioAgregarMedidas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioConsultarMedidas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioHistorial.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioPerfil.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioMisRutinas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioRutinaPerso.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioRutinasPrees.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioEjercicios.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarEntrenador.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarFacturas.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarMiembro.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ConsultarProd.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarMembresia.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioMenuPrincipal.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RecuperarContraseña.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.RegistrarEntrenador.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Login.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.MenuPrincipal.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Registrar.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe.config
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\ENTITY.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Memory.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Buffers.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.dll.config
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\ENTITY.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xml
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe
+C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb

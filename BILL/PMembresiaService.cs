@@ -29,7 +29,7 @@ namespace BILL
             }
             catch (Exception ex)
             {
-                return "Error al registrAr: " + ex.Message;
+                return "Error al registrar: " + ex.Message;
             }
         }
         public List<PerfilMembresia> ConsultarCed(string cedula)

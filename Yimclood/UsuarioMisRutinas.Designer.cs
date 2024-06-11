@@ -45,6 +45,7 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tablaEjercicios = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEjercicios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,12 +117,23 @@ namespace Presentacion
             this.tablaEjercicios.Size = new System.Drawing.Size(729, 309);
             this.tablaEjercicios.TabIndex = 11;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(656, 81);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(103, 34);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // UsuarioMisRutinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(794, 472);
+            this.ClientSize = new System.Drawing.Size(858, 472);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.tablaEjercicios);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbRutinas);
@@ -149,5 +161,6 @@ namespace Presentacion
         private Label lblDescripcion;
         private Label lblNombre;
         private DataGridView tablaEjercicios;
+        private Button btnEliminar;
     }
 }

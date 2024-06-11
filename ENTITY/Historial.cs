@@ -10,23 +10,15 @@ namespace ENTITY
     {
         public int Id { get; private set; }
         public Miembro Miembro { get; set; }
-        public DayOfWeek  DiaDeLaSemana { get; set; }
+        public DateTime  Fecha { get; set; }
         public Registro Registro { get; set; }
-        public Rutina Rutina { get; set; }
         public Historial() { }
-        public Historial(int id,Miembro miembro, DayOfWeek diaDeLaSemana, Registro registro)
+        public Historial(int id,Miembro miembro, DateTime fecha, Registro registro)
         {
             Id = id;
             Miembro = miembro;
-            DiaDeLaSemana = diaDeLaSemana;
+            Fecha = fecha;
             Registro = registro;
-        }
-        public Historial(int id, Miembro miembro, DayOfWeek diaDeLaSemana, Rutina rutina)
-        {
-            Id = id;
-            Miembro= miembro;
-            DiaDeLaSemana = diaDeLaSemana;
-            Rutina = rutina;
         }
     }
 }

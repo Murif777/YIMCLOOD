@@ -63,6 +63,7 @@ namespace Presentacion
             numDuracion.Value = 0;
             NumSeries.Value = 0;
             nmRepeticiones.Value= 0;
+            imageBytes= null;
         }
         private void DatosPorDefecto()
         {

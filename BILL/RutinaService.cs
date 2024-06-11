@@ -45,6 +45,18 @@ namespace BILL
                 return null;
             }
         }
+        public string EliminnarRutina(string cedula)
+        {
+            try
+            {
+                return ru_repository.EliminarRutinaPersonalizada(cedula);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public List<Rutina> ConsultarPersonalizadas(string cedula)
         {
             try

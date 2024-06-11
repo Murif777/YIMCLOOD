@@ -1,8 +1,11 @@
-﻿using System;
+﻿using BILL;
+using ENTITY;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +18,11 @@ namespace Presentacion
     {
         //CREATE ANOTHER STATIC VARIABLE FOR DAYS;
         public static string static_day;
-        public UserControlDays()
+        private Miembro miembroRecibido;
+        public UserControlDays(Miembro miembro)
         {
             InitializeComponent();
+            miembroRecibido = miembro;
         }
 
         private void UserControlDays_Load(object sender, EventArgs e)
@@ -26,12 +31,29 @@ namespace Presentacion
         public void days(int numday)
         {
             lbldays.Text = numday+"";
+
+        }
+        public void CambiarColor(bool cambiar)
+        {
+            if (cambiar)
+            {
+                this.BackColor = Color.Red;
+            }
         }
 
+        public void ShowPesoLabels(bool visible)
+        {
+            lblValorPeso.Visible = visible;
+            lblPeso.Visible = visible;
+        }
+        public void peso(int? peso)
+        {
+            lblPeso.Text = peso + "";
+        }
         private void UserControlDays_Click(object sender, EventArgs e)
         {
             static_day=lbldays.Text;
-            UsuarioConsultarMedidas usuarioConsultarMedidas =new UsuarioConsultarMedidas();
+            UsuarioConsultarMedidas usuarioConsultarMedidas =new UsuarioConsultarMedidas(miembroRecibido);
             usuarioConsultarMedidas.Show();
         }
         //CREATE A NEW METHOD TO DISPLAY EXERCISE

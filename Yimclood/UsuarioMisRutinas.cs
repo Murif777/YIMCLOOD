@@ -48,6 +48,28 @@ namespace Presentacion
                 cbRutinas.DisplayMember = "Nombre";
             }
         }
+        private void EliminarRutina(string nombreRutina)
+        {
+            MessageBox.Show(rutinaService.EliminnarRutina(nombreRutina));
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Rutina rutinaSeleccionada = cbRutinas.SelectedItem as Rutina;
+            if (rutinaSeleccionada != null)
+            {
+                string mensaje = $"¿Está seguro de eliminar la rutina '{rutinaSeleccionada.Nombre}'?";
+                DialogResult resultado = MessageBox.Show(mensaje, "Confirmación de Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    EliminarRutina(rutinaSeleccionada.Nombre);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ninguna rutina para eliminar.");
+            }
+        }
         private void mostrarEjerciciosTabla()
         {
             Rutina rutinaSeleccionada = cbRutinas.SelectedItem as Rutina;
@@ -118,5 +140,7 @@ namespace Presentacion
         {
 
         }
+
+
     }
 }

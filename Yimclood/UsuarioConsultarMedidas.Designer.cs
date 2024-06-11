@@ -39,202 +39,55 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioConsultarMedidas));
-            this.lblsd = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtPantorrillas = new System.Windows.Forms.Label();
-            this.txtGluteos = new System.Windows.Forms.Label();
-            this.fasd = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.asd = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.TextBox();
-            this.lblPiernas = new System.Windows.Forms.Label();
-            this.lblAbdominales = new System.Windows.Forms.Label();
-            this.lblBiceps = new System.Windows.Forms.Label();
-            this.lblPecho = new System.Windows.Forms.Label();
-            this.lblHombros = new System.Windows.Forms.Label();
-            this.lblPantorrillas = new System.Windows.Forms.Label();
-            this.lblGluteos = new System.Windows.Forms.Label();
-            this.lblAntebrazos = new System.Windows.Forms.Label();
-            this.lblTriceps = new System.Windows.Forms.Label();
-            this.lblEspalda = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtAntebrazos = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblsd = new System.Windows.Forms.Label();
+            this.lblPecho = new System.Windows.Forms.Label();
+            this.lblHombros = new System.Windows.Forms.Label();
+            this.lblCadera = new System.Windows.Forms.Label();
+            this.lblCintura = new System.Windows.Forms.Label();
+            this.lblPiernaIzq = new System.Windows.Forms.Label();
+            this.lblGemeloIzq = new System.Windows.Forms.Label();
+            this.lblPiernasDe = new System.Windows.Forms.Label();
+            this.lblGemeloDe = new System.Windows.Forms.Label();
+            this.lblAltura = new System.Windows.Forms.Label();
+            this.lblBrazoIzq = new System.Windows.Forms.Label();
+            this.lblBrazoDe = new System.Windows.Forms.Label();
+            this.lblAntebrazoIzq = new System.Windows.Forms.Label();
+            this.lblAntebrazoDe = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblsd
-            // 
-            this.lblsd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblsd.AutoSize = true;
-            this.lblsd.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblsd.ForeColor = System.Drawing.Color.Black;
-            this.lblsd.Location = new System.Drawing.Point(118, 341);
-            this.lblsd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblsd.Name = "lblsd";
-            this.lblsd.Size = new System.Drawing.Size(137, 41);
-            this.lblsd.TabIndex = 56;
-            this.lblsd.Text = "Hombros";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(118, 400);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 41);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Pecho";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(119, 459);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 41);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "Biceps";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(119, 516);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(190, 41);
-            this.label7.TabIndex = 59;
-            this.label7.Text = "Abdominales";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(119, 572);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(120, 41);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "Piernas";
-            // 
-            // txtPantorrillas
-            // 
-            this.txtPantorrillas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPantorrillas.AutoSize = true;
-            this.txtPantorrillas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.txtPantorrillas.ForeColor = System.Drawing.Color.Black;
-            this.txtPantorrillas.Location = new System.Drawing.Point(469, 567);
-            this.txtPantorrillas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtPantorrillas.Name = "txtPantorrillas";
-            this.txtPantorrillas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPantorrillas.Size = new System.Drawing.Size(176, 41);
-            this.txtPantorrillas.TabIndex = 65;
-            this.txtPantorrillas.Text = "Pantorrillas";
-            // 
-            // txtGluteos
-            // 
-            this.txtGluteos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGluteos.AutoSize = true;
-            this.txtGluteos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.txtGluteos.ForeColor = System.Drawing.Color.Black;
-            this.txtGluteos.Location = new System.Drawing.Point(469, 513);
-            this.txtGluteos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtGluteos.Name = "txtGluteos";
-            this.txtGluteos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtGluteos.Size = new System.Drawing.Size(117, 41);
-            this.txtGluteos.TabIndex = 64;
-            this.txtGluteos.Text = "Gluteos";
-            // 
-            // fasd
-            // 
-            this.fasd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fasd.AutoSize = true;
-            this.fasd.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.fasd.ForeColor = System.Drawing.Color.Black;
-            this.fasd.Location = new System.Drawing.Point(469, 459);
-            this.fasd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.fasd.Name = "fasd";
-            this.fasd.Size = new System.Drawing.Size(169, 41);
-            this.fasd.TabIndex = 63;
-            this.fasd.Text = "Antebrazos";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(469, 400);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 41);
-            this.label12.TabIndex = 62;
-            this.label12.Text = "Triceps";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(469, 341);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 41);
-            this.label13.TabIndex = 61;
-            this.label13.Text = "Espalda";
             // 
             // label4
             // 
@@ -244,97 +97,22 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(203, 229);
+            this.label4.Location = new System.Drawing.Point(172, 149);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 41);
+            this.label4.Size = new System.Drawing.Size(42, 33);
             this.label4.TabIndex = 73;
             this.label4.Text = "Kg";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(399, 346);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 30);
-            this.label9.TabIndex = 74;
-            this.label9.Text = "cm";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(399, 405);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 30);
-            this.label10.TabIndex = 75;
-            this.label10.Text = "cm";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(399, 468);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 30);
-            this.label11.TabIndex = 76;
-            this.label11.Text = "cm";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(399, 521);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 30);
-            this.label14.TabIndex = 77;
-            this.label14.Text = "cm";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(399, 580);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(43, 30);
-            this.label15.TabIndex = 78;
-            this.label15.Text = "cm";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 35F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1, 270);
+            this.label2.Location = new System.Drawing.Point(6, 204);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 71);
+            this.label2.Size = new System.Drawing.Size(175, 57);
             this.label2.TabIndex = 54;
             this.label2.Text = "Medidas";
             // 
@@ -343,10 +121,10 @@ namespace Presentacion
             this.asd.AutoSize = true;
             this.asd.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 35F);
             this.asd.ForeColor = System.Drawing.Color.Black;
-            this.asd.Location = new System.Drawing.Point(1, 162);
+            this.asd.Location = new System.Drawing.Point(6, 129);
             this.asd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.asd.Name = "asd";
-            this.asd.Size = new System.Drawing.Size(137, 71);
+            this.asd.Size = new System.Drawing.Size(112, 57);
             this.asd.TabIndex = 30;
             this.asd.Text = "Peso";
             // 
@@ -354,238 +132,14 @@ namespace Presentacion
             // 
             this.lblFecha.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 35F);
             this.lblFecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFecha.Location = new System.Drawing.Point(197, 86);
+            this.lblFecha.Location = new System.Drawing.Point(168, 69);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.ReadOnly = true;
-            this.lblFecha.Size = new System.Drawing.Size(459, 78);
+            this.lblFecha.Size = new System.Drawing.Size(286, 64);
             this.lblFecha.TabIndex = 84;
             this.lblFecha.Text = "DIA/MES/AÑO";
             this.lblFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblPiernas
-            // 
-            this.lblPiernas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPiernas.AutoSize = true;
-            this.lblPiernas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblPiernas.ForeColor = System.Drawing.Color.Black;
-            this.lblPiernas.Location = new System.Drawing.Point(327, 572);
-            this.lblPiernas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPiernas.Name = "lblPiernas";
-            this.lblPiernas.Size = new System.Drawing.Size(76, 41);
-            this.lblPiernas.TabIndex = 89;
-            this.lblPiernas.Text = "XX.X";
-            // 
-            // lblAbdominales
-            // 
-            this.lblAbdominales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAbdominales.AutoSize = true;
-            this.lblAbdominales.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblAbdominales.ForeColor = System.Drawing.Color.Black;
-            this.lblAbdominales.Location = new System.Drawing.Point(327, 513);
-            this.lblAbdominales.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAbdominales.Name = "lblAbdominales";
-            this.lblAbdominales.Size = new System.Drawing.Size(76, 41);
-            this.lblAbdominales.TabIndex = 88;
-            this.lblAbdominales.Text = "XX.X";
-            // 
-            // lblBiceps
-            // 
-            this.lblBiceps.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBiceps.AutoSize = true;
-            this.lblBiceps.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblBiceps.ForeColor = System.Drawing.Color.Black;
-            this.lblBiceps.Location = new System.Drawing.Point(327, 460);
-            this.lblBiceps.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBiceps.Name = "lblBiceps";
-            this.lblBiceps.Size = new System.Drawing.Size(76, 41);
-            this.lblBiceps.TabIndex = 87;
-            this.lblBiceps.Text = "XX.X";
-            // 
-            // lblPecho
-            // 
-            this.lblPecho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPecho.AutoSize = true;
-            this.lblPecho.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblPecho.ForeColor = System.Drawing.Color.Black;
-            this.lblPecho.Location = new System.Drawing.Point(327, 397);
-            this.lblPecho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPecho.Name = "lblPecho";
-            this.lblPecho.Size = new System.Drawing.Size(76, 41);
-            this.lblPecho.TabIndex = 86;
-            this.lblPecho.Text = "X.XX";
-            // 
-            // lblHombros
-            // 
-            this.lblHombros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHombros.AutoSize = true;
-            this.lblHombros.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblHombros.ForeColor = System.Drawing.Color.Black;
-            this.lblHombros.Location = new System.Drawing.Point(327, 338);
-            this.lblHombros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHombros.Name = "lblHombros";
-            this.lblHombros.Size = new System.Drawing.Size(76, 41);
-            this.lblHombros.TabIndex = 85;
-            this.lblHombros.Text = "X.XX";
-            // 
-            // lblPantorrillas
-            // 
-            this.lblPantorrillas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPantorrillas.AutoSize = true;
-            this.lblPantorrillas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblPantorrillas.ForeColor = System.Drawing.Color.Black;
-            this.lblPantorrillas.Location = new System.Drawing.Point(653, 572);
-            this.lblPantorrillas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPantorrillas.Name = "lblPantorrillas";
-            this.lblPantorrillas.Size = new System.Drawing.Size(76, 41);
-            this.lblPantorrillas.TabIndex = 94;
-            this.lblPantorrillas.Text = "XX.X";
-            // 
-            // lblGluteos
-            // 
-            this.lblGluteos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblGluteos.AutoSize = true;
-            this.lblGluteos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblGluteos.ForeColor = System.Drawing.Color.Black;
-            this.lblGluteos.Location = new System.Drawing.Point(653, 513);
-            this.lblGluteos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblGluteos.Name = "lblGluteos";
-            this.lblGluteos.Size = new System.Drawing.Size(76, 41);
-            this.lblGluteos.TabIndex = 93;
-            this.lblGluteos.Text = "XX.X";
-            // 
-            // lblAntebrazos
-            // 
-            this.lblAntebrazos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAntebrazos.AutoSize = true;
-            this.lblAntebrazos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblAntebrazos.ForeColor = System.Drawing.Color.Black;
-            this.lblAntebrazos.Location = new System.Drawing.Point(653, 460);
-            this.lblAntebrazos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAntebrazos.Name = "lblAntebrazos";
-            this.lblAntebrazos.Size = new System.Drawing.Size(76, 41);
-            this.lblAntebrazos.TabIndex = 92;
-            this.lblAntebrazos.Text = "XX.X";
-            // 
-            // lblTriceps
-            // 
-            this.lblTriceps.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTriceps.AutoSize = true;
-            this.lblTriceps.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblTriceps.ForeColor = System.Drawing.Color.Black;
-            this.lblTriceps.Location = new System.Drawing.Point(653, 397);
-            this.lblTriceps.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTriceps.Name = "lblTriceps";
-            this.lblTriceps.Size = new System.Drawing.Size(76, 41);
-            this.lblTriceps.TabIndex = 91;
-            this.lblTriceps.Text = "X.XX";
-            // 
-            // lblEspalda
-            // 
-            this.lblEspalda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEspalda.AutoSize = true;
-            this.lblEspalda.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblEspalda.ForeColor = System.Drawing.Color.Black;
-            this.lblEspalda.Location = new System.Drawing.Point(653, 338);
-            this.lblEspalda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEspalda.Name = "lblEspalda";
-            this.lblEspalda.Size = new System.Drawing.Size(76, 41);
-            this.lblEspalda.TabIndex = 90;
-            this.lblEspalda.Text = "X.XX";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(733, 580);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 30);
-            this.label16.TabIndex = 99;
-            this.label16.Text = "cm";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(733, 521);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(43, 30);
-            this.label17.TabIndex = 98;
-            this.label17.Text = "cm";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(733, 468);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 30);
-            this.label18.TabIndex = 97;
-            this.label18.Text = "cm";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(733, 405);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(43, 30);
-            this.label19.TabIndex = 96;
-            this.label19.Text = "cm";
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(733, 346);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(43, 30);
-            this.label20.TabIndex = 95;
-            this.label20.Text = "cm";
             // 
             // lblPeso
             // 
@@ -595,21 +149,21 @@ namespace Presentacion
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblPeso.ForeColor = System.Drawing.Color.Black;
-            this.lblPeso.Location = new System.Drawing.Point(118, 229);
+            this.lblPeso.Location = new System.Drawing.Point(131, 149);
             this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(76, 41);
+            this.lblPeso.Size = new System.Drawing.Size(26, 33);
             this.lblPeso.TabIndex = 100;
-            this.lblPeso.Text = "X.XX";
+            this.lblPeso.Text = "-";
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(696, 2);
+            this.btnMinimizar.Location = new System.Drawing.Point(557, 2);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(91, 74);
+            this.btnMinimizar.Size = new System.Drawing.Size(73, 59);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 10;
             this.btnMinimizar.TabStop = false;
@@ -619,10 +173,10 @@ namespace Presentacion
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(791, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(633, 4);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(90, 71);
+            this.btnCerrar.Size = new System.Drawing.Size(72, 57);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.TabStop = false;
@@ -637,49 +191,596 @@ namespace Presentacion
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(881, 81);
+            this.pnlSuperior.Size = new System.Drawing.Size(705, 65);
             this.pnlSuperior.TabIndex = 101;
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFoto.BackColor = System.Drawing.Color.Transparent;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(477, 69);
+            this.pbFoto.Margin = new System.Windows.Forms.Padding(2);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(217, 192);
+            this.pbFoto.TabIndex = 102;
+            this.pbFoto.TabStop = false;
+            // 
+            // label33
+            // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label33.ForeColor = System.Drawing.Color.Black;
+            this.label33.Location = new System.Drawing.Point(551, 293);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(34, 24);
+            this.label33.TabIndex = 160;
+            this.label33.Text = "cm";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(370, 286);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(81, 33);
+            this.label34.TabIndex = 158;
+            this.label34.Text = "Altura";
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(329, 488);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(34, 24);
+            this.label30.TabIndex = 157;
+            this.label30.Text = "cm";
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label31.ForeColor = System.Drawing.Color.Black;
+            this.label31.Location = new System.Drawing.Point(221, 488);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(34, 24);
+            this.label31.TabIndex = 155;
+            this.label31.Text = "cm";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label32.ForeColor = System.Drawing.Color.Black;
+            this.label32.Location = new System.Drawing.Point(41, 481);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label32.Size = new System.Drawing.Size(106, 33);
+            this.label32.TabIndex = 153;
+            this.label32.Text = "Gemelos";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(329, 452);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(34, 24);
+            this.label29.TabIndex = 152;
+            this.label29.Text = "cm";
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label27.ForeColor = System.Drawing.Color.Black;
+            this.label27.Location = new System.Drawing.Point(275, 365);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(34, 24);
+            this.label27.TabIndex = 150;
+            this.label27.Text = "cm";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label28.ForeColor = System.Drawing.Color.Black;
+            this.label28.Location = new System.Drawing.Point(51, 361);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(91, 33);
+            this.label28.TabIndex = 148;
+            this.label28.Text = "Cadera";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(276, 406);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(34, 24);
+            this.label25.TabIndex = 147;
+            this.label25.Text = "cm";
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(52, 402);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(92, 33);
+            this.label26.TabIndex = 145;
+            this.label26.Text = "Cintura";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(652, 339);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(34, 24);
+            this.label22.TabIndex = 144;
+            this.label22.Text = "cm";
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(553, 342);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(34, 24);
+            this.label23.TabIndex = 142;
+            this.label23.Text = "cm";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(365, 335);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(86, 33);
+            this.label24.TabIndex = 140;
+            this.label24.Text = "Brazos";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(657, 389);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 24);
+            this.label21.TabIndex = 139;
+            this.label21.Text = "cm";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(558, 386);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 24);
+            this.label18.TabIndex = 135;
+            this.label18.Text = "cm";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(221, 452);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(34, 24);
+            this.label15.TabIndex = 132;
+            this.label15.Text = "cm";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(274, 315);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 24);
+            this.label10.TabIndex = 129;
+            this.label10.Text = "cm";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(274, 268);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 24);
+            this.label9.TabIndex = 128;
+            this.label9.Text = "cm";
+            // 
+            // txtAntebrazos
+            // 
+            this.txtAntebrazos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAntebrazos.AutoSize = true;
+            this.txtAntebrazos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.txtAntebrazos.ForeColor = System.Drawing.Color.Black;
+            this.txtAntebrazos.Location = new System.Drawing.Point(354, 379);
+            this.txtAntebrazos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtAntebrazos.Name = "txtAntebrazos";
+            this.txtAntebrazos.Size = new System.Drawing.Size(134, 33);
+            this.txtAntebrazos.TabIndex = 115;
+            this.txtAntebrazos.Text = "Antebrazos";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(52, 442);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label8.Size = new System.Drawing.Size(95, 33);
+            this.label8.TabIndex = 112;
+            this.label8.Text = "Piernas";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(49, 311);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 33);
+            this.label5.TabIndex = 109;
+            this.label5.Text = "Pecho";
+            // 
+            // lblsd
+            // 
+            this.lblsd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblsd.AutoSize = true;
+            this.lblsd.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblsd.ForeColor = System.Drawing.Color.Black;
+            this.lblsd.Location = new System.Drawing.Point(49, 264);
+            this.lblsd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblsd.Name = "lblsd";
+            this.lblsd.Size = new System.Drawing.Size(108, 33);
+            this.lblsd.TabIndex = 108;
+            this.lblsd.Text = "Hombros";
+            // 
+            // lblPecho
+            // 
+            this.lblPecho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPecho.AutoSize = true;
+            this.lblPecho.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblPecho.ForeColor = System.Drawing.Color.Black;
+            this.lblPecho.Location = new System.Drawing.Point(162, 315);
+            this.lblPecho.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPecho.Name = "lblPecho";
+            this.lblPecho.Size = new System.Drawing.Size(26, 33);
+            this.lblPecho.TabIndex = 161;
+            this.lblPecho.Text = "-";
+            // 
+            // lblHombros
+            // 
+            this.lblHombros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHombros.AutoSize = true;
+            this.lblHombros.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblHombros.ForeColor = System.Drawing.Color.Black;
+            this.lblHombros.Location = new System.Drawing.Point(162, 261);
+            this.lblHombros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHombros.Name = "lblHombros";
+            this.lblHombros.Size = new System.Drawing.Size(26, 33);
+            this.lblHombros.TabIndex = 162;
+            this.lblHombros.Text = "-";
+            // 
+            // lblCadera
+            // 
+            this.lblCadera.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCadera.AutoSize = true;
+            this.lblCadera.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblCadera.ForeColor = System.Drawing.Color.Black;
+            this.lblCadera.Location = new System.Drawing.Point(162, 365);
+            this.lblCadera.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCadera.Name = "lblCadera";
+            this.lblCadera.Size = new System.Drawing.Size(26, 33);
+            this.lblCadera.TabIndex = 164;
+            this.lblCadera.Text = "-";
+            // 
+            // lblCintura
+            // 
+            this.lblCintura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCintura.AutoSize = true;
+            this.lblCintura.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblCintura.ForeColor = System.Drawing.Color.Black;
+            this.lblCintura.Location = new System.Drawing.Point(162, 405);
+            this.lblCintura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCintura.Name = "lblCintura";
+            this.lblCintura.Size = new System.Drawing.Size(26, 33);
+            this.lblCintura.TabIndex = 165;
+            this.lblCintura.Text = "-";
+            // 
+            // lblPiernaIzq
+            // 
+            this.lblPiernaIzq.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPiernaIzq.AutoSize = true;
+            this.lblPiernaIzq.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblPiernaIzq.ForeColor = System.Drawing.Color.Black;
+            this.lblPiernaIzq.Location = new System.Drawing.Point(162, 446);
+            this.lblPiernaIzq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPiernaIzq.Name = "lblPiernaIzq";
+            this.lblPiernaIzq.Size = new System.Drawing.Size(26, 33);
+            this.lblPiernaIzq.TabIndex = 166;
+            this.lblPiernaIzq.Text = "-";
+            // 
+            // lblGemeloIzq
+            // 
+            this.lblGemeloIzq.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGemeloIzq.AutoSize = true;
+            this.lblGemeloIzq.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblGemeloIzq.ForeColor = System.Drawing.Color.Black;
+            this.lblGemeloIzq.Location = new System.Drawing.Point(155, 484);
+            this.lblGemeloIzq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGemeloIzq.Name = "lblGemeloIzq";
+            this.lblGemeloIzq.Size = new System.Drawing.Size(26, 33);
+            this.lblGemeloIzq.TabIndex = 167;
+            this.lblGemeloIzq.Text = "-";
+            // 
+            // lblPiernasDe
+            // 
+            this.lblPiernasDe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPiernasDe.AutoSize = true;
+            this.lblPiernasDe.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblPiernasDe.ForeColor = System.Drawing.Color.Black;
+            this.lblPiernasDe.Location = new System.Drawing.Point(259, 446);
+            this.lblPiernasDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPiernasDe.Name = "lblPiernasDe";
+            this.lblPiernasDe.Size = new System.Drawing.Size(26, 33);
+            this.lblPiernasDe.TabIndex = 168;
+            this.lblPiernasDe.Text = "-";
+            // 
+            // lblGemeloDe
+            // 
+            this.lblGemeloDe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGemeloDe.AutoSize = true;
+            this.lblGemeloDe.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblGemeloDe.ForeColor = System.Drawing.Color.Black;
+            this.lblGemeloDe.Location = new System.Drawing.Point(259, 481);
+            this.lblGemeloDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGemeloDe.Name = "lblGemeloDe";
+            this.lblGemeloDe.Size = new System.Drawing.Size(26, 33);
+            this.lblGemeloDe.TabIndex = 169;
+            this.lblGemeloDe.Text = "-";
+            // 
+            // lblAltura
+            // 
+            this.lblAltura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAltura.AutoSize = true;
+            this.lblAltura.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblAltura.ForeColor = System.Drawing.Color.Black;
+            this.lblAltura.Location = new System.Drawing.Point(485, 286);
+            this.lblAltura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAltura.Name = "lblAltura";
+            this.lblAltura.Size = new System.Drawing.Size(26, 33);
+            this.lblAltura.TabIndex = 170;
+            this.lblAltura.Text = "-";
+            // 
+            // lblBrazoIzq
+            // 
+            this.lblBrazoIzq.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBrazoIzq.AutoSize = true;
+            this.lblBrazoIzq.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblBrazoIzq.ForeColor = System.Drawing.Color.Black;
+            this.lblBrazoIzq.Location = new System.Drawing.Point(485, 335);
+            this.lblBrazoIzq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBrazoIzq.Name = "lblBrazoIzq";
+            this.lblBrazoIzq.Size = new System.Drawing.Size(26, 33);
+            this.lblBrazoIzq.TabIndex = 173;
+            this.lblBrazoIzq.Text = "-";
+            // 
+            // lblBrazoDe
+            // 
+            this.lblBrazoDe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBrazoDe.AutoSize = true;
+            this.lblBrazoDe.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblBrazoDe.ForeColor = System.Drawing.Color.Black;
+            this.lblBrazoDe.Location = new System.Drawing.Point(591, 333);
+            this.lblBrazoDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBrazoDe.Name = "lblBrazoDe";
+            this.lblBrazoDe.Size = new System.Drawing.Size(26, 33);
+            this.lblBrazoDe.TabIndex = 174;
+            this.lblBrazoDe.Text = "-";
+            // 
+            // lblAntebrazoIzq
+            // 
+            this.lblAntebrazoIzq.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAntebrazoIzq.AutoSize = true;
+            this.lblAntebrazoIzq.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblAntebrazoIzq.ForeColor = System.Drawing.Color.Black;
+            this.lblAntebrazoIzq.Location = new System.Drawing.Point(483, 382);
+            this.lblAntebrazoIzq.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAntebrazoIzq.Name = "lblAntebrazoIzq";
+            this.lblAntebrazoIzq.Size = new System.Drawing.Size(26, 33);
+            this.lblAntebrazoIzq.TabIndex = 175;
+            this.lblAntebrazoIzq.Text = "-";
+            // 
+            // lblAntebrazoDe
+            // 
+            this.lblAntebrazoDe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAntebrazoDe.AutoSize = true;
+            this.lblAntebrazoDe.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
+            this.lblAntebrazoDe.ForeColor = System.Drawing.Color.Black;
+            this.lblAntebrazoDe.Location = new System.Drawing.Point(591, 377);
+            this.lblAntebrazoDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAntebrazoDe.Name = "lblAntebrazoDe";
+            this.lblAntebrazoDe.Size = new System.Drawing.Size(26, 33);
+            this.lblAntebrazoDe.TabIndex = 176;
+            this.lblAntebrazoDe.Text = "-";
             // 
             // UsuarioConsultarMedidas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(881, 651);
-            this.Controls.Add(this.pnlSuperior);
-            this.Controls.Add(this.lblPeso);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.lblPantorrillas);
-            this.Controls.Add(this.lblGluteos);
-            this.Controls.Add(this.lblAntebrazos);
-            this.Controls.Add(this.lblTriceps);
-            this.Controls.Add(this.lblEspalda);
-            this.Controls.Add(this.lblPiernas);
-            this.Controls.Add(this.lblAbdominales);
-            this.Controls.Add(this.lblBiceps);
-            this.Controls.Add(this.lblPecho);
+            this.ClientSize = new System.Drawing.Size(705, 521);
+            this.Controls.Add(this.lblAntebrazoDe);
+            this.Controls.Add(this.lblAntebrazoIzq);
+            this.Controls.Add(this.lblBrazoDe);
+            this.Controls.Add(this.lblBrazoIzq);
+            this.Controls.Add(this.lblAltura);
+            this.Controls.Add(this.lblGemeloDe);
+            this.Controls.Add(this.lblPiernasDe);
+            this.Controls.Add(this.lblGemeloIzq);
+            this.Controls.Add(this.lblPiernaIzq);
+            this.Controls.Add(this.lblCintura);
+            this.Controls.Add(this.lblCadera);
             this.Controls.Add(this.lblHombros);
-            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblPecho);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPantorrillas);
-            this.Controls.Add(this.txtGluteos);
-            this.Controls.Add(this.fasd);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtAntebrazos);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblsd);
+            this.Controls.Add(this.pbFoto);
+            this.Controls.Add(this.pnlSuperior);
+            this.Controls.Add(this.lblPeso);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.asd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -691,49 +792,56 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.pnlSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Label lblsd;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label txtPantorrillas;
-        private Label txtGluteos;
-        private Label fasd;
-        private Label label12;
-        private Label label13;
         private Label label4;
-        private Label label9;
-        private Label label10;
-        private Label label11;
-        private Label label14;
-        private Label label15;
         private Label label2;
         private Label asd;
         private TextBox lblFecha;
-        private Label lblPiernas;
-        private Label lblAbdominales;
-        private Label lblBiceps;
-        private Label lblPecho;
-        private Label lblHombros;
-        private Label lblPantorrillas;
-        private Label lblGluteos;
-        private Label lblAntebrazos;
-        private Label lblTriceps;
-        private Label lblEspalda;
-        private Label label16;
-        private Label label17;
-        private Label label18;
-        private Label label19;
-        private Label label20;
         private Label lblPeso;
         private PictureBox btnMinimizar;
         private PictureBox btnCerrar;
         private Panel pnlSuperior;
+        private PictureBox pbFoto;
+        private Label label33;
+        private Label label34;
+        private Label label30;
+        private Label label31;
+        private Label label32;
+        private Label label29;
+        private Label label27;
+        private Label label28;
+        private Label label25;
+        private Label label26;
+        private Label label22;
+        private Label label23;
+        private Label label24;
+        private Label label21;
+        private Label label18;
+        private Label label15;
+        private Label label10;
+        private Label label9;
+        private Label txtAntebrazos;
+        private Label label8;
+        private Label label5;
+        private Label lblsd;
+        private Label lblPecho;
+        private Label lblHombros;
+        private Label lblCadera;
+        private Label lblCintura;
+        private Label lblPiernaIzq;
+        private Label lblGemeloIzq;
+        private Label lblPiernasDe;
+        private Label lblGemeloDe;
+        private Label lblAltura;
+        private Label lblBrazoIzq;
+        private Label lblBrazoDe;
+        private Label lblAntebrazoIzq;
+        private Label lblAntebrazoDe;
     }
 }

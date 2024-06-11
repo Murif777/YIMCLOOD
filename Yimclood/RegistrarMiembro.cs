@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Presentacion
 {
@@ -44,28 +45,123 @@ namespace Presentacion
 
         private void registrarMiembro()
         {
-            string cedula = txtCedula.Text;
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            string telefono = txtTelefono.Text;
-            string sexo = Sexo();
-            string correo = txtCorreo.Text;
-            DateTime FechaNacimiento = fechaNacimiento.Value;
+            Miembro miembro = ValidadorMiembro();
+
             Membresia membresiaSeleccionada = ObtenerMembresia();
+            if (membresiaSeleccionada == null)
+            {
+                MessageBox.Show("Seleccione una membresia");
+                return;
+            }
+            if (miembro != null)
+            {
+                Usuario usuario = new Usuario(miembro);
+                try
+                {
+                    string resultadoMiembro = miembroService.Registrar(miembro);
+                    string resultadoUsuario = usuarioService.Registrar(usuario);
+                    string resultadoMembresia = RegistrarMembresia(membresiaSeleccionada, usuario);
+
+                    if (resultadoMiembro.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                        resultadoUsuario.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                        resultadoMembresia.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        MessageBox.Show("Miembro no guardado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Miembro guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar_Campos();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+        
+        private Miembro ValidadorMiembro()
+        {
+            // Lista de errores
+            List<string> errores = new List<string>();
+
+            // Validar cédula
+            string cedula = txtCedula.Text;
+            if (string.IsNullOrWhiteSpace(cedula) || !cedula.All(char.IsDigit))
+            {
+                errores.Add("La cédula solo puede contener números y no puede estar vacía.");
+                MessageBox.Show("La cédula solo puede contener números y no puede estar vacía.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+
+            // Validar nombre
+            string nombre = txtNombre.Text;
+            if (string.IsNullOrWhiteSpace(nombre) || !nombre.All(char.IsLetter))
+            {
+                errores.Add("El nombre solo puede contener letras y no puede estar vacío.");
+                MessageBox.Show("El nombre solo puede contener letras y no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+            else
+            {
+                nombre = char.ToUpper(nombre[0]) + nombre.Substring(1).ToLower();
+            }
+
+            // Validar apellido
+            string apellido = txtApellido.Text;
+            if (string.IsNullOrWhiteSpace(apellido) || !apellido.All(char.IsLetter))
+            {
+                errores.Add("El apellido solo puede contener letras y no puede estar vacío.");
+                MessageBox.Show("El apellido solo puede contener letras y no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+            else
+            {
+                apellido = char.ToUpper(apellido[0]) + apellido.Substring(1).ToLower();
+            }
+
+            // Validar teléfono
+            string telefono = txtTelefono.Text;
+            if (string.IsNullOrWhiteSpace(telefono) || !telefono.All(char.IsDigit))
+            {
+                errores.Add("El teléfono solo puede contener números y no puede estar vacío.");
+                MessageBox.Show("El teléfono solo puede contener números y no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+
+            // Validar correo electrónico
+            string correo = txtCorreo.Text;
+            if (string.IsNullOrWhiteSpace(correo) || !IsValidEmail(correo))
+            {
+                errores.Add("El correo electrónico no tiene un formato válido o está vacío.");
+                MessageBox.Show("El correo electrónico no tiene un formato válido o está vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+
+            // Si no hay errores, crear y retornar el objeto Miembro
+            DateTime FechaNacimiento = fechaNacimiento.Value;
             Miembro miembro = new Miembro(
-                cedula, nombre, apellido, telefono, sexo, correo, FechaNacimiento,
+                cedula, nombre, apellido, telefono, Sexo(), correo, FechaNacimiento,
                 0, 0, imageBytes);
-            MessageBox.Show(miembroService.Registrar(miembro));
-            RegistrarMembresia(membresiaSeleccionada, registrarUsuario(miembro));
+
+            return miembro;
         }
 
-        private Usuario registrarUsuario(Miembro miembro)
+        private bool IsValidEmail(string email)
         {
-            Usuario usuario = new Usuario(miembro);
-            string resultado = usuarioService.Registrar(usuario);
-            MessageBox.Show(resultado);
-            return usuario;
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
+
         private void ActualizarMiembroBD()
         {
             string cedula = txtCedula.Text;
@@ -81,9 +177,8 @@ namespace Presentacion
                 0, 0, imageBytes);
             MessageBox.Show(miembroService.ActualizarMiembro(miembro));
         }
-        private void RegistrarMembresia(Membresia membresia,Usuario usuario)
+        private string RegistrarMembresia(Membresia membresia,Usuario usuario)
         {
-
             if (usuario != null)
             {
                 PerfilMembresia perfil = new PerfilMembresia();
@@ -91,14 +186,14 @@ namespace Presentacion
                 perfil.TipoMembresia = membresia;
                 perfil.Pagado = true;
                 PMembresiaService PmembresiaService = new PMembresiaService();
-                //PmembresiaService.consultartodo();
-                MessageBox.Show(PmembresiaService.Registrar(perfil));
-                //PmembresiaService.VerificarMembresias(perfil);
+                //MessageBox.Show(PmembresiaService.Registrar(perfil));
+                return PmembresiaService.Registrar(perfil);
             }
             else
             {
                 MessageBox.Show("usuario vacio");
             }
+            return null;
         }
         private Membresia ObtenerMembresia()
         {
@@ -116,7 +211,6 @@ namespace Presentacion
 
             return null;
         }
-
         private string Sexo()
         {
             if (rdbtnHombre.Checked)
@@ -129,7 +223,6 @@ namespace Presentacion
             }
             return null;
         }
-
         private void Limpiar_Campos()
         {
             txtCedula.Clear();
@@ -139,9 +232,8 @@ namespace Presentacion
             txtCorreo.Clear();
             rdbtnHombre.Checked = false;
             rdbtnMujer.Checked = false;
-            imageBytes = null; // Limpiar la imagen seleccionada
+            imageBytes = null; 
         }
-
         private void ComboboxMembresias()
         {
             List<Membresia> membresias = MembresiaService.ConsultarTodo();
@@ -157,7 +249,6 @@ namespace Presentacion
                 TiposMembresia.DisplayMember = "Nombre";
             }
         }
-        
         public void Asignar_Campos()
         {
             txtCedula.Text = MiembroRecibido.DatosUsuario.DatosMiembro.Cedula;

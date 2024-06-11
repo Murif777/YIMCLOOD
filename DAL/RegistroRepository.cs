@@ -13,8 +13,8 @@ namespace DAL
         public string GuardarRegistroBD(Registro registro)
         {
             UsuarioRepository usuarioRepository = new UsuarioRepository();
-            string sql = "INSERT INTO registros(Foto, Miembro, Fecha, Peso, Hombros, Pecho, AntebrazoIzquierdo, AntebrazoDerecho, BrazoIzquierdo, BrazoDerecho, Cintura, Cadera, PiernaIzquierda, PiernaDerecha, GemeloIzquierdo, GemeloDerecho, Altura) " +
-                  "VALUES (@Foto, @Miembro, @Fecha, @Peso, @Hombros, @Pecho, @AntebrazoIzquierdo, @AntebrazoDerecho, @BrazoIzquierdo, @BrazoDerecho, @Cintura, @Cadera, @PiernaIzquierda, @PiernaDerecha, @GemeloIzquierdo, @GemeloDerecho, @Altura)";
+            string sql = "INSERT INTO registros(Miembro_Cedula, Fecha, Peso, Hombros, Pecho, AntebrazoIzquierdo, AntebrazoDerecho, BrazoIzquierdo, BrazoDerecho, Cintura, Cadera, PiernaIzquierda, PiernaDerecha, GemeloIzquierdo, GemeloDerecho, Altura, Foto) " +
+                  "VALUES (@Miembro, @Fecha, @Peso, @Hombros, @Pecho, @AntebrazoIzquierdo, @AntebrazoDerecho, @BrazoIzquierdo, @BrazoDerecho, @Cintura, @Cadera, @PiernaIzquierda, @PiernaDerecha, @GemeloIzquierdo, @GemeloDerecho, @Altura, @Foto)";
             MySqlConnection conexionBd = new MySqlConnection();
             conexionBd = conexion();
             try
@@ -23,8 +23,6 @@ namespace DAL
                 conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Foto", registro.Foto);
-                comando.Parameters.AddWithValue("@Miembro", registro.Miembro);
-                comando.Parameters.AddWithValue("@Fecha", registro.Fecha);
                 comando.Parameters.AddWithValue("@Peso", registro.Peso);
                 comando.Parameters.AddWithValue("@Hombros", registro.Hombros);
                 comando.Parameters.AddWithValue("@Pecho", registro.Pecho);

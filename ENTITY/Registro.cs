@@ -12,28 +12,26 @@ namespace ENTITY
     {
         public byte[] Foto { get; set; }=null;
         public int Id { get; set; }
-        public Miembro Miembro { get; set; }
-        public DateTime Fecha { get; set; }
-        public double Peso { get; set; }
-        public double? Hombros { get; set; }
-        public double? Pecho { get; set; }
-        public double? AntebrazoIzquierdo { get; set; }
-        public double? AntebrazoDerecho { get; set; }
-        public double? BrazoIzquierdo { get; set; }
-        public double? BrazoDerecho { get; set; }
-        public double? Cintura { get; set; }
-        public double? Cadera { get; set; }
-        public double? PiernaIzquierda { get; set; }
-        public double? PiernaDerecha { get; set; }
-        public double? GemeloIzquierdo { get; set; }
-        public double? GemeloDerecho { get; set; }
-        public double? Altura { get; set; }
-
-        public Registro(int id,Miembro miembro, DateTime fecha, double peso)
+        public int? Peso { get; set; }
+        public int? Hombros { get; set; }
+        public int? Pecho { get; set; }
+        public int? AntebrazoIzquierdo { get; set; }
+        public int? AntebrazoDerecho { get; set; }
+        public int? BrazoIzquierdo { get; set; }
+        public int? BrazoDerecho { get; set; }
+        public int? Cintura { get; set; }
+        public int? Cadera { get; set; }
+        public int? PiernaIzquierda { get; set; }
+        public int? PiernaDerecha { get; set; }
+        public int? GemeloIzquierdo { get; set; }
+        public int? GemeloDerecho { get; set; }
+        public int? Altura { get; set; }
+        public Registro()
+        {
+        }
+        public Registro(int id, int peso)
         {
             Id = id;
-            Miembro = miembro;
-            Fecha = fecha;
             Peso = peso;
         }
     }

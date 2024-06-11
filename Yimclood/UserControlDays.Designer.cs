@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbldays = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblValorPeso = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -37,44 +37,48 @@
             // 
             this.lbldays.AutoSize = true;
             this.lbldays.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 18F);
-            this.lbldays.Location = new System.Drawing.Point(3, 0);
+            this.lbldays.Location = new System.Drawing.Point(2, 0);
+            this.lbldays.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldays.Name = "lbldays";
-            this.lbldays.Size = new System.Drawing.Size(44, 36);
+            this.lbldays.Size = new System.Drawing.Size(37, 29);
             this.lbldays.TabIndex = 0;
             this.lbldays.Text = "00";
             // 
-            // label1
+            // lblValorPeso
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.label1.Location = new System.Drawing.Point(3, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Peso:";
+            this.lblValorPeso.AutoSize = true;
+            this.lblValorPeso.BackColor = System.Drawing.Color.Transparent;
+            this.lblValorPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
+            this.lblValorPeso.Location = new System.Drawing.Point(2, 46);
+            this.lblValorPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblValorPeso.Name = "lblValorPeso";
+            this.lblValorPeso.Size = new System.Drawing.Size(50, 24);
+            this.lblValorPeso.TabIndex = 1;
+            this.lblValorPeso.Text = "Peso:";
             // 
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.BackColor = System.Drawing.Color.Transparent;
             this.lblPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.lblPeso.Location = new System.Drawing.Point(84, 56);
+            this.lblPeso.Location = new System.Drawing.Point(63, 46);
+            this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(108, 30);
+            this.lblPeso.Size = new System.Drawing.Size(89, 24);
             this.lblPeso.TabIndex = 3;
             this.lblPeso.Text = "XX.X+\"Kg\"";
             // 
             // UserControlDays
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblPeso);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblValorPeso);
             this.Controls.Add(this.lbldays);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UserControlDays";
-            this.Size = new System.Drawing.Size(220, 100);
+            this.Size = new System.Drawing.Size(165, 81);
             this.Load += new System.EventHandler(this.UserControlDays_Load);
             this.Click += new System.EventHandler(this.UserControlDays_Click);
             this.ResumeLayout(false);
@@ -85,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbldays;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblValorPeso;
         private System.Windows.Forms.Label lblPeso;
     }
 }
