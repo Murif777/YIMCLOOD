@@ -25,8 +25,9 @@ namespace Presentacion
             InitializeComponent();
             this.Shown += new EventHandler(FormRegistrar_Shown);
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
-            this.btnSubirfoto.Click += new EventHandler(this.btnSubirfoto_Click);
+            this.btnSubirfoto.Click += new EventHandler(this.btnSubirfoto_Click_1);
             this.newProducto = newProducto;
+            BtnActualizar.Visible = false;
         }
 
 
@@ -100,10 +101,6 @@ namespace Presentacion
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
 
-        private void btnSubirfoto_Click(object sender, EventArgs e)
-        {
-            
-        }
         public void AsignarCampos()
         {
             if (newProducto != null)
