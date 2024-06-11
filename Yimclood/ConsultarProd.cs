@@ -1,4 +1,5 @@
 ﻿using BILL;
+using ENTITY;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,13 +17,14 @@ namespace Presentacion
     {
         public event EventHandler OnRegresar;
         private  ProductoService ProductoService = new ProductoService();
+        private List<Producto> listaProductos;
         public ConsultarProd()
         {
             InitializeComponent();
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             MostrarTabla();
-
+            pnlActualizar.Visible = false;
         }
 
         private void Btnregresar_Click(object sender, EventArgs e)
@@ -60,13 +62,17 @@ namespace Presentacion
                     Foto = p.Foto, 
                     Referencia = p.Referencia,
                     Nombre = p.Nombre,
-                    Precio = p.Valor
+                    Precio = p.Valor,
+                    cantidad= p.CantidadDisponible,
+                    descripcion= p.Descripcion
                 }).ToList();
                 dataGridView1.DataSource = viewList;
                 dataGridView1.Columns["Foto"].DisplayIndex = 0;
                 dataGridView1.Columns["Referencia"].DisplayIndex = 1;
                 dataGridView1.Columns["Nombre"].DisplayIndex = 2;
                 dataGridView1.Columns["Precio"].DisplayIndex = 3;
+                dataGridView1.Columns["Cantidad"].DisplayIndex = 4;
+                dataGridView1.Columns["Descripcion"].DisplayIndex= 5;
                 int primeraColumna = 0;
                 dataGridView1.Columns[primeraColumna].Visible = false;
             }
@@ -75,6 +81,68 @@ namespace Presentacion
                 MessageBox.Show("Lista vacía");
             }
         }
+        private void FormActualizar()
+        {
+            Producto producto = AsignaciondeValoresProducto();
+            if (producto != null)
+            {
+                pnlActualizar.Visible = true;
+                AgregarProducto registrar = new AgregarProducto(producto);
+                AbrirFormPanel(registrar);
+            }
+        }
+        private void AbrirFormPanel(Form formHijo)
+        {
+            if (this.pnlActualizar.Controls.Count > 0)
+                this.pnlActualizar.Controls.RemoveAt(0);
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            formHijo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            this.pnlActualizar.Controls.Add(formHijo);
+            this.pnlActualizar.Tag = formHijo;
+            formHijo.Show();
+
+            if (formHijo is AgregarProducto)
+            {
+                AgregarProducto registrarForm = (AgregarProducto)formHijo;
+                registrarForm.btnAgregar.Visible = false;
+                registrarForm.Btnregresar.Visible = false; // Botón Regresar
+                registrarForm.BtnActualizar.Visible = true;
+                registrarForm.AsignarCampos();
+            }
+        }
+
+
+        private Producto AsignaciondeValoresProducto()
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                string referencia = selectedRow.Cells["Referencia"].Value.ToString();
+                string nombre = selectedRow.Cells["Nombre"].Value.ToString();
+                string descripcion = selectedRow.Cells["Descripcion"].Value.ToString();
+                int valor = Convert.ToInt32(selectedRow.Cells["Precio"].Value);
+                int cantidad = Convert.ToInt32(selectedRow.Cells["Cantidad"].Value);
+                byte[] foto = (byte[])selectedRow.Cells["Foto"].Value;
+
+                Producto producto = new Producto()
+                {
+                    Referencia = referencia,
+                    Nombre = nombre,
+                    Descripcion = descripcion,
+                    Valor = valor,
+                    CantidadDisponible = cantidad,
+                    Foto = foto
+                };
+
+                return producto;
+            }
+            MessageBox.Show("Seleccione un producto de la tabla");
+            return null;
+        }
+
 
         private void MostrarBusquedaProducto()
         {
@@ -87,7 +155,9 @@ namespace Presentacion
                     Foto = p.Foto, 
                     Referencia = p.Referencia,
                     Nombre = p.Nombre,
-                    Precio = p.Valor
+                    Precio = p.Valor,
+                    cantidad = p.CantidadDisponible,
+                    descripcion = p.Descripcion
                 }).ToList();
                 dataGridView1.DataSource = viewList;
                 // Configurar las columnas para mostrar en el orden deseado
@@ -95,6 +165,8 @@ namespace Presentacion
                 dataGridView1.Columns["Referencia"].DisplayIndex = 1;
                 dataGridView1.Columns["Nombre"].DisplayIndex = 2;
                 dataGridView1.Columns["Precio"].DisplayIndex = 3;
+                dataGridView1.Columns["Cantidad"].DisplayIndex = 4;
+                dataGridView1.Columns["Descripcion"].DisplayIndex = 5;
                 int primeraColumna = 0;
                 dataGridView1.Columns[primeraColumna].Visible = false;
             }
@@ -170,6 +242,13 @@ namespace Presentacion
             {
                 MessageBox.Show("Seleccione un dato de la tabla");
             }
+
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            FormActualizar();
         }
     }
 }

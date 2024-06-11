@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarProducto));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnActualizar = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnSubirfoto = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -43,18 +46,17 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSubirfoto = new System.Windows.Forms.Button();
             this.Btnregresar = new System.Windows.Forms.Button();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel2.Controls.Add(this.BtnActualizar);
             this.panel2.Controls.Add(this.pbFoto);
             this.panel2.Controls.Add(this.txtCantidad);
             this.panel2.Controls.Add(this.label7);
@@ -73,12 +75,39 @@
             this.panel2.Location = new System.Drawing.Point(0, 63);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(876, 480);
+            this.panel2.Size = new System.Drawing.Size(1455, 768);
             this.panel2.TabIndex = 12;
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.BackColor = System.Drawing.Color.Gray;
+            this.BtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnActualizar.FlatAppearance.BorderSize = 0;
+            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnActualizar.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.ForeColor = System.Drawing.Color.White;
+            this.BtnActualizar.Location = new System.Drawing.Point(949, 480);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(148, 57);
+            this.BtnActualizar.TabIndex = 29;
+            this.BtnActualizar.Text = "ACTUALIZAR";
+            this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Location = new System.Drawing.Point(962, 262);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(175, 175);
+            this.pbFoto.TabIndex = 28;
+            this.pbFoto.TabStop = false;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(376, 169);
+            this.txtCantidad.Location = new System.Drawing.Point(696, 315);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
@@ -89,27 +118,41 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(84, 169);
+            this.label7.Location = new System.Drawing.Point(404, 315);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 32);
             this.label7.TabIndex = 12;
             this.label7.Text = "Cantidad:";
             // 
+            // btnSubirfoto
+            // 
+            this.btnSubirfoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubirfoto.FlatAppearance.BorderSize = 0;
+            this.btnSubirfoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubirfoto.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirfoto.Image")));
+            this.btnSubirfoto.Location = new System.Drawing.Point(1115, 160);
+            this.btnSubirfoto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubirfoto.Name = "btnSubirfoto";
+            this.btnSubirfoto.Size = new System.Drawing.Size(72, 70);
+            this.btnSubirfoto.TabIndex = 11;
+            this.btnSubirfoto.UseVisualStyleBackColor = true;
+            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click_1);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(646, 41);
+            this.label6.Location = new System.Drawing.Point(957, 179);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 32);
+            this.label6.Size = new System.Drawing.Size(154, 32);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Foto:";
+            this.label6.Text = "Subir Foto:";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(377, 116);
+            this.txtPrecio.Location = new System.Drawing.Point(697, 262);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Multiline = true;
             this.txtPrecio.Name = "txtPrecio";
@@ -124,7 +167,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(629, 334);
+            this.btnAgregar.Location = new System.Drawing.Point(949, 480);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(148, 57);
@@ -137,7 +180,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 61);
+            this.label2.Location = new System.Drawing.Point(404, 207);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 32);
@@ -148,7 +191,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 14);
+            this.label3.Location = new System.Drawing.Point(404, 160);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 32);
@@ -159,7 +202,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(85, 116);
+            this.label5.Location = new System.Drawing.Point(405, 262);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 32);
@@ -170,7 +213,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(85, 234);
+            this.label4.Location = new System.Drawing.Point(405, 380);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(330, 32);
@@ -179,7 +222,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(376, 62);
+            this.txtNombre.Location = new System.Drawing.Point(696, 208);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -188,7 +231,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(90, 283);
+            this.txtDescripcion.Location = new System.Drawing.Point(410, 429);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -197,7 +240,7 @@
             // 
             // txtReferencia
             // 
-            this.txtReferencia.Location = new System.Drawing.Point(376, 14);
+            this.txtReferencia.Location = new System.Drawing.Point(696, 160);
             this.txtReferencia.Margin = new System.Windows.Forms.Padding(2);
             this.txtReferencia.Multiline = true;
             this.txtReferencia.Name = "txtReferencia";
@@ -206,39 +249,15 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel1.Controls.Add(this.Btnregresar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 63);
+            this.panel1.Size = new System.Drawing.Size(1455, 63);
             this.panel1.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(268, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Agregar Producto";
-            // 
-            // btnSubirfoto
-            // 
-            this.btnSubirfoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubirfoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubirfoto.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirfoto.Image")));
-            this.btnSubirfoto.Location = new System.Drawing.Point(730, 37);
-            this.btnSubirfoto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSubirfoto.Name = "btnSubirfoto";
-            this.btnSubirfoto.Size = new System.Drawing.Size(47, 48);
-            this.btnSubirfoto.TabIndex = 11;
-            this.btnSubirfoto.UseVisualStyleBackColor = true;
-            this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click_1);
             // 
             // Btnregresar
             // 
@@ -254,22 +273,23 @@
             this.Btnregresar.UseVisualStyleBackColor = true;
             this.Btnregresar.Click += new System.EventHandler(this.Btnregresar_Click);
             // 
-            // pbFoto
+            // label1
             // 
-            this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Location = new System.Drawing.Point(642, 116);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(175, 175);
-            this.pbFoto.TabIndex = 28;
-            this.pbFoto.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(268, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(277, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Agregar Producto";
             // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(876, 543);
+            this.ClientSize = new System.Drawing.Size(1455, 831);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -278,9 +298,9 @@
             this.Text = "FormAgregarProductocs";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,21 +309,22 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox txtReferencia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Btnregresar;
         private System.Windows.Forms.Button btnSubirfoto;
-        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pbFoto;
+        public System.Windows.Forms.Button BtnActualizar;
+        public System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.Button btnAgregar;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtDescripcion;
+        public System.Windows.Forms.TextBox txtReferencia;
+        public System.Windows.Forms.Button Btnregresar;
+        public System.Windows.Forms.TextBox txtCantidad;
     }
 }

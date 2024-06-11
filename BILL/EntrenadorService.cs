@@ -53,9 +53,18 @@ namespace BILL
             return en_repository.EliminarEntrenador(cedulaEntrenador);
         }
 
-        public void ActualizarEntrenador(Entrenador entrenador)
+        public string ActualizarEntrenador(Entrenador entrenador)
         {
-           en_repository.ActualizarEntrenador(entrenador);
+            try
+            {
+                return en_repository.ActualizarEntrenador(entrenador);
+                //return m_repository.AbrirConexion().ToString();
+            }
+            catch (Exception ex)
+            {
+                return "Error al registrar: " + ex.Message;
+            }
+
         }
     }
 }
