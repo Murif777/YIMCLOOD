@@ -72,6 +72,7 @@ namespace Presentacion
                 tablaEjercicios1.Columns["Series"].DisplayIndex = 5;
                 tablaEjercicios1.Columns["Musculo"].DisplayIndex = 6;
                 tablaEjercicios1.Columns["Categoria"].DisplayIndex = 7;
+                tablaEjercicios1.ColumnHeadersVisible = false;
                 foreach (DataGridViewRow row in tablaEjercicios1.Rows)
                 {
                     row.Height = 100; // Establece la altura deseada para cada fila

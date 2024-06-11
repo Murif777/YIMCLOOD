@@ -1,3 +1,4 @@
+-- Lista en ORDEN de creacion
 CREATE TABLE Entrenadores (
     Cedula VARCHAR(20) PRIMARY KEY,
     Nombre VARCHAR(20) NOT NULL,

@@ -88,6 +88,7 @@ namespace Presentacion
                 TablaProductos.Columns["Nombre"].DisplayIndex = 2;
                 TablaProductos.Columns["Precio"].DisplayIndex = 3;
                 TablaProductos.Columns["Cantidad"].DisplayIndex = 4;
+                TablaProductos.RowHeadersVisible = false;
                 // Ajustar la altura de las filas para mostrar correctamente las imágenes
                 foreach (DataGridViewRow row in TablaProductos.Rows)
                 {

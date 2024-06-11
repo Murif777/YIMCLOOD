@@ -21,7 +21,6 @@ namespace Presentacion
         public Login()
         {
             InitializeComponent();
-            metododeprueba();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -40,8 +39,8 @@ namespace Presentacion
         }
         private void metododeprueba()
         {
-            txtUsuario.Text= "faridelcapo0107@gmail.com";
-            txtContrasena.Text = "1021667065";
+            txtUsuario.Text= "juadanaes19@gmail.com";
+            txtContrasena.Text = "123";
             //txtUsuario.Text= "dariobernatte@hotmail.com";
             //txtContrasena.Text = "1066864190";
         }

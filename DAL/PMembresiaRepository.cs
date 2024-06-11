@@ -96,13 +96,12 @@ namespace DAL
             {
                 conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-                comando.Parameters.AddWithValue("@Correo_Usuario ", correo);
-                conexionBd.Open();
+                comando.Parameters.AddWithValue("@Correo_Usuario", correo);
                 using (var reader = comando.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        perfil = Map(reader);
+                        perfil = Mapeo(reader);
                     }
                     return perfil;
                 }
@@ -119,6 +118,41 @@ namespace DAL
                 
             }
         }
+        private PerfilMembresia Mapeo(MySqlDataReader reader)
+        {
+            string CorreoElectronico = reader.GetString(0);
+            string Nombre = reader.GetString(1);
+            string Estado = reader.GetString(2);
+            DateTime Fechainicio = reader.GetDateTime(3);
+            DateTime Fechafinal = reader.GetDateTime(4);
+            int SaldoDebe = reader.GetInt32(5);
+            bool Pagado = reader.GetBoolean(6);
+            int DuracionAcumulada = reader.GetInt32(7);
+            int TiempoRestante = reader.GetInt32(8);
+
+            
+            Miembro miembro= new Miembro();
+            miembro.Correo= CorreoElectronico;
+
+            Usuario usuario = new Usuario();
+            usuario.DatosMiembro =miembro;
+
+            Membresia membresia = new Membresia();
+            membresia.Nombre= Nombre;
+
+            PerfilMembresia perfil = new PerfilMembresia();
+            perfil.DatosUsuario=usuario;
+            perfil.TipoMembresia = membresia;
+            perfil.Estado= Estado;
+            perfil.Fechafinal= Fechafinal;
+            perfil.Fechainicio= Fechainicio;
+            perfil.SaldoDebe= SaldoDebe;
+            perfil.Pagado= Pagado;
+            perfil.DuracionAcumulada= DuracionAcumulada;
+            perfil.TiempoRestante= TiempoRestante;
+            return perfil;
+        }
+
         public List<PerfilMembresia> ConsultarTodos()
         {
             List<PerfilMembresia> perfiles = new List<PerfilMembresia>();

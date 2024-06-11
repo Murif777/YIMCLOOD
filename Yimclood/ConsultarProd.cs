@@ -156,7 +156,7 @@ namespace Presentacion
                     Referencia = p.Referencia,
                     Nombre = p.Nombre,
                     Precio = p.Valor,
-                    Cantidad= p.CantidadDisponible
+                    Cantidad= p.CantidadDisponible,
                     Descripcion = p.Descripcion
                 }).ToList();
                 dataGridView1.DataSource = viewList;

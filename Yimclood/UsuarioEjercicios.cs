@@ -98,6 +98,10 @@ namespace Presentacion
                 listEjercicios.Columns["Series"].DisplayIndex = 5;
                 listEjercicios.Columns["Musculo"].DisplayIndex = 6;
                 listEjercicios.Columns["Categoria"].DisplayIndex = 7;
+                listEjercicios.ColumnHeadersVisible = false;
+                listEjercicios.RowHeadersVisible = false;
+
+
                 foreach (DataGridViewRow row in listEjercicios.Rows)
                 {
                     row.Height = 100; 
