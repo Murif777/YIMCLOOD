@@ -152,6 +152,5 @@ namespace Presentacion
         {
             arrastrarElemento();
         }
-
     }
 }

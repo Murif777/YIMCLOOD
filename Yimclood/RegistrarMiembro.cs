@@ -309,6 +309,7 @@ namespace Presentacion
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             ActualizarMiembroBD();
+
         }
         private void fechaNacimiento_ValueChanged(object sender, EventArgs e)
         {

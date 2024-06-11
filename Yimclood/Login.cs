@@ -42,6 +42,8 @@ namespace Presentacion
         {
             txtUsuario.Text= "faridelcapo0107@gmail.com";
             txtContrasena.Text = "1021667065";
+            //txtUsuario.Text= "dariobernatte@hotmail.com";
+            //txtContrasena.Text = "1066864190";
         }
         private void txtContra_Enter(object sender, EventArgs e)
         {

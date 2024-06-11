@@ -68,19 +68,20 @@ namespace BILL
                 return null;
             }
         }
-
+        private int numeroFacturaActual = 100000;
         private void GenerarPDF(Factura factura, string filePath)
         {
-            string nombre = factura.Miembro.Nombre;
+            string nombre = $"{factura.Miembro.Nombre} {factura.Miembro.Apellido}";
             //string apellido = factura.Miembro.Apellido; AGREGAR A PDF
             string cedula = factura.Miembro.Cedula;
             DateTime fecha = factura.FechaFactura;
-           // int id =factura.Id; AGREGAR A PDF
-           //AGREGAR LOGO  ARREGLAR COLUMNA PRECIO TOTAL
+            int numeroFactura = ObtenerSiguienteNumeroFactura();
+            //AGREGAR LOGO  ARREGLAR COLUMNA PRECIO TOTAL
             string paginahtml_texto = Properties.Resources.plantillaFactura.ToString();
             paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", nombre);
             paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", cedula);
             paginahtml_texto = paginahtml_texto.Replace("@FECHA", fecha.ToString("yyyy-MM-dd"));
+            paginahtml_texto = paginahtml_texto.Replace("@NUMEROFAC", numeroFactura.ToString());
 
             string filas = string.Empty;
             foreach (var row in factura.Productos)
@@ -104,14 +105,32 @@ namespace BILL
                 pdfDoc.Open();
                 pdfDoc.Add(new Phrase(""));
 
+                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.logo, System.Drawing.Imaging.ImageFormat.Png);
+                img.ScaleToFit(60, 60);
+                img.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                //img.SetAbsolutePosition(10,100);
+                img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                pdfDoc.Add(img);
+
                 using (StringReader sr = new StringReader(paginahtml_texto))
                 {
                     XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
                 }
-
+                ActualizarSiguienteNumeroFactura(numeroFactura);
                 pdfDoc.Close();
                 stream.Close();
             }
+            
+        }
+        private int ObtenerSiguienteNumeroFactura()
+        {
+            return numeroFacturaActual++; // Retorna el número actual y luego lo incrementa en uno
+        }
+
+        private void ActualizarSiguienteNumeroFactura(int nuevoNumero)
+        {
+            numeroFacturaActual = nuevoNumero; // Actualiza el número de factura actual
         }
 
         public void GenerarYEnviarPDF(Factura factura, string filePath)

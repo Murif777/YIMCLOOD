@@ -65,7 +65,6 @@ namespace Presentacion
             this.rdbtnHombre = new System.Windows.Forms.RadioButton();
             this.btnSubir = new Presentacion.botones.botones();
             this.btnGuardar = new Presentacion.botones.botones();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -77,10 +76,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFoto.BackColor = System.Drawing.Color.White;
-            this.pbFoto.Location = new System.Drawing.Point(465, 38);
+            this.pbFoto.Location = new System.Drawing.Point(579, 59);
             this.pbFoto.Margin = new System.Windows.Forms.Padding(2);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(309, 251);
+            this.pbFoto.Size = new System.Drawing.Size(568, 432);
             this.pbFoto.TabIndex = 28;
             this.pbFoto.TabStop = false;
             // 
@@ -104,7 +103,7 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(650, 417);
+            this.label3.Location = new System.Drawing.Point(798, 475);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(201, 33);
@@ -120,9 +119,10 @@ namespace Presentacion
             this.fechaNacimiento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.fechaNacimiento.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaNacimiento.Location = new System.Drawing.Point(888, 411);
+            this.fechaNacimiento.Location = new System.Drawing.Point(805, 520);
+            this.fechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.fechaNacimiento.Name = "fechaNacimiento";
-            this.fechaNacimiento.Size = new System.Drawing.Size(149, 40);
+            this.fechaNacimiento.Size = new System.Drawing.Size(367, 40);
             this.fechaNacimiento.TabIndex = 50;
             // 
             // lblsd
@@ -133,7 +133,7 @@ namespace Presentacion
             this.lblsd.AutoSize = true;
             this.lblsd.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.lblsd.ForeColor = System.Drawing.Color.Black;
-            this.lblsd.Location = new System.Drawing.Point(190, 351);
+            this.lblsd.Location = new System.Drawing.Point(223, 413);
             this.lblsd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblsd.Name = "lblsd";
             this.lblsd.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -149,7 +149,7 @@ namespace Presentacion
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(190, 398);
+            this.label5.Location = new System.Drawing.Point(223, 472);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 33);
@@ -164,7 +164,7 @@ namespace Presentacion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(191, 446);
+            this.label6.Location = new System.Drawing.Point(224, 531);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 33);
@@ -179,7 +179,7 @@ namespace Presentacion
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(191, 491);
+            this.label7.Location = new System.Drawing.Point(224, 588);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -195,7 +195,7 @@ namespace Presentacion
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(191, 534);
+            this.label8.Location = new System.Drawing.Point(224, 642);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -211,7 +211,7 @@ namespace Presentacion
             this.txtAntebrazos.AutoSize = true;
             this.txtAntebrazos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.txtAntebrazos.ForeColor = System.Drawing.Color.Black;
-            this.txtAntebrazos.Location = new System.Drawing.Point(650, 537);
+            this.txtAntebrazos.Location = new System.Drawing.Point(798, 645);
             this.txtAntebrazos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtAntebrazos.Name = "txtAntebrazos";
             this.txtAntebrazos.Size = new System.Drawing.Size(104, 33);
@@ -226,7 +226,7 @@ namespace Presentacion
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(650, 490);
+            this.label12.Location = new System.Drawing.Point(797, 586);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 33);
@@ -241,7 +241,7 @@ namespace Presentacion
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(650, 354);
+            this.label13.Location = new System.Drawing.Point(797, 416);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(90, 33);
@@ -254,10 +254,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCedula.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.txtCedula.Location = new System.Drawing.Point(312, 354);
+            this.txtCedula.Location = new System.Drawing.Point(375, 416);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(290, 32);
+            this.txtCedula.Size = new System.Drawing.Size(472, 32);
             this.txtCedula.TabIndex = 66;
             this.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -267,10 +267,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefono.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.txtTelefono.Location = new System.Drawing.Point(312, 494);
+            this.txtTelefono.Location = new System.Drawing.Point(375, 591);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(290, 32);
+            this.txtTelefono.Size = new System.Drawing.Size(472, 32);
             this.txtTelefono.TabIndex = 67;
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -280,10 +280,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellido.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.txtApellido.Location = new System.Drawing.Point(312, 448);
+            this.txtApellido.Location = new System.Drawing.Point(375, 534);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(290, 32);
+            this.txtApellido.Size = new System.Drawing.Size(472, 32);
             this.txtApellido.TabIndex = 68;
             this.txtApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -293,10 +293,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.txtNombre.Location = new System.Drawing.Point(312, 401);
+            this.txtNombre.Location = new System.Drawing.Point(375, 475);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(290, 32);
+            this.txtNombre.Size = new System.Drawing.Size(472, 32);
             this.txtNombre.TabIndex = 69;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -306,10 +306,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCorreo.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.txtCorreo.Location = new System.Drawing.Point(787, 356);
+            this.txtCorreo.Location = new System.Drawing.Point(969, 419);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(326, 32);
+            this.txtCorreo.Size = new System.Drawing.Size(508, 32);
             this.txtCorreo.TabIndex = 66;
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -319,10 +319,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEstatura.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.txtEstatura.Location = new System.Drawing.Point(787, 539);
+            this.txtEstatura.Location = new System.Drawing.Point(969, 648);
             this.txtEstatura.Margin = new System.Windows.Forms.Padding(2);
             this.txtEstatura.Name = "txtEstatura";
-            this.txtEstatura.Size = new System.Drawing.Size(269, 32);
+            this.txtEstatura.Size = new System.Drawing.Size(451, 32);
             this.txtEstatura.TabIndex = 68;
             this.txtEstatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -332,10 +332,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.txtPeso.Location = new System.Drawing.Point(787, 492);
+            this.txtPeso.Location = new System.Drawing.Point(969, 589);
             this.txtPeso.Margin = new System.Windows.Forms.Padding(2);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(269, 32);
+            this.txtPeso.Size = new System.Drawing.Size(451, 32);
             this.txtPeso.TabIndex = 69;
             this.txtPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -347,7 +347,7 @@ namespace Presentacion
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(1132, 498);
+            this.label17.Location = new System.Drawing.Point(1400, 597);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(30, 24);
@@ -362,7 +362,7 @@ namespace Presentacion
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(1132, 543);
+            this.label18.Location = new System.Drawing.Point(1400, 653);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(34, 24);
@@ -412,10 +412,10 @@ namespace Presentacion
             this.btnSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubir.ForeColor = System.Drawing.Color.White;
             this.btnSubir.Image = ((System.Drawing.Image)(resources.GetObject("btnSubir.Image")));
-            this.btnSubir.Location = new System.Drawing.Point(778, 230);
+            this.btnSubir.Location = new System.Drawing.Point(900, 305);
             this.btnSubir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubir.Name = "btnSubir";
-            this.btnSubir.Size = new System.Drawing.Size(58, 59);
+            this.btnSubir.Size = new System.Drawing.Size(53, 56);
             this.btnSubir.TabIndex = 82;
             this.btnSubir.TextColor = System.Drawing.Color.White;
             this.btnSubir.UseVisualStyleBackColor = false;
@@ -435,27 +435,14 @@ namespace Presentacion
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(1042, 410);
+            this.btnGuardar.Location = new System.Drawing.Point(739, 566);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(66, 58);
+            this.btnGuardar.Size = new System.Drawing.Size(248, 176);
             this.btnGuardar.TabIndex = 71;
             this.btnGuardar.TextColor = System.Drawing.Color.White;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(1059, 493);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 33);
-            this.label2.TabIndex = 85;
-            this.label2.Text = "Cm";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -474,8 +461,7 @@ namespace Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1109, 630);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1291, 748);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSubir);
@@ -541,7 +527,6 @@ namespace Presentacion
         private GroupBox groupBox1;
         private RadioButton rdbtnMujer;
         private RadioButton rdbtnHombre;
-        private Label label2;
         private Label label4;
     }
 }

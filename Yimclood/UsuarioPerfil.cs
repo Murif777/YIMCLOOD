@@ -72,9 +72,10 @@ namespace Presentacion
         {
             _usuarioMenuPrincipal.Abrirformpanel(new UsuarioActualizarMiembro(Miembro));
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+        private void btnSubir_Click(object sender, EventArgs e)
+        {
+             
         }
     }
 }

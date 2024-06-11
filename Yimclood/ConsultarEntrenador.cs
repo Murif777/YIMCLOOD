@@ -17,6 +17,7 @@ namespace Presentacion
     {
         private EntrenadorService entrenadorService = new EntrenadorService();
         public event EventHandler OnRegresar;
+        private List<Entrenador> listaEntrenadores;
         public ConsultarEntrenador()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace Presentacion
             txtCedula.KeyPress += new KeyPressEventHandler(txtCedula_KeyPress);
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             MostrarTabla();
+            //CargarDatos(entrenador);
+            pnlActualizar.Visible = false;
         }
 
         private void Btnregresar_Click(object sender, EventArgs e)
@@ -38,33 +41,81 @@ namespace Presentacion
         }
         private void MostrarTabla()
         {
-            if (entrenadorService.Consultar() != null)
+            listaEntrenadores = entrenadorService.Consultar();
+            if (listaEntrenadores != null && listaEntrenadores.Count > 0)
             {
-                dataGridView1.DataSource = entrenadorService.Consultar();
+                var viewList = listaEntrenadores.Select(p => new
+                {
+                    Foto = p.Foto,
+                    Cedula = p.Cedula,
+                    Nombre = p.Nombre,
+                    Apellido = p.Apellido,
+                    Correo = p.Correo,
+                    Telefono = p.Telefono,
+                    Sexo = p.Sexo,
+                    FechaNacimiento = p.FechaNacimiento
+                }).ToList();
+
+                dataGridView1.DataSource = viewList;
+
+                // Configurar las columnas para mostrar en el orden deseado
+                dataGridView1.Columns["Foto"].DisplayIndex = 0;
+                dataGridView1.Columns["Cedula"].DisplayIndex = 1;
+                dataGridView1.Columns["Nombre"].DisplayIndex = 2;
+                dataGridView1.Columns["Apellido"].DisplayIndex = 3;
+                dataGridView1.Columns["Correo"].DisplayIndex = 4;
+                dataGridView1.Columns["Telefono"].DisplayIndex = 5;
+                dataGridView1.Columns["Sexo"].DisplayIndex = 6;
+                dataGridView1.Columns["FechaNacimiento"].DisplayIndex = 7;
+
                 int primeraColumna = 0;
                 dataGridView1.Columns[primeraColumna].Visible = false;
             }
             else
             {
-                MessageBox.Show("Lista vacia");
+                MessageBox.Show("Lista vacía");
             }
         }
+
         private void MostrarBusqueda()
         {
             string cedula = txtCedula.Text;
-            var consulta = entrenadorService.ConsultarCed(cedula);
-            if (consulta != null)
+            var entrenadores = entrenadorService.ConsultarCed(cedula);
+            if (entrenadores != null && entrenadores.Count > 0)
             {
-                dataGridView1.DataSource = consulta;
-                int lastColumnIndex = dataGridView1.Columns.Count - 1;
-                dataGridView1.Columns[lastColumnIndex].Visible = false;
+                var viewList = entrenadores.Select(p => new
+                {
+                    Foto = p.Foto,
+                    Cedula = p.Cedula,
+                    Nombre = p.Nombre,
+                    Apellido = p.Apellido,
+                    Correo = p.Correo,
+                    Telefono = p.Telefono,
+                    Sexo = p.Sexo,
+                    FechaNacimiento = p.FechaNacimiento
+                }).ToList();
 
+                dataGridView1.DataSource = viewList;
+
+                // Configurar las columnas para mostrar en el orden deseado
+                dataGridView1.Columns["Foto"].DisplayIndex = 0;
+                dataGridView1.Columns["Cedula"].DisplayIndex = 1;
+                dataGridView1.Columns["Nombre"].DisplayIndex = 2;
+                dataGridView1.Columns["Apellido"].DisplayIndex = 3;
+                dataGridView1.Columns["Correo"].DisplayIndex = 4;
+                dataGridView1.Columns["Telefono"].DisplayIndex = 5;
+                dataGridView1.Columns["Sexo"].DisplayIndex = 6;
+                dataGridView1.Columns["FechaNacimiento"].DisplayIndex = 7;
+
+                int primeraColumna = 0;
+                dataGridView1.Columns[primeraColumna].Visible = false;
             }
             else
             {
-                MessageBox.Show("Lista vacia");
+                MessageBox.Show("Lista vacía");
             }
         }
+
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -94,13 +145,13 @@ namespace Presentacion
         }
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                
+
                 MessageBox.Show("Por favor, ingresa solo números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                
+
                 e.Handled = true;
             }
         }
@@ -154,5 +205,84 @@ namespace Presentacion
         {
 
         }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+        private Entrenador AsignaciondeValoresEntrenador()
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                string cedula = selectedRow.Cells["Cedula"].Value.ToString();
+                string nombre = selectedRow.Cells["Nombre"].Value.ToString();
+                string apellido = selectedRow.Cells["Apellido"].Value.ToString();
+                string telefono = selectedRow.Cells["Telefono"].Value.ToString();
+                string correo = selectedRow.Cells["Correo"].Value.ToString();
+                string fechanacimiento = selectedRow.Cells["FechaNacimiento"].Value.ToString();
+                string sexo = selectedRow.Cells["Sexo"].Value.ToString();
+                byte[] foto = (byte[])selectedRow.Cells["Foto"].Value;
+
+                Entrenador entrenador = new Entrenador();
+                entrenador.Cedula = cedula;
+                entrenador.Nombre = nombre;
+                entrenador.Apellido = apellido;
+                entrenador.Telefono = telefono;
+                entrenador.Correo = correo;
+                entrenador.FechaNacimiento = Convert.ToDateTime(fechanacimiento);
+                entrenador.Sexo = sexo;
+                entrenador.Foto = foto;
+
+                return entrenador;
+            }
+            MessageBox.Show("Seleccione un entrenador de la tabla");
+            return null;
+        }
+        private void Abrirformpanel(Form formHijo)
+        {
+            if (this.pnlActualizar.Controls.Count > 0)
+                this.pnlActualizar.Controls.RemoveAt(0);
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            formHijo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            this.pnlActualizar.Controls.Add(formHijo);
+            this.pnlActualizar.Tag = formHijo;
+            formHijo.Show();
+
+            if (formHijo is RegistrarEntrenador)
+            {
+                RegistrarEntrenador registrarForm = (RegistrarEntrenador)formHijo;
+                registrarForm.button1.Visible = false;
+                registrarForm.Btnregresar.Visible = false; // Botón Regresar
+                registrarForm.btnActualizar.Visible = true;
+                registrarForm.AsignarCampos();
+            }
+
+
+        }
+        private void FormActualizar()
+        {
+            Entrenador entrenador = AsignaciondeValoresEntrenador();
+            if (entrenador != null)
+            {
+                pnlActualizar.Visible = true;
+                RegistrarEntrenador registrar = new RegistrarEntrenador(entrenador);
+                Abrirformpanel(registrar);
+            }
+        }
+
+        private void btnactualizar_Click_1(object sender, EventArgs e)
+        {
+            FormActualizar();
+        }
+
+        private void ConsultarEntrenador_Click(object sender, EventArgs e)
+        {
+            this.pnlActualizar.Visible = false;
+        }
     }
 }
+

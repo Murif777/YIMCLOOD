@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.ConsultarContenedor = new System.Windows.Forms.Panel();
+            this.bntconsultar = new System.Windows.Forms.Button();
+            this.btnconsultarentrenador = new System.Windows.Forms.Button();
+            this.btn_ConsultarUsuario = new System.Windows.Forms.Button();
+            this.btnconsultarfacturas = new System.Windows.Forms.Button();
+            this.bnt_ConsultarProducto = new System.Windows.Forms.Button();
             this.Agregarcontenedor = new System.Windows.Forms.Panel();
             this.AgregarEjercicio = new System.Windows.Forms.Button();
             this.AgregarFactura = new System.Windows.Forms.Button();
@@ -39,12 +45,6 @@
             this.menuanimacion = new System.Windows.Forms.Button();
             this.AgregarUsuario = new System.Windows.Forms.Button();
             this.BntAgregarporducto = new System.Windows.Forms.Button();
-            this.ConsultarContenedor = new System.Windows.Forms.Panel();
-            this.bntconsultar = new System.Windows.Forms.Button();
-            this.btnconsultarentrenador = new System.Windows.Forms.Button();
-            this.btn_ConsultarUsuario = new System.Windows.Forms.Button();
-            this.btnconsultarfacturas = new System.Windows.Forms.Button();
-            this.bnt_ConsultarProducto = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.deslizar = new System.Windows.Forms.PictureBox();
             this.panelsuperior = new System.Windows.Forms.Panel();
@@ -57,8 +57,8 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.consultarTransicion = new System.Windows.Forms.Timer(this.components);
             this.MenuVertical.SuspendLayout();
-            this.Agregarcontenedor.SuspendLayout();
             this.ConsultarContenedor.SuspendLayout();
+            this.Agregarcontenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deslizar)).BeginInit();
             this.panelsuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,8 +69,8 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
-            this.MenuVertical.Controls.Add(this.Agregarcontenedor);
             this.MenuVertical.Controls.Add(this.ConsultarContenedor);
+            this.MenuVertical.Controls.Add(this.Agregarcontenedor);
             this.MenuVertical.Controls.Add(this.btnSalir);
             this.MenuVertical.Controls.Add(this.deslizar);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -80,6 +80,122 @@
             this.MenuVertical.Size = new System.Drawing.Size(300, 718);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
+            // 
+            // ConsultarContenedor
+            // 
+            this.ConsultarContenedor.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConsultarContenedor.Controls.Add(this.bntconsultar);
+            this.ConsultarContenedor.Controls.Add(this.btnconsultarentrenador);
+            this.ConsultarContenedor.Controls.Add(this.btn_ConsultarUsuario);
+            this.ConsultarContenedor.Controls.Add(this.btnconsultarfacturas);
+            this.ConsultarContenedor.Controls.Add(this.bnt_ConsultarProducto);
+            this.ConsultarContenedor.Location = new System.Drawing.Point(2, 254);
+            this.ConsultarContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.ConsultarContenedor.Name = "ConsultarContenedor";
+            this.ConsultarContenedor.Size = new System.Drawing.Size(299, 47);
+            this.ConsultarContenedor.TabIndex = 11;
+            this.ConsultarContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.ConsultarContenedor_Paint);
+            // 
+            // bntconsultar
+            // 
+            this.bntconsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
+            this.bntconsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntconsultar.FlatAppearance.BorderSize = 0;
+            this.bntconsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntconsultar.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
+            this.bntconsultar.ForeColor = System.Drawing.Color.Transparent;
+            this.bntconsultar.Image = ((System.Drawing.Image)(resources.GetObject("bntconsultar.Image")));
+            this.bntconsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntconsultar.Location = new System.Drawing.Point(-2, 1);
+            this.bntconsultar.Margin = new System.Windows.Forms.Padding(2);
+            this.bntconsultar.Name = "bntconsultar";
+            this.bntconsultar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.bntconsultar.Size = new System.Drawing.Size(299, 47);
+            this.bntconsultar.TabIndex = 8;
+            this.bntconsultar.Text = "CONSULTAR";
+            this.bntconsultar.UseVisualStyleBackColor = false;
+            this.bntconsultar.Click += new System.EventHandler(this.bntconsultar_Click);
+            this.bntconsultar.MouseHover += new System.EventHandler(this.bntconsultar_MouseHover);
+            // 
+            // btnconsultarentrenador
+            // 
+            this.btnconsultarentrenador.BackColor = System.Drawing.Color.LightBlue;
+            this.btnconsultarentrenador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnconsultarentrenador.FlatAppearance.BorderSize = 0;
+            this.btnconsultarentrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconsultarentrenador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconsultarentrenador.ForeColor = System.Drawing.Color.Black;
+            this.btnconsultarentrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultarentrenador.Image")));
+            this.btnconsultarentrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnconsultarentrenador.Location = new System.Drawing.Point(1, 189);
+            this.btnconsultarentrenador.Margin = new System.Windows.Forms.Padding(2);
+            this.btnconsultarentrenador.Name = "btnconsultarentrenador";
+            this.btnconsultarentrenador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnconsultarentrenador.Size = new System.Drawing.Size(299, 47);
+            this.btnconsultarentrenador.TabIndex = 10;
+            this.btnconsultarentrenador.Text = "    CONSULTAR ENTRENADOR";
+            this.btnconsultarentrenador.UseVisualStyleBackColor = false;
+            this.btnconsultarentrenador.Click += new System.EventHandler(this.btnconsultarentrenador_Click);
+            // 
+            // btn_ConsultarUsuario
+            // 
+            this.btn_ConsultarUsuario.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_ConsultarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ConsultarUsuario.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConsultarUsuario.ForeColor = System.Drawing.Color.Black;
+            this.btn_ConsultarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_ConsultarUsuario.Image")));
+            this.btn_ConsultarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ConsultarUsuario.Location = new System.Drawing.Point(1, 48);
+            this.btn_ConsultarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ConsultarUsuario.Name = "btn_ConsultarUsuario";
+            this.btn_ConsultarUsuario.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_ConsultarUsuario.Size = new System.Drawing.Size(299, 47);
+            this.btn_ConsultarUsuario.TabIndex = 5;
+            this.btn_ConsultarUsuario.Text = "CONSULTAR MIEMBRO";
+            this.btn_ConsultarUsuario.UseVisualStyleBackColor = false;
+            this.btn_ConsultarUsuario.Click += new System.EventHandler(this.btn_ConsultarUsuario_Click);
+            // 
+            // btnconsultarfacturas
+            // 
+            this.btnconsultarfacturas.BackColor = System.Drawing.Color.LightBlue;
+            this.btnconsultarfacturas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnconsultarfacturas.FlatAppearance.BorderSize = 0;
+            this.btnconsultarfacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconsultarfacturas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconsultarfacturas.ForeColor = System.Drawing.Color.Black;
+            this.btnconsultarfacturas.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultarfacturas.Image")));
+            this.btnconsultarfacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnconsultarfacturas.Location = new System.Drawing.Point(1, 142);
+            this.btnconsultarfacturas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnconsultarfacturas.Name = "btnconsultarfacturas";
+            this.btnconsultarfacturas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnconsultarfacturas.Size = new System.Drawing.Size(299, 47);
+            this.btnconsultarfacturas.TabIndex = 9;
+            this.btnconsultarfacturas.Text = "CONSULTAR FACTURAS";
+            this.btnconsultarfacturas.UseVisualStyleBackColor = false;
+            this.btnconsultarfacturas.Click += new System.EventHandler(this.btnconsultarfacturas_Click);
+            // 
+            // bnt_ConsultarProducto
+            // 
+            this.bnt_ConsultarProducto.BackColor = System.Drawing.Color.LightBlue;
+            this.bnt_ConsultarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnt_ConsultarProducto.FlatAppearance.BorderSize = 0;
+            this.bnt_ConsultarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bnt_ConsultarProducto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_ConsultarProducto.ForeColor = System.Drawing.Color.Black;
+            this.bnt_ConsultarProducto.Image = ((System.Drawing.Image)(resources.GetObject("bnt_ConsultarProducto.Image")));
+            this.bnt_ConsultarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bnt_ConsultarProducto.Location = new System.Drawing.Point(1, 95);
+            this.bnt_ConsultarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.bnt_ConsultarProducto.Name = "bnt_ConsultarProducto";
+            this.bnt_ConsultarProducto.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.bnt_ConsultarProducto.Size = new System.Drawing.Size(299, 47);
+            this.bnt_ConsultarProducto.TabIndex = 7;
+            this.bnt_ConsultarProducto.Text = "CONSULTAR PRODUCTO";
+            this.bnt_ConsultarProducto.UseVisualStyleBackColor = false;
+            this.bnt_ConsultarProducto.Click += new System.EventHandler(this.bnt_ConsultarProducto_Click);
             // 
             // Agregarcontenedor
             // 
@@ -91,7 +207,7 @@
             this.Agregarcontenedor.Controls.Add(this.menuanimacion);
             this.Agregarcontenedor.Controls.Add(this.AgregarUsuario);
             this.Agregarcontenedor.Controls.Add(this.BntAgregarporducto);
-            this.Agregarcontenedor.Location = new System.Drawing.Point(0, 160);
+            this.Agregarcontenedor.Location = new System.Drawing.Point(0, 203);
             this.Agregarcontenedor.Margin = new System.Windows.Forms.Padding(2);
             this.Agregarcontenedor.Name = "Agregarcontenedor";
             this.Agregarcontenedor.Size = new System.Drawing.Size(299, 47);
@@ -99,7 +215,7 @@
             // 
             // AgregarEjercicio
             // 
-            this.AgregarEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.AgregarEjercicio.BackColor = System.Drawing.Color.LightBlue;
             this.AgregarEjercicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AgregarEjercicio.FlatAppearance.BorderSize = 0;
             this.AgregarEjercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -119,7 +235,7 @@
             // 
             // AgregarFactura
             // 
-            this.AgregarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.AgregarFactura.BackColor = System.Drawing.Color.LightBlue;
             this.AgregarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AgregarFactura.FlatAppearance.BorderSize = 0;
             this.AgregarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -139,7 +255,7 @@
             // 
             // agregarmembresia
             // 
-            this.agregarmembresia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.agregarmembresia.BackColor = System.Drawing.Color.LightBlue;
             this.agregarmembresia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.agregarmembresia.FlatAppearance.BorderSize = 0;
             this.agregarmembresia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -159,7 +275,7 @@
             // 
             // btnAEntrenador
             // 
-            this.btnAEntrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.btnAEntrenador.BackColor = System.Drawing.Color.LightBlue;
             this.btnAEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAEntrenador.FlatAppearance.BorderSize = 0;
             this.btnAEntrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -182,7 +298,7 @@
             this.menuanimacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuanimacion.FlatAppearance.BorderSize = 0;
             this.menuanimacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuanimacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuanimacion.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
             this.menuanimacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuanimacion.Image = ((System.Drawing.Image)(resources.GetObject("menuanimacion.Image")));
             this.menuanimacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,10 +311,11 @@
             this.menuanimacion.Text = "AGREGAR";
             this.menuanimacion.UseVisualStyleBackColor = true;
             this.menuanimacion.Click += new System.EventHandler(this.menuanimacion_Click);
+            this.menuanimacion.MouseHover += new System.EventHandler(this.menuanimacion_MouseHover);
             // 
             // AgregarUsuario
             // 
-            this.AgregarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.AgregarUsuario.BackColor = System.Drawing.Color.LightBlue;
             this.AgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AgregarUsuario.FlatAppearance.BorderSize = 0;
@@ -219,7 +336,7 @@
             // 
             // BntAgregarporducto
             // 
-            this.BntAgregarporducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
+            this.BntAgregarporducto.BackColor = System.Drawing.Color.LightBlue;
             this.BntAgregarporducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BntAgregarporducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BntAgregarporducto.FlatAppearance.BorderSize = 0;
@@ -238,121 +355,6 @@
             this.BntAgregarporducto.UseVisualStyleBackColor = false;
             this.BntAgregarporducto.Click += new System.EventHandler(this.BntAgregarporducto_Click);
             // 
-            // ConsultarContenedor
-            // 
-            this.ConsultarContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ConsultarContenedor.Controls.Add(this.bntconsultar);
-            this.ConsultarContenedor.Controls.Add(this.btnconsultarentrenador);
-            this.ConsultarContenedor.Controls.Add(this.btn_ConsultarUsuario);
-            this.ConsultarContenedor.Controls.Add(this.btnconsultarfacturas);
-            this.ConsultarContenedor.Controls.Add(this.bnt_ConsultarProducto);
-            this.ConsultarContenedor.Location = new System.Drawing.Point(1, 253);
-            this.ConsultarContenedor.Margin = new System.Windows.Forms.Padding(2);
-            this.ConsultarContenedor.Name = "ConsultarContenedor";
-            this.ConsultarContenedor.Size = new System.Drawing.Size(299, 47);
-            this.ConsultarContenedor.TabIndex = 11;
-            this.ConsultarContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.ConsultarContenedor_Paint);
-            // 
-            // bntconsultar
-            // 
-            this.bntconsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
-            this.bntconsultar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntconsultar.FlatAppearance.BorderSize = 0;
-            this.bntconsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntconsultar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.bntconsultar.ForeColor = System.Drawing.Color.Transparent;
-            this.bntconsultar.Image = ((System.Drawing.Image)(resources.GetObject("bntconsultar.Image")));
-            this.bntconsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntconsultar.Location = new System.Drawing.Point(-2, 1);
-            this.bntconsultar.Margin = new System.Windows.Forms.Padding(2);
-            this.bntconsultar.Name = "bntconsultar";
-            this.bntconsultar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bntconsultar.Size = new System.Drawing.Size(299, 49);
-            this.bntconsultar.TabIndex = 8;
-            this.bntconsultar.Text = "CONSULTAR";
-            this.bntconsultar.UseVisualStyleBackColor = false;
-            this.bntconsultar.Click += new System.EventHandler(this.bntconsultar_Click);
-            // 
-            // btnconsultarentrenador
-            // 
-            this.btnconsultarentrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
-            this.btnconsultarentrenador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnconsultarentrenador.FlatAppearance.BorderSize = 0;
-            this.btnconsultarentrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnconsultarentrenador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconsultarentrenador.ForeColor = System.Drawing.Color.Black;
-            this.btnconsultarentrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultarentrenador.Image")));
-            this.btnconsultarentrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconsultarentrenador.Location = new System.Drawing.Point(1, 191);
-            this.btnconsultarentrenador.Margin = new System.Windows.Forms.Padding(2);
-            this.btnconsultarentrenador.Name = "btnconsultarentrenador";
-            this.btnconsultarentrenador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnconsultarentrenador.Size = new System.Drawing.Size(299, 47);
-            this.btnconsultarentrenador.TabIndex = 10;
-            this.btnconsultarentrenador.Text = "    CONSULTAR ENTRENADOR";
-            this.btnconsultarentrenador.UseVisualStyleBackColor = false;
-            this.btnconsultarentrenador.Click += new System.EventHandler(this.btnconsultarentrenador_Click);
-            // 
-            // btn_ConsultarUsuario
-            // 
-            this.btn_ConsultarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
-            this.btn_ConsultarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ConsultarUsuario.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btn_ConsultarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_ConsultarUsuario.Image")));
-            this.btn_ConsultarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ConsultarUsuario.Location = new System.Drawing.Point(1, 50);
-            this.btn_ConsultarUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ConsultarUsuario.Name = "btn_ConsultarUsuario";
-            this.btn_ConsultarUsuario.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_ConsultarUsuario.Size = new System.Drawing.Size(299, 47);
-            this.btn_ConsultarUsuario.TabIndex = 5;
-            this.btn_ConsultarUsuario.Text = "CONSULTAR MIEMBRO";
-            this.btn_ConsultarUsuario.UseVisualStyleBackColor = false;
-            this.btn_ConsultarUsuario.Click += new System.EventHandler(this.btn_ConsultarUsuario_Click);
-            // 
-            // btnconsultarfacturas
-            // 
-            this.btnconsultarfacturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
-            this.btnconsultarfacturas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnconsultarfacturas.FlatAppearance.BorderSize = 0;
-            this.btnconsultarfacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnconsultarfacturas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconsultarfacturas.ForeColor = System.Drawing.Color.Black;
-            this.btnconsultarfacturas.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultarfacturas.Image")));
-            this.btnconsultarfacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconsultarfacturas.Location = new System.Drawing.Point(1, 144);
-            this.btnconsultarfacturas.Margin = new System.Windows.Forms.Padding(2);
-            this.btnconsultarfacturas.Name = "btnconsultarfacturas";
-            this.btnconsultarfacturas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnconsultarfacturas.Size = new System.Drawing.Size(299, 47);
-            this.btnconsultarfacturas.TabIndex = 9;
-            this.btnconsultarfacturas.Text = "CONSULTAR FACTURAS";
-            this.btnconsultarfacturas.UseVisualStyleBackColor = false;
-            this.btnconsultarfacturas.Click += new System.EventHandler(this.btnconsultarfacturas_Click);
-            // 
-            // bnt_ConsultarProducto
-            // 
-            this.bnt_ConsultarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(149)))));
-            this.bnt_ConsultarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bnt_ConsultarProducto.FlatAppearance.BorderSize = 0;
-            this.bnt_ConsultarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bnt_ConsultarProducto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_ConsultarProducto.ForeColor = System.Drawing.Color.Black;
-            this.bnt_ConsultarProducto.Image = ((System.Drawing.Image)(resources.GetObject("bnt_ConsultarProducto.Image")));
-            this.bnt_ConsultarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bnt_ConsultarProducto.Location = new System.Drawing.Point(1, 97);
-            this.bnt_ConsultarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.bnt_ConsultarProducto.Name = "bnt_ConsultarProducto";
-            this.bnt_ConsultarProducto.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.bnt_ConsultarProducto.Size = new System.Drawing.Size(299, 47);
-            this.bnt_ConsultarProducto.TabIndex = 7;
-            this.bnt_ConsultarProducto.Text = "CONSULTAR PRODUCTO";
-            this.bnt_ConsultarProducto.UseVisualStyleBackColor = false;
-            this.bnt_ConsultarProducto.Click += new System.EventHandler(this.bnt_ConsultarProducto_Click);
-            // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -363,10 +365,10 @@
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(3, 669);
+            this.btnSalir.Location = new System.Drawing.Point(3, 661);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(38, 47);
+            this.btnSalir.Size = new System.Drawing.Size(60, 55);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -444,7 +446,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(83, 15);
+            this.label1.Location = new System.Drawing.Point(85, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 34);
@@ -463,7 +465,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(300, 55);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
@@ -491,8 +493,8 @@
             this.Text = "FormMenuR";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuPrincipal_MouseDown);
             this.MenuVertical.ResumeLayout(false);
-            this.Agregarcontenedor.ResumeLayout(false);
             this.ConsultarContenedor.ResumeLayout(false);
+            this.Agregarcontenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deslizar)).EndInit();
             this.panelsuperior.ResumeLayout(false);
             this.panelsuperior.PerformLayout();

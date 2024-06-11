@@ -53,36 +53,39 @@ namespace Presentacion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.lblDescripcion.Location = new System.Drawing.Point(509, 88);
+            this.lblDescripcion.Location = new System.Drawing.Point(744, 150);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(0, 24);
+            this.lblDescripcion.Size = new System.Drawing.Size(18, 24);
             this.lblDescripcion.TabIndex = 7;
+            this.lblDescripcion.Text = "-";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.lblNombre.Location = new System.Drawing.Point(259, 88);
+            this.lblNombre.Location = new System.Drawing.Point(374, 150);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(0, 24);
+            this.lblNombre.Size = new System.Drawing.Size(18, 24);
             this.lblNombre.TabIndex = 6;
+            this.lblNombre.Text = "-";
             // 
             // cbRutinas
             // 
-            this.cbRutinas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14F);
+            this.cbRutinas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRutinas.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.cbRutinas.FormattingEnabled = true;
-            this.cbRutinas.Location = new System.Drawing.Point(422, 27);
+            this.cbRutinas.Location = new System.Drawing.Point(530, 91);
             this.cbRutinas.Name = "cbRutinas";
-            this.cbRutinas.Size = new System.Drawing.Size(154, 31);
+            this.cbRutinas.Size = new System.Drawing.Size(402, 41);
             this.cbRutinas.TabIndex = 3;
-            this.cbRutinas.SelectedIndexChanged += new System.EventHandler(this.cbRutinas_SelectedIndexChanged);
+            this.cbRutinas.DropDown += new System.EventHandler(this.cbRutinas_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label3.Location = new System.Drawing.Point(363, 81);
+            this.label3.Location = new System.Drawing.Point(598, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 33);
             this.label3.TabIndex = 2;
@@ -92,7 +95,7 @@ namespace Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 30F);
-            this.label2.Location = new System.Drawing.Point(159, 12);
+            this.label2.Location = new System.Drawing.Point(266, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(258, 48);
             this.label2.TabIndex = 1;
@@ -103,7 +106,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label1.Location = new System.Drawing.Point(154, 81);
+            this.label1.Location = new System.Drawing.Point(269, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 33);
             this.label1.TabIndex = 0;
@@ -112,16 +115,18 @@ namespace Presentacion
             // tablaEjercicios
             // 
             this.tablaEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaEjercicios.Location = new System.Drawing.Point(30, 117);
+            this.tablaEjercicios.Location = new System.Drawing.Point(274, 194);
             this.tablaEjercicios.Name = "tablaEjercicios";
-            this.tablaEjercicios.Size = new System.Drawing.Size(729, 309);
-            this.tablaEjercicios.TabIndex = 11;
+            this.tablaEjercicios.RowHeadersWidth = 51;
+            this.tablaEjercicios.Size = new System.Drawing.Size(789, 513);
+            this.tablaEjercicios.TabIndex = 38;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(656, 81);
+            this.btnEliminar.Location = new System.Drawing.Point(981, 152);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(103, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(82, 27);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -132,7 +137,7 @@ namespace Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(858, 472);
+            this.ClientSize = new System.Drawing.Size(1334, 800);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.tablaEjercicios);
             this.Controls.Add(this.label1);
