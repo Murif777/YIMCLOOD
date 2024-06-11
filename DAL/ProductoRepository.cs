@@ -232,7 +232,7 @@ namespace DAL
         public string ActualizarProducto(Producto producto)
         {
             string query = "UPDATE Productos SET Nombre=@Nombre," +
-                " Descripcion=@Descripcion, Valor=@Valor, Cantidad=@Cantidad," +
+                " Descripcion=@Descripcion, Valor=@Valor, Cantidad_Disponible =@Cantidad," +
                 " Foto=@Foto WHERE Referencia=@Referencia";
             using (MySqlConnection conexionBd = conexion())
             {
@@ -253,7 +253,7 @@ namespace DAL
                             cmd.ExecuteNonQuery();
                         }
                         transaction.Commit();
-                        return "Stock actualizado";
+                        return "Producto actualizado";
                     }
                     catch (MySqlException ex)
                     {

@@ -16,7 +16,7 @@ namespace Presentacion
     public partial class ConsultarProd : Form
     {
         public event EventHandler OnRegresar;
-        private  ProductoService ProductoService = new ProductoService();
+        private ProductoService ProductoService = new ProductoService();
         private List<Producto> listaProductos;
         public ConsultarProd()
         {
@@ -40,7 +40,7 @@ namespace Presentacion
         {
             string referencia = txtReferenciaProducto.Text;
             var consulta = ProductoService.ConsultarRef(referencia);
-            if (consulta!= null)
+            if (consulta != null)
             {
                 dataGridView1.DataSource = consulta;
                 int lastColumnIndex = dataGridView1.Columns.Count - 1;
@@ -55,6 +55,11 @@ namespace Presentacion
         private void MostrarTabla()
         {
             var productos = ProductoService.Consultar();
+            if (productos == null)
+            {
+                Console.WriteLine("lista vacia");
+                return;
+            }
             if (productos != null && productos.Count > 0)
             {
                 var viewList = productos.Select(p => new

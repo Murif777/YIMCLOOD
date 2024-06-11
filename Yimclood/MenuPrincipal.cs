@@ -55,6 +55,7 @@ namespace Presentacion
         {
             var registrarForm = new Registrar(null);
             registrarForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(registrarForm);
         }
 
@@ -62,6 +63,7 @@ namespace Presentacion
         {
             var agregarProductoForm = new AgregarProducto(null);
             agregarProductoForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(agregarProductoForm);
         }
 
@@ -69,6 +71,7 @@ namespace Presentacion
         {
             var consultarMiembroForm = new ConsultarMiembro();
             consultarMiembroForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(consultarMiembroForm);
         }
 
@@ -76,6 +79,7 @@ namespace Presentacion
         {
             var consultarProdForm = new ConsultarProd();
             consultarProdForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(consultarProdForm);
         }
 
@@ -83,6 +87,7 @@ namespace Presentacion
         {
             var registrarEntrenadorForm = new RegistrarEntrenador(null);
             registrarEntrenadorForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(registrarEntrenadorForm);
         }
 
@@ -154,9 +159,6 @@ namespace Presentacion
             }
         }
 
-        private void consultarTransicion_Tick(object sender, EventArgs e)
-        {
-        }
 
         private void menuanimacion_Click(object sender, EventArgs e)
         {
@@ -211,10 +213,9 @@ namespace Presentacion
         {
             var consultarfacturafrom = new ConsultarFacturas();
             consultarfacturafrom.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(consultarfacturafrom);
         }
-
-        
 
         private void panelsuperior_Paint(object sender, PaintEventArgs e)
         {
@@ -226,6 +227,7 @@ namespace Presentacion
         {
             var consultarentrenadorForm = new ConsultarEntrenador();
             consultarentrenadorForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(consultarentrenadorForm);
         }
 
@@ -239,6 +241,7 @@ namespace Presentacion
         {
             var agregarmembresiaForm = new AgregarMembresia();
             agregarmembresiaForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(agregarmembresiaForm);
 
         }
@@ -249,15 +252,12 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void bntMaximizar_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void AgregarFactura_Click(object sender, EventArgs e)
         {
             var agregarfacturaForm = new AgregarFactura();
             agregarfacturaForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(agregarfacturaForm);
         }
 
@@ -265,6 +265,7 @@ namespace Presentacion
         {
             var agregarejercicioForm = new AgregarEjercicio();
             agregarejercicioForm.OnRegresar += RegistrarForm_OnRegresar;
+            sliderbartransicion.Start();
             Abrirformpanel(agregarejercicioForm);
         }
 

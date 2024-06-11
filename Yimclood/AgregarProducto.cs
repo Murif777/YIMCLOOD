@@ -18,15 +18,15 @@ namespace Presentacion
         private ProductoService productoService = new ProductoService();
         public event EventHandler OnRegresar;
         private byte[] imageBytes;
-        private Producto newProducto;
+        private Producto productoRecibido;
 
         public AgregarProducto(Producto newProducto)
         {
             InitializeComponent();
             this.Shown += new EventHandler(FormRegistrar_Shown);
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
-            this.btnSubirfoto.Click += new EventHandler(this.btnSubirfoto_Click);
-            this.newProducto = newProducto;
+            this.productoRecibido = newProducto;
+            this.BtnActualizar.Visible = false;
         }
 
 
@@ -52,22 +52,22 @@ namespace Presentacion
         }
         private void CargarDatosProducto()
         {
-            if (newProducto != null)
+            if (productoRecibido != null)
             {
-                txtReferencia.Text = newProducto.Referencia;
-                txtNombre.Text = newProducto.Nombre;
-                txtDescripcion.Text = newProducto.Descripcion;
-                txtPrecio.Text = newProducto.Valor.ToString();
-                txtCantidad.Text = newProducto.CantidadDisponible.ToString();
-                if (newProducto.Foto != null)
+                txtReferencia.Text = productoRecibido.Referencia;
+                txtNombre.Text = productoRecibido.Nombre;
+                txtDescripcion.Text = productoRecibido.Descripcion;
+                txtPrecio.Text = productoRecibido.Valor.ToString();
+                txtCantidad.Text = productoRecibido.CantidadDisponible.ToString();
+                if (productoRecibido.Foto != null)
                 {
-                    Image image = Image.FromStream(new MemoryStream(newProducto.Foto));
+                    Image image = Image.FromStream(new MemoryStream(productoRecibido.Foto));
                     int nuevoAncho = 175;
                     int nuevoAlto = 175;
                     Image imagenRedimensionada = new Bitmap(image, nuevoAncho, nuevoAlto);
                     pbFoto.Image = imagenRedimensionada;
                 }
-                imageBytes = newProducto.Foto;
+                imageBytes = productoRecibido.Foto;
             }
         }
         private void Limpiar_Campos()
@@ -78,6 +78,7 @@ namespace Presentacion
             txtPrecio.Clear();
             txtCantidad.Clear();
             imageBytes = null;
+            pbFoto = null;
         }
         private void actualizarProductoBD()
         {
@@ -99,24 +100,19 @@ namespace Presentacion
         {
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
-
-        private void btnSubirfoto_Click(object sender, EventArgs e)
-        {
-            
-        }
         public void AsignarCampos()
         {
-            if (newProducto != null)
+            if (productoRecibido != null)
             {
-                txtReferencia.Text = newProducto.Referencia;
+                txtReferencia.Text = productoRecibido.Referencia;
                 txtReferencia.Enabled = false;
-                txtNombre.Text = newProducto.Nombre;
-                txtDescripcion.Text = newProducto.Descripcion;
-                txtPrecio.Text = newProducto.Valor.ToString();
-                txtCantidad.Text = newProducto.CantidadDisponible.ToString();
+                txtNombre.Text = productoRecibido.Nombre;
+                txtDescripcion.Text = productoRecibido.Descripcion;
+                txtPrecio.Text = productoRecibido.Valor.ToString();
+                txtCantidad.Text = productoRecibido.CantidadDisponible.ToString();
 
                 // Asignar la foto si existe
-                byte[] foto = newProducto.Foto;
+                byte[] foto = productoRecibido.Foto;
                 if (foto != null)
                 {
                     Image image = Image.FromStream(new MemoryStream(foto));
