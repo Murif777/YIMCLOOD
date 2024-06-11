@@ -60,7 +60,7 @@ namespace Presentacion
 
         private void BntAgregarporducto_Click(object sender, EventArgs e)
         {
-            var agregarProductoForm = new AgregarProducto();
+            var agregarProductoForm = new AgregarProducto(null);
             agregarProductoForm.OnRegresar += RegistrarForm_OnRegresar;
             Abrirformpanel(agregarProductoForm);
         }
@@ -81,7 +81,7 @@ namespace Presentacion
 
         private void btnAEntrenador_Click(object sender, EventArgs e)
         {
-            var registrarEntrenadorForm = new RegistrarEntrenador();
+            var registrarEntrenadorForm = new RegistrarEntrenador(null);
             registrarEntrenadorForm.OnRegresar += RegistrarForm_OnRegresar;
             Abrirformpanel(registrarEntrenadorForm);
         }
@@ -182,7 +182,7 @@ namespace Presentacion
             else
             {
                 ConsultarContenedor.Height -= 10;
-                if (ConsultarContenedor.Height <= 58)
+                if (ConsultarContenedor.Height <= 53)
                 {
                     consultarTransicion.Stop();
                     menuExpandConsultar = false;
@@ -266,6 +266,16 @@ namespace Presentacion
             var agregarejercicioForm = new AgregarEjercicio();
             agregarejercicioForm.OnRegresar += RegistrarForm_OnRegresar;
             Abrirformpanel(agregarejercicioForm);
+        }
+
+        private void menuanimacion_MouseHover(object sender, EventArgs e)
+        {
+            menuTransicion.Start();
+        }
+
+        private void bntconsultar_MouseHover(object sender, EventArgs e)
+        {
+            consultarTransicion.Start();
         }
     }
 }

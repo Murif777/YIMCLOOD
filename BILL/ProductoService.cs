@@ -65,9 +65,18 @@ namespace BILL
             return pro_repository.EliminarProducto(referenciaProducto);
         }
 
-        public void ActualizarProducto(Producto producto)
+        public string ActualizarProducto(Producto producto)
         {
-            pro_repository.ActualizarProducto(producto);
+            
+            try
+            {
+                return pro_repository.ActualizarProducto(producto);
+                
+            }
+            catch (Exception ex)
+            {
+                return "Error al registrar: " + ex.Message;
+            }
         }
         public string ObtenerCantidadDisponiblePorReferencia(string referencia)
         {

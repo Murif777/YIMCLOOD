@@ -55,7 +55,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(383, 125);
+            this.btnBuscar.Location = new System.Drawing.Point(806, 255);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(52, 37);
@@ -69,7 +69,7 @@
             this.Btnregresar.FlatAppearance.BorderSize = 0;
             this.Btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnregresar.Image = ((System.Drawing.Image)(resources.GetObject("Btnregresar.Image")));
-            this.Btnregresar.Location = new System.Drawing.Point(18, 6);
+            this.Btnregresar.Location = new System.Drawing.Point(26, 20);
             this.Btnregresar.Margin = new System.Windows.Forms.Padding(2);
             this.Btnregresar.Name = "Btnregresar";
             this.Btnregresar.Size = new System.Drawing.Size(56, 40);
@@ -80,26 +80,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label1.Location = new System.Drawing.Point(258, 6);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(475, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 37);
+            this.label1.Size = new System.Drawing.Size(320, 41);
             this.label1.TabIndex = 1;
             this.label1.Text = "BUSCAR MIEMBRO";
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Btnregresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 54);
+            this.panel1.Size = new System.Drawing.Size(1349, 76);
             this.panel1.TabIndex = 4;
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(173, 128);
+            this.txtCedula.Location = new System.Drawing.Point(596, 258);
             this.txtCedula.Multiline = true;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(206, 31);
@@ -108,10 +109,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 128);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
+            this.label2.Location = new System.Drawing.Point(476, 258);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 26);
+            this.label2.Size = new System.Drawing.Size(88, 31);
             this.label2.TabIndex = 6;
             this.label2.Text = "Cedula:";
             // 
@@ -119,13 +120,13 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 283);
+            this.dataGridView1.Location = new System.Drawing.Point(329, 394);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 174);
+            this.dataGridView1.Size = new System.Drawing.Size(812, 214);
             this.dataGridView1.TabIndex = 11;
             // 
             // label3
@@ -133,7 +134,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(17, 262);
+            this.label3.Location = new System.Drawing.Point(330, 373);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(259, 15);
@@ -144,7 +145,7 @@
             // 
             this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Location = new System.Drawing.Point(431, 60);
+            this.pbFoto.Location = new System.Drawing.Point(930, 149);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(175, 175);
             this.pbFoto.TabIndex = 12;
@@ -158,7 +159,7 @@
             this.btnVer.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnVer.Image = ((System.Drawing.Image)(resources.GetObject("btnVer.Image")));
-            this.btnVer.Location = new System.Drawing.Point(721, 248);
+            this.btnVer.Location = new System.Drawing.Point(1100, 356);
             this.btnVer.Margin = new System.Windows.Forms.Padding(2);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(44, 37);
@@ -171,7 +172,7 @@
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(688, 248);
+            this.btnEliminar.Location = new System.Drawing.Point(1071, 356);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(34, 34);
@@ -184,7 +185,7 @@
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(658, 248);
+            this.btnActualizar.Location = new System.Drawing.Point(1036, 356);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(34, 34);
@@ -195,17 +196,17 @@
             // pnlActualizar
             // 
             this.pnlActualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlActualizar.Location = new System.Drawing.Point(18, 60);
+            this.pnlActualizar.Location = new System.Drawing.Point(38, 108);
             this.pnlActualizar.Name = "pnlActualizar";
-            this.pnlActualizar.Size = new System.Drawing.Size(812, 565);
+            this.pnlActualizar.Size = new System.Drawing.Size(1264, 587);
             this.pnlActualizar.TabIndex = 17;
             // 
             // ConsultarMiembro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(812, 483);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.ClientSize = new System.Drawing.Size(1349, 742);
             this.Controls.Add(this.pnlActualizar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);

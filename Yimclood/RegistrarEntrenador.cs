@@ -18,10 +18,11 @@ namespace Presentacion
      private EntrenadorService entrenadorService = new EntrenadorService();
      private UsuarioService usuarioService = new UsuarioService();
      private MembresiaService MembresiaService = new MembresiaService();
+        private Entrenador newentrenador;
 
         public event EventHandler OnRegresar;
         private byte[] imageBytes;
-        public RegistrarEntrenador()
+        public RegistrarEntrenador(Entrenador entrenador)
         {
             InitializeComponent();
             ComboboxMembresias();
@@ -29,6 +30,8 @@ namespace Presentacion
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
             this.btnsubirfoto.Click += new EventHandler(this.btnsubirfoto_Click);
             InitializeDateTimePicker();
+            newentrenador = entrenador;
+            btnActualizar.Visible = false;
         }
 
         private void FormRegistrar_Shown(object sender, EventArgs e)
@@ -57,6 +60,23 @@ namespace Presentacion
                                                    );
             MessageBox.Show(entrenadorService.Registrar(entrenador));
             RegistrarMembresia(membresiaSeleccionada ,registrarUsuario(entrenador));
+        }
+        private void actualizarentrenadoBD()
+        {
+            string cedula = txtCedula.Text;
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string telefono = txtTelefono.Text;
+            string sexo = Sexo();
+            string correo = txtCorreo.Text;
+            Membresia membresiaSeleccionada = ObtenerMembresia();
+            DateTime FechaNacimiento = fechaNacimiento.Value;
+            Entrenador entrenador = new Entrenador(
+                                                    cedula, nombre, apellido, telefono, sexo,
+                                                    correo, FechaNacimiento, imageBytes
+                                                   );
+            MessageBox.Show(entrenadorService.ActualizarEntrenador(entrenador));
+            //RegistrarMembresia(membresiaSeleccionada, registrarUsuario(entrenador));
         }
         private Usuario registrarUsuario(Entrenador entrenador)
         {
@@ -203,6 +223,54 @@ namespace Presentacion
             {
                 pbFoto.Image = null;
             }
+        }
+        //public void AsignarCampos(Entrenador entrenador)
+        //{
+            
+        //}
+
+        public void AsignarCampos()
+        {
+            if ( newentrenador != null)
+            {
+                txtCedula.Text = newentrenador.Cedula;
+                txtCedula.Enabled = false;  
+                txtNombre.Text = newentrenador.Nombre;
+                txtApellido.Text = newentrenador.Apellido;
+                txtTelefono.Text = newentrenador.Telefono;
+                txtCorreo.Text = newentrenador.Correo;
+                if (newentrenador.Sexo == "Hombre")
+                {
+                    rdbtnHombre.Checked = true;
+                }
+                else
+                {
+                    rdbtnMujer.Checked = true;
+                }
+                fechaNacimiento.Value = newentrenador.FechaNacimiento;
+                TiposMembresia.Enabled = false;
+                // Asignar la foto si existe
+                byte[] foto = newentrenador.Foto;
+                if (foto != null)
+                {
+                    Image image = Image.FromStream(new MemoryStream(foto));
+                    pbFoto.Image = image;
+                }
+                else
+                {
+                    pbFoto.Image = null;
+                }
+            }
+            else
+            {
+                pbFoto.Image = null;
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            actualizarentrenadoBD();
+            
         }
     }
 }

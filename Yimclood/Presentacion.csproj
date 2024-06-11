@@ -98,6 +98,11 @@
     <Compile Include="UserControlBlank.Designer.cs">
       <DependentUpon>UserControlBlank.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBlank1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserControlBlank.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControlDays.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -254,7 +259,8 @@
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlBlank.resx">
-      <DependentUpon>UserControlBlank.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserControlBlank1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDays.resx">
       <DependentUpon>UserControlDays.cs</DependentUpon>
