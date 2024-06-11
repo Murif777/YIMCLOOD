@@ -196,10 +196,6 @@ namespace Presentacion
         {
         }
 
-        private void MenuVertical_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -277,6 +273,11 @@ namespace Presentacion
         private void bntconsultar_MouseHover(object sender, EventArgs e)
         {
             consultarTransicion.Start();
+        }
+
+        private void MenuVertical_Click(object sender, EventArgs e)
+        {
+            sliderbartransicion.Start();
         }
     }
 }

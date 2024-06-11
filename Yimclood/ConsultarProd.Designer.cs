@@ -68,6 +68,7 @@
             this.txtReferenciaProducto.Name = "txtReferenciaProducto";
             this.txtReferenciaProducto.Size = new System.Drawing.Size(189, 28);
             this.txtReferenciaProducto.TabIndex = 1;
+            this.txtReferenciaProducto.Click += new System.EventHandler(this.txtReferenciaProducto_Click);
             // 
             // panel1
             // 
@@ -160,7 +161,7 @@
             // pnlActualizar
             // 
             this.pnlActualizar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlActualizar.Location = new System.Drawing.Point(215, 378);
+            this.pnlActualizar.Location = new System.Drawing.Point(139, 5);
             this.pnlActualizar.Name = "pnlActualizar";
             this.pnlActualizar.Size = new System.Drawing.Size(993, 510);
             this.pnlActualizar.TabIndex = 10;

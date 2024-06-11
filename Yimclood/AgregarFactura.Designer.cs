@@ -50,6 +50,7 @@
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.lblPrecioTotal = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnEliminarPro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -133,7 +134,7 @@
             this.btnAgregarProducto.FlatAppearance.BorderSize = 0;
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarProducto.Image")));
-            this.btnAgregarProducto.Location = new System.Drawing.Point(1196, 270);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(1167, 277);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(42, 42);
@@ -229,6 +230,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.btnEliminarPro);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblCantidadDisp);
             this.panel1.Controls.Add(this.lblPrecioUnitario);
@@ -322,6 +324,16 @@
             this.dataGridView2.Size = new System.Drawing.Size(726, 228);
             this.dataGridView2.TabIndex = 29;
             // 
+            // btnEliminarPro
+            // 
+            this.btnEliminarPro.Location = new System.Drawing.Point(1259, 287);
+            this.btnEliminarPro.Name = "btnEliminarPro";
+            this.btnEliminarPro.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarPro.TabIndex = 34;
+            this.btnEliminarPro.Text = "Eliminar";
+            this.btnEliminarPro.UseVisualStyleBackColor = true;
+            this.btnEliminarPro.Click += new System.EventHandler(this.btnEliminarPro_Click);
+            // 
             // AgregarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,5 +378,6 @@
         private System.Windows.Forms.Label lblCantidadDisp;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnEliminarPro;
     }
 }

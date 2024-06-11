@@ -46,7 +46,6 @@
             this.AgregarUsuario = new System.Windows.Forms.Button();
             this.BntAgregarporducto = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.deslizar = new System.Windows.Forms.PictureBox();
             this.panelsuperior = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Cerrar = new System.Windows.Forms.PictureBox();
@@ -59,7 +58,6 @@
             this.MenuVertical.SuspendLayout();
             this.ConsultarContenedor.SuspendLayout();
             this.Agregarcontenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deslizar)).BeginInit();
             this.panelsuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
@@ -72,14 +70,13 @@
             this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.Agregarcontenedor);
             this.MenuVertical.Controls.Add(this.btnSalir);
-            this.MenuVertical.Controls.Add(this.deslizar);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(2);
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(300, 788);
             this.MenuVertical.TabIndex = 0;
-            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
+            this.MenuVertical.Click += new System.EventHandler(this.MenuVertical_Click);
             // 
             // ConsultarContenedor
             // 
@@ -373,19 +370,6 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // deslizar
-            // 
-            this.deslizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deslizar.Image = ((System.Drawing.Image)(resources.GetObject("deslizar.Image")));
-            this.deslizar.Location = new System.Drawing.Point(5, 6);
-            this.deslizar.Margin = new System.Windows.Forms.Padding(2);
-            this.deslizar.Name = "deslizar";
-            this.deslizar.Size = new System.Drawing.Size(58, 50);
-            this.deslizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.deslizar.TabIndex = 3;
-            this.deslizar.TabStop = false;
-            this.deslizar.Click += new System.EventHandler(this.deslizar_Click);
-            // 
             // panelsuperior
             // 
             this.panelsuperior.BackColor = System.Drawing.Color.LightBlue;
@@ -495,7 +479,6 @@
             this.MenuVertical.ResumeLayout(false);
             this.ConsultarContenedor.ResumeLayout(false);
             this.Agregarcontenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.deslizar)).EndInit();
             this.panelsuperior.ResumeLayout(false);
             this.panelsuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -517,7 +500,6 @@
         private System.Windows.Forms.Button btnAEntrenador;
         private System.Windows.Forms.Timer menuTransicion;
         private System.Windows.Forms.Timer sliderbartransicion;
-        private System.Windows.Forms.PictureBox deslizar;
         protected internal System.Windows.Forms.Button AgregarUsuario;
         private System.Windows.Forms.Button menuanimacion;
         private System.Windows.Forms.Panel Agregarcontenedor;

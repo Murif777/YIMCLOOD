@@ -75,13 +75,13 @@ namespace BILL
             //string apellido = factura.Miembro.Apellido; AGREGAR A PDF
             string cedula = factura.Miembro.Cedula;
             DateTime fecha = factura.FechaFactura;
-            int numeroFactura = ObtenerSiguienteNumeroFactura();
+            int numeroFactura = factura.Id;
             //AGREGAR LOGO  ARREGLAR COLUMNA PRECIO TOTAL
             string paginahtml_texto = Properties.Resources.plantillaFactura.ToString();
             paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", nombre);
             paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", cedula);
             paginahtml_texto = paginahtml_texto.Replace("@FECHA", fecha.ToString("yyyy-MM-dd"));
-            paginahtml_texto = paginahtml_texto.Replace("@NUMEROFAC", numeroFactura.ToString());
+            paginahtml_texto = paginahtml_texto.Replace("@IDFAC", numeroFactura.ToString());
 
             string filas = string.Empty;
             foreach (var row in factura.Productos)
@@ -117,20 +117,10 @@ namespace BILL
                 {
                     XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
                 }
-                ActualizarSiguienteNumeroFactura(numeroFactura);
                 pdfDoc.Close();
                 stream.Close();
             }
             
-        }
-        private int ObtenerSiguienteNumeroFactura()
-        {
-            return numeroFacturaActual++; // Retorna el número actual y luego lo incrementa en uno
-        }
-
-        private void ActualizarSiguienteNumeroFactura(int nuevoNumero)
-        {
-            numeroFacturaActual = nuevoNumero; // Actualiza el número de factura actual
         }
 
         public void GenerarYEnviarPDF(Factura factura, string filePath)

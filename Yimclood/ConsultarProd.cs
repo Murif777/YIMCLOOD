@@ -263,5 +263,10 @@ namespace Presentacion
         {
             this.pnlActualizar.Visible = false;
         }
+
+        private void txtReferenciaProducto_Click(object sender, EventArgs e)
+        {
+            this.pnlActualizar.Visible=false;
+        }
     }
 }
