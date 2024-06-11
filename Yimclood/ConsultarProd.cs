@@ -132,15 +132,13 @@ namespace Presentacion
                 int cantidad = Convert.ToInt32(selectedRow.Cells["Cantidad"].Value);
                 byte[] foto = (byte[])selectedRow.Cells["Foto"].Value;
 
-                Producto producto = new Producto()
-                {
-                    Referencia = referencia,
-                    Nombre = nombre,
-                    Descripcion = descripcion,
-                    Valor = valor,
-                    CantidadDisponible = cantidad,
-                    Foto = foto
-                };
+                Producto producto = new Producto();
+                    producto.Referencia = referencia;
+                    producto.Nombre = nombre;
+                    producto.Descripcion = descripcion;
+                producto.Valor = valor;
+                producto.CantidadDisponible = cantidad; 
+                producto.Foto = foto;
 
                 return producto;
             }
@@ -254,6 +252,16 @@ namespace Presentacion
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             FormActualizar();
+        }
+
+        private void ConsultarProd_Click(object sender, EventArgs e)
+        {
+            this.pnlActualizar.Visible = false;
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            this.pnlActualizar.Visible = false;
         }
     }
 }

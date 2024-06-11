@@ -25,8 +25,9 @@ namespace Presentacion
             InitializeComponent();
             this.Shown += new EventHandler(FormRegistrar_Shown);
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
+            this.btnSubirfoto.Click += new EventHandler(this.btnSubirfoto_Click_1);
             this.productoRecibido = newProducto;
-            this.BtnActualizar.Visible = false;
+            BtnActualizar.Visible = false;
         }
 
 
