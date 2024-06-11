@@ -185,10 +185,6 @@ namespace Presentacion
         {
             boton.BackColor = color;
             musculos.Image = imagen;
-        }      
-
-
-
-
+        }
     }
 }

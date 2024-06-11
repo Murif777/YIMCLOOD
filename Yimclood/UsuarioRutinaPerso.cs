@@ -63,20 +63,20 @@ namespace Presentacion
 
                 }).ToList();
 
-                tablaEjercicios.DataSource = viewList;
-                tablaEjercicios.Columns["Foto"].DisplayIndex = 0;
-                tablaEjercicios.Columns["Nombre"].DisplayIndex = 1;
-                tablaEjercicios.Columns["Descripcion"].DisplayIndex = 2;
-                tablaEjercicios.Columns["Duracion"].DisplayIndex = 3;
-                tablaEjercicios.Columns["Repeticiones"].DisplayIndex = 4;
-                tablaEjercicios.Columns["Series"].DisplayIndex = 5;
-                tablaEjercicios.Columns["Musculo"].DisplayIndex = 6;
-                tablaEjercicios.Columns["Categoria"].DisplayIndex = 7;
-                foreach (DataGridViewRow row in tablaEjercicios.Rows)
+                tablaEjercicios1.DataSource = viewList;
+                tablaEjercicios1.Columns["Foto"].DisplayIndex = 0;
+                tablaEjercicios1.Columns["Nombre"].DisplayIndex = 1;
+                tablaEjercicios1.Columns["Descripcion"].DisplayIndex = 2;
+                tablaEjercicios1.Columns["Duracion"].DisplayIndex = 3;
+                tablaEjercicios1.Columns["Repeticiones"].DisplayIndex = 4;
+                tablaEjercicios1.Columns["Series"].DisplayIndex = 5;
+                tablaEjercicios1.Columns["Musculo"].DisplayIndex = 6;
+                tablaEjercicios1.Columns["Categoria"].DisplayIndex = 7;
+                foreach (DataGridViewRow row in tablaEjercicios1.Rows)
                 {
                     row.Height = 100; // Establece la altura deseada para cada fila
                 }
-                DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)tablaEjercicios.Columns["Foto"];
+                DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)tablaEjercicios1.Columns["Foto"];
                 imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
             }
             else
@@ -135,7 +135,7 @@ namespace Presentacion
             if (e.RowIndex >= 0)
             {
                 // Obtener el ejercicio seleccionado
-                string nombreEjercicio = tablaEjercicios.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
+                string nombreEjercicio = tablaEjercicios1.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
                 ejercicioTemporal = ejercicioService.ConsultarEjercicios().FirstOrDefault(ej => ej.Nombre == nombreEjercicio);
             }
         }
