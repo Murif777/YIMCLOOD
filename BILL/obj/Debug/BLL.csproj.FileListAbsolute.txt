@@ -170,6 +170,13 @@ C:\Users\juann\Desktop\Yim\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.
 C:\Users\juann\Desktop\Yim\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\juann\Desktop\Yim\YIMCLOOD\BILL\obj\Debug\BILL.dll
 C:\Users\juann\Desktop\Yim\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\itextsharp.dll
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\itextsharp.xml
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\obj\Debug\BILL.Properties.Resources.resources
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\obj\Debug\BLL.csproj.GenerateResource.cache
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\BILL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\BILL.pdb
@@ -192,10 +199,3 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.pdb
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\itextsharp.dll
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\itextsharp.xmlworker.dll
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\itextsharp.xml
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\obj\Debug\BILL.Properties.Resources.resources
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\obj\Debug\BLL.csproj.GenerateResource.cache

@@ -525,28 +525,6 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Present
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presentacion.pdb
-<<<<<<< HEAD
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe.config
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\Presentacion.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xmlworker.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Memory.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Buffers.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\BILL.dll.config
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xml
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\itextsharp.dll
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xmlworker.dll
@@ -558,5 +536,3 @@ C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presenta
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioConsultarMedidas.resources
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioRutinaPerso.resources
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UserControlBlank.resources
-=======
->>>>>>> 54d6e724c744a09aadcc0304ccd849329e59d7a2

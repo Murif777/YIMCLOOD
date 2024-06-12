@@ -118,8 +118,8 @@ namespace Presentacion
             // Si no hay errores, crear y retornar el objeto Miembro
             DateTime FechaNacimiento = fechaNacimiento.Value;
             Miembro miembro = new Miembro(
-                cedula, nombre, apellido, telefono, sexo, correo, FechaNacimiento,
-                peso, estatura, imageBytes);
+            cedula, nombre, apellido, telefono, Sexo(), correo, FechaNacimiento,
+            0, 0, imageBytes);
             MessageBox.Show(miembroService.ActualizarMiembro(miembro,miembroRecibido.Correo));
             DialogResult result = MessageBox.Show("Es necesario volver a iniciar sesión", "Aviso", MessageBoxButtons.OK);
             if (result == DialogResult.OK)
@@ -129,6 +129,7 @@ namespace Presentacion
                 _usuarioMenuPrincipal.Close();
 
             }
+            return miembro;
         }
 
         private bool IsValidEmail(string email)

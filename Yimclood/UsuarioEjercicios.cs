@@ -90,6 +90,7 @@ namespace Presentacion
                 }).ToList();
 
                 listEjercicios.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
                 listEjercicios.DataSource = viewList;
                 listEjercicios.Columns["Foto"].DisplayIndex = 0;
                 listEjercicios.Columns["Nombre"].DisplayIndex = 1;
