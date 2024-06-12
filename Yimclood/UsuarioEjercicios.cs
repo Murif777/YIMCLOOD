@@ -31,6 +31,7 @@ namespace Presentacion
             InitializeComponent();
             _usuarioMenuPrincipal = usuarioMenuPrincipal;
             this.miembro = miembro;
+           listEjercicios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void VerRutinasPrestablecidas()
         {
@@ -76,7 +77,6 @@ namespace Presentacion
             if (ejercicios.Count > 0)
             {
                 listEjercicios.Columns.Clear();
-
                 var viewList = ejercicios.Select(p => new
                 {
                     Foto = p.Foto,
@@ -89,6 +89,7 @@ namespace Presentacion
                     Categoria = p.Categoria
                 }).ToList();
 
+                listEjercicios.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 listEjercicios.DataSource = viewList;
                 listEjercicios.Columns["Foto"].DisplayIndex = 0;
                 listEjercicios.Columns["Nombre"].DisplayIndex = 1;
@@ -98,13 +99,9 @@ namespace Presentacion
                 listEjercicios.Columns["Series"].DisplayIndex = 5;
                 listEjercicios.Columns["Musculo"].DisplayIndex = 6;
                 listEjercicios.Columns["Categoria"].DisplayIndex = 7;
-                listEjercicios.ColumnHeadersVisible = false;
-                listEjercicios.RowHeadersVisible = false;
-
-
                 foreach (DataGridViewRow row in listEjercicios.Rows)
                 {
-                    row.Height = 100; 
+                    row.Height = 100;
                 }
                 DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)listEjercicios.Columns["Foto"];
                 imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;

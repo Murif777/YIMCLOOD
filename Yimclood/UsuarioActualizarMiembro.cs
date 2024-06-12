@@ -35,15 +35,87 @@ namespace Presentacion
 
         private void ActualizarMiembroBD()
         {
+            Miembro miembro = ValidadorMiembro();
+        }
+
+        private Miembro ValidadorMiembro()
+        {
+            // Lista de errores
+            List<string> errores = new List<string>();
+
+            // Validar cédula
             string cedula = txtCedula.Text;
-            txtCedula.Enabled = false;
+            if (string.IsNullOrWhiteSpace(cedula) || !cedula.All(char.IsDigit))
+            {
+                errores.Add("La cédula solo puede contener números y no puede estar vacía.");
+                MessageBox.Show("La cédula solo puede contener números y no puede estar vacía.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+
+            // Validar nombre
             string nombre = txtNombre.Text;
+            if (string.IsNullOrWhiteSpace(nombre) || !nombre.All(char.IsLetter))
+            {
+                errores.Add("El nombre solo puede contener letras y no puede estar vacío.");
+                MessageBox.Show("El nombre solo puede contener letras y no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+            else
+            {
+                nombre = char.ToUpper(nombre[0]) + nombre.Substring(1).ToLower();
+            }
+
+            // Validar apellido
             string apellido = txtApellido.Text;
+            if (string.IsNullOrWhiteSpace(apellido) || !apellido.All(char.IsLetter))
+            {
+                errores.Add("El apellido solo puede contener letras y no puede estar vacío.");
+                MessageBox.Show("El apellido solo puede contener letras y no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+            else
+            {
+                apellido = char.ToUpper(apellido[0]) + apellido.Substring(1).ToLower();
+            }
+
+            // Validar teléfono
             string telefono = txtTelefono.Text;
-            string sexo = Sexo();
+            if (string.IsNullOrWhiteSpace(telefono) || !telefono.All(char.IsDigit))
+            {
+                errores.Add("El teléfono solo puede contener números y no puede estar vacío.");
+                MessageBox.Show("El teléfono solo puede contener números y no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+
+            // Validar correo electrónico
             string correo = txtCorreo.Text;
-            int peso = int.Parse(txtPeso.Text);
-            int estatura = int.Parse(txtEstatura.Text);
+            if (string.IsNullOrWhiteSpace(correo) || !IsValidEmail(correo))
+            {
+                errores.Add("El correo electrónico no tiene un formato válido o está vacío.");
+                MessageBox.Show("El correo electrónico no tiene un formato válido o está vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+
+            // Validar peso
+            string peso = txtPeso.Text;
+            if (string.IsNullOrWhiteSpace(peso) || !peso.All(char.IsDigit))
+            {
+                errores.Add("El peso solo puede contener números y no puede estar vacío.");
+                MessageBox.Show("El peso solo puede contener números y no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+
+            // Validar estatura
+            string estatura = txtEstatura.Text;
+            if (string.IsNullOrWhiteSpace(estatura) || !estatura.All(char.IsDigit))
+            {
+                errores.Add("La estatura solo puede contener números y no puede estar vacío.");
+                MessageBox.Show("La estatura solo puede contener números y no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null; // Detener la ejecución del método
+            }
+
+
+            // Si no hay errores, crear y retornar el objeto Miembro
             DateTime FechaNacimiento = fechaNacimiento.Value;
             Miembro miembro = new Miembro(
                 cedula, nombre, apellido, telefono, sexo, correo, FechaNacimiento,
@@ -58,6 +130,20 @@ namespace Presentacion
 
             }
         }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public void Asignar_Campos()
         {
             txtCedula.Text = miembroRecibido.Cedula;

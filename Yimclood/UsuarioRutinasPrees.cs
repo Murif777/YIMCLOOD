@@ -86,14 +86,14 @@ namespace Presentacion
                     tablaEjercicios.Columns["Series"].DisplayIndex = 5;
                     tablaEjercicios.Columns["Musculo"].DisplayIndex = 6;
                     tablaEjercicios.Columns["Categoria"].DisplayIndex = 7;
+                    DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)tablaEjercicios.Columns["Foto"];
+                    imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
                     tablaEjercicios.ColumnHeadersVisible = false;
                     tablaEjercicios.RowHeadersVisible = false;
                     foreach (DataGridViewRow row in tablaEjercicios.Rows)
                     {
                         row.Height = 100; // Establece la altura deseada para cada fila
                     }
-                    DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)tablaEjercicios.Columns["Foto"];
-                    imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 }
                 else
                 {
