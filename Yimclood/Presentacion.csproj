@@ -84,7 +84,7 @@
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="botones.cs">
+    <Compile Include="botones\botones.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -356,5 +356,6 @@
     <Content Include="Images\WhatsApp Image 2024-04-25 at 7.36.57 PM.jpeg" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
