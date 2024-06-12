@@ -250,7 +250,6 @@ C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\System.R
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.exe.config
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.ActualizarMiembro.resources
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarEjercicio.resources
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.AgregarFactura.resources
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioPerfil.resources
@@ -259,8 +258,6 @@ C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presenta
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioRutinasPrees.resources
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioEjercicios.resources
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioMenuPrincipal.resources
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.Hombros.resources
-C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioAgregarDatos.resources
 C:\Users\juann\Desktop\yimc\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe.config
 C:\Users\juann\Desktop\yimc\YIMCLOOD\Yimclood\bin\Debug\Presentacion.exe
 C:\Users\juann\Desktop\yimc\YIMCLOOD\Yimclood\bin\Debug\Presentacion.pdb
@@ -474,3 +471,14 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\itextsh
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\bin\Debug\DAL.pdb
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\Yimclood\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\itextsharp.dll
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\BILL.dll.config
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\bin\Debug\itextsharp.xml
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UserControlDays.resources
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioActualizarMiembro.resources
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioAgregarMedidas.resources
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioConsultarMedidas.resources
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UsuarioRutinaPerso.resources
+C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\Yimclood\obj\Debug\Presentacion.UserControlBlank.resources

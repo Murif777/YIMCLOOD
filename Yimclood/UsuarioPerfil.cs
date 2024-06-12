@@ -93,5 +93,21 @@ namespace Presentacion
         {
              
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("¿Está seguro de que desea salir del perfil?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Verificar la respuesta del usuario
+            if (result == DialogResult.Yes)
+            {
+                // Si el usuario elige "Sí", ocultar el formulario actual y mostrar el formulario de inicio de sesión
+                Login loginform = new Login();
+                _usuarioMenuPrincipal.Close();
+                loginform.Show();
+
+            }
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace Presentacion
         public Login()
         {
             InitializeComponent();
+            metododeprueba();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -39,10 +40,8 @@ namespace Presentacion
         }
         private void metododeprueba()
         {
-            txtUsuario.Text= "juadanaes19@gmail.com";
-            txtContrasena.Text = "123";
-            //txtUsuario.Text= "dariobernatte@hotmail.com";
-            //txtContrasena.Text = "1066864190";
+            txtUsuario.Text= "dariobernatte@hotmail.com";
+            txtContrasena.Text = "1066864190";
         }
         private void txtContra_Enter(object sender, EventArgs e)
         {
@@ -118,9 +117,16 @@ namespace Presentacion
             else
             {
                 Miembro miembro = DatosPerfil();
-                UsuarioMenuPrincipal usuarioMenuPrincipal = new UsuarioMenuPrincipal(miembro);
-                usuarioMenuPrincipal.Show();
-                this.Hide();
+                if (miembro == null)
+                {
+                    MessageBox.Show("No existe un miembro");
+                }
+                else
+                {
+                    UsuarioMenuPrincipal usuarioMenuPrincipal = new UsuarioMenuPrincipal(miembro);
+                    usuarioMenuPrincipal.Show();
+                    this.Hide();
+                }
             }
             
         }

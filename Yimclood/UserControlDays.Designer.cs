@@ -37,10 +37,9 @@
             // 
             this.lbldays.AutoSize = true;
             this.lbldays.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 18F);
-            this.lbldays.Location = new System.Drawing.Point(2, 0);
-            this.lbldays.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbldays.Location = new System.Drawing.Point(3, 0);
             this.lbldays.Name = "lbldays";
-            this.lbldays.Size = new System.Drawing.Size(37, 29);
+            this.lbldays.Size = new System.Drawing.Size(44, 36);
             this.lbldays.TabIndex = 0;
             this.lbldays.Text = "00";
             // 
@@ -49,10 +48,9 @@
             this.lblValorPeso.AutoSize = true;
             this.lblValorPeso.BackColor = System.Drawing.Color.Transparent;
             this.lblValorPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.lblValorPeso.Location = new System.Drawing.Point(2, 46);
-            this.lblValorPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblValorPeso.Location = new System.Drawing.Point(3, 57);
             this.lblValorPeso.Name = "lblValorPeso";
-            this.lblValorPeso.Size = new System.Drawing.Size(50, 24);
+            this.lblValorPeso.Size = new System.Drawing.Size(65, 30);
             this.lblValorPeso.TabIndex = 1;
             this.lblValorPeso.Text = "Peso:";
             // 
@@ -61,24 +59,23 @@
             this.lblPeso.AutoSize = true;
             this.lblPeso.BackColor = System.Drawing.Color.Transparent;
             this.lblPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15F);
-            this.lblPeso.Location = new System.Drawing.Point(63, 46);
-            this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPeso.Location = new System.Drawing.Point(84, 57);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(89, 24);
+            this.lblPeso.Size = new System.Drawing.Size(108, 30);
             this.lblPeso.TabIndex = 3;
             this.lblPeso.Text = "XX.X+\"Kg\"";
             // 
             // UserControlDays
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblPeso);
             this.Controls.Add(this.lblValorPeso);
             this.Controls.Add(this.lbldays);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControlDays";
-            this.Size = new System.Drawing.Size(165, 81);
+            this.Size = new System.Drawing.Size(219, 100);
             this.Load += new System.EventHandler(this.UserControlDays_Load);
             this.Click += new System.EventHandler(this.UserControlDays_Click);
             this.ResumeLayout(false);

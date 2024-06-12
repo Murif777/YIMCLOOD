@@ -38,32 +38,82 @@ namespace Presentacion
            txtAltura.Text= miembroRecibido.Estatura.ToString();
             fecha.Enabled = false;
         }
+
+        private bool ValidarCamposEnteros()
+        {
+            // Define una función de validación que verifica si un valor es un entero
+            bool EsEntero(string valor)
+            {
+                return int.TryParse(valor, out _);
+            }
+
+            // Verifica si todos los campos son enteros
+            if (!EsEntero(txtPeso.Text) ||
+                !EsEntero(txtHombros.Text) ||
+                !EsEntero(txtPecho.Text) ||
+                !EsEntero(txtAntebraIzq.Text) ||
+                !EsEntero(txtAntebrazoDe.Text) ||
+                !EsEntero(txtBrazoIzq.Text) ||
+                !EsEntero(txtBrazoDe.Text) ||
+                !EsEntero(txtCintura.Text) ||
+                !EsEntero(txtCadera.Text) ||
+                !EsEntero(txtPiernaIzq.Text) ||
+                !EsEntero(txtPiernaDe.Text) ||
+                !EsEntero(txtGemeloIzq.Text) ||
+                !EsEntero(txtGemeloDe.Text) ||
+                !EsEntero(txtAltura.Text))
+            {
+                MessageBox.Show("Ingrese solo valores enteros en los campos.");
+                return false;
+            }
+
+            return true;
+        }
         private void GuardarRegistroBD()
         {
-            Registro registro = new Registro();
+            if (ValidarCamposEnteros())
+            {
+                Registro registro = new Registro();
 
-            registro.Peso = int.Parse(txtPeso.Text);
-            registro.Hombros=int.Parse(txtHombros.Text);
-            registro.Pecho = int.Parse(txtPecho.Text);
-            registro.AntebrazoIzquierdo = int.Parse(txtAntebraIzq.Text);
-            registro.AntebrazoDerecho = int.Parse(txtAntebrazoDe.Text);
-            registro.BrazoIzquierdo = int.Parse(txtBrazoIzq.Text);
-            registro.BrazoDerecho= int.Parse(txtBrazoDe.Text);
-            registro.Cintura = int.Parse(txtCintura.Text);
-            registro.Cadera= int.Parse(txtCadera.Text);
-            registro.PiernaIzquierda = int.Parse(txtPiernaIzq.Text);
-            registro.PiernaDerecha = int.Parse(txtPiernaDe.Text);
-            registro.GemeloIzquierdo = int.Parse(txtGemeloIzq.Text);
-            registro.GemeloDerecho= int.Parse(txtGemeloDe.Text);
-            registro.Altura = int.Parse(txtAltura.Text);
-            registro.Foto = imageBytes;
+                int? Peso = string.IsNullOrWhiteSpace(txtPeso.Text) ? (int?)null : int.Parse(txtPeso.Text);
+                int? Hombros = string.IsNullOrWhiteSpace(txtHombros.Text) ? (int?)null : int.Parse(txtHombros.Text);
+                int? Pecho = string.IsNullOrWhiteSpace(txtPecho.Text) ? (int?)null : int.Parse(txtPecho.Text);
+                int? AntebrazoIzquierdo = string.IsNullOrWhiteSpace(txtAntebraIzq.Text) ? (int?)null : int.Parse(txtAntebraIzq.Text);
+                int? AntebrazoDerecho = string.IsNullOrWhiteSpace(txtAntebrazoDe.Text) ? (int?)null : int.Parse(txtAntebrazoDe.Text);
+                int? BrazoIzquierdo = string.IsNullOrWhiteSpace(txtBrazoIzq.Text) ? (int?)null : int.Parse(txtBrazoIzq.Text);
+                int? BrazoDerecho = string.IsNullOrWhiteSpace(txtBrazoDe.Text) ? (int?)null : int.Parse(txtBrazoDe.Text);
+                int? Cintura = string.IsNullOrWhiteSpace(txtCintura.Text) ? (int?)null : int.Parse(txtCintura.Text);
+                int? Cadera = string.IsNullOrWhiteSpace(txtCadera.Text) ? (int?)null : int.Parse(txtCadera.Text);
+                int? PiernaIzquierda = string.IsNullOrWhiteSpace(txtPiernaIzq.Text) ? (int?)null : int.Parse(txtPiernaIzq.Text);
+                int? PiernaDerecha = string.IsNullOrWhiteSpace(txtPiernaDe.Text) ? (int?)null : int.Parse(txtPiernaDe.Text);
+                int? GemeloIzquierdo = string.IsNullOrWhiteSpace(txtGemeloIzq.Text) ? (int?)null : int.Parse(txtGemeloIzq.Text);
+                int? GemeloDerecho = string.IsNullOrWhiteSpace(txtGemeloDe.Text) ? (int?)null : int.Parse(txtGemeloDe.Text);
+                int? Altura = string.IsNullOrWhiteSpace(txtAltura.Text) ? (int?)null : int.Parse(txtAltura.Text);
 
-            Historial historial = new Historial();
-            historial.Miembro = miembroRecibido;
-            historial.Fecha = DateTime.Now;
-            historial.Registro = registro;
 
-            MessageBox.Show(historialService.Registrar(historial));
+                registro.Peso = Peso;
+                registro.Hombros = Hombros;
+                registro.Pecho = Pecho;
+                registro.AntebrazoIzquierdo = AntebrazoIzquierdo;
+                registro.AntebrazoDerecho = AntebrazoDerecho;
+                registro.BrazoIzquierdo = BrazoIzquierdo;
+                registro.BrazoDerecho = BrazoDerecho;
+                registro.Cintura = Cintura;
+                registro.Cadera = Cadera;
+                registro.PiernaIzquierda = PiernaIzquierda;
+                registro.PiernaDerecha = PiernaDerecha;
+                registro.GemeloIzquierdo = GemeloIzquierdo;
+                registro.GemeloDerecho = GemeloDerecho;
+                registro.Altura = Altura;
+                registro.Foto = imageBytes;
+
+                Historial historial = new Historial();
+                historial.Miembro = miembroRecibido;
+                historial.Fecha = DateTime.Now;
+                historial.Registro = registro;
+
+                MessageBox.Show(historialService.Registrar(historial));
+            }
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
