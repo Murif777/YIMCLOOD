@@ -307,6 +307,7 @@ namespace Presentacion
                 txtApellido.Text = newentrenador.Apellido;
                 txtTelefono.Text = newentrenador.Telefono;
                 txtCorreo.Text = newentrenador.Correo;
+                imageBytes = newentrenador.Foto;
                 if (newentrenador.Sexo == "Hombre")
                 {
                     rdbtnHombre.Checked = true;

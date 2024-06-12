@@ -25,7 +25,7 @@ namespace Presentacion
             InitializeComponent();
             this.Shown += new EventHandler(FormRegistrar_Shown);
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
-            this.btnSubirfoto.Click += new EventHandler(this.btnSubirfoto_Click_1);
+            //this.btnSubirfoto.Click += new EventHandler(this.btnSubirfoto_Click_1);
             this.productoRecibido = newProducto;
             BtnActualizar.Visible = false;
         }
@@ -186,7 +186,7 @@ namespace Presentacion
                 txtDescripcion.Text = productoRecibido.Descripcion;
                 txtPrecio.Text = productoRecibido.Valor.ToString();
                 txtCantidad.Text = productoRecibido.CantidadDisponible.ToString();
-
+                imageBytes = productoRecibido.Foto;
                 // Asignar la foto si existe
                 byte[] foto = productoRecibido.Foto;
                 if (foto != null)

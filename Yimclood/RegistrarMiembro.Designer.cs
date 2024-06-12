@@ -113,7 +113,7 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnActualizar.Location = new System.Drawing.Point(804, 454);
+            this.btnActualizar.Location = new System.Drawing.Point(804, 500);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(134, 53);

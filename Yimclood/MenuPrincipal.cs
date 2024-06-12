@@ -17,6 +17,7 @@ namespace Presentacion
         private PMembresiaService MembresiaService = new PMembresiaService();
         public MenuPrincipal()
         {
+            MembresiaService.VerificarMembresias();
             InitializeComponent();
             MembresiaService.ActualizarBD();
             this.WindowState = FormWindowState.Maximized;

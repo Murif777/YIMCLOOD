@@ -23,7 +23,6 @@ namespace BILL
             try
             {
                 var perfilCompleto = CrearPerfilCompleto(perfil);
-                VerificarMembresias();
 
                 return PmembresiaRepository.GuardarPMembresiaBD(perfilCompleto);
             }

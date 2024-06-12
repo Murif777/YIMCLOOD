@@ -15,13 +15,15 @@ namespace Presentacion
     {
         private MiembroService miembroService = new MiembroService();
         private UsuarioService usuarioService = new UsuarioService();
-        private MembresiaService MembresiaService = new MembresiaService();
+        private MembresiaService membresiaService = new MembresiaService();
+        private PMembresiaService PMembresiaService = new PMembresiaService();
         private byte[] imageBytes;
         private PerfilMembresia MiembroRecibido;
         public event EventHandler OnRegresar;
 
         public Registrar(PerfilMembresia miembro)
         {
+            PMembresiaService.VerificarMembresias();
             InitializeComponent();
             btnActualizar.Visible = false;
             ComboboxMembresias();
@@ -40,7 +42,7 @@ namespace Presentacion
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             registrarMiembro();
-            //Limpiar_Campos();
+            Limpiar_Campos();
         }
 
         private void registrarMiembro()
@@ -257,6 +259,7 @@ namespace Presentacion
             txtApellido.Text= MiembroRecibido.DatosUsuario.DatosMiembro.Apellido;
             txtTelefono.Text = MiembroRecibido.DatosUsuario.DatosMiembro.Telefono;
             txtCorreo.Text= MiembroRecibido.DatosUsuario.DatosMiembro.Correo;
+            imageBytes = MiembroRecibido.DatosUsuario.DatosMiembro.Foto;
             if (MiembroRecibido.DatosUsuario.DatosMiembro.Sexo == "Hombre")
             {
                 rdbtnHombre.Checked=true;
