@@ -61,50 +61,47 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label1.Location = new System.Drawing.Point(307, 203);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(409, 250);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 31);
+            this.label1.Size = new System.Drawing.Size(140, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "MUSCULO:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(432, 272);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(576, 335);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(199, 28);
+            this.txtNombre.Size = new System.Drawing.Size(264, 34);
             this.txtNombre.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label2.Location = new System.Drawing.Point(315, 262);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(420, 322);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 31);
+            this.label2.Size = new System.Drawing.Size(131, 39);
             this.label2.TabIndex = 2;
             this.label2.Text = "NOMBRE:";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(313, 381);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.Location = new System.Drawing.Point(417, 469);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(228, 129);
+            this.txtDescripcion.Size = new System.Drawing.Size(303, 158);
             this.txtDescripcion.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label3.Location = new System.Drawing.Point(315, 337);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(420, 415);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 31);
+            this.label3.Size = new System.Drawing.Size(185, 39);
             this.label3.TabIndex = 4;
             this.label3.Text = "DESCRIPCION";
             // 
@@ -112,10 +109,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label4.Location = new System.Drawing.Point(737, 300);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(983, 369);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 31);
+            this.label4.Size = new System.Drawing.Size(199, 39);
             this.label4.TabIndex = 21;
             this.label4.Text = "REPETICIONES";
             // 
@@ -123,19 +119,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label5.Location = new System.Drawing.Point(766, 369);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(1021, 454);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 31);
+            this.label5.Size = new System.Drawing.Size(108, 39);
             this.label5.TabIndex = 23;
             this.label5.Text = "SERIES";
             // 
             // NumSeries
             // 
-            this.NumSeries.Location = new System.Drawing.Point(927, 381);
-            this.NumSeries.Margin = new System.Windows.Forms.Padding(2);
+            this.NumSeries.Location = new System.Drawing.Point(1236, 469);
+            this.NumSeries.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NumSeries.Name = "NumSeries";
-            this.NumSeries.Size = new System.Drawing.Size(63, 20);
+            this.NumSeries.Size = new System.Drawing.Size(84, 22);
             this.NumSeries.TabIndex = 22;
             this.NumSeries.Value = new decimal(new int[] {
             1,
@@ -147,10 +142,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label6.Location = new System.Drawing.Point(698, 213);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(931, 262);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(254, 31);
+            this.label6.Size = new System.Drawing.Size(316, 39);
             this.label6.TabIndex = 24;
             this.label6.Text = "DURACION (en minutos) ";
             // 
@@ -158,20 +152,19 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label7.Location = new System.Drawing.Point(705, 445);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(940, 548);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 31);
+            this.label7.Size = new System.Drawing.Size(176, 39);
             this.label7.TabIndex = 26;
             this.label7.Text = "CATEGORIAS:";
             // 
             // cbCategorias
             // 
             this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(876, 449);
-            this.cbCategorias.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategorias.Location = new System.Drawing.Point(1168, 553);
+            this.cbCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategorias.Name = "cbCategorias";
-            this.cbCategorias.Size = new System.Drawing.Size(137, 21);
+            this.cbCategorias.Size = new System.Drawing.Size(181, 24);
             this.cbCategorias.TabIndex = 27;
             // 
             // btnRegistrar
@@ -180,10 +173,10 @@
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRegistrar.Location = new System.Drawing.Point(733, 537);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrar.Location = new System.Drawing.Point(977, 661);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(208, 56);
+            this.btnRegistrar.Size = new System.Drawing.Size(277, 69);
             this.btnRegistrar.TabIndex = 28;
             this.btnRegistrar.Text = "AGREGAR EJERCICIO";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -195,19 +188,18 @@
             this.panel1.Controls.Add(this.Btnregresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1385, 81);
+            this.panel1.Size = new System.Drawing.Size(1847, 100);
             this.panel1.TabIndex = 29;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(496, 27);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(661, 33);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(376, 36);
+            this.label8.Size = new System.Drawing.Size(481, 45);
             this.label8.TabIndex = 8;
             this.label8.Text = "AGREGAR EJERCICIOS";
             // 
@@ -217,19 +209,20 @@
             this.Btnregresar.FlatAppearance.BorderSize = 0;
             this.Btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnregresar.Image = ((System.Drawing.Image)(resources.GetObject("Btnregresar.Image")));
-            this.Btnregresar.Location = new System.Drawing.Point(12, 12);
+            this.Btnregresar.Location = new System.Drawing.Point(16, 15);
+            this.Btnregresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btnregresar.Name = "Btnregresar";
-            this.Btnregresar.Size = new System.Drawing.Size(76, 44);
+            this.Btnregresar.Size = new System.Drawing.Size(101, 54);
             this.Btnregresar.TabIndex = 7;
             this.Btnregresar.UseVisualStyleBackColor = true;
             this.Btnregresar.Click += new System.EventHandler(this.Btnregresar_Click);
             // 
             // numDuracion
             // 
-            this.numDuracion.Location = new System.Drawing.Point(974, 221);
-            this.numDuracion.Margin = new System.Windows.Forms.Padding(2);
+            this.numDuracion.Location = new System.Drawing.Point(1299, 272);
+            this.numDuracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numDuracion.Name = "numDuracion";
-            this.numDuracion.Size = new System.Drawing.Size(63, 20);
+            this.numDuracion.Size = new System.Drawing.Size(84, 22);
             this.numDuracion.TabIndex = 30;
             this.numDuracion.Value = new decimal(new int[] {
             1,
@@ -240,10 +233,10 @@
             // cbMusculo
             // 
             this.cbMusculo.FormattingEnabled = true;
-            this.cbMusculo.Location = new System.Drawing.Point(432, 213);
-            this.cbMusculo.Margin = new System.Windows.Forms.Padding(2);
+            this.cbMusculo.Location = new System.Drawing.Point(576, 262);
+            this.cbMusculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMusculo.Name = "cbMusculo";
-            this.cbMusculo.Size = new System.Drawing.Size(199, 21);
+            this.cbMusculo.Size = new System.Drawing.Size(264, 24);
             this.cbMusculo.TabIndex = 31;
             // 
             // btnSubirfoto
@@ -252,10 +245,10 @@
             this.btnSubirfoto.FlatAppearance.BorderSize = 0;
             this.btnSubirfoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubirfoto.Image = ((System.Drawing.Image)(resources.GetObject("btnSubirfoto.Image")));
-            this.btnSubirfoto.Location = new System.Drawing.Point(1151, 300);
-            this.btnSubirfoto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubirfoto.Location = new System.Drawing.Point(1535, 369);
+            this.btnSubirfoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubirfoto.Name = "btnSubirfoto";
-            this.btnSubirfoto.Size = new System.Drawing.Size(86, 65);
+            this.btnSubirfoto.Size = new System.Drawing.Size(115, 80);
             this.btnSubirfoto.TabIndex = 33;
             this.btnSubirfoto.UseVisualStyleBackColor = true;
             this.btnSubirfoto.Click += new System.EventHandler(this.btnSubirfoto_Click_1);
@@ -264,37 +257,37 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1067, 318);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(1423, 391);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 32);
+            this.label9.Size = new System.Drawing.Size(101, 42);
             this.label9.TabIndex = 32;
             this.label9.Text = "Foto:";
             // 
             // nmRepeticiones
             // 
-            this.nmRepeticiones.Location = new System.Drawing.Point(927, 304);
-            this.nmRepeticiones.Margin = new System.Windows.Forms.Padding(2);
+            this.nmRepeticiones.Location = new System.Drawing.Point(1236, 374);
+            this.nmRepeticiones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nmRepeticiones.Name = "nmRepeticiones";
-            this.nmRepeticiones.Size = new System.Drawing.Size(63, 20);
+            this.nmRepeticiones.Size = new System.Drawing.Size(84, 22);
             this.nmRepeticiones.TabIndex = 34;
             // 
             // pbFoto
             // 
             this.pbFoto.BackColor = System.Drawing.Color.CornflowerBlue;
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Location = new System.Drawing.Point(1050, 384);
+            this.pbFoto.Location = new System.Drawing.Point(1400, 473);
+            this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(175, 175);
+            this.pbFoto.Size = new System.Drawing.Size(233, 215);
             this.pbFoto.TabIndex = 35;
             this.pbFoto.TabStop = false;
             // 
             // AgregarEjercicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(1385, 776);
+            this.ClientSize = new System.Drawing.Size(1847, 955);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.nmRepeticiones);
             this.Controls.Add(this.btnSubirfoto);
@@ -315,7 +308,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AgregarEjercicio";
             this.Text = "AgregarEjercicio";
             ((System.ComponentModel.ISupportInitialize)(this.NumSeries)).EndInit();

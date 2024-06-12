@@ -158,6 +158,7 @@ namespace Presentacion
             this.tablaEjercicios.Size = new System.Drawing.Size(1362, 480);
             this.tablaEjercicios.TabIndex = 40;
             this.tablaEjercicios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEjercicios_CellClick);
+            this.tablaEjercicios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEjercicios_CellContentClick);
             // 
             // btnAgregarEjercicio
             // 

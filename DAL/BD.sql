@@ -1,4 +1,5 @@
 -- Lista en ORDEN de creacion
+SELECT * FROM Ejercicios;
 CREATE TABLE Entrenadores (
     Cedula VARCHAR(20) PRIMARY KEY,
     Nombre VARCHAR(20) NOT NULL,
@@ -211,20 +212,22 @@ VALUES ('Hip Thrust', 'Ejercicio para glúteos', '00:01:00', 12, 3, 'Glúteos', 
 
 -- --------------------------------------------Inserts para la tabla Rutinas_Ejercicios
 -- Relaciones para Rutina de Iniciación
-INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (1, 'Sentadillas');
-INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (1, 'Flexiones');
+SELECT * FROM Ejercicios;
+SELECT * FROM Rutinas;
+INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (12, 'SENTADILLAS');
+INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (12, 'PRESS MILITAR');
 
 -- Relaciones para Rutina de Pérdida de Peso
-INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (2, 'Burpees');
-INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (2, 'Saltos de Tijera');
+INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (13, 'ELEVACION DE PIERNAS');
+INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (13, 'REMO CON BARRA');
 
 -- Relaciones para Rutina de Musculación
-INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (3, 'Press de Banca');
-INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (3, 'Remo con Barra');
+INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (14, 'PRESS DE BANCA');
+INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (14, 'PRESS MILITAR');
 
 -- Relaciones para Rutina de Definición
-INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (4, 'Abdominales');
-INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (4, 'Mountain Climbers');
+INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (15, 'CURL DE BICEPS');
+INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (15, 'CURL DE MUÑECA');
 
 -- Relaciones para Rutina de Entrenamiento Funcional
 INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (5, 'Kettlebell Swings');

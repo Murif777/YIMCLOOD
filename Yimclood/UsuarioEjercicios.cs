@@ -65,6 +65,25 @@ namespace Presentacion
             }
         }
 
+        private Image ResizeImage(Image img, int width, int height)
+        {
+            Bitmap b = new Bitmap(width, height);
+            using (Graphics g = Graphics.FromImage(b))
+            {
+                g.DrawImage(img, 0, 0, width, height);
+            }
+            return b;
+        }
+
+
+        private Image ByteArrayToImage(byte[] byteArray)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
         private void cargarEjercicio(string musculo)
         {
             var ejercicios = ejercicioService.ConsultarEjercicioMusculo(musculo);
@@ -79,7 +98,7 @@ namespace Presentacion
                 listEjercicios.Columns.Clear();
                 var viewList = ejercicios.Select(p => new
                 {
-                    Foto = p.Foto,
+                    Foto = ResizeImage(ByteArrayToImage(p.Foto), 370, 370),
                     Nombre = p.Nombre,
                     Descripcion = p.Descripcion,
                     Duracion = p.Duracion,
@@ -102,7 +121,11 @@ namespace Presentacion
                 listEjercicios.Columns["Categoria"].DisplayIndex = 7;
                 foreach (DataGridViewRow row in listEjercicios.Rows)
                 {
-                    row.Height = 100;
+                    row.Height = 150;
+                }
+                foreach (DataGridViewColumn column in listEjercicios.Columns)
+                {
+                    column.Width = 150;
                 }
                 DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)listEjercicios.Columns["Foto"];
                 imgColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
