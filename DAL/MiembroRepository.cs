@@ -13,7 +13,7 @@ namespace DAL
 {
     public class MiembroRepository : ConexionBD
     {
-
+        private PMembresiaRepository perfilmembresia = new PMembresiaRepository();
         public string GuardarMiembroBD(Miembro miembro)
         {
             string sql = "INSERT INTO Miembros(Cedula, Nombre, Apellido, Telefono, Sexo, Fecha_Nacimiento,Correo_Electronico, Peso, Estatura,Foto) " +
@@ -180,7 +180,163 @@ namespace DAL
                 conexionBd.Close();
             }
         }
+        public string ActualizarMiembroBD(Miembro miembro, string correoViejo)
+        {
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
 
+            // Buscar la clave del usuario según el correo del miembro recibido
+            string claveUsuario = ObtenerClaveUsuarioPorCorreo(correoViejo);
+            if (claveUsuario == null)
+            {
+                return "Error no clave";
+            }
+
+            // Obtener el correo antiguo
+            string correoAntiguo = ObtenerCorreoAntiguo(miembro.Cedula);
+            if (correoAntiguo == null)
+            {
+                return "Error no correo";
+            }
+
+            // Obtener perfil de membresía antiguo
+            PerfilMembresia perfilMembresiaViejo = perfilmembresia.ObtenerPerfilMembresiaPorCorreo(correoViejo);
+
+            // Actualizar los datos del miembro según la cédula
+            string sqlActualizarMiembro = "UPDATE Miembros SET Nombre=@Nombre, Apellido=@Apellido, " +
+                                           "Telefono=@Telefono, Sexo=@Sexo, Fecha_Nacimiento=@FechaNacimiento, " +
+                                           "Correo_Electronico=@Correo, Peso=@Peso, Estatura=@Estatura, Foto=@Foto " +
+                                           "WHERE Cedula=@Cedula";
+            try
+            {
+                conexionBd.Open();
+                MySqlCommand comandoActualizarMiembro = new MySqlCommand(sqlActualizarMiembro, conexionBd);
+                comandoActualizarMiembro.Parameters.AddWithValue("@Cedula", miembro.Cedula);
+                comandoActualizarMiembro.Parameters.AddWithValue("@Nombre", miembro.Nombre);
+                comandoActualizarMiembro.Parameters.AddWithValue("@Apellido", miembro.Apellido);
+                comandoActualizarMiembro.Parameters.AddWithValue("@Telefono", miembro.Telefono);
+                comandoActualizarMiembro.Parameters.AddWithValue("@Sexo", miembro.Sexo);
+                comandoActualizarMiembro.Parameters.AddWithValue("@FechaNacimiento", miembro.FechaNacimiento.ToString("yyyy-MM-dd"));
+                comandoActualizarMiembro.Parameters.AddWithValue("@Correo", miembro.Correo);
+                comandoActualizarMiembro.Parameters.AddWithValue("@Peso", miembro.Peso);
+                comandoActualizarMiembro.Parameters.AddWithValue("@Estatura", miembro.Estatura);
+                comandoActualizarMiembro.Parameters.AddWithValue("@Foto", miembro.Foto);
+
+                int resActualizarMiembro = comandoActualizarMiembro.ExecuteNonQuery();
+                if (resActualizarMiembro == 0)
+                {
+                    return "Miembro no actualizado";
+                }
+                // Eliminar los datos de membresias_usuarios según el correo del miembro recibido
+                string sqlEliminarMembresiaUsuario = "DELETE FROM Membresias_Usuarios WHERE Correo_Usuario=@CorreoViejo";
+                MySqlCommand comandoEliminarMembresiaUsuario = new MySqlCommand(sqlEliminarMembresiaUsuario, conexionBd);
+                comandoEliminarMembresiaUsuario.Parameters.AddWithValue("@CorreoViejo", correoViejo);
+                int resEliminarMembresiaUsuario = comandoEliminarMembresiaUsuario.ExecuteNonQuery();
+
+                // Eliminar los datos del usuario según la cédula del miembro recibido
+                string sqlEliminarUsuario = "DELETE FROM Usuarios WHERE Ced_Miembro=@Cedula";
+                MySqlCommand comandoEliminarUsuario = new MySqlCommand(sqlEliminarUsuario, conexionBd);
+                comandoEliminarUsuario.Parameters.AddWithValue("@Cedula", miembro.Cedula);
+                int resEliminarUsuario = comandoEliminarUsuario.ExecuteNonQuery();
+
+                // Insertar nuevamente el usuario con los nuevos datos
+                string sqlInsertarUsuario = "INSERT INTO Usuarios (Correo_Electronico, Clave, Ced_Miembro) VALUES (@Correo, @Clave, @Cedula)";
+                MySqlCommand comandoInsertarUsuario = new MySqlCommand(sqlInsertarUsuario, conexionBd);
+                comandoInsertarUsuario.Parameters.AddWithValue("@Correo", miembro.Correo);
+                comandoInsertarUsuario.Parameters.AddWithValue("@Clave", claveUsuario);
+                comandoInsertarUsuario.Parameters.AddWithValue("@Cedula", miembro.Cedula);
+                int resInsertarUsuario = comandoInsertarUsuario.ExecuteNonQuery();
+
+
+                // Insertar nuevamente la membresia del usuario con los nuevos datos
+                string sqlInsertarMembresiaUsuario = "INSERT INTO Membresias_Usuarios (Correo_Usuario, Nombre_Membresia, Estado, Fecha_Inicio, Fecha_Final, Saldo_Debe, Pagado, Duracion_Acumulada, Tiempo_Restante) " +
+                                                     "VALUES (@Correo, @NombreMembresia, @Estado, @FechaInicio, @FechaFinal, @SaldoDebe, @Pagado, @DuracionAcumulada, @TiempoRestante)";
+                MySqlCommand comandoInsertarMembresiaUsuario = new MySqlCommand(sqlInsertarMembresiaUsuario, conexionBd);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@Correo", miembro.Correo);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@NombreMembresia", perfilMembresiaViejo.TipoMembresia.Nombre);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@Estado", perfilMembresiaViejo.Estado);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@FechaInicio", perfilMembresiaViejo.Fechainicio);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@FechaFinal", perfilMembresiaViejo.Fechafinal);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@SaldoDebe", perfilMembresiaViejo.SaldoDebe);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@Pagado", perfilMembresiaViejo.Pagado);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@DuracionAcumulada", perfilMembresiaViejo.DuracionAcumulada);
+                comandoInsertarMembresiaUsuario.Parameters.AddWithValue("@TiempoRestante", perfilMembresiaViejo.TiempoRestante);
+                int resInsertarMembresiaUsuario = comandoInsertarMembresiaUsuario.ExecuteNonQuery();
+
+                return "Miembro actualizado exitosamente";
+            }
+            catch (MySqlException ex)
+            {
+                return "Error al actualizar: " + ex.Message;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
+        private string ObtenerCorreoAntiguo(string cedula)
+        {
+            Miembro miembro = new Miembro();
+
+            string ssql = "SELECT * FROM miembros WHERE Cedula = @Cedula ";
+
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
+                conexionBd.Open();
+                comando.Parameters.AddWithValue("@Cedula", cedula);
+
+                var reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    miembro.Correo = reader.GetString("Correo_Electronico");
+                }
+                    return miembro.Correo;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("error: "+ex.Message);
+                return null;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
+
+        private string ObtenerClaveUsuarioPorCorreo(string correo)
+        {
+            Usuario usuario = new Usuario();
+            string ssql = "SELECT * FROM usuarios WHERE Correo_Electronico = @Correo";
+
+            MySqlConnection conexionBd = new MySqlConnection();
+            conexionBd = conexion();
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
+                conexionBd.Open();
+                comando.Parameters.AddWithValue("@Correo", correo);
+
+                var reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    usuario.Clave = reader.GetString("Clave");
+                }
+                return usuario.Clave;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error :" + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conexionBd.Close();
+            }
+        }
 
     }
 

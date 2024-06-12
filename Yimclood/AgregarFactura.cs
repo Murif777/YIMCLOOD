@@ -45,7 +45,7 @@ namespace Presentacion
             {
                 perfiles = PMembresiaService.consultartodo();
             }
-            else
+            if (txtCedula.Text != "")
             {
                 string cedula = txtCedula.Text;
                 perfiles = PMembresiaService.ConsultarCed(cedula);
@@ -100,7 +100,7 @@ namespace Presentacion
                         Nombre = p.Nombre,
                         Precio = p.Valor,
                         Cantidad =p.CantidadDisponible,
-                        valor = p.Valor
+                        //valor = p.Valor
                     }).ToList();
                     dataGridView2.DataSource = viewList;
                     // Configurar las columnas para mostrar en el orden deseado
@@ -109,7 +109,7 @@ namespace Presentacion
                     dataGridView2.Columns["Nombre"].DisplayIndex = 2;
                     dataGridView2.Columns["Cantidad"].DisplayIndex = 3;
                     dataGridView2.Columns["Precio"].DisplayIndex = 4;
-                    dataGridView2.Columns["Valor"].DisplayIndex = 5;
+                    //dataGridView2.Columns["Valor"].DisplayIndex = 5;
                     foreach (DataGridViewRow row in dataGridView2.Rows)
                     {
                         row.Height = 100; // Establece la altura deseada para cada fila
@@ -254,7 +254,7 @@ namespace Presentacion
                         Nombre = p.Nombre,
                         Precio = p.Valor,
                         Cantidad = p.CantidadDisponible,
-                        Valor = p.Valor
+                        //Valor = p.Valor
                     }).ToList();
                 }
             }

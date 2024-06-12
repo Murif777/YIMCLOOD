@@ -92,7 +92,6 @@ namespace DAL
             }
         }
 
-
         public bool Login(Usuario usuario)
         {
             string sql = "SELECT 1 FROM Usuarios WHERE Correo_Electronico = @CorreoElectronico AND Clave = @Clave LIMIT 1";

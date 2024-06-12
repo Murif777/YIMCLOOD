@@ -47,6 +47,17 @@ namespace BILL
                 return "Error al actualizar: " + ex.Message;
             }
         }
+        public string ActualizarMiembro(Miembro miembro, string correoViejo)
+        {
+            try
+            {
+                return miembroRepository.ActualizarMiembroBD(miembro, correoViejo);
+            }
+            catch (Exception ex)
+            {
+                return "Error al actualizar: " + ex.Message;
+            }
+        }
     }
 
 }

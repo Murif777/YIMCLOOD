@@ -24,11 +24,13 @@ namespace Presentacion
         private Miembro miembroRecibido;
         private byte[] imageBytes;
         private MiembroService miembroService = new MiembroService();
-        public UsuarioActualizarMiembro(Miembro miembro)
+        private UsuarioMenuPrincipal _usuarioMenuPrincipal;
+        public UsuarioActualizarMiembro(UsuarioMenuPrincipal usuarioMenuPrincipal,Miembro miembro)
         {
             InitializeComponent();
             miembroRecibido = miembro;
             Asignar_Campos();
+            _usuarioMenuPrincipal = usuarioMenuPrincipal;
         }
 
         private void ActualizarMiembroBD()
@@ -46,7 +48,15 @@ namespace Presentacion
             Miembro miembro = new Miembro(
                 cedula, nombre, apellido, telefono, sexo, correo, FechaNacimiento,
                 peso, estatura, imageBytes);
-            MessageBox.Show(miembroService.ActualizarMiembro(miembro));
+            MessageBox.Show(miembroService.ActualizarMiembro(miembro,miembroRecibido.Correo));
+            DialogResult result = MessageBox.Show("Es necesario volver a iniciar sesión", "Aviso", MessageBoxButtons.OK);
+            if (result == DialogResult.OK)
+            {
+                Login loginForm = new Login();
+                loginForm.Show();
+                _usuarioMenuPrincipal.Close();
+
+            }
         }
         public void Asignar_Campos()
         {

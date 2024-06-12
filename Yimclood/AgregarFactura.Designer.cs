@@ -44,13 +44,13 @@
             this.btnRegistrarFactura = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEliminarPro = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblCantidadDisp = new System.Windows.Forms.Label();
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.lblPrecioTotal = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnEliminarPro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label3.Location = new System.Drawing.Point(1005, 179);
+            this.label3.Location = new System.Drawing.Point(942, 179);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(272, 31);
@@ -71,7 +71,7 @@
             // 
             // numericUpDownCantidad
             // 
-            this.numericUpDownCantidad.Location = new System.Drawing.Point(1285, 183);
+            this.numericUpDownCantidad.Location = new System.Drawing.Point(1222, 183);
             this.numericUpDownCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownCantidad.Name = "numericUpDownCantidad";
             this.numericUpDownCantidad.Size = new System.Drawing.Size(63, 20);
@@ -86,7 +86,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label4.Location = new System.Drawing.Point(1005, 259);
+            this.label4.Location = new System.Drawing.Point(942, 259);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 31);
@@ -97,7 +97,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label5.Location = new System.Drawing.Point(1005, 224);
+            this.label5.Location = new System.Drawing.Point(942, 224);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(222, 31);
@@ -108,7 +108,7 @@
             // 
             this.lblCantidadDisponible.AutoSize = true;
             this.lblCantidadDisponible.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.lblCantidadDisponible.Location = new System.Drawing.Point(1005, 127);
+            this.lblCantidadDisponible.Location = new System.Drawing.Point(942, 127);
             this.lblCantidadDisponible.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidadDisponible.Name = "lblCantidadDisponible";
             this.lblCantidadDisponible.Size = new System.Drawing.Size(248, 31);
@@ -134,7 +134,7 @@
             this.btnAgregarProducto.FlatAppearance.BorderSize = 0;
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarProducto.Image")));
-            this.btnAgregarProducto.Location = new System.Drawing.Point(1167, 277);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(1104, 277);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(42, 42);
@@ -256,6 +256,16 @@
             this.panel1.Size = new System.Drawing.Size(1386, 776);
             this.panel1.TabIndex = 28;
             // 
+            // btnEliminarPro
+            // 
+            this.btnEliminarPro.Location = new System.Drawing.Point(1196, 287);
+            this.btnEliminarPro.Name = "btnEliminarPro";
+            this.btnEliminarPro.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarPro.TabIndex = 34;
+            this.btnEliminarPro.Text = "Eliminar";
+            this.btnEliminarPro.UseVisualStyleBackColor = true;
+            this.btnEliminarPro.Click += new System.EventHandler(this.btnEliminarPro_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label6);
@@ -281,7 +291,7 @@
             // 
             this.lblCantidadDisp.AutoSize = true;
             this.lblCantidadDisp.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadDisp.Location = new System.Drawing.Point(1271, 129);
+            this.lblCantidadDisp.Location = new System.Drawing.Point(1208, 129);
             this.lblCantidadDisp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidadDisp.Name = "lblCantidadDisp";
             this.lblCantidadDisp.Size = new System.Drawing.Size(20, 26);
@@ -292,7 +302,7 @@
             // 
             this.lblPrecioUnitario.AutoSize = true;
             this.lblPrecioUnitario.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioUnitario.Location = new System.Drawing.Point(1236, 229);
+            this.lblPrecioUnitario.Location = new System.Drawing.Point(1173, 229);
             this.lblPrecioUnitario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecioUnitario.Name = "lblPrecioUnitario";
             this.lblPrecioUnitario.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -304,7 +314,7 @@
             // 
             this.lblPrecioTotal.AutoSize = true;
             this.lblPrecioTotal.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioTotal.Location = new System.Drawing.Point(1089, 264);
+            this.lblPrecioTotal.Location = new System.Drawing.Point(1026, 264);
             this.lblPrecioTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecioTotal.Name = "lblPrecioTotal";
             this.lblPrecioTotal.Size = new System.Drawing.Size(20, 26);
@@ -323,16 +333,6 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(726, 228);
             this.dataGridView2.TabIndex = 29;
-            // 
-            // btnEliminarPro
-            // 
-            this.btnEliminarPro.Location = new System.Drawing.Point(1259, 287);
-            this.btnEliminarPro.Name = "btnEliminarPro";
-            this.btnEliminarPro.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarPro.TabIndex = 34;
-            this.btnEliminarPro.Text = "Eliminar";
-            this.btnEliminarPro.UseVisualStyleBackColor = true;
-            this.btnEliminarPro.Click += new System.EventHandler(this.btnEliminarPro_Click);
             // 
             // AgregarFactura
             // 

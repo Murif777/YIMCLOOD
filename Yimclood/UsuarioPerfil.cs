@@ -86,7 +86,7 @@ namespace Presentacion
 
         private void btnAgregarDatos_Click(object sender, EventArgs e)
         {
-            _usuarioMenuPrincipal.Abrirformpanel(new UsuarioActualizarMiembro(Miembro));
+            _usuarioMenuPrincipal.Abrirformpanel(new UsuarioActualizarMiembro(_usuarioMenuPrincipal, Miembro));
         }
 
         private void btnSubir_Click(object sender, EventArgs e)

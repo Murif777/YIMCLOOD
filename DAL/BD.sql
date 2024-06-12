@@ -26,8 +26,8 @@ CREATE TABLE Usuarios (
     Clave VARCHAR(20) NOT NULL,
     Ced_Miembro VARCHAR(20) UNIQUE,
     Ced_Entrenador VARCHAR(20) UNIQUE,
-    FOREIGN KEY (Ced_Miembro) REFERENCES Miembros(Cedula) ON DELETE CASCADE,
-    FOREIGN KEY (Ced_Entrenador) REFERENCES Entrenadores(Cedula) ON DELETE CASCADE
+    FOREIGN KEY (Ced_Miembro) REFERENCES Miembros(Cedula),
+    FOREIGN KEY (Ced_Entrenador) REFERENCES Entrenadores(Cedula)
 );
 CREATE TABLE Membresias (
     Nombre VARCHAR(20) PRIMARY KEY NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE Membresias_Usuarios (
     Pagado BOOL NOT NULL,
     Duracion_Acumulada INT NOT NULL,
     Tiempo_Restante INT NOT NULL,
-    FOREIGN KEY (Correo_Usuario) REFERENCES Usuarios(Correo_Electronico) ON DELETE CASCADE,
+    FOREIGN KEY (Correo_Usuario) REFERENCES Usuarios(Correo_Electronico),
     FOREIGN KEY (Nombre_Membresia) REFERENCES Membresias(Nombre) ON DELETE CASCADE
 );
 CREATE TABLE Productos (
