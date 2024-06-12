@@ -46,5 +46,17 @@ namespace BILL
                 return null;
             }
         }
+
+        public string Actualizarfoto(string nombre, byte[] nuevaFoto)
+        {
+            try
+            {
+                return e_repository.ActualizarFotoEjercicioBD(nombre, nuevaFoto);
+            }
+            catch (Exception ex)
+            {
+                return "Error al registrar: " + ex.Message;
+            }
+        }
     }
 }

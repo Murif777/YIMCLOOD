@@ -154,4 +154,22 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\obj\Debug\DAL.csproj.C
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\obj\Debug\DAL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\obj\Debug\DAL.pdb
+<<<<<<< HEAD
 C:\Users\juann\Desktop\yimm\YIMCLOOD\DAL\bin\Debug\MySql.Data.xml
+=======
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\DAL.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\DAL.pdb
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\ENTITY.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\MySql.Data.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\System.Memory.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\System.Buffers.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\ENTITY.pdb
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\bin\Debug\MySql.Data.xml
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\obj\Debug\DAL.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\DAL\obj\Debug\DAL.pdb
+>>>>>>> 515bbb1556360d4646998c81fdd785fa9badf7a1

@@ -86,7 +86,6 @@ namespace Presentacion
                     tablaEjercicios.Columns["Series"].DisplayIndex = 5;
                     tablaEjercicios.Columns["Musculo"].DisplayIndex = 6;
                     tablaEjercicios.Columns["Categoria"].DisplayIndex = 7;
-                    tablaEjercicios.ColumnHeadersDefaultCellStyle.Font = new Font("Bahnschrift", 12);
 
 
                     DataGridViewImageColumn imgColumn = (DataGridViewImageColumn)tablaEjercicios.Columns["Foto"];
@@ -152,10 +151,6 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        private void pnlPadre_MouseDown(object sender, MouseEventArgs e)
-        {
-            arrastrarElemento();
         }
     }
 }

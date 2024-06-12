@@ -44,7 +44,7 @@ namespace Presentacion
             // Define una función de validación que verifica si un valor es un entero
             bool EsEntero(string valor)
             {
-                return int.TryParse(valor, out _);
+                return string.IsNullOrWhiteSpace(valor) || int.TryParse(valor, out _);
             }
 
             // Verifica si todos los campos son enteros
