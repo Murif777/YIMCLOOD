@@ -40,6 +40,12 @@ C:\Users\juann\Desktop\yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.Assembly
 C:\Users\juann\Desktop\yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
 C:\Users\juann\Desktop\yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
 C:\Users\juann\Desktop\yimclood\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
+C:\Users\juann\Desktop\Yim\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
+C:\Users\juann\Desktop\Yim\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
+C:\Users\juann\Desktop\Yim\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
+C:\Users\juann\Desktop\Yim\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
+C:\Users\juann\Desktop\Yim\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
+C:\Users\juann\Desktop\Yim\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache

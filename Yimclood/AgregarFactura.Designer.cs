@@ -50,6 +50,7 @@
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.lblPrecioTotal = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnEliminarPro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -133,7 +134,7 @@
             this.btnAgregarProducto.FlatAppearance.BorderSize = 0;
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarProducto.Image")));
-            this.btnAgregarProducto.Location = new System.Drawing.Point(1347, 266);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(1167, 277);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(42, 42);
@@ -204,7 +205,7 @@
             this.btnRegistrarFactura.FlatAppearance.BorderSize = 0;
             this.btnRegistrarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarFactura.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarFactura.Location = new System.Drawing.Point(1109, 709);
+            this.btnRegistrarFactura.Location = new System.Drawing.Point(544, 583);
             this.btnRegistrarFactura.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarFactura.Name = "btnRegistrarFactura";
             this.btnRegistrarFactura.Size = new System.Drawing.Size(261, 56);
@@ -229,6 +230,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.btnEliminarPro);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblCantidadDisp);
             this.panel1.Controls.Add(this.lblPrecioUnitario);
@@ -251,7 +253,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1432, 776);
+            this.panel1.Size = new System.Drawing.Size(1386, 776);
             this.panel1.TabIndex = 28;
             // 
             // panel2
@@ -261,7 +263,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1432, 68);
+            this.panel2.Size = new System.Drawing.Size(1386, 68);
             this.panel2.TabIndex = 33;
             // 
             // label6
@@ -313,20 +315,30 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView2.Location = new System.Drawing.Point(658, 312);
+            this.dataGridView2.Location = new System.Drawing.Point(649, 323);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(748, 245);
+            this.dataGridView2.Size = new System.Drawing.Size(726, 228);
             this.dataGridView2.TabIndex = 29;
+            // 
+            // btnEliminarPro
+            // 
+            this.btnEliminarPro.Location = new System.Drawing.Point(1259, 287);
+            this.btnEliminarPro.Name = "btnEliminarPro";
+            this.btnEliminarPro.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarPro.TabIndex = 34;
+            this.btnEliminarPro.Text = "Eliminar";
+            this.btnEliminarPro.UseVisualStyleBackColor = true;
+            this.btnEliminarPro.Click += new System.EventHandler(this.btnEliminarPro_Click);
             // 
             // AgregarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1432, 776);
+            this.ClientSize = new System.Drawing.Size(1386, 776);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -366,5 +378,6 @@
         private System.Windows.Forms.Label lblCantidadDisp;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnEliminarPro;
     }
 }

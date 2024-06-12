@@ -161,10 +161,10 @@ namespace Presentacion
             SaveFileDialog guardar = new SaveFileDialog();
             guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
 
-            if (guardar.ShowDialog() == DialogResult.OK)
-            {
-                facturaService.GenerarYEnviarPDF(factura, guardar.FileName);
-            }
+            //if (guardar.ShowDialog() == DialogResult.OK)
+            //{
+            facturaService.GenerarYEnviarPDF(factura, guardar.FileName);
+            //}
         }
 
         private void limpiarcampos()
@@ -236,6 +236,33 @@ namespace Presentacion
             MostrarTablaMiembros();
 
         }
+        private void btnEliminarPro_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView2.SelectedRows[0];
+                string referencia = selectedRow.Cells["Referencia"].Value.ToString();
+
+                Producto productoAEliminar = productosSeleccionados.FirstOrDefault(p => p.Referencia == referencia);
+                if (productoAEliminar != null)
+                {
+                    productosSeleccionados.Remove(productoAEliminar);
+                    dataGridView2.DataSource = productosSeleccionados.Select(p => new
+                    {
+                        Foto = p.Foto,
+                        Referencia = p.Referencia,
+                        Nombre = p.Nombre,
+                        Precio = p.Valor,
+                        Cantidad = p.CantidadDisponible,
+                        Valor = p.Valor
+                    }).ToList();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto para eliminar.");
+            }
+        }
         private void LlenarComboBoxProductos()
         {
             var productos = productoService.Consultar();
@@ -294,5 +321,7 @@ namespace Presentacion
         {
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
+
+
     }
 }

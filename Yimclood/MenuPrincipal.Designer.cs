@@ -46,7 +46,6 @@
             this.AgregarUsuario = new System.Windows.Forms.Button();
             this.BntAgregarporducto = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.deslizar = new System.Windows.Forms.PictureBox();
             this.panelsuperior = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Cerrar = new System.Windows.Forms.PictureBox();
@@ -59,7 +58,6 @@
             this.MenuVertical.SuspendLayout();
             this.ConsultarContenedor.SuspendLayout();
             this.Agregarcontenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deslizar)).BeginInit();
             this.panelsuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
@@ -72,14 +70,13 @@
             this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.Agregarcontenedor);
             this.MenuVertical.Controls.Add(this.btnSalir);
-            this.MenuVertical.Controls.Add(this.deslizar);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(2);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(300, 718);
+            this.MenuVertical.Size = new System.Drawing.Size(300, 788);
             this.MenuVertical.TabIndex = 0;
-            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
+            this.MenuVertical.Click += new System.EventHandler(this.MenuVertical_Click);
             // 
             // ConsultarContenedor
             // 
@@ -89,7 +86,7 @@
             this.ConsultarContenedor.Controls.Add(this.btn_ConsultarUsuario);
             this.ConsultarContenedor.Controls.Add(this.btnconsultarfacturas);
             this.ConsultarContenedor.Controls.Add(this.bnt_ConsultarProducto);
-            this.ConsultarContenedor.Location = new System.Drawing.Point(2, 254);
+            this.ConsultarContenedor.Location = new System.Drawing.Point(2, 289);
             this.ConsultarContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.ConsultarContenedor.Name = "ConsultarContenedor";
             this.ConsultarContenedor.Size = new System.Drawing.Size(299, 47);
@@ -365,26 +362,13 @@
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(3, 661);
+            this.btnSalir.Location = new System.Drawing.Point(3, 731);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(60, 55);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // deslizar
-            // 
-            this.deslizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deslizar.Image = ((System.Drawing.Image)(resources.GetObject("deslizar.Image")));
-            this.deslizar.Location = new System.Drawing.Point(5, 6);
-            this.deslizar.Margin = new System.Windows.Forms.Padding(2);
-            this.deslizar.Name = "deslizar";
-            this.deslizar.Size = new System.Drawing.Size(58, 50);
-            this.deslizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.deslizar.TabIndex = 3;
-            this.deslizar.TabStop = false;
-            this.deslizar.Click += new System.EventHandler(this.deslizar_Click);
             // 
             // panelsuperior
             // 
@@ -397,7 +381,7 @@
             this.panelsuperior.Location = new System.Drawing.Point(300, 0);
             this.panelsuperior.Margin = new System.Windows.Forms.Padding(2);
             this.panelsuperior.Name = "panelsuperior";
-            this.panelsuperior.Size = new System.Drawing.Size(867, 55);
+            this.panelsuperior.Size = new System.Drawing.Size(700, 55);
             this.panelsuperior.TabIndex = 1;
             this.panelsuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.panelsuperior_Paint);
             this.panelsuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelsuperior_MouseDown);
@@ -418,7 +402,7 @@
             this.Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrar.Image")));
-            this.Cerrar.Location = new System.Drawing.Point(813, 6);
+            this.Cerrar.Location = new System.Drawing.Point(646, 6);
             this.Cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.Cerrar.Name = "Cerrar";
             this.Cerrar.Size = new System.Drawing.Size(53, 41);
@@ -432,7 +416,7 @@
             this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(764, 6);
+            this.Minimizar.Location = new System.Drawing.Point(597, 6);
             this.Minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(44, 42);
@@ -470,7 +454,7 @@
             this.panelContenedor.Location = new System.Drawing.Point(300, 55);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(867, 663);
+            this.panelContenedor.Size = new System.Drawing.Size(700, 733);
             this.panelContenedor.TabIndex = 2;
             // 
             // consultarTransicion
@@ -482,7 +466,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 718);
+            this.ClientSize = new System.Drawing.Size(1000, 788);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelsuperior);
             this.Controls.Add(this.MenuVertical);
@@ -495,7 +479,6 @@
             this.MenuVertical.ResumeLayout(false);
             this.ConsultarContenedor.ResumeLayout(false);
             this.Agregarcontenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.deslizar)).EndInit();
             this.panelsuperior.ResumeLayout(false);
             this.panelsuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -517,7 +500,6 @@
         private System.Windows.Forms.Button btnAEntrenador;
         private System.Windows.Forms.Timer menuTransicion;
         private System.Windows.Forms.Timer sliderbartransicion;
-        private System.Windows.Forms.PictureBox deslizar;
         protected internal System.Windows.Forms.Button AgregarUsuario;
         private System.Windows.Forms.Button menuanimacion;
         private System.Windows.Forms.Panel Agregarcontenedor;

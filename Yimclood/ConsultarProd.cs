@@ -16,7 +16,7 @@ namespace Presentacion
     public partial class ConsultarProd : Form
     {
         public event EventHandler OnRegresar;
-        private  ProductoService ProductoService = new ProductoService();
+        private ProductoService ProductoService = new ProductoService();
         private List<Producto> listaProductos;
         public ConsultarProd()
         {
@@ -40,7 +40,7 @@ namespace Presentacion
         {
             string referencia = txtReferenciaProducto.Text;
             var consulta = ProductoService.ConsultarRef(referencia);
-            if (consulta!= null)
+            if (consulta != null)
             {
                 dataGridView1.DataSource = consulta;
                 int lastColumnIndex = dataGridView1.Columns.Count - 1;
@@ -55,6 +55,11 @@ namespace Presentacion
         private void MostrarTabla()
         {
             var productos = ProductoService.Consultar();
+            if (productos == null)
+            {
+                Console.WriteLine("lista vacia");
+                return;
+            }
             if (productos != null && productos.Count > 0)
             {
                 var viewList = productos.Select(p => new
@@ -127,15 +132,13 @@ namespace Presentacion
                 int cantidad = Convert.ToInt32(selectedRow.Cells["Cantidad"].Value);
                 byte[] foto = (byte[])selectedRow.Cells["Foto"].Value;
 
-                Producto producto = new Producto()
-                {
-                    Referencia = referencia,
-                    Nombre = nombre,
-                    Descripcion = descripcion,
-                    Valor = valor,
-                    CantidadDisponible = cantidad,
-                    Foto = foto
-                };
+                Producto producto = new Producto();
+                    producto.Referencia = referencia;
+                    producto.Nombre = nombre;
+                    producto.Descripcion = descripcion;
+                producto.Valor = valor;
+                producto.CantidadDisponible = cantidad; 
+                producto.Foto = foto;
 
                 return producto;
             }
@@ -249,6 +252,21 @@ namespace Presentacion
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             FormActualizar();
+        }
+
+        private void ConsultarProd_Click(object sender, EventArgs e)
+        {
+            this.pnlActualizar.Visible = false;
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            this.pnlActualizar.Visible = false;
+        }
+
+        private void txtReferenciaProducto_Click(object sender, EventArgs e)
+        {
+            this.pnlActualizar.Visible=false;
         }
     }
 }

@@ -68,6 +68,7 @@
             this.txtReferenciaProducto.Name = "txtReferenciaProducto";
             this.txtReferenciaProducto.Size = new System.Drawing.Size(189, 28);
             this.txtReferenciaProducto.TabIndex = 1;
+            this.txtReferenciaProducto.Click += new System.EventHandler(this.txtReferenciaProducto_Click);
             // 
             // panel1
             // 
@@ -80,6 +81,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1287, 60);
             this.panel1.TabIndex = 2;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // Btnregresar
             // 
@@ -159,9 +161,9 @@
             // pnlActualizar
             // 
             this.pnlActualizar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlActualizar.Location = new System.Drawing.Point(51, 16);
+            this.pnlActualizar.Location = new System.Drawing.Point(139, 5);
             this.pnlActualizar.Name = "pnlActualizar";
-            this.pnlActualizar.Size = new System.Drawing.Size(1194, 676);
+            this.pnlActualizar.Size = new System.Drawing.Size(993, 510);
             this.pnlActualizar.TabIndex = 10;
             // 
             // btnActualizar
@@ -239,6 +241,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConsultarProd";
             this.Text = "FormConsultar";
+            this.Click += new System.EventHandler(this.ConsultarProd_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

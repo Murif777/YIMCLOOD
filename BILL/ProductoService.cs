@@ -30,7 +30,7 @@ namespace BILL
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al registrar: " + ex.Message);
+                Console.WriteLine("Error al consultar " + ex.Message);
                 return null;
             }
         }

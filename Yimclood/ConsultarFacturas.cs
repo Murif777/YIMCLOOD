@@ -63,7 +63,8 @@ namespace Presentacion
             }
             else
             {
-                MessageBox.Show("No se encontró el usuario");
+                MessageBox.Show("No hay facturas creadas");
+                return;
             }
         }
         private void MostrarProductosDeFactura(int facturaId)
