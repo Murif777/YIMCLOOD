@@ -146,42 +146,73 @@ namespace DAL
         }
         public string EliminarEntrenador(string cedulaEntrenador)
         {
-            string sql = "DELETE FROM Entrenadores WHERE Cedula = @Cedula";
+            MySqlConnection conexionBd = null;
+            MySqlTransaction transaction = null;
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
             try
             {
+                conexionBd = conexion();
                 conexionBd.Open();
-                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-                comando.Parameters.AddWithValue("@Cedula", cedulaEntrenador);
-                var res = comando.ExecuteNonQuery();
+                transaction = conexionBd.BeginTransaction();
 
-                if (res == 0)
+                string sqlEliminarMembresiasUsuarios = "DELETE FROM Membresias_Usuarios WHERE Correo_Usuario IN (SELECT Correo_Electronico FROM Usuarios WHERE Ced_Entrenador = @CedulaEntrenador)";
+                using (MySqlCommand comandoEliminarMembresiasUsuarios = new MySqlCommand(sqlEliminarMembresiasUsuarios, conexionBd, transaction))
                 {
-                    return "Entrenador no encontrado";
+                    comandoEliminarMembresiasUsuarios.Parameters.AddWithValue("@CedulaEntrenador", cedulaEntrenador);
+                    comandoEliminarMembresiasUsuarios.ExecuteNonQuery();
                 }
-                else
+
+
+                string sqlEliminarUsuarios = "DELETE FROM Usuarios WHERE Ced_Entrenador = @CedulaEntrenador";
+                using (MySqlCommand comandoEliminarUsuarios = new MySqlCommand(sqlEliminarUsuarios, conexionBd, transaction))
                 {
-                    return "Entrenador eliminado correctamente";
+                    comandoEliminarUsuarios.Parameters.AddWithValue("@CedulaEntrenador", cedulaEntrenador);
+                    comandoEliminarUsuarios.ExecuteNonQuery();
                 }
+
+
+                string sqlEliminarEntrenador = "DELETE FROM Entrenadores WHERE Cedula = @CedulaEntrenador";
+                using (MySqlCommand comandoEliminarEntrenador = new MySqlCommand(sqlEliminarEntrenador, conexionBd, transaction))
+                {
+                    comandoEliminarEntrenador.Parameters.AddWithValue("@CedulaEntrenador", cedulaEntrenador);
+                    int filasAfectadas = comandoEliminarEntrenador.ExecuteNonQuery();
+
+
+                    if (filasAfectadas == 0)
+                    {
+
+                        transaction.Rollback();
+                        return "Entrenador no encontrado";
+                    }
+                }
+
+                transaction.Commit();
+                return "Entrenador eliminado correctamente";
             }
             catch (MySqlException ex)
             {
+                if (transaction != null)
+                {
+                    transaction.Rollback();
+                }
                 return "Error al eliminar el entrenador: " + ex.Message;
             }
             finally
             {
-                conexionBd.Close();
+                if (conexionBd != null)
+                {
+                    conexionBd.Close();
+                }
             }
         }
+
         public string ActualizarEntrenador(Entrenador entrenador)
         {
             string query = "UPDATE Entrenadores SET Nombre=@Nombre, Apellido=@Apellido, Telefono=@Telefono," +
                            " Sexo=@Sexo, Correo_Electronico=@Correo, " +
                            "Fecha_Nacimiento=@FechaNacimiento, Foto=@Foto WHERE Cedula=@Cedula";
 
-            MySqlConnection conexionBd = conexion(); // Método para obtener una instancia de MySqlConnection
+            MySqlConnection conexionBd = conexion(); 
 
             try
             {

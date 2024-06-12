@@ -81,7 +81,7 @@ namespace BILL
             paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", nombre);
             paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", cedula);
             paginahtml_texto = paginahtml_texto.Replace("@FECHA", fecha.ToString("yyyy-MM-dd"));
-            paginahtml_texto = paginahtml_texto.Replace("@IDFAC", numeroFactura.ToString());
+            paginahtml_texto = paginahtml_texto.Replace("@NUMEROFAC", numeroFactura.ToString());
 
             string filas = string.Empty;
             foreach (var row in factura.Productos)

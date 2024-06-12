@@ -24,16 +24,22 @@ namespace Presentacion
             DatosPorDefecto();
         }
 
-        private void registrarEjercicio()
+        private bool registrarEjercicio()
         {
             // Obtener los valores de los controles de la interfaz de usuario
-            string nombre = txtNombre.Text;
-            string descripcion = txtDescripcion.Text;
+            string nombre = txtNombre.Text.Trim();
+            string descripcion = txtDescripcion.Text.Trim();
             TimeSpan duracion = TimeSpan.FromMinutes((double)numDuracion.Value);
-            string musculo = cbMusculo.SelectedItem.ToString();
-            string categoria = cbCategorias.SelectedItem.ToString();
+            string musculo = cbMusculo.SelectedItem?.ToString();
+            string categoria = cbCategorias.SelectedItem?.ToString();
             int series = (int)NumSeries.Value;
-            int repeticiones = (int)nmRepeticiones.Value; 
+            int repeticiones = (int)nmRepeticiones.Value;
+
+            // Validaciones
+            if (!ValidarCamposEjercicio(nombre, descripcion))
+            {
+                return false;
+            }
 
             // Crear el objeto Ejercicio con los valores obtenidos
             Ejercicio ejercicio;
@@ -48,22 +54,59 @@ namespace Presentacion
             }
 
             // Llamar al servicio o método para guardar el ejercicio
-           MessageBox.Show(ejercicioService.Registrar(ejercicio)); // Asegúrate de tener un método para registrar el ejercicio
-            Limpiar_Campos();
+            MessageBox.Show(ejercicioService.Registrar(ejercicio));
+            return true;
+        }
+
+        private bool ValidarCamposEjercicio(string nombre, string descripcion)
+        {
+            if (!EsNombreValido(nombre))
+            {
+                MostrarMensajeError("El nombre debe contener solo letras y no puede estar vacío.");
+                return false;
+            }
+
+            if (!EsDescripcionValida(descripcion))
+            {
+                MostrarMensajeError("La descripción debe contener solo letras y no puede estar vacía.");
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool EsNombreValido(string nombre)
+        {
+            return !string.IsNullOrWhiteSpace(nombre) && nombre.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        }
+
+        private bool EsDescripcionValida(string descripcion)
+        {
+            return !string.IsNullOrWhiteSpace(descripcion) && descripcion.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        }
+
+        private void MostrarMensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Error de validación");
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            registrarEjercicio();
+            if (registrarEjercicio())
+            {
+                Limpiar_Campos();
+            }
         }
         private void Limpiar_Campos()
         {
             txtNombre.Clear();
             txtDescripcion.Clear();
-            imageBytes = null;
             numDuracion.Value = 0;
+            cbMusculo.SelectedIndex = -1;
+            cbCategorias.SelectedIndex = -1;
             NumSeries.Value = 0;
-            nmRepeticiones.Value= 0;
-            imageBytes= null;
+            nmRepeticiones.Value = 0;
+            imageBytes = null;
+            pbFoto.Image = null;
         }
         private void DatosPorDefecto()
         {

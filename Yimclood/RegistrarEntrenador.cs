@@ -28,7 +28,7 @@ namespace Presentacion
             ComboboxMembresias();
             this.Shown += new EventHandler(FormRegistrar_Shown);
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
-            this.btnsubirfoto.Click += new EventHandler(this.btnsubirfoto_Click);
+            //this.btnsubirfoto.Click += new EventHandler(this.btnsubirfoto_Click);
             InitializeDateTimePicker();
             newentrenador = entrenador;
             btnActualizar.Visible = false;
@@ -41,26 +41,94 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            registrarEntrenador();
-            Limpiar_Campos();
+            if (registrarEntrenador())
+            {
+                Limpiar_Campos();
+            }
         }
-        private void registrarEntrenador()
+        private bool registrarEntrenador()
         {
-            string cedula = txtCedula.Text;
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            string telefono = txtTelefono.Text;
+            // Obtén los valores de los campos de texto
+            string cedula = txtCedula.Text.Trim();
+            string nombre = txtNombre.Text.Trim();
+            string apellido = txtApellido.Text.Trim();
+            string telefono = txtTelefono.Text.Trim();
             string sexo = Sexo();
-            string correo = txtCorreo.Text;
+            string correo = txtCorreo.Text.Trim();
             Membresia membresiaSeleccionada = ObtenerMembresia();
             DateTime FechaNacimiento = fechaNacimiento.Value;
+
+            // Validaciones
+            if (!ValidarCamposEntrenador(cedula, nombre, apellido, telefono))
+            {
+                return false;
+            }
+
+            // Crear el entrenador y registrarlo
             Entrenador entrenador = new Entrenador(
-                                                    cedula, nombre, apellido, telefono, sexo,
-                                                    correo, FechaNacimiento, imageBytes
-                                                   );
+                cedula, nombre, apellido, telefono, sexo,
+                correo, FechaNacimiento, imageBytes
+            );
+
             MessageBox.Show(entrenadorService.Registrar(entrenador));
-            RegistrarMembresia(membresiaSeleccionada ,registrarUsuario(entrenador));
+            RegistrarMembresia(membresiaSeleccionada, registrarUsuario(entrenador));
+            return true;
         }
+
+        private bool ValidarCamposEntrenador(string cedula, string nombre, string apellido, string telefono)
+        {
+            if (!EsCedulaValida(cedula))
+            {
+                MostrarMensajeError("La cédula debe contener solo números y no puede estar vacía.");
+                return false;
+            }
+
+            if (!EsNombreValido(nombre))
+            {
+                MostrarMensajeError("El nombre debe contener solo letras y no puede estar vacío.");
+                return false;
+            }
+
+            if (!EsApellidoValido(apellido))
+            {
+                MostrarMensajeError("El apellido debe contener solo letras y no puede estar vacío.");
+                return false;
+            }
+
+            if (!EsTelefonoValido(telefono))
+            {
+                MostrarMensajeError("El teléfono debe contener solo números y no puede estar vacío.");
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool EsCedulaValida(string cedula)
+        {
+            return !string.IsNullOrWhiteSpace(cedula) && cedula.All(char.IsDigit);
+        }
+
+        private bool EsNombreValido(string nombre)
+        {
+            return !string.IsNullOrWhiteSpace(nombre) && nombre.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        }
+
+        private bool EsApellidoValido(string apellido)
+        {
+            return !string.IsNullOrWhiteSpace(apellido) && apellido.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        }
+
+        private bool EsTelefonoValido(string telefono)
+        {
+            return !string.IsNullOrWhiteSpace(telefono) && telefono.All(char.IsDigit);
+        }
+
+        private void MostrarMensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Error de validación");
+        }
+
         private void actualizarentrenadoBD()
         {
             string cedula = txtCedula.Text;

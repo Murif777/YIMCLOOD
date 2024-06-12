@@ -37,20 +37,95 @@ namespace Presentacion
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            registrarProducto();
-            Limpiar_Campos();
+            if (registrarProducto())
+            {
+                Limpiar_Campos();
+            }
         }
-        private void registrarProducto()
+        private bool registrarProducto()
         {
-            string Referencia = txtReferencia.Text;
-            string nombre = txtNombre.Text;
-            string Descripcion = txtDescripcion.Text;
-            int valor = int.Parse(txtPrecio.Text);
-            int cantidad=int.Parse(txtCantidad.Text);
-            Producto producto = new Producto(
-                Referencia, nombre, Descripcion, valor,cantidad,imageBytes);
+            // Obtén los valores de los campos de texto
+            string referencia = txtReferencia.Text.Trim();
+            string nombre = txtNombre.Text.Trim();
+            string descripcion = txtDescripcion.Text.Trim();
+            string valorTexto = txtPrecio.Text.Trim();
+            string cantidadTexto = txtCantidad.Text.Trim();
+
+            // Validaciones
+            if (!ValidarCampos(referencia, nombre, descripcion, valorTexto, cantidadTexto, out int valor, out int cantidad))
+            {
+                return false;
+            }
+
+            // Crear el producto y registrarlo
+            Producto producto = new Producto(referencia, nombre, descripcion, valor, cantidad, imageBytes);
             MessageBox.Show(productoService.Registrar(producto));
+            return true;
         }
+
+        private bool ValidarCampos(string referencia, string nombre, string descripcion, string valorTexto, string cantidadTexto, out int valor, out int cantidad)
+        {
+            valor = 0;
+            cantidad = 0;
+
+            if (!EsReferenciaValida(referencia))
+            {
+                MostrarMensajeError("La referencia debe contener solo números y no puede estar vacía.");
+                return false;
+            }
+
+            if (!EsNombreValido(nombre))
+            {
+                MostrarMensajeError("El nombre debe contener solo letras y no puede estar vacío.");
+                return false;
+            }
+
+            if (!EsDescripcionValida(descripcion))
+            {
+                MostrarMensajeError("La descripción debe contener solo letras y no puede estar vacía.");
+                return false;
+            }
+
+            if (!EsNumeroValido(valorTexto, out valor))
+            {
+                MostrarMensajeError("El valor debe ser un número válido y no puede estar vacío.");
+                return false;
+            }
+
+            if (!EsNumeroValido(cantidadTexto, out cantidad))
+            {
+                MostrarMensajeError("La cantidad debe ser un número válido y no puede estar vacía.");
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool EsReferenciaValida(string referencia)
+        {
+            return !string.IsNullOrWhiteSpace(referencia) && referencia.All(char.IsDigit);
+        }
+
+        private bool EsNombreValido(string nombre)
+        {
+            return !string.IsNullOrWhiteSpace(nombre) && nombre.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        }
+
+        private bool EsDescripcionValida(string descripcion)
+        {
+            return !string.IsNullOrWhiteSpace(descripcion) && descripcion.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        }
+
+        private bool EsNumeroValido(string texto, out int numero)
+        {
+            return int.TryParse(texto, out numero);
+        }
+
+        private void MostrarMensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Error de validación");
+        }
+
         private void CargarDatosProducto()
         {
             if (productoRecibido != null)

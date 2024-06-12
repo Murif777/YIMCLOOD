@@ -112,8 +112,6 @@ namespace DAL
         }
         public string EliminarMiembroBD(string cedula)
         {
-            string sqlMiembros = "DELETE FROM Miembros WHERE Cedula = @Cedula";
-
             using (MySqlConnection conexionBd = conexion())
             {
                 conexionBd.Open();
@@ -121,11 +119,52 @@ namespace DAL
                 {
                     try
                     {
-                        // Eliminar de Miembros
-                        using (MySqlCommand comando = new MySqlCommand(sqlMiembros, conexionBd, transaction))
+                        // Eliminar de Facturas relacionadas
+                        string sqlEliminarFacturas = "DELETE FROM Facturas WHERE Cedula_Miembro = @Cedula";
+                        using (MySqlCommand comandoFacturas = new MySqlCommand(sqlEliminarFacturas, conexionBd, transaction))
                         {
-                            comando.Parameters.AddWithValue("@Cedula", cedula);
-                            comando.ExecuteNonQuery();
+                            comandoFacturas.Parameters.AddWithValue("@Cedula", cedula);
+                            comandoFacturas.ExecuteNonQuery();
+                        }
+
+                        // Eliminar de Historial relacionado
+                        string sqlEliminarHistorial = "DELETE FROM Historial WHERE Cedula_Miembro = @Cedula";
+                        using (MySqlCommand comandoHistorial = new MySqlCommand(sqlEliminarHistorial, conexionBd, transaction))
+                        {
+                            comandoHistorial.Parameters.AddWithValue("@Cedula", cedula);
+                            comandoHistorial.ExecuteNonQuery();
+                        }
+
+                        // Eliminar de Membresias_Usuarios relacionado
+                        string sqlEliminarMembresiasUsuarios = "DELETE FROM Membresias_Usuarios WHERE Correo_Usuario IN (SELECT Correo_Electronico FROM Usuarios WHERE Ced_Miembro = @Cedula)";
+                        using (MySqlCommand comandoMembresiasUsuarios = new MySqlCommand(sqlEliminarMembresiasUsuarios, conexionBd, transaction))
+                        {
+                            comandoMembresiasUsuarios.Parameters.AddWithValue("@Cedula", cedula);
+                            comandoMembresiasUsuarios.ExecuteNonQuery();
+                        }
+
+                        // Eliminar de Usuarios relacionado
+                        string sqlEliminarUsuarios = "DELETE FROM Usuarios WHERE Ced_Miembro = @Cedula";
+                        using (MySqlCommand comandoUsuarios = new MySqlCommand(sqlEliminarUsuarios, conexionBd, transaction))
+                        {
+                            comandoUsuarios.Parameters.AddWithValue("@Cedula", cedula);
+                            comandoUsuarios.ExecuteNonQuery();
+                        }
+
+                        // Eliminar de Rutinas_Miembro relacionado
+                        string sqlEliminarRutinasMiembro = "DELETE FROM Rutinas_Miembro WHERE Miembro_Cedula = @Cedula";
+                        using (MySqlCommand comandoRutinasMiembro = new MySqlCommand(sqlEliminarRutinasMiembro, conexionBd, transaction))
+                        {
+                            comandoRutinasMiembro.Parameters.AddWithValue("@Cedula", cedula);
+                            comandoRutinasMiembro.ExecuteNonQuery();
+                        }
+
+                        // Eliminar de Miembros
+                        string sqlEliminarMiembro = "DELETE FROM Miembros WHERE Cedula = @Cedula";
+                        using (MySqlCommand comandoMiembro = new MySqlCommand(sqlEliminarMiembro, conexionBd, transaction))
+                        {
+                            comandoMiembro.Parameters.AddWithValue("@Cedula", cedula);
+                            comandoMiembro.ExecuteNonQuery();
                         }
 
                         // Commit transaction
@@ -141,6 +180,8 @@ namespace DAL
                 }
             }
         }
+
+
         public string ActualizarMiembroBD(Miembro miembro)
         {
             string sql = "UPDATE Miembros SET Nombre=@Nombre, Apellido=@Apellido, " +

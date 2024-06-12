@@ -72,9 +72,9 @@
             this.MenuVertical.Controls.Add(this.btnSalir);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
-            this.MenuVertical.Margin = new System.Windows.Forms.Padding(2);
+            this.MenuVertical.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(300, 788);
+            this.MenuVertical.Size = new System.Drawing.Size(400, 970);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Click += new System.EventHandler(this.MenuVertical_Click);
             // 
@@ -86,10 +86,10 @@
             this.ConsultarContenedor.Controls.Add(this.btn_ConsultarUsuario);
             this.ConsultarContenedor.Controls.Add(this.btnconsultarfacturas);
             this.ConsultarContenedor.Controls.Add(this.bnt_ConsultarProducto);
-            this.ConsultarContenedor.Location = new System.Drawing.Point(2, 289);
-            this.ConsultarContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.ConsultarContenedor.Location = new System.Drawing.Point(3, 356);
+            this.ConsultarContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConsultarContenedor.Name = "ConsultarContenedor";
-            this.ConsultarContenedor.Size = new System.Drawing.Size(299, 47);
+            this.ConsultarContenedor.Size = new System.Drawing.Size(399, 58);
             this.ConsultarContenedor.TabIndex = 11;
             this.ConsultarContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.ConsultarContenedor_Paint);
             // 
@@ -103,11 +103,11 @@
             this.bntconsultar.ForeColor = System.Drawing.Color.Transparent;
             this.bntconsultar.Image = ((System.Drawing.Image)(resources.GetObject("bntconsultar.Image")));
             this.bntconsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntconsultar.Location = new System.Drawing.Point(-2, 1);
-            this.bntconsultar.Margin = new System.Windows.Forms.Padding(2);
+            this.bntconsultar.Location = new System.Drawing.Point(-3, 1);
+            this.bntconsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntconsultar.Name = "bntconsultar";
-            this.bntconsultar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.bntconsultar.Size = new System.Drawing.Size(299, 47);
+            this.bntconsultar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.bntconsultar.Size = new System.Drawing.Size(399, 58);
             this.bntconsultar.TabIndex = 8;
             this.bntconsultar.Text = "CONSULTAR";
             this.bntconsultar.UseVisualStyleBackColor = false;
@@ -124,11 +124,11 @@
             this.btnconsultarentrenador.ForeColor = System.Drawing.Color.Black;
             this.btnconsultarentrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultarentrenador.Image")));
             this.btnconsultarentrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconsultarentrenador.Location = new System.Drawing.Point(1, 189);
-            this.btnconsultarentrenador.Margin = new System.Windows.Forms.Padding(2);
+            this.btnconsultarentrenador.Location = new System.Drawing.Point(1, 233);
+            this.btnconsultarentrenador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnconsultarentrenador.Name = "btnconsultarentrenador";
-            this.btnconsultarentrenador.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnconsultarentrenador.Size = new System.Drawing.Size(299, 47);
+            this.btnconsultarentrenador.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnconsultarentrenador.Size = new System.Drawing.Size(399, 58);
             this.btnconsultarentrenador.TabIndex = 10;
             this.btnconsultarentrenador.Text = "    CONSULTAR ENTRENADOR";
             this.btnconsultarentrenador.UseVisualStyleBackColor = false;
@@ -144,11 +144,11 @@
             this.btn_ConsultarUsuario.ForeColor = System.Drawing.Color.Black;
             this.btn_ConsultarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_ConsultarUsuario.Image")));
             this.btn_ConsultarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ConsultarUsuario.Location = new System.Drawing.Point(1, 48);
-            this.btn_ConsultarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ConsultarUsuario.Location = new System.Drawing.Point(1, 59);
+            this.btn_ConsultarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ConsultarUsuario.Name = "btn_ConsultarUsuario";
-            this.btn_ConsultarUsuario.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_ConsultarUsuario.Size = new System.Drawing.Size(299, 47);
+            this.btn_ConsultarUsuario.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btn_ConsultarUsuario.Size = new System.Drawing.Size(399, 58);
             this.btn_ConsultarUsuario.TabIndex = 5;
             this.btn_ConsultarUsuario.Text = "CONSULTAR MIEMBRO";
             this.btn_ConsultarUsuario.UseVisualStyleBackColor = false;
@@ -164,11 +164,11 @@
             this.btnconsultarfacturas.ForeColor = System.Drawing.Color.Black;
             this.btnconsultarfacturas.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultarfacturas.Image")));
             this.btnconsultarfacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconsultarfacturas.Location = new System.Drawing.Point(1, 142);
-            this.btnconsultarfacturas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnconsultarfacturas.Location = new System.Drawing.Point(1, 175);
+            this.btnconsultarfacturas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnconsultarfacturas.Name = "btnconsultarfacturas";
-            this.btnconsultarfacturas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnconsultarfacturas.Size = new System.Drawing.Size(299, 47);
+            this.btnconsultarfacturas.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnconsultarfacturas.Size = new System.Drawing.Size(399, 58);
             this.btnconsultarfacturas.TabIndex = 9;
             this.btnconsultarfacturas.Text = "CONSULTAR FACTURAS";
             this.btnconsultarfacturas.UseVisualStyleBackColor = false;
@@ -184,11 +184,11 @@
             this.bnt_ConsultarProducto.ForeColor = System.Drawing.Color.Black;
             this.bnt_ConsultarProducto.Image = ((System.Drawing.Image)(resources.GetObject("bnt_ConsultarProducto.Image")));
             this.bnt_ConsultarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bnt_ConsultarProducto.Location = new System.Drawing.Point(1, 95);
-            this.bnt_ConsultarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.bnt_ConsultarProducto.Location = new System.Drawing.Point(1, 117);
+            this.bnt_ConsultarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bnt_ConsultarProducto.Name = "bnt_ConsultarProducto";
-            this.bnt_ConsultarProducto.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.bnt_ConsultarProducto.Size = new System.Drawing.Size(299, 47);
+            this.bnt_ConsultarProducto.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.bnt_ConsultarProducto.Size = new System.Drawing.Size(399, 58);
             this.bnt_ConsultarProducto.TabIndex = 7;
             this.bnt_ConsultarProducto.Text = "CONSULTAR PRODUCTO";
             this.bnt_ConsultarProducto.UseVisualStyleBackColor = false;
@@ -204,10 +204,10 @@
             this.Agregarcontenedor.Controls.Add(this.menuanimacion);
             this.Agregarcontenedor.Controls.Add(this.AgregarUsuario);
             this.Agregarcontenedor.Controls.Add(this.BntAgregarporducto);
-            this.Agregarcontenedor.Location = new System.Drawing.Point(0, 203);
-            this.Agregarcontenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.Agregarcontenedor.Location = new System.Drawing.Point(0, 250);
+            this.Agregarcontenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Agregarcontenedor.Name = "Agregarcontenedor";
-            this.Agregarcontenedor.Size = new System.Drawing.Size(299, 47);
+            this.Agregarcontenedor.Size = new System.Drawing.Size(399, 58);
             this.Agregarcontenedor.TabIndex = 1;
             // 
             // AgregarEjercicio
@@ -220,11 +220,11 @@
             this.AgregarEjercicio.ForeColor = System.Drawing.Color.Black;
             this.AgregarEjercicio.Image = ((System.Drawing.Image)(resources.GetObject("AgregarEjercicio.Image")));
             this.AgregarEjercicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarEjercicio.Location = new System.Drawing.Point(0, 282);
-            this.AgregarEjercicio.Margin = new System.Windows.Forms.Padding(2);
+            this.AgregarEjercicio.Location = new System.Drawing.Point(0, 347);
+            this.AgregarEjercicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarEjercicio.Name = "AgregarEjercicio";
-            this.AgregarEjercicio.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.AgregarEjercicio.Size = new System.Drawing.Size(299, 47);
+            this.AgregarEjercicio.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.AgregarEjercicio.Size = new System.Drawing.Size(399, 58);
             this.AgregarEjercicio.TabIndex = 11;
             this.AgregarEjercicio.Text = "AGREGAR EJERCICIO";
             this.AgregarEjercicio.UseVisualStyleBackColor = false;
@@ -240,13 +240,13 @@
             this.AgregarFactura.ForeColor = System.Drawing.Color.Black;
             this.AgregarFactura.Image = ((System.Drawing.Image)(resources.GetObject("AgregarFactura.Image")));
             this.AgregarFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarFactura.Location = new System.Drawing.Point(0, 235);
-            this.AgregarFactura.Margin = new System.Windows.Forms.Padding(2);
+            this.AgregarFactura.Location = new System.Drawing.Point(0, 289);
+            this.AgregarFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarFactura.Name = "AgregarFactura";
-            this.AgregarFactura.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.AgregarFactura.Size = new System.Drawing.Size(299, 47);
+            this.AgregarFactura.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.AgregarFactura.Size = new System.Drawing.Size(399, 58);
             this.AgregarFactura.TabIndex = 10;
-            this.AgregarFactura.Text = "AGREGAR FACTURA";
+            this.AgregarFactura.Text = "GENERAR COMPRA";
             this.AgregarFactura.UseVisualStyleBackColor = false;
             this.AgregarFactura.Click += new System.EventHandler(this.AgregarFactura_Click);
             // 
@@ -260,11 +260,11 @@
             this.agregarmembresia.ForeColor = System.Drawing.Color.Black;
             this.agregarmembresia.Image = ((System.Drawing.Image)(resources.GetObject("agregarmembresia.Image")));
             this.agregarmembresia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agregarmembresia.Location = new System.Drawing.Point(0, 188);
-            this.agregarmembresia.Margin = new System.Windows.Forms.Padding(2);
+            this.agregarmembresia.Location = new System.Drawing.Point(0, 231);
+            this.agregarmembresia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agregarmembresia.Name = "agregarmembresia";
-            this.agregarmembresia.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.agregarmembresia.Size = new System.Drawing.Size(299, 47);
+            this.agregarmembresia.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.agregarmembresia.Size = new System.Drawing.Size(399, 58);
             this.agregarmembresia.TabIndex = 9;
             this.agregarmembresia.Text = "AGREGAR MEMBRESIA";
             this.agregarmembresia.UseVisualStyleBackColor = false;
@@ -280,11 +280,11 @@
             this.btnAEntrenador.ForeColor = System.Drawing.Color.Black;
             this.btnAEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnAEntrenador.Image")));
             this.btnAEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAEntrenador.Location = new System.Drawing.Point(0, 141);
-            this.btnAEntrenador.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAEntrenador.Location = new System.Drawing.Point(0, 174);
+            this.btnAEntrenador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAEntrenador.Name = "btnAEntrenador";
-            this.btnAEntrenador.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnAEntrenador.Size = new System.Drawing.Size(299, 47);
+            this.btnAEntrenador.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAEntrenador.Size = new System.Drawing.Size(399, 58);
             this.btnAEntrenador.TabIndex = 8;
             this.btnAEntrenador.Text = "AGREGAR ENTRENADOR";
             this.btnAEntrenador.UseVisualStyleBackColor = false;
@@ -299,11 +299,11 @@
             this.menuanimacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuanimacion.Image = ((System.Drawing.Image)(resources.GetObject("menuanimacion.Image")));
             this.menuanimacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuanimacion.Location = new System.Drawing.Point(2, 0);
-            this.menuanimacion.Margin = new System.Windows.Forms.Padding(2);
+            this.menuanimacion.Location = new System.Drawing.Point(3, 0);
+            this.menuanimacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.menuanimacion.Name = "menuanimacion";
-            this.menuanimacion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.menuanimacion.Size = new System.Drawing.Size(299, 47);
+            this.menuanimacion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.menuanimacion.Size = new System.Drawing.Size(399, 58);
             this.menuanimacion.TabIndex = 0;
             this.menuanimacion.Text = "AGREGAR";
             this.menuanimacion.UseVisualStyleBackColor = true;
@@ -321,11 +321,11 @@
             this.AgregarUsuario.ForeColor = System.Drawing.Color.Black;
             this.AgregarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("AgregarUsuario.Image")));
             this.AgregarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarUsuario.Location = new System.Drawing.Point(0, 50);
-            this.AgregarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.AgregarUsuario.Location = new System.Drawing.Point(0, 62);
+            this.AgregarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarUsuario.Name = "AgregarUsuario";
-            this.AgregarUsuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.AgregarUsuario.Size = new System.Drawing.Size(299, 47);
+            this.AgregarUsuario.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.AgregarUsuario.Size = new System.Drawing.Size(399, 58);
             this.AgregarUsuario.TabIndex = 4;
             this.AgregarUsuario.Text = "AGREGAR USUARIO";
             this.AgregarUsuario.UseVisualStyleBackColor = false;
@@ -342,11 +342,11 @@
             this.BntAgregarporducto.ForeColor = System.Drawing.Color.Black;
             this.BntAgregarporducto.Image = ((System.Drawing.Image)(resources.GetObject("BntAgregarporducto.Image")));
             this.BntAgregarporducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BntAgregarporducto.Location = new System.Drawing.Point(0, 95);
-            this.BntAgregarporducto.Margin = new System.Windows.Forms.Padding(2);
+            this.BntAgregarporducto.Location = new System.Drawing.Point(0, 117);
+            this.BntAgregarporducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BntAgregarporducto.Name = "BntAgregarporducto";
-            this.BntAgregarporducto.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.BntAgregarporducto.Size = new System.Drawing.Size(299, 47);
+            this.BntAgregarporducto.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.BntAgregarporducto.Size = new System.Drawing.Size(399, 58);
             this.BntAgregarporducto.TabIndex = 6;
             this.BntAgregarporducto.Text = "AGREGAR PRODUCTO";
             this.BntAgregarporducto.UseVisualStyleBackColor = false;
@@ -362,10 +362,10 @@
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(3, 731);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(4, 900);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(60, 55);
+            this.btnSalir.Size = new System.Drawing.Size(80, 68);
             this.btnSalir.TabIndex = 0;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -378,10 +378,10 @@
             this.panelsuperior.Controls.Add(this.Minimizar);
             this.panelsuperior.Controls.Add(this.label1);
             this.panelsuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelsuperior.Location = new System.Drawing.Point(300, 0);
-            this.panelsuperior.Margin = new System.Windows.Forms.Padding(2);
+            this.panelsuperior.Location = new System.Drawing.Point(400, 0);
+            this.panelsuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelsuperior.Name = "panelsuperior";
-            this.panelsuperior.Size = new System.Drawing.Size(700, 55);
+            this.panelsuperior.Size = new System.Drawing.Size(933, 68);
             this.panelsuperior.TabIndex = 1;
             this.panelsuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.panelsuperior_Paint);
             this.panelsuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelsuperior_MouseDown);
@@ -390,9 +390,9 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 58);
+            this.pictureBox3.Size = new System.Drawing.Size(105, 71);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -402,10 +402,10 @@
             this.Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrar.Image")));
-            this.Cerrar.Location = new System.Drawing.Point(646, 6);
-            this.Cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Cerrar.Location = new System.Drawing.Point(861, 7);
+            this.Cerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cerrar.Name = "Cerrar";
-            this.Cerrar.Size = new System.Drawing.Size(53, 41);
+            this.Cerrar.Size = new System.Drawing.Size(71, 50);
             this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Cerrar.TabIndex = 2;
             this.Cerrar.TabStop = false;
@@ -416,10 +416,10 @@
             this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(597, 6);
-            this.Minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.Minimizar.Location = new System.Drawing.Point(796, 7);
+            this.Minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(44, 42);
+            this.Minimizar.Size = new System.Drawing.Size(59, 52);
             this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Minimizar.TabIndex = 2;
             this.Minimizar.TabStop = false;
@@ -430,8 +430,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(85, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(113, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 34);
             this.label1.TabIndex = 0;
@@ -451,10 +450,10 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(300, 55);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContenedor.Location = new System.Drawing.Point(400, 68);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(700, 733);
+            this.panelContenedor.Size = new System.Drawing.Size(933, 902);
             this.panelContenedor.TabIndex = 2;
             // 
             // consultarTransicion
@@ -464,15 +463,15 @@
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 788);
+            this.ClientSize = new System.Drawing.Size(1333, 970);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelsuperior);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuPrincipal";
             this.Text = "FormMenuR";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MenuPrincipal_MouseDown);

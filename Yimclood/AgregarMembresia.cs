@@ -42,29 +42,94 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            registrarMembresia();
-            //Limpiar_Campos();
+            if (registrarMembresia())
+            {
+                Limpiar_Campos();
+            }
         }
-        private void registrarMembresia()
+
+        private bool registrarMembresia()
         {
-            string nombre = txtNombre.Text;
-            string Descripcion = txtDescripcion.Text;
-            int valor = int.Parse(txtValor.Text);
-            int duracion = int.Parse(txtDuracion.Text);
+            // Obtén los valores de los campos de texto
+            string nombre = txtNombre.Text.Trim();
+            string descripcion = txtDescripcion.Text.Trim();
+            string valorTexto = txtValor.Text.Trim();
+            string duracionTexto = txtDuracion.Text.Trim();
+
+            // Validaciones
+            if (!ValidarCamposMembresia(nombre, descripcion, valorTexto, duracionTexto, out int valor, out int duracion))
+            {
+                return false;
+            }
+
             TimeSpan Duracion = TimeSpan.FromDays(duracion);
             Entrenador entrenador = ObtenerEntrenador();
-            Membresia membresia = new Membresia( nombre, Descripcion, valor, Duracion, entrenador);
+            Membresia membresia = new Membresia(nombre, descripcion, valor, Duracion, entrenador);
             MessageBox.Show(MembresiaService.Registrar(membresia));
-            //MessageBox.Show(cbEntrenadores.SelectedItem != null ? cbEntrenadores.SelectedItem.ToString() : null);
+            return true;
         }
-        //private void Limpiar_Campos()
-        //{
-        //    txtReferencia.Clear();
-        //    txtNombre.Clear();
-        //    txtDescripcion.Clear();
-        //    txtPrecio.Clear();
-        //    //foto
-        //}
+
+        private bool ValidarCamposMembresia(string nombre, string descripcion, string valorTexto, string duracionTexto, out int valor, out int duracion)
+        {
+            valor = 0;
+            duracion = 0;
+
+            if (!EsNombreValido(nombre))
+            {
+                MostrarMensajeError("El nombre debe contener solo letras y no puede estar vacío.");
+                return false;
+            }
+
+            if (!EsDescripcionValida(descripcion))
+            {
+                MostrarMensajeError("La descripción debe contener solo letras y no puede estar vacía.");
+                return false;
+            }
+
+            if (!EsNumeroValido(valorTexto, out valor))
+            {
+                MostrarMensajeError("El valor debe ser un número válido y no puede estar vacío.");
+                return false;
+            }
+
+            if (!EsNumeroValido(duracionTexto, out duracion))
+            {
+                MostrarMensajeError("La duración debe ser un número válido y no puede estar vacía.");
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool EsNombreValido(string nombre)
+        {
+            return !string.IsNullOrWhiteSpace(nombre) && nombre.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        }
+
+        private bool EsDescripcionValida(string descripcion)
+        {
+            return !string.IsNullOrWhiteSpace(descripcion) && descripcion.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        }
+
+        private bool EsNumeroValido(string texto, out int numero)
+        {
+            return int.TryParse(texto, out numero);
+        }
+
+        private void MostrarMensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Error de validación");
+        }
+
+        private void Limpiar_Campos()
+        {
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtValor.Clear();
+            txtDuracion.Clear();
+            // Si tienes más campos, añádelos aquí
+        }
+
         private void ComboboxEntrenadores()
         {
             List<Entrenador> listaEntrenadores = entrenadorService.Consultar();

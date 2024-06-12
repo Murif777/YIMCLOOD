@@ -199,3 +199,10 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\itextsharp.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\bin\Debug\itextsharp.xml
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BILL.Properties.Resources.resources
+C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BLL.csproj.GenerateResource.cache

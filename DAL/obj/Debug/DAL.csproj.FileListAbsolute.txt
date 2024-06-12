@@ -154,3 +154,4 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\obj\Debug\DAL.csproj.C
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\obj\Debug\DAL.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\DAL\obj\Debug\DAL.pdb
+C:\Users\juann\Desktop\yimm\YIMCLOOD\DAL\bin\Debug\MySql.Data.xml
