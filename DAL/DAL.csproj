@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
     <Compile Include="EjercicioRepository.cs" />
-    <Compile Include="EntrenamientoRepository.cs" />
     <Compile Include="EntrenadorRepository.cs" />
     <Compile Include="FacturaRepository.cs" />
     <Compile Include="HistorialRepository.cs" />

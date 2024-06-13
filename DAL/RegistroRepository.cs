@@ -15,12 +15,11 @@ namespace DAL
             UsuarioRepository usuarioRepository = new UsuarioRepository();
             string sql = "INSERT INTO registros(Miembro_Cedula, Fecha, Peso, Hombros, Pecho, AntebrazoIzquierdo, AntebrazoDerecho, BrazoIzquierdo, BrazoDerecho, Cintura, Cadera, PiernaIzquierda, PiernaDerecha, GemeloIzquierdo, GemeloDerecho, Altura, Foto) " +
                   "VALUES (@Miembro, @Fecha, @Peso, @Hombros, @Pecho, @AntebrazoIzquierdo, @AntebrazoDerecho, @BrazoIzquierdo, @BrazoDerecho, @Cintura, @Cadera, @PiernaIzquierda, @PiernaDerecha, @GemeloIzquierdo, @GemeloDerecho, @Altura, @Foto)";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
                 //AbrirConexion();
-                conexionBd.Open();
+               // // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Foto", registro.Foto);
                 comando.Parameters.AddWithValue("@Peso", registro.Peso);
@@ -53,13 +52,13 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
 
         }
-        //faltan metodos buscar eliminar y actualizar
+       
 
     }
 }

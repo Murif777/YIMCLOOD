@@ -16,8 +16,8 @@ namespace Presentacion
 {
     public partial class Login : Form
     {
-        private UsuarioService UsuarioService = new UsuarioService();
-
+        private UsuarioService usuarioService = new UsuarioService();
+        private ConexionService conexionService = new ConexionService();
         public Login()
         {
             InitializeComponent();            
@@ -93,10 +93,9 @@ namespace Presentacion
             string correo= txtUsuario.Text;
             string clave = txtContrasena.Text;
             Usuario usuario = new Usuario(correo,clave);
-            if (UsuarioService.Login(usuario))
+            if (conexionService.Login(usuario))
             {
                 AbrirMenu(usuario);
-                //MessageBox.Show("Acceso Exitoso");
                 return usuario;
             }
             else
@@ -107,7 +106,8 @@ namespace Presentacion
         }
         private void AbrirMenu(Usuario usuario)
         {
-            if (usuario.CorreoElectronico=="admin@admin")
+            Console.WriteLine( usuario.CorreoElectronico);
+            if (usuario.CorreoElectronico=="admin" || usuario.CorreoElectronico == "root")
             {
                 MenuPrincipal menuPrincipal = new MenuPrincipal();
                 menuPrincipal.Show();
@@ -135,7 +135,7 @@ namespace Presentacion
             string correo = txtUsuario.Text;
             string clave = txtContrasena.Text;
             Usuario usuario =new Usuario(correo,clave);
-            Miembro miembro = UsuarioService.DatosMiembro(usuario);
+            Miembro miembro = usuarioService.DatosMiembro(usuario);
             return miembro;
         }
 

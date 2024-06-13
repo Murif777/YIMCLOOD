@@ -19,13 +19,13 @@ namespace DAL
             string sqlFacturaProducto = "INSERT INTO Facturas_Productos(Id_Factura, Referencia_Producto, Cantidad, Precio_Total) " +
                                         "VALUES (@Id_Factura, @Referencia_Producto, @Cantidad, @Precio_Total)";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             MySqlTransaction transaction = null;
 
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 transaction = conexionBd.BeginTransaction();
 
                 // Insertar en la tabla Facturas y obtener el ID generado
@@ -60,7 +60,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public List<Factura> ConsultarTodo()
@@ -94,11 +94,11 @@ namespace DAL
         JOIN Miembros m ON f.Cedula_Miembro = m.Cedula
         JOIN Facturas_Productos fp ON f.Id = fp.Id_Factura
         JOIN Productos p ON fp.Referencia_Producto = p.Referencia";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
 
                 using (MySqlDataReader reader = comando.ExecuteReader())
@@ -149,11 +149,11 @@ namespace DAL
         JOIN Facturas_Productos fp ON f.Id = fp.Id_Factura
         JOIN Productos p ON fp.Referencia_Producto = p.Referencia
         WHERE m.Cedula = @Cedula";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Cedula", cedula);
 

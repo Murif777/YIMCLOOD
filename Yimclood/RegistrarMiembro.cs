@@ -63,7 +63,7 @@ namespace Presentacion
                     string resultadoMiembro = miembroService.Registrar(miembro);
                     string resultadoUsuario = usuarioService.Registrar(usuario);
                     string resultadoMembresia = RegistrarMembresia(membresiaSeleccionada, usuario);
-
+                    MessageBox.Show(resultadoUsuario);
                     if (resultadoMiembro.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0 ||
                         resultadoUsuario.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0 ||
                         resultadoMembresia.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0)
@@ -199,7 +199,7 @@ namespace Presentacion
         }
         private Membresia ObtenerMembresia()
         {
-            List<Membresia> listaMembresias = MembresiaService.ConsultarTodo();
+            List<Membresia> listaMembresias = membresiaService.ConsultarTodo();
 
             if (listaMembresias != null && listaMembresias.Count > 0 && TiposMembresia.SelectedItem != null)
             {
@@ -238,7 +238,7 @@ namespace Presentacion
         }
         private void ComboboxMembresias()
         {
-            List<Membresia> membresias = MembresiaService.ConsultarTodo();
+            List<Membresia> membresias = membresiaService.ConsultarTodo();
             if (membresias == null)
             {
                 MessageBox.Show("Lista vacia");

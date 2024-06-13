@@ -25,8 +25,6 @@ namespace Presentacion
         private Miembro Miembro;
         private PMembresiaService MembresiaService = new PMembresiaService();
         private UsuarioMenuPrincipal _usuarioMenuPrincipal;
-
-
         public UsuarioPerfil(UsuarioMenuPrincipal usuarioMenuPrincipal,Miembro miembro)
         {
             InitializeComponent();
@@ -75,8 +73,8 @@ namespace Presentacion
             }
             lblNombreApellido.Text=NombreyApellido;
             lblCorreo.Text=correo;
-            lblPeso.Text= peso.ToString();
-            lblEstatura.Text= estatura.ToString();
+            //lblPeso.Text= peso.ToString();
+            //lblEstatura.Text= estatura.ToString();
             lblSaldoDebe.Text= saldo.ToString();
             lblFechaFinal.Text = fechafinal.ToString("dd/MM/yyyy");
             lblEstado.Text = estado;
@@ -87,11 +85,6 @@ namespace Presentacion
         private void btnAgregarDatos_Click(object sender, EventArgs e)
         {
             _usuarioMenuPrincipal.Abrirformpanel(new UsuarioActualizarMiembro(_usuarioMenuPrincipal, Miembro));
-        }
-
-        private void btnSubir_Click(object sender, EventArgs e)
-        {
-             
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

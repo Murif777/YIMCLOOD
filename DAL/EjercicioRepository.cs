@@ -16,12 +16,15 @@ namespace DAL
             string sql = "INSERT INTO Ejercicios (Nombre, Descripcion, Duracion, Repeticiones, Series, Musculo, Categoria, Foto) " +
                          "VALUES (@Nombre, @Descripcion, @Duracion, @Repeticiones, @Series, @Musculo, @Categoria, @Foto)";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionDateBase = conexionBD();
+            if (conexionDateBase == null)
+            {
+                return "conexion perdida";
+            }
             try
             {
-                conexionBd.Open();
-                MySqlCommand comando = new MySqlCommand(sql, conexionBd);
+                //conexionDateBase.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionDateBase);
 
                 comando.Parameters.AddWithValue("@Nombre", ejercicio.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", ejercicio.Descripcion);
@@ -47,7 +50,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+                //conexionDateBase.Close();
             }
             return null;
         }
@@ -56,11 +59,10 @@ namespace DAL
         {
             string sql = "UPDATE Ejercicios SET Foto=@Foto WHERE Nombre =@Nombre";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
-                conexionBd.Open();
+               ////// // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Nombre", nombre);
                 comando.Parameters.AddWithValue("@Foto", nuevaFoto);
@@ -78,7 +80,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               //// // conexionBd.Close();
             }
         }
 
@@ -88,13 +90,11 @@ namespace DAL
 
             string ssql = $"select * from ejercicios";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
-
+            var conexionBd = conexionBD();
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
+               //// // conexionBd.Open();
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -110,7 +110,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public List<Ejercicio> ConsultarEjercicioMusculo(string musculo)
@@ -118,15 +118,14 @@ namespace DAL
             List<Ejercicio> Ejercicios = new List<Ejercicio>();
             string ssql = $"select * from ejercicios where musculo = @musculo";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
                 // Añadir el parámetro a la consulta
                 comando.Parameters.AddWithValue("@musculo", musculo);
-                conexionBd.Open();
+               //// // conexionBd.Open();
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -143,7 +142,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public List<Ejercicio> ConsultarEjerciciosPorRutina(int rutinaId)
@@ -155,13 +154,12 @@ namespace DAL
                   "INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre " +
                   "WHERE re.Rutina_Id = @rutinaId";
 
-            MySqlConnection conexionBd = conexion();
-
+            var conexionBd = conexionBD();
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
                 comando.Parameters.AddWithValue("@rutinaId", rutinaId);
-                conexionBd.Open();
+               ////// // conexionBd.Open();
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -184,7 +182,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 

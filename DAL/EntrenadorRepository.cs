@@ -19,12 +19,12 @@ namespace DAL
             UsuarioRepository usuarioRepository = new UsuarioRepository();
             string sql = "INSERT INTO entrenadores(Cedula, Nombre, Apellido, Telefono, Sexo, Correo_Electronico, Fecha_Nacimiento, Foto) " +
                   "VALUES (@Cedula, @Nombre, @Apellido, @Telefono, @Sexo, @Correo, @FechaNacimiento, @Foto)";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             try
             {
                 //AbrirConexion();
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 //comando.Parameters.AddWithValue("@Id", entrenador.Id);
                 comando.Parameters.AddWithValue("@Cedula", entrenador.Cedula);
@@ -52,7 +52,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
@@ -64,13 +64,12 @@ namespace DAL
 
             string ssql = $"select * from entrenadores";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
+                // conexionBd.Open();
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -84,7 +83,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 
@@ -94,13 +93,12 @@ namespace DAL
             List<Entrenador> entrenadores = new List<Entrenador>();
 
             string ssql = $"SELECT * FROM entrenadores WHERE Cedula = {cedula}";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
+                // conexionBd.Open();
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -119,7 +117,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         private Entrenador Map(MySqlDataReader reader)
@@ -146,13 +144,12 @@ namespace DAL
         }
         public string EliminarEntrenador(string cedulaEntrenador)
         {
-            MySqlConnection conexionBd = null;
+            var conexionBd = conexionBD();
             MySqlTransaction transaction = null;
 
             try
             {
-                conexionBd = conexion();
-                conexionBd.Open();
+                // conexionBd.Open();
                 transaction = conexionBd.BeginTransaction();
 
                 string sqlEliminarMembresiasUsuarios = "DELETE FROM Membresias_Usuarios WHERE Correo_Usuario IN (SELECT Correo_Electronico FROM Usuarios WHERE Ced_Entrenador = @CedulaEntrenador)";
@@ -201,7 +198,7 @@ namespace DAL
             {
                 if (conexionBd != null)
                 {
-                    conexionBd.Close();
+                   // // conexionBd.Close();
                 }
             }
         }
@@ -212,11 +209,11 @@ namespace DAL
                            " Sexo=@Sexo, Correo_Electronico=@Correo, " +
                            "Fecha_Nacimiento=@FechaNacimiento, Foto=@Foto WHERE Cedula=@Cedula";
 
-            MySqlConnection conexionBd = conexion(); 
+            var conexionBd = conexionBD();
 
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(query, conexionBd);
                 comando.Parameters.AddWithValue("@Cedula", entrenador.Cedula);
                 comando.Parameters.AddWithValue("@Nombre", entrenador.Nombre);
@@ -240,7 +237,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 

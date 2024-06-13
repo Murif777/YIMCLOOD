@@ -37,19 +37,6 @@ namespace BILL
                 return "Error al registrar: " + ex.Message;
             }
         }
-
-        public bool Login(Usuario usuario)
-        {
-            try
-            {
-                return u_repository.Login(usuario);
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
         public Miembro DatosMiembro(Usuario usuario)
         {
             try

@@ -228,3 +228,25 @@ C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompileInputs
 C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BILL.dll
 C:\Users\juann\Desktop\yimm\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\obj\Debug\BILL.Properties.Resources.resources
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\obj\Debug\BLL.csproj.GenerateResource.cache
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\obj\Debug\BILL.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\BILL.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\BILL.pdb
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\DAL.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\ENTITY.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\itextsharp.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\System.Memory.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\System.Buffers.dll
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\DAL.pdb
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\ENTITY.pdb
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\itextsharp.xml
+C:\Users\farid muriel\Videos\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date

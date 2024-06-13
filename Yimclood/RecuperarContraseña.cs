@@ -15,6 +15,8 @@ namespace Presentacion
 {
     public partial class RecuperarContraseña : Form
     {
+       private UsuarioService usuarioService = new UsuarioService();
+       private ConexionService conexionService = new ConexionService();
         public RecuperarContraseña()
         {
             InitializeComponent();
@@ -113,14 +115,23 @@ namespace Presentacion
         {
             if (txtContraseña.Text == txtConfirmar.Text)
             {
-                UsuarioService usuarioService = new UsuarioService();
-                Usuario usuario = new Usuario();
-                Login login = new Login();
-                usuario.CorreoElectronico = txtCorreo.Text;
-                usuario.Clave = txtContraseña.Text;
-                MessageBox.Show(usuarioService.Actualizar(usuario));
-                this.Hide();
-                login.Show();
+
+                Usuario usuarioActulizar = new Usuario();
+
+                Usuario usuarioRecuperacion = conexionService.UsuarioRecuperacion();
+
+                if (conexionService.Login(usuarioRecuperacion))
+                {
+
+                    Login login = new Login();
+
+                    usuarioActulizar.CorreoElectronico = txtCorreo.Text;
+                    usuarioActulizar.Clave = txtContraseña.Text;
+
+                    MessageBox.Show(usuarioService.Actualizar(usuarioActulizar));
+                    this.Hide();
+                    login.Show();
+                }
             }
             else
             {

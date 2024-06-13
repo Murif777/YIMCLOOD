@@ -41,10 +41,8 @@ namespace Presentacion
             System.Windows.Forms.Button btnSalir;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioPerfil));
             this.fotoPerfil = new System.Windows.Forms.PictureBox();
-            this.lblEstatura = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblPeso = new System.Windows.Forms.Label();
             this.lblNombreApellido = new System.Windows.Forms.Label();
             this.lblSaldoDebe = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -53,13 +51,10 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnSubir = new Presentacion.botones.botones();
             this.btnAgregarDatos = new Presentacion.botones.botones();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +70,7 @@ namespace Presentacion
             btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnSalir.Location = new System.Drawing.Point(1057, 11);
-            btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            btnSalir.Margin = new System.Windows.Forms.Padding(2);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new System.Drawing.Size(64, 54);
             btnSalir.TabIndex = 107;
@@ -95,22 +90,6 @@ namespace Presentacion
             this.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPerfil.TabIndex = 86;
             this.fotoPerfil.TabStop = false;
-            // 
-            // lblEstatura
-            // 
-            this.lblEstatura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEstatura.AutoSize = true;
-            this.lblEstatura.BackColor = System.Drawing.Color.Transparent;
-            this.lblEstatura.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblEstatura.ForeColor = System.Drawing.Color.Black;
-            this.lblEstatura.Location = new System.Drawing.Point(706, 454);
-            this.lblEstatura.Name = "lblEstatura";
-            this.lblEstatura.Size = new System.Drawing.Size(104, 33);
-            this.lblEstatura.TabIndex = 92;
-            this.lblEstatura.Text = "estatura";
-            this.lblEstatura.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCorreo
             // 
@@ -142,22 +121,6 @@ namespace Presentacion
             this.label1.Size = new System.Drawing.Size(593, 81);
             this.label1.TabIndex = 85;
             this.label1.Text = "Informacion personal";
-            // 
-            // lblPeso
-            // 
-            this.lblPeso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPeso.AutoSize = true;
-            this.lblPeso.BackColor = System.Drawing.Color.Transparent;
-            this.lblPeso.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.lblPeso.ForeColor = System.Drawing.Color.Black;
-            this.lblPeso.Location = new System.Drawing.Point(551, 454);
-            this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(64, 33);
-            this.lblPeso.TabIndex = 38;
-            this.lblPeso.Text = "peso";
-            this.lblPeso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNombreApellido
             // 
@@ -287,29 +250,6 @@ namespace Presentacion
             this.label4.Text = "Saldo debe:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSubir
-            // 
-            this.btnSubir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSubir.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnSubir.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSubir.BorderRadius = 10;
-            this.btnSubir.BorderSize = 0;
-            this.btnSubir.FlatAppearance.BorderSize = 0;
-            this.btnSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubir.ForeColor = System.Drawing.Color.White;
-            this.btnSubir.Image = ((System.Drawing.Image)(resources.GetObject("btnSubir.Image")));
-            this.btnSubir.Location = new System.Drawing.Point(851, 297);
-            this.btnSubir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSubir.Name = "btnSubir";
-            this.btnSubir.Size = new System.Drawing.Size(66, 42);
-            this.btnSubir.TabIndex = 93;
-            this.btnSubir.TextColor = System.Drawing.Color.White;
-            this.btnSubir.UseVisualStyleBackColor = false;
-            this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
-            // 
             // btnAgregarDatos
             // 
             this.btnAgregarDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -325,7 +265,7 @@ namespace Presentacion
             this.btnAgregarDatos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.btnAgregarDatos.ForeColor = System.Drawing.Color.White;
             this.btnAgregarDatos.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDatos.Image")));
-            this.btnAgregarDatos.Location = new System.Drawing.Point(936, 429);
+            this.btnAgregarDatos.Location = new System.Drawing.Point(674, 442);
             this.btnAgregarDatos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarDatos.Name = "btnAgregarDatos";
             this.btnAgregarDatos.Size = new System.Drawing.Size(77, 58);
@@ -357,7 +297,7 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.Location = new System.Drawing.Point(585, 112);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 227);
             this.panel1.TabIndex = 101;
@@ -378,38 +318,6 @@ namespace Presentacion
             this.label8.TabIndex = 104;
             this.label8.Text = "Datos membresia";
             // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(551, 422);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 33);
-            this.label9.TabIndex = 105;
-            this.label9.Text = "Peso:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
-            this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label10.Location = new System.Drawing.Point(699, 422);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 33);
-            this.label10.TabIndex = 106;
-            this.label10.Text = "Estatura:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // UsuarioPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -418,8 +326,6 @@ namespace Presentacion
             this.ClientSize = new System.Drawing.Size(1124, 630);
             this.Controls.Add(btnSalir);
             this.Controls.Add(this.lblNombreApellido);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.label5);
@@ -428,13 +334,10 @@ namespace Presentacion
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTiempoRestante);
             this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.btnSubir);
             this.Controls.Add(this.fotoPerfil);
-            this.Controls.Add(this.lblEstatura);
             this.Controls.Add(this.btnAgregarDatos);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblPeso);
             this.Controls.Add(this.lblSaldoDebe);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(25)))), ((int)(((byte)(3)))));
@@ -450,14 +353,10 @@ namespace Presentacion
         }
 
         #endregion
-
-        private botones.botones btnSubir;
         private PictureBox fotoPerfil;
-        private Label lblEstatura;
         private botones.botones btnAgregarDatos;
         private Label lblCorreo;
         private Label label1;
-        private Label lblPeso;
         private Label lblNombreApellido;
         private Label lblSaldoDebe;
         private Label lblEstado;
@@ -469,7 +368,5 @@ namespace Presentacion
         private Label label5;
         private Panel panel1;
         private Label label8;
-        private Label label9;
-        private Label label10;
     }
 }

@@ -9,30 +9,30 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class UsuarioRepository:ConexionBD
+    public class UsuarioRepository : ConexionBD
     {
         public string GuardarUsuarioBD(Usuario usuario)
         {
             string sql = "INSERT INTO usuarios(Correo_Electronico, Clave, Ced_Miembro,Ced_Entrenador) VALUES" +
                 "(@Correo,@Clave, @Ced_Miembro, @Ced_Entrenador)";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+
+            var conexionBd = conexionBD();
             try
             {
-                conexionBd.Open();
+                //conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
-                if (usuario.DatosEntrenador == null) 
+                if (usuario.DatosEntrenador == null)
                 {
                     comando.Parameters.AddWithValue("@Correo", usuario.CorreoElectronico);
                     comando.Parameters.AddWithValue("@Clave", usuario.Clave);
                     comando.Parameters.AddWithValue("@Ced_Miembro", usuario.DatosMiembro.Cedula);
                     comando.Parameters.AddWithValue("@Ced_Entrenador", null);
                 }
-                if(usuario.DatosMiembro==null) 
+                if (usuario.DatosMiembro == null)
                 {
                     comando.Parameters.AddWithValue("@Correo", usuario.CorreoElectronico);
                     comando.Parameters.AddWithValue("@Clave", usuario.Clave);
-                    comando.Parameters.AddWithValue("@Ced_Miembro",null );
+                    comando.Parameters.AddWithValue("@Ced_Miembro", null);
                     comando.Parameters.AddWithValue("@Ced_Entrenador", usuario.DatosEntrenador.Cedula);
 
                 }
@@ -52,7 +52,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+                //conexionBd.Close();
             }
             return null;
         }
@@ -61,7 +61,7 @@ namespace DAL
         {
             string actualizarSql = "UPDATE Usuarios SET Clave = @NuevaClave WHERE Correo_Electronico = @CorreoElectronico";
 
-            using (var connection = conexion())
+            using (var connection = conexionBD())
             {
                 MySqlCommand actualizarComando = new MySqlCommand(actualizarSql, connection);
                 actualizarComando.Parameters.AddWithValue("@NuevaClave", usuario.Clave);
@@ -69,7 +69,7 @@ namespace DAL
 
                 try
                 {
-                    connection.Open();
+                    //connection.Open();
                     int rowsAffected = actualizarComando.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
@@ -87,32 +87,7 @@ namespace DAL
                 }
                 finally
                 {
-                    connection.Close();
-                }
-            }
-        }
-
-        public bool Login(Usuario usuario)
-        {
-            string sql = "SELECT 1 FROM Usuarios WHERE Correo_Electronico = @CorreoElectronico AND Clave = @Clave LIMIT 1";
-
-            using (var connection = conexion())
-            {
-                MySqlCommand comando = new MySqlCommand(sql, connection);
-                comando.Parameters.AddWithValue("@CorreoElectronico", usuario.CorreoElectronico);
-                comando.Parameters.AddWithValue("@Clave", usuario.Clave);
-
-                try
-                {
-                    connection.Open();
-                    using (MySqlDataReader reader = comando.ExecuteReader())
-                    {
-                        return reader.HasRows;
-                    }
-                }
-                catch (MySqlException ex)
-                {
-                    throw new Exception("Error al realizar la consulta", ex);
+                    //connection.Close();
                 }
             }
         }
@@ -121,12 +96,12 @@ namespace DAL
         {
             string sql = "SELECT * FROM Miembros WHERE Correo_Electronico = @CorreoElectronico";
 
-            using (MySqlConnection conexionBd = conexion())
+            using (MySqlConnection conexionBd = conexionBD())
             {
 
                 try
                 {
-                    conexionBd.Open();
+                    //conexionBd.Open();
                     MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                     comando.Parameters.AddWithValue("@CorreoElectronico", usuario.CorreoElectronico);
 
@@ -152,7 +127,7 @@ namespace DAL
         }
         private Miembro MapMiembro(MySqlDataReader reader)
         {
-            Miembro miembro= new Miembro
+            Miembro miembro = new Miembro
             {
                 Cedula = reader.GetString("Cedula"),
                 Nombre = reader.GetString("Nombre"),

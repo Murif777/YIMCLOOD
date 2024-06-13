@@ -18,13 +18,13 @@ namespace DAL
         {
             string sql = "INSERT INTO Miembros(Cedula, Nombre, Apellido, Telefono, Sexo, Fecha_Nacimiento,Correo_Electronico, Peso, Estatura,Foto) " +
                   "VALUES (@Cedula, @Nombre, @Apellido, @Telefono, @Sexo, @Fecha_Nacimiento, @Correo_Electronico, @Peso, @Estatura, @Foto)";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             //arreglar columnas
             try
             {
                 //AbrirConexion();
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Cedula", miembro.Cedula);
                 comando.Parameters.AddWithValue("@Nombre", miembro.Nombre);
@@ -52,7 +52,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
@@ -62,11 +62,11 @@ namespace DAL
         {
             string sql = "SELECT * FROM Miembros WHERE Cedula = @Cedula";
 
-            using (MySqlConnection conexionBd = conexion())
+            using (var conexionBd = conexionBD())
             {
                 try
                 {
-                    conexionBd.Open();
+                    // conexionBd.Open();
                     MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                     comando.Parameters.AddWithValue("@Cedula", cedula);
 
@@ -112,9 +112,9 @@ namespace DAL
         }
         public string EliminarMiembroBD(string cedula)
         {
-            using (MySqlConnection conexionBd = conexion())
+            using (var conexionBd = conexionBD())
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 using (MySqlTransaction transaction = conexionBd.BeginTransaction())
                 {
                     try
@@ -188,11 +188,11 @@ namespace DAL
                          "Telefono=@Telefono, Sexo=@Sexo, Fecha_Nacimiento=@FechaNacimiento, " +
                          "Correo_Electronico=@Correo, Peso=@Peso, Estatura=@Estatura, Foto=@Foto " +
                          "WHERE Cedula=@Cedula";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Cedula", miembro.Cedula);
                 comando.Parameters.AddWithValue("@Nombre", miembro.Nombre);
@@ -218,13 +218,13 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public string ActualizarMiembroBD(Miembro miembro, string correoViejo)
         {
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
 
             // Buscar la clave del usuario según el correo del miembro recibido
             string claveUsuario = ObtenerClaveUsuarioPorCorreo(correoViejo);
@@ -250,7 +250,7 @@ namespace DAL
                                            "WHERE Cedula=@Cedula";
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comandoActualizarMiembro = new MySqlCommand(sqlActualizarMiembro, conexionBd);
                 comandoActualizarMiembro.Parameters.AddWithValue("@Cedula", miembro.Cedula);
                 comandoActualizarMiembro.Parameters.AddWithValue("@Nombre", miembro.Nombre);
@@ -312,7 +312,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         private string ObtenerCorreoAntiguo(string cedula)
@@ -321,13 +321,13 @@ namespace DAL
 
             string ssql = "SELECT * FROM miembros WHERE Cedula = @Cedula ";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
+                // conexionBd.Open();
                 comando.Parameters.AddWithValue("@Cedula", cedula);
 
                 var reader = comando.ExecuteReader();
@@ -344,7 +344,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 
@@ -353,12 +353,11 @@ namespace DAL
             Usuario usuario = new Usuario();
             string ssql = "SELECT * FROM usuarios WHERE Correo_Electronico = @Correo";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
+                // conexionBd.Open();
                 comando.Parameters.AddWithValue("@Correo", correo);
 
                 var reader = comando.ExecuteReader();
@@ -375,7 +374,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 

@@ -16,12 +16,12 @@ namespace DAL
         {
             string sql = "INSERT INTO productos(Referencia, Nombre, Descripcion, Valor,Cantidad_Disponible, Foto) " +
                   "VALUES (@Referencia, @Nombre, @Descripcion, @Valor,@Cantidad, @Foto)";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             try
             {
                 //AbrirConexion();
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Referencia", producto.Referencia);
                 comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
@@ -45,7 +45,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
@@ -57,13 +57,13 @@ namespace DAL
 
             string ssql = "SELECT * FROM productos";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
+                // conexionBd.Open();
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -83,19 +83,18 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public string ActualizarCantidadDisponible(Producto producto)
         {
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
 
             string sql = "UPDATE Productos SET Cantidad_Disponible = @Cantidad_Disponible WHERE Referencia = @Referencia";
 
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Cantidad_Disponible", producto.CantidadDisponible);
                 comando.Parameters.AddWithValue("@Referencia", producto.Referencia);
@@ -108,7 +107,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 
@@ -118,13 +117,13 @@ namespace DAL
 
             string ssql = $"SELECT * FROM productos WHERE Referencia = {referencia}";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
+                // conexionBd.Open();
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -144,7 +143,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         private Producto Map(MySqlDataReader reader)
@@ -180,9 +179,9 @@ namespace DAL
         {
             string sql = "DELETE FROM Productos WHERE Referencia = @Referencia";
 
-            using (MySqlConnection conexionBd = conexion())
+            using (var conexionBd = conexionBD())
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 using (MySqlTransaction transaction = conexionBd.BeginTransaction())
                 {
                     try
@@ -206,7 +205,7 @@ namespace DAL
                     }
                     finally
                     {
-                        conexionBd.Close();
+                       // // conexionBd.Close();
                     }
                 }
             }
@@ -217,11 +216,10 @@ namespace DAL
             string query = "UPDATE Productos SET Nombre=@Nombre, " +
                 "Descripcion=@Descripcion, Valor=@Valor, Cantidad_Disponible=@Cantidad, " +
                 "Foto=@Foto WHERE Referencia=@Referencia";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand cmd = new MySqlCommand(query, conexionBd);
                 cmd.Parameters.AddWithValue("@Referencia", producto.Referencia);
                 cmd.Parameters.AddWithValue("@Nombre", producto.Nombre);
@@ -242,7 +240,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 
@@ -252,9 +250,9 @@ namespace DAL
 
             string query = "SELECT Cantidad_Disponible FROM Productos WHERE Referencia = @Referencia";
 
-            using (MySqlConnection conexionBd = conexion())
+            using (var conexionBd = conexionBD())
             {
-                conexionBd.Open();
+                // conexionBd.Open();
 
                 MySqlCommand command = new MySqlCommand(query, conexionBd);
                 command.Parameters.AddWithValue("@Referencia", referenciaProducto);
@@ -276,9 +274,9 @@ namespace DAL
 
             string query = "SELECT Valor FROM Productos WHERE Referencia = @Referencia";
 
-            using (MySqlConnection conexionBd = conexion())
+            using (var conexionBd = conexionBD())
             {
-                conexionBd.Open();
+                // conexionBd.Open();
 
                 MySqlCommand command = new MySqlCommand(query, conexionBd);
                 command.Parameters.AddWithValue("@Referencia", referenciaProducto);

@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,11 @@ namespace DAL
         {
             string sql = "INSERT INTO membresias_usuarios(Correo_Usuario, Nombre_Membresia,Estado,Fecha_Inicio,Fecha_final,Saldo_Debe,Pagado,Duracion_Acumulada,Tiempo_Restante) " +
                   "VALUES (@Correo_Usuario, @Nombre_Membresia, @Estado, @Fecha_Inicio,@Fecha_final,@SaldoDebe,@Pagado,@Duracion_Acumulada,@Tiempo_Restante)";
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
                 //AbrirConexion();
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Correo_Usuario", pMembresia.DatosUsuario.CorreoElectronico);
                 comando.Parameters.AddWithValue("@Nombre_Membresia", pMembresia.TipoMembresia.Nombre);
@@ -46,7 +46,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
             return null;
 
@@ -57,11 +57,10 @@ namespace DAL
                 "SET Estado = @Estado, Fecha_Inicio = @Fechainicio, Fecha_Final = @Fechafinal, Saldo_Debe = @SaldoDebe, Pagado = @Pagado, Duracion_Acumulada = @DuracionAcumulada, Tiempo_Restante = @TiempoRestante " +
                 "WHERE Correo_Usuario = @CorreoUsuario AND Nombre_Membresia = @NombreMembresia";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Estado", perfil.Estado);
                 comando.Parameters.AddWithValue("@Fechainicio", perfil.Fechainicio);
@@ -80,7 +79,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
             return null;
 
@@ -90,11 +89,10 @@ namespace DAL
             string sql = "SELECT * FROM Membresias_Usuarios WHERE Correo_Usuario  = @Correo_Usuario ";
             PerfilMembresia perfil = null;
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Correo_Usuario", correo);
                 using (var reader = comando.ExecuteReader())
@@ -114,7 +112,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
                 
             }
         }
@@ -188,11 +186,14 @@ namespace DAL
     JOIN Miembros m ON u.Ced_Miembro = m.Cedula
     JOIN Membresias mem ON mu.Nombre_Membresia = mem.Nombre";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
-                conexionBd.Open();
+                if (conexionBd.State != ConnectionState.Open)
+                {
+                    conexionBd.Open();
+                }
+                //conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 using (var reader = comando.ExecuteReader())
                 {
@@ -212,7 +213,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public List<PerfilMembresia> ConsultarCed(string cedula)
@@ -251,11 +252,11 @@ namespace DAL
                 JOIN Membresias mem ON mu.Nombre_Membresia = mem.Nombre
                 WHERE m.Cedula = @Cedula";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Cedula", cedula);
                 using (var reader = comando.ExecuteReader())
@@ -276,7 +277,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // // conexionBd.Close();
             }
         }
         private PerfilMembresia Map(MySqlDataReader reader)
@@ -332,11 +333,11 @@ namespace DAL
                  "Estado = @Estado " +
                  "WHERE Correo_Usuario = @Correo_Usuario";
 
-            using (MySqlConnection conexionBd = conexion())
+            using (var conexionBd = conexionBD())
             {
                 try
                 {
-                    conexionBd.Open();
+                    // conexionBd.Open();
                     MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                     comando.Parameters.AddWithValue("@DuracionAcumulada", perfil.DuracionAcumulada);
                     comando.Parameters.AddWithValue("@TiempoRestante", perfil.TiempoRestante);

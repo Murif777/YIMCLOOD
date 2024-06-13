@@ -24,12 +24,12 @@ namespace DAL
             string sqlHistorial = "INSERT INTO Historial (Cedula_Miembro, Fecha, Registro_Id) " +
                                   "VALUES (@CedulaMiembro, @Fecha, @RegistroId)";
 
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             MySqlTransaction transaction = null;
             try
             {
-                conexionBd.Open();
+               // // conexionBd.Open();
                 transaction = conexionBd.BeginTransaction();
 
                 MySqlCommand comandoRegistro = new MySqlCommand(sqlRegistro, conexionBd, transaction);
@@ -73,15 +73,15 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 
         public List<Historial> ConsultarCed(string ced)
         {
             List<Historial> historiales = new List<Historial>();
-            MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             string sql = "SELECT h.Cedula_Miembro, h.Fecha, h.Registro_Id, " +
                          "r.Peso, r.Hombros, r.Pecho, r.AntebrazoIzquierdo, r.AntebrazoDerecho, " +
                          "r.BrazoIzquierdo, r.BrazoDerecho, r.Cintura, r.Cadera, r.PiernaIzquierda, " +
@@ -93,7 +93,7 @@ namespace DAL
             using (MySqlCommand command = new MySqlCommand(sql, conexionBd))
             {
                 command.Parameters.AddWithValue("@Cedula", ced);
-                conexionBd.Open();
+               // // conexionBd.Open();
 
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
@@ -130,7 +130,7 @@ namespace DAL
                     }
                 }
 
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
 
             return historiales;

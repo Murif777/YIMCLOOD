@@ -16,12 +16,12 @@ namespace DAL
         {
             string sql = "INSERT INTO membresias(Nombre, Descripcion, Valor, Duracion, Ced_Entrenador) " +
                   "VALUES (@Nombre, @Descripcion, @Valor, @Duracion, @Entrenador)";
-           MySqlConnection conexionBd = new MySqlConnection();
-            conexionBd = conexion();
+            var conexionBd = conexionBD();
+
             try
             {
                 //AbrirConexion();
-                conexionBd.Open();
+               // // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Nombre", membresia.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", membresia.Descripcion);
@@ -45,7 +45,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
@@ -74,12 +74,12 @@ namespace DAL
             LEFT JOIN 
                 entrenadores e ON m.Ced_Entrenador = e.Cedula";
 
-            using (MySqlConnection conexionBd = conexion())
+            using (var conexionBd = conexionBD())
             {
                 try
                 {
                     MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                    conexionBd.Open();
+                   // // conexionBd.Open();
 
                     using (var reader = comando.ExecuteReader())
                     {

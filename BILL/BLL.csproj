@@ -54,10 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionService.cs" />
     <Compile Include="EjercicioService.cs" />
     <Compile Include="EmailService.cs" />
     <Compile Include="EntrenadorService.cs" />
-    <Compile Include="EntrenamientoService.cs" />
     <Compile Include="FacturaService.cs" />
     <Compile Include="HistorialService.cs" />
     <Compile Include="ICrud.cs" />

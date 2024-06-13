@@ -16,10 +16,10 @@ namespace DAL
         {
             string sql = "INSERT INTO rutinas_miembro (Id_Rutina, Miembro_Cedula) " +
                          "VALUES (@Id_Rutina, @Miembro_Cedula)";
-            MySqlConnection conexionBd = conexion();
+            var conexionBd = conexionBD();
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionBd);
                 comando.Parameters.AddWithValue("@Id_Rutina", rutina.Id);
                 comando.Parameters.AddWithValue("@Miembro_Cedula", rutina.Miembro.Cedula);
@@ -39,16 +39,16 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public string GuardarRutinaPersoBD(Rutina rutina)
         {
-            MySqlConnection conexionBd = conexion();
+            var conexionBd = conexionBD();
 
             try
             {
-                conexionBd.Open();
+                // conexionBd.Open();
 
                 // Insertar en la tabla Rutinas
                 string sqlRutinas = "INSERT INTO Rutinas (Nombre, Descripcion,EsPredefinida ) " +
@@ -89,7 +89,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 
@@ -106,12 +106,12 @@ namespace DAL
                INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre
                WHERE r.EsPredefinida = TRUE;";
 
-            MySqlConnection conexionBd = conexion();
+            var conexionBd = conexionBD();
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
-                conexionBd.Open();
+                // conexionBd.Open();
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
@@ -140,7 +140,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public List<Rutina> ConsultarPersonalizadas(string cedula)
@@ -159,13 +159,12 @@ namespace DAL
               "INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre " +
               "WHERE rm.Miembro_Cedula = @Cedula";
 
-            MySqlConnection conexionBd = conexion();
-
+            var conexionBd = conexionBD();
             try
             {
                 MySqlCommand comando = new MySqlCommand(ssql, conexionBd);
 
-                conexionBd.Open();
+                // conexionBd.Open();
                 comando.Parameters.AddWithValue("@Cedula", cedula);
 
                 var reader = comando.ExecuteReader();
@@ -193,19 +192,19 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
         public string EliminarRutinaPersonalizada(string nombre)
         {
             string sqlDeleteRutina = "DELETE FROM Rutinas WHERE Nombre = @Nombre AND EsPredefinida = FALSE ";
-            MySqlConnection conexionBd = conexion();
+            var conexionBd = conexionBD();
 
             try
             {
                 using (MySqlCommand comando = new MySqlCommand(sqlDeleteRutina, conexionBd))
                 {
-                    conexionBd.Open();
+                    // conexionBd.Open();
                     comando.Parameters.AddWithValue("@Nombre", nombre);
                     int rowsAffected = comando.ExecuteNonQuery();
 
@@ -225,7 +224,7 @@ namespace DAL
             }
             finally
             {
-                conexionBd.Close();
+               // // conexionBd.Close();
             }
         }
 
