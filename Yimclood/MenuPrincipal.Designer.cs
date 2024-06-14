@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.ConsultarContenedor = new System.Windows.Forms.Panel();
+            this.btnreportes = new System.Windows.Forms.Button();
             this.bntconsultar = new System.Windows.Forms.Button();
             this.btnconsultarentrenador = new System.Windows.Forms.Button();
             this.btn_ConsultarUsuario = new System.Windows.Forms.Button();
@@ -81,6 +82,7 @@
             // ConsultarContenedor
             // 
             this.ConsultarContenedor.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConsultarContenedor.Controls.Add(this.btnreportes);
             this.ConsultarContenedor.Controls.Add(this.bntconsultar);
             this.ConsultarContenedor.Controls.Add(this.btnconsultarentrenador);
             this.ConsultarContenedor.Controls.Add(this.btn_ConsultarUsuario);
@@ -92,6 +94,26 @@
             this.ConsultarContenedor.Size = new System.Drawing.Size(399, 58);
             this.ConsultarContenedor.TabIndex = 11;
             this.ConsultarContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.ConsultarContenedor_Paint);
+            // 
+            // btnreportes
+            // 
+            this.btnreportes.BackColor = System.Drawing.Color.LightBlue;
+            this.btnreportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnreportes.FlatAppearance.BorderSize = 0;
+            this.btnreportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreportes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreportes.ForeColor = System.Drawing.Color.Black;
+            this.btnreportes.Image = ((System.Drawing.Image)(resources.GetObject("btnreportes.Image")));
+            this.btnreportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnreportes.Location = new System.Drawing.Point(-2, 282);
+            this.btnreportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnreportes.Name = "btnreportes";
+            this.btnreportes.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnreportes.Size = new System.Drawing.Size(399, 58);
+            this.btnreportes.TabIndex = 11;
+            this.btnreportes.Text = "  REPORTES";
+            this.btnreportes.UseVisualStyleBackColor = false;
+            this.btnreportes.Click += new System.EventHandler(this.btnreportes_Click);
             // 
             // bntconsultar
             // 
@@ -432,7 +454,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label1.Location = new System.Drawing.Point(113, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 34);
+            this.label1.Size = new System.Drawing.Size(194, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "YIMCLOOD";
             // 
@@ -514,5 +536,6 @@
         private System.Windows.Forms.Button agregarmembresia;
         private System.Windows.Forms.Button AgregarFactura;
         private System.Windows.Forms.Button AgregarEjercicio;
+        private System.Windows.Forms.Button btnreportes;
     }
 }

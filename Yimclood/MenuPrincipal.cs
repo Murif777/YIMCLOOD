@@ -177,7 +177,7 @@ namespace Presentacion
             if (!menuExpandConsultar)
             {
                 ConsultarContenedor.Height += 10;
-                if (ConsultarContenedor.Height >= 250)
+                if (ConsultarContenedor.Height >= 290)
                 {
                     consultarTransicion.Stop();
                     menuExpandConsultar = true;
@@ -280,6 +280,13 @@ namespace Presentacion
         private void MenuVertical_Click(object sender, EventArgs e)
         {
             sliderbartransicion.Start();
+        }
+
+        private void btnreportes_Click(object sender, EventArgs e)
+        {
+            var reportesFrom = new Reportes();
+            reportesFrom.OnRegresar += RegistrarForm_OnRegresar;
+            Abrirformpanel(reportesFrom);
         }
     }
 }

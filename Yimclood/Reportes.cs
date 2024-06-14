@@ -22,6 +22,7 @@ namespace Presentacion
         private MiembroService miembroService = new MiembroService();
         private DateTime fechainicio;
         private DateTime fechafinal;
+        public event EventHandler OnRegresar;
 
         private string ReporteSeleccionado;
         private string MembresiaSeleccionado;
@@ -42,6 +43,7 @@ namespace Presentacion
             //filtroMiembro();
             groupBox1.Visible = false;
             dataGridView1.RowHeadersVisible = false;
+            Btnregresar.Click += new EventHandler(Btnregresar_Click);
         }
         private void ComboboxReportes()
         {
@@ -469,20 +471,25 @@ namespace Presentacion
         }
         private void generarPDF()
         {
-           Factura factura = new Factura();
-            factura.FechaFactura =DateTime.Today;
-            factura.
-            SaveFileDialog guardar = new SaveFileDialog();
-            guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+            //Factura factura = new Factura();
+            //factura.FechaFactura = DateTime.Today;
+            //factura.
+            //SaveFileDialog guardar = new SaveFileDialog();
+            //guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
 
-            if (guardar.ShowDialog() == DialogResult.OK)
-            {
-                facturaService.GenerarYEnviarPDFReporte( guardar.FileName);
-            }
+            //if (guardar.ShowDialog() == DialogResult.OK)
+            //{
+            //    facturaService.GenerarYEnviarPDFReporte(guardar.FileName);
+            //}
         }
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Btnregresar_Click(object sender, EventArgs e)
+        {
+            OnRegresar?.Invoke(this, EventArgs.Empty);
         }
     }
 }
