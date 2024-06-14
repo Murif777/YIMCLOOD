@@ -150,5 +150,10 @@ namespace Presentacion
         {
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

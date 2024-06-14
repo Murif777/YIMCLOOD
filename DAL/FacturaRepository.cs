@@ -60,7 +60,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public List<Factura> ConsultarTodo()

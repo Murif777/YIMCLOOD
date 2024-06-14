@@ -253,6 +253,8 @@ INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (9, 'Dips');
 INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (10, 'Sprints');
 INSERT INTO Rutinas_Ejercicios (Id_Rutina, Ejercicio_Nombre) VALUES (10, 'Running');
 
+SET SQL_SAFE_UPDATES = 0;
+
 
 -- --------------------------------DROP para todas las tablas
 -- Eliminar filas de las tablas secundarias
@@ -298,3 +300,20 @@ FROM Rutinas r
 INNER JOIN Rutinas_Ejercicios re ON r.Id = re.Id_Rutina
 INNER JOIN Ejercicios e ON re.Ejercicio_Nombre = e.Nombre
 WHERE r.EsPredefinida = TRUE;
+
+CREATE USER 'miembro'@'%' IDENTIFIED BY '123';
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON yimclood.Miembros TO 'miembro'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON yimclood.Registros TO 'miembro'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON yimclood.Historial TO 'miembro'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON yimclood.Rutinas_Ejercicios TO 'miembro'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON yimclood.Rutinas_Miembro TO 'miembro'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON yimclood.Rutinas TO 'miembro'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON yimclood.Ejercicios TO 'miembro'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON yimclood.membresias_usuarios TO 'miembro'@'%';
+
+CREATE USER 'admin'@'%' IDENTIFIED BY '123';
+
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;

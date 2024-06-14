@@ -66,7 +66,7 @@
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.Agregarcontenedor);
             this.MenuVertical.Controls.Add(this.btnSalir);
@@ -95,7 +95,7 @@
             // 
             // bntconsultar
             // 
-            this.bntconsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
+            this.bntconsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.bntconsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntconsultar.FlatAppearance.BorderSize = 0;
             this.bntconsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -116,7 +116,7 @@
             // 
             // btnconsultarentrenador
             // 
-            this.btnconsultarentrenador.BackColor = System.Drawing.Color.LightBlue;
+            this.btnconsultarentrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.btnconsultarentrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnconsultarentrenador.FlatAppearance.BorderSize = 0;
             this.btnconsultarentrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -136,7 +136,7 @@
             // 
             // btn_ConsultarUsuario
             // 
-            this.btn_ConsultarUsuario.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_ConsultarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.btn_ConsultarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ConsultarUsuario.FlatAppearance.BorderSize = 0;
             this.btn_ConsultarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -156,7 +156,7 @@
             // 
             // btnconsultarfacturas
             // 
-            this.btnconsultarfacturas.BackColor = System.Drawing.Color.LightBlue;
+            this.btnconsultarfacturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.btnconsultarfacturas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnconsultarfacturas.FlatAppearance.BorderSize = 0;
             this.btnconsultarfacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -176,7 +176,7 @@
             // 
             // bnt_ConsultarProducto
             // 
-            this.bnt_ConsultarProducto.BackColor = System.Drawing.Color.LightBlue;
+            this.bnt_ConsultarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.bnt_ConsultarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bnt_ConsultarProducto.FlatAppearance.BorderSize = 0;
             this.bnt_ConsultarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -212,7 +212,7 @@
             // 
             // AgregarEjercicio
             // 
-            this.AgregarEjercicio.BackColor = System.Drawing.Color.LightBlue;
+            this.AgregarEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.AgregarEjercicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AgregarEjercicio.FlatAppearance.BorderSize = 0;
             this.AgregarEjercicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -232,7 +232,7 @@
             // 
             // AgregarFactura
             // 
-            this.AgregarFactura.BackColor = System.Drawing.Color.LightBlue;
+            this.AgregarFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.AgregarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AgregarFactura.FlatAppearance.BorderSize = 0;
             this.AgregarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -252,7 +252,7 @@
             // 
             // agregarmembresia
             // 
-            this.agregarmembresia.BackColor = System.Drawing.Color.LightBlue;
+            this.agregarmembresia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.agregarmembresia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.agregarmembresia.FlatAppearance.BorderSize = 0;
             this.agregarmembresia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -272,7 +272,7 @@
             // 
             // btnAEntrenador
             // 
-            this.btnAEntrenador.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAEntrenador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.btnAEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAEntrenador.FlatAppearance.BorderSize = 0;
             this.btnAEntrenador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -292,6 +292,7 @@
             // 
             // menuanimacion
             // 
+            this.menuanimacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.menuanimacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuanimacion.FlatAppearance.BorderSize = 0;
             this.menuanimacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -306,13 +307,13 @@
             this.menuanimacion.Size = new System.Drawing.Size(399, 58);
             this.menuanimacion.TabIndex = 0;
             this.menuanimacion.Text = "AGREGAR";
-            this.menuanimacion.UseVisualStyleBackColor = true;
+            this.menuanimacion.UseVisualStyleBackColor = false;
             this.menuanimacion.Click += new System.EventHandler(this.menuanimacion_Click);
             this.menuanimacion.MouseHover += new System.EventHandler(this.menuanimacion_MouseHover);
             // 
             // AgregarUsuario
             // 
-            this.AgregarUsuario.BackColor = System.Drawing.Color.LightBlue;
+            this.AgregarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.AgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AgregarUsuario.FlatAppearance.BorderSize = 0;
@@ -333,7 +334,7 @@
             // 
             // BntAgregarporducto
             // 
-            this.BntAgregarporducto.BackColor = System.Drawing.Color.LightBlue;
+            this.BntAgregarporducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.BntAgregarporducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BntAgregarporducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BntAgregarporducto.FlatAppearance.BorderSize = 0;
@@ -355,7 +356,7 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(97)))));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -372,7 +373,7 @@
             // 
             // panelsuperior
             // 
-            this.panelsuperior.BackColor = System.Drawing.Color.LightBlue;
+            this.panelsuperior.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panelsuperior.Controls.Add(this.pictureBox3);
             this.panelsuperior.Controls.Add(this.Cerrar);
             this.panelsuperior.Controls.Add(this.Minimizar);
@@ -402,10 +403,10 @@
             this.Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrar.Image")));
-            this.Cerrar.Location = new System.Drawing.Point(861, 7);
+            this.Cerrar.Location = new System.Drawing.Point(861, 2);
             this.Cerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cerrar.Name = "Cerrar";
-            this.Cerrar.Size = new System.Drawing.Size(71, 50);
+            this.Cerrar.Size = new System.Drawing.Size(71, 66);
             this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Cerrar.TabIndex = 2;
             this.Cerrar.TabStop = false;
@@ -416,10 +417,10 @@
             this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(796, 7);
+            this.Minimizar.Location = new System.Drawing.Point(796, 2);
             this.Minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(59, 52);
+            this.Minimizar.Size = new System.Drawing.Size(59, 66);
             this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Minimizar.TabIndex = 2;
             this.Minimizar.TabStop = false;
@@ -432,7 +433,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label1.Location = new System.Drawing.Point(113, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 34);
+            this.label1.Size = new System.Drawing.Size(194, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "YIMCLOOD";
             // 
@@ -448,7 +449,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.Control;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(400, 68);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

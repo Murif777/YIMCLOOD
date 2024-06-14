@@ -87,6 +87,12 @@
     <Compile Include="botones\botones.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,12 +219,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegistrarMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlBlank.resx">
       <DependentUpon>UserControlBlank.cs</DependentUpon>
@@ -306,9 +309,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrarMiembro.resx">
       <DependentUpon>RegistrarMiembro.cs</DependentUpon>

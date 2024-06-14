@@ -20,7 +20,8 @@ namespace Presentacion
         private ConexionService conexionService = new ConexionService();
         public Login()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            metododeprueba();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -39,8 +40,8 @@ namespace Presentacion
         }
         private void metododeprueba()
         {
-            txtUsuario.Text= "dariobernatte@hotmail.com";
-            txtContrasena.Text = "1066864190";
+            txtUsuario.Text= "admin";
+            txtContrasena.Text = "123";
         }
         private void txtContra_Enter(object sender, EventArgs e)
         {

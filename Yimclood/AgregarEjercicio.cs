@@ -181,6 +181,31 @@ namespace Presentacion
         {
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
+
+        private void AgregarEjercicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumSeries_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nmRepeticiones_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numDuracion_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

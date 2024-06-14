@@ -45,7 +45,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
@@ -83,7 +83,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public string ActualizarCantidadDisponible(Producto producto)
@@ -107,7 +107,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 
@@ -143,7 +143,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         private Producto Map(MySqlDataReader reader)
@@ -205,7 +205,7 @@ namespace DAL
                     }
                     finally
                     {
-                       // // conexionBd.Close();
+                       conexionBd.Close();
                     }
                 }
             }
@@ -240,7 +240,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 

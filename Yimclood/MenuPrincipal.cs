@@ -15,11 +15,11 @@ namespace Presentacion
     public partial class MenuPrincipal : Form
     {
         private PMembresiaService MembresiaService = new PMembresiaService();
-        private ConexionService conexionService = new ConexionService();
         public MenuPrincipal()
         {
+            MembresiaService.VerificarMembresias();
             InitializeComponent();
-           // MembresiaService.ActualizarBD();
+            MembresiaService.ActualizarBD();
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
 
@@ -37,7 +37,6 @@ namespace Presentacion
 
         private void Cerrar_Click(object sender, EventArgs e)
         {
-            conexionService.cerrarConexion();
             Application.Exit();
         }
 

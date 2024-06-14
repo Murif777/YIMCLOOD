@@ -39,7 +39,7 @@ namespace Presentacion
             txtCedula.Focus();
         }
 
-        private void btnRegistrar_Click_1(object sender, EventArgs e)
+        public void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             registrarMiembro();
             Limpiar_Campos();
@@ -364,7 +364,5 @@ namespace Presentacion
                 pbFoto.Image = null;
             }
         }
-
-       
     }
 }

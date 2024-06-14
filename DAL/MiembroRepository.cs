@@ -52,7 +52,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
@@ -218,7 +218,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public string ActualizarMiembroBD(Miembro miembro, string correoViejo)
@@ -312,7 +312,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         private string ObtenerCorreoAntiguo(string cedula)
@@ -344,7 +344,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 
@@ -374,7 +374,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 

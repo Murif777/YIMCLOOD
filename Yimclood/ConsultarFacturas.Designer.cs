@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1812, 85);
             this.panel1.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.Btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnregresar.Image = ((System.Drawing.Image)(resources.GetObject("Btnregresar.Image")));
             this.Btnregresar.Location = new System.Drawing.Point(16, 15);
-            this.Btnregresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btnregresar.Margin = new System.Windows.Forms.Padding(4);
             this.Btnregresar.Name = "Btnregresar";
             this.Btnregresar.Size = new System.Drawing.Size(113, 58);
             this.Btnregresar.TabIndex = 1;
@@ -75,33 +75,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label1.Location = new System.Drawing.Point(641, 34);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 30F);
+            this.label1.Location = new System.Drawing.Point(629, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 31);
+            this.label1.Size = new System.Drawing.Size(621, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "HISTORIAL DE FACTURACIONES";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(479, 352);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 15);
+            this.label3.Size = new System.Drawing.Size(245, 17);
             this.label3.TabIndex = 19;
             this.label3.Text = "*Seleccione una factura para ver su imagen";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(555, 222);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 26);
+            this.label2.Size = new System.Drawing.Size(124, 36);
             this.label2.TabIndex = 16;
             this.label2.Text = "Cedula:";
             // 
@@ -140,7 +140,7 @@
             // txtCedula
             // 
             this.txtCedula.Location = new System.Drawing.Point(687, 222);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedula.Multiline = true;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(273, 37);
@@ -150,8 +150,9 @@
             // 
             this.TablaFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaFacturas.Location = new System.Drawing.Point(264, 377);
-            this.TablaFacturas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TablaFacturas.Margin = new System.Windows.Forms.Padding(4);
             this.TablaFacturas.Name = "TablaFacturas";
+            this.TablaFacturas.RowHeadersWidth = 51;
             this.TablaFacturas.Size = new System.Drawing.Size(1211, 225);
             this.TablaFacturas.TabIndex = 22;
             // 
@@ -160,29 +161,31 @@
             this.pnlProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlProductos.Controls.Add(this.TablaProductos);
             this.pnlProductos.Controls.Add(this.label4);
-            this.pnlProductos.Location = new System.Drawing.Point(71, 129);
-            this.pnlProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlProductos.Location = new System.Drawing.Point(0, 85);
+            this.pnlProductos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlProductos.Name = "pnlProductos";
-            this.pnlProductos.Size = new System.Drawing.Size(1413, 596);
+            this.pnlProductos.Size = new System.Drawing.Size(1812, 1463);
             this.pnlProductos.TabIndex = 23;
             // 
             // TablaProductos
             // 
+            this.TablaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaProductos.Location = new System.Drawing.Point(20, 53);
-            this.TablaProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TablaProductos.Location = new System.Drawing.Point(220, 155);
+            this.TablaProductos.Margin = new System.Windows.Forms.Padding(4);
             this.TablaProductos.Name = "TablaProductos";
-            this.TablaProductos.Size = new System.Drawing.Size(1317, 500);
+            this.TablaProductos.RowHeadersWidth = 51;
+            this.TablaProductos.Size = new System.Drawing.Size(1442, 1300);
             this.TablaProductos.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 19F);
-            this.label4.Location = new System.Drawing.Point(701, 18);
+            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
+            this.label4.Location = new System.Drawing.Point(850, 100);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 31);
+            this.label4.Size = new System.Drawing.Size(185, 51);
             this.label4.TabIndex = 1;
             this.label4.Text = "Productos";
             // 
@@ -190,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1812, 885);
             this.Controls.Add(this.pnlProductos);
             this.Controls.Add(this.TablaFacturas);
@@ -201,7 +204,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultarFacturas";
             this.Text = "ConsultarFacturas";
             this.Click += new System.EventHandler(this.ConsultarFacturas_Click);
