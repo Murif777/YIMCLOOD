@@ -19,7 +19,8 @@ namespace Presentacion
         private PMembresiaService PmembresiaService = new PMembresiaService();
         private ConexionService conexionService = new ConexionService();
         private FacturaService facturaService = new FacturaService();
-        private EntrenadorService entrenadorService = new EntrenadorService();
+        private EntrenadorService entrenadorService = new EntrenadorService(
+            );
         private MiembroService miembroService = new MiembroService();
         private DateTime fechainicio;
         private DateTime fechafinal;
@@ -34,7 +35,7 @@ namespace Presentacion
         private List<Producto> productosenviar;
         private List<MembresiaAgrupada> membresiaAgrupadas;
 
-        private int IngresosMembresia;
+        
         public Reportes()
         {
             InitializeComponent();
@@ -159,7 +160,7 @@ namespace Presentacion
                     ValorTotal = p.Valor * p.CantidadDisponible
                 }).ToList();
 
-                Cantidad = productos.Count;
+                Cantidad = viewList.Sum(p => p.Cantidad);
                 Ingresos = viewList.Sum(p => p.ValorTotal);
                 dataGridView1.DataSource = viewList;
                 // Configurar las columnas para mostrar en el orden deseado
@@ -394,7 +395,7 @@ namespace Presentacion
                     groupBox1.Visible = false;
                     cbMembresias.Visible = false;
                     lblSeleccionmem.Visible = false;
-
+                    lblIngresos.Visible = true;
                     lblCantidad.Text = Cantidad.ToString();
                     lblIngresos.Text = Ingresos.ToString();
                     mostrarTablaProductos();

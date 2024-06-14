@@ -273,9 +273,13 @@ namespace Presentacion
             {
                 TiposMembresia.SelectedIndex = 2;
             }
-            if (MiembroRecibido.TipoMembresia.Nombre == "VIP")
+            if (MiembroRecibido.TipoMembresia.Nombre == "PREMIUM")
             {
                 TiposMembresia.SelectedIndex = 3;
+            }
+            if (MiembroRecibido.TipoMembresia.Nombre == "VIP")
+            {
+                TiposMembresia.SelectedIndex = 4;
             }
             if (MiembroRecibido.TipoMembresia.Nombre == "ENTRENADOR")
             {

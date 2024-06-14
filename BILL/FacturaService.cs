@@ -127,13 +127,13 @@ namespace BILL
             string nombreReporte = "Reporte de Ingresos";
             string documento = "Yimclood";
             DateTime fecha = DateTime.Now;
+            int total = 0;
             int numeroReporte = 1; // Puedes cambiar esto si tienes un sistema para generar números de reporte
 
             // Cargar la plantilla HTML
             string paginahtml_texto = Properties.Resources.codigo.ToString();
             paginahtml_texto = paginahtml_texto.Replace("@NUMEROREPORT", numeroReporte.ToString());
             paginahtml_texto = paginahtml_texto.Replace("@TOTAL_MEMBRESIAS", agrupadas.Sum(a => a.Valor).ToString("F2"));
-            paginahtml_texto = paginahtml_texto.Replace("@TOTAL_PRODUCTOS", productos.Sum(p => p.Valor).ToString("F2"));
 
             // Generar filas de membresías
             string filasMembresias = string.Empty;
@@ -147,11 +147,12 @@ namespace BILL
             }
             paginahtml_texto = paginahtml_texto.Replace("@FILAS_MEMBRESIAS", filasMembresias);
 
-            // Generar filas de productos
+            // Generar filas de productos y calcular el total
             string filasProductos = string.Empty;
             foreach (var producto in productos)
             {
-                int valor = producto.Valor*producto.CantidadDisponible;
+                int valor = producto.Valor * producto.CantidadDisponible;
+                total += valor;
                 filasProductos += "<tr>";
                 filasProductos += "<td>" + producto.Nombre + "</td>";
                 filasProductos += "<td>" + producto.CantidadDisponible + "</td>";
@@ -159,6 +160,9 @@ namespace BILL
                 filasProductos += "</tr>";
             }
             paginahtml_texto = paginahtml_texto.Replace("@FILAS_PRODUCTOS", filasProductos);
+
+            // Reemplazar la variable @TOTAL_PRODUCTOS con el total calculado
+            paginahtml_texto = paginahtml_texto.Replace("@TOTAL_PRODUCTOS", total.ToString("F2"));
 
             // Crear el documento PDF
             using (FileStream stream = new FileStream(filePath, FileMode.Create))
@@ -185,6 +189,7 @@ namespace BILL
                 stream.Close();
             }
         }
+
 
         public void GenerarYEnviarPDFReporte(List<Producto> productos,List<MembresiaAgrupada> membresiaAgrupadas, string filePath)
         {
