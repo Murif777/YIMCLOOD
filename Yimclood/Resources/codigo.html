@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reporte de Membresías y Productos</title>
+    <style>
+        table.border {
+            border-collapse: collapse;
+        }
+
+        table.border th, table.border td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .table-spacing {
+            margin-top: 30px; /* Espacio deseado entre las tablas */
+        }
+    </style>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td style="width:20%"></td>
+            <td style="width:60%" align="center" valign="top">
+                <table>
+                    <tr><td align="center"><h4 style="margin:0px">REPORTE</h4></td></tr>
+                    <tr><td align="center">Yimclood: más que un gimnasio</td></tr>
+                    <tr><td align="center">Teléfono: 567-546-55</td></tr>
+                </table>
+            </td>
+            <td style="width:20%">
+                <table class="border" style="width:100%">
+                    <tr><td align="center" style="background-color:#D8D8D8">N° DE REPORTE</td></tr>
+                    <tr><td align="center">@NUMEROREPORT</td></tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr><td colspan="3" height="20"></td></tr>
+
+        <tr>
+            <td colspan="3">
+                <table class="border" style="width:100%;">
+                    <thead>
+                        <tr style="background-color:#D8D8D8">
+                            <th>Membresía</th>
+                            <th>Cantidades activas</th>
+                            <th>Ingresos Estimados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @FILAS_MEMBRESIAS
+                        <tr>
+                            <td style="border: 0px !important"></td>
+                            <td style="border: 0px !important"></td>
+                            <td align="right">TOTAL:</td>
+                            <td>@TOTAL_MEMBRESIAS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr><td colspan="3" height="60"></td></tr> <!-- Espacio entre las tablas -->
+
+        <tr>
+            <td colspan="3">
+                <table class="border table-spacing" style="width:100%;">
+                    <thead>
+                        <tr style="background-color:#D8D8D8">
+                            <th>Producto</th>
+                            <th>Cantidad vendida</th>
+                            <th>Ingresos estimados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @FILAS_PRODUCTOS
+                        <tr>
+                            <td style="border: 0px !important"></td>
+                            <td style="border: 0px !important"></td>
+                            <td align="right">TOTAL:</td>
+                            <td>@TOTAL_PRODUCTOS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

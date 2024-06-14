@@ -122,35 +122,45 @@ namespace BILL
             }
             
         }
-        private void GenerarPDFReporte(Factura factura,PerfilMembresia perfilMembresia, string filePath)
+        private void GenerarPDFReporte(List<Producto> productos, List<MembresiaAgrupada> agrupadas, string filePath)
         {
-            string nombre = $"Reporte Ingresos";
-            //string apellido = factura.Miembro.Apellido; AGREGAR A PDF
-            string cedula ="yimclood";
-            DateTime fecha = factura.FechaFactura;
-            int numeroFactura = factura.Id;
-            //AGREGAR LOGO  ARREGLAR COLUMNA PRECIO TOTAL
-            string paginahtml_texto = Properties.Resources.plantillaFactura.ToString();
-            paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", nombre);
-            paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", cedula);
-            paginahtml_texto = paginahtml_texto.Replace("@FECHA", fecha.ToString("yyyy-MM-dd"));
-            paginahtml_texto = paginahtml_texto.Replace("@NUMEROFAC", numeroFactura.ToString());
+            string nombreReporte = "Reporte de Ingresos";
+            string documento = "Yimclood";
+            DateTime fecha = DateTime.Now;
+            int numeroReporte = 1; // Puedes cambiar esto si tienes un sistema para generar números de reporte
 
-            string filas = string.Empty;
-            foreach (var row in factura.Productos)
+            // Cargar la plantilla HTML
+            string paginahtml_texto = Properties.Resources.codigo.ToString();
+            paginahtml_texto = paginahtml_texto.Replace("@NUMEROREPORT", numeroReporte.ToString());
+            paginahtml_texto = paginahtml_texto.Replace("@TOTAL_MEMBRESIAS", agrupadas.Sum(a => a.Valor).ToString("F2"));
+            paginahtml_texto = paginahtml_texto.Replace("@TOTAL_PRODUCTOS", productos.Sum(p => p.Valor).ToString("F2"));
+
+            // Generar filas de membresías
+            string filasMembresias = string.Empty;
+            foreach (var item in agrupadas)
             {
-                filas += "<tr>";
-                filas += "<td>" + row.Referencia + "</td>";
-                filas += "<td>" + row.Nombre + "</td>";
-                filas += "<td>" + row.CantidadDisponible + " </td>";
-                filas += "<td>" + row.Valor + "</td>";
-                filas += "</tr>";
+                filasMembresias += "<tr>";
+                filasMembresias += "<td>" + item.Membresia + "</td>";
+                filasMembresias += "<td>" + item.Cantidad + "</td>";
+                filasMembresias += "<td>" + item.Valor.ToString("F2") + "</td>";
+                filasMembresias += "</tr>";
             }
-            double total = factura.Precio_Total;
+            paginahtml_texto = paginahtml_texto.Replace("@FILAS_MEMBRESIAS", filasMembresias);
 
-            paginahtml_texto = paginahtml_texto.Replace("@FILAS", filas);
-            paginahtml_texto = paginahtml_texto.Replace("@TOTAL", total.ToString());
+            // Generar filas de productos
+            string filasProductos = string.Empty;
+            foreach (var producto in productos)
+            {
+                int valor = producto.Valor*producto.CantidadDisponible;
+                filasProductos += "<tr>";
+                filasProductos += "<td>" + producto.Nombre + "</td>";
+                filasProductos += "<td>" + producto.CantidadDisponible + "</td>";
+                filasProductos += "<td>" + valor.ToString("F2") + "</td>";
+                filasProductos += "</tr>";
+            }
+            paginahtml_texto = paginahtml_texto.Replace("@FILAS_PRODUCTOS", filasProductos);
 
+            // Crear el documento PDF
             using (FileStream stream = new FileStream(filePath, FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.LETTER, 25, 25, 25, 25);
@@ -158,26 +168,27 @@ namespace BILL
                 pdfDoc.Open();
                 pdfDoc.Add(new Phrase(""));
 
+                // Agregar logo
                 iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.logo, System.Drawing.Imaging.ImageFormat.Png);
                 img.ScaleToFit(60, 60);
                 img.Alignment = iTextSharp.text.Image.UNDERLYING;
-
-                //img.SetAbsolutePosition(10,100);
                 img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
                 pdfDoc.Add(img);
 
+                // Parsear HTML y agregar al PDF
                 using (StringReader sr = new StringReader(paginahtml_texto))
                 {
                     XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
                 }
+
                 pdfDoc.Close();
                 stream.Close();
             }
-
         }
-        public void GenerarYEnviarPDFReporte(Factura factura,PerfilMembresia perfil, string filePath)
+
+        public void GenerarYEnviarPDFReporte(List<Producto> productos,List<MembresiaAgrupada> membresiaAgrupadas, string filePath)
         {
-            GenerarPDFReporte(factura,perfil, filePath);
+            GenerarPDFReporte(productos,membresiaAgrupadas, filePath);
         }
 
         public void GenerarYEnviarPDF(Factura factura, string filePath)

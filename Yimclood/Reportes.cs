@@ -14,6 +14,7 @@ namespace Presentacion
 {
     public partial class Reportes : Form
     {
+
         private MembresiaService membresiaService = new MembresiaService();
         private PMembresiaService PmembresiaService = new PMembresiaService();
         private ConexionService conexionService = new ConexionService();
@@ -30,21 +31,25 @@ namespace Presentacion
         private int Cantidad;
         private int Ingresos;
 
-        private int CantidadProducto;
-        private int IngresosProducto;
+        private List<Producto> productosenviar;
+        private List<MembresiaAgrupada> membresiaAgrupadas;
 
-        private int CantidadMembresia;
         private int IngresosMembresia;
         public Reportes()
         {
             InitializeComponent();
-            conexionService.prueba();
+            ConfigureComboBoxes();
+            //conexionService.prueba();
             ComboboxReportes();
             //filtroMiembro();
             groupBox1.Visible = false;
+            cbMembresias.Visible = false;
+            lblSeleccionmem.Visible = false;
             dataGridView1.RowHeadersVisible = false;
             Btnregresar.Click += new EventHandler(Btnregresar_Click);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
+
         private void ComboboxReportes()
         {
             List<string> reportes = new List<string>
@@ -57,8 +62,14 @@ namespace Presentacion
                 "Miembros"
             };
 
-            cbReportes.DataSource= reportes;
+            cbReportes.DataSource = reportes;
             cbTipoReportes.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        private void ConfigureComboBoxes()
+        {
+            cbTipoReportes.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbMembresias.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbReportes.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private void ComboboxTipoReportes()
         {
@@ -70,71 +81,12 @@ namespace Presentacion
                 "Esta semana",
                 "Semana pasada",
                 "Este mes",
-                "Mes anterior",
+                "Mes pasado",
                 "Este año",
-                "Año anterior"
+                "Año pasado"
             };
-            cbTipoReportes.DataSource=(Tiporeportes);
+            cbTipoReportes.DataSource = (Tiporeportes);
             cbTipoReportes.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
-        private void CbTipoReportes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string seleccionado = cbTipoReportes.SelectedItem.ToString();
-            DateTime today = DateTime.Today;
-            DateTime startOfWeek = today.AddDays(-(int)today.DayOfWeek + (int)DayOfWeek.Monday);
-            DateTime startOfLastWeek = startOfWeek.AddDays(-7);
-
-            switch (seleccionado)
-            {
-                case "Hoy":
-                    fechainicio = today;
-                    fechafinal = today;
-                    break;
-                case "Ayer":
-                    fechainicio = today.AddDays(-1);
-                    fechafinal = today.AddDays(-1);
-                    break;
-                case "Esta semana":
-                    fechainicio = startOfWeek;
-                    fechafinal = startOfWeek.AddDays(6);
-                    break;
-                case "Semana pasada":
-                    fechainicio = startOfLastWeek;
-                    fechafinal = startOfLastWeek.AddDays(6);
-                    break;
-                case "Este mes":
-                    fechainicio = new DateTime(today.Year, today.Month, 1);
-                    fechafinal = fechainicio.AddMonths(1).AddDays(-1);
-                    break;
-                case "Mes pasado":
-                    fechainicio = new DateTime(today.Year, today.Month, 1).AddMonths(-1);
-                    fechafinal = fechainicio.AddMonths(1).AddDays(-1);
-                    break;
-                case "Este año":
-                    fechainicio = new DateTime(today.Year, 1, 1);
-                    fechafinal = new DateTime(today.Year, 12, 31);
-                    break;
-                case "Año pasado":
-                    fechainicio = new DateTime(today.Year - 1, 1, 1);
-                    fechafinal = new DateTime(today.Year - 1, 12, 31);
-                    break;
-                default:
-                    // Aquí puedes manejar el caso por defecto si es necesario
-                    break;
-            }
-
-            // Si el reporte seleccionado es "Miembros", actualiza la tabla de miembros
-            if (ReporteSeleccionado == "Miembros")
-            {
-                mostrarTablaMiembro();
-            }
-            // Si el reporte seleccionado es "Membresias", actualiza la tabla de membresías
-            else if (ReporteSeleccionado == "Membresias")
-            {
-                mostrarTablaMembresias();
-            }
-            fechafinal = DateTime.Today;
-            fechainicio = DateTime.Today;
         }
 
         private void mostrarTablaEntrenadores()
@@ -158,7 +110,7 @@ namespace Presentacion
                     Correo = p.Correo,
                     Telefono = p.Telefono,
                 }).ToList();
-                Cantidad=listaEntrenadores.Count;
+                Cantidad = listaEntrenadores.Count;
                 dataGridView1.DataSource = viewList;
 
                 // Configurar las columnas para mostrar en el orden deseado
@@ -168,6 +120,7 @@ namespace Presentacion
                 dataGridView1.Columns["Correo"].DisplayIndex = 3;
                 dataGridView1.Columns["Telefono"].DisplayIndex = 4;
                 lblCantidad.Text = Cantidad.ToString();
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
             else
             {
@@ -181,7 +134,7 @@ namespace Presentacion
 
             List<Producto> productos = new List<Producto>();
             var facturasFiltrados = facturas;
-            if (fechainicio != DateTime.MinValue && fechafinal != DateTime.MaxValue && ReporteSeleccionado!="Ninguno")
+            if (fechainicio != DateTime.MinValue && fechafinal != DateTime.MaxValue && ReporteSeleccionado != "Ninguno")
             {
                 facturasFiltrados = facturas
                     .Where(p => p.FechaFactura >= fechainicio && p.FechaFactura <= fechafinal)
@@ -194,7 +147,7 @@ namespace Presentacion
                     productos.Add(producto);
                 }
             }
-            
+
             if (productos != null && productos.Count > 0)
             {
                 var viewList = productos.Select(p => new
@@ -203,28 +156,36 @@ namespace Presentacion
                     Nombre = p.Nombre,
                     Precio = p.Valor,
                     Cantidad = p.CantidadDisponible,
+                    ValorTotal = p.Valor * p.CantidadDisponible
                 }).ToList();
+
                 Cantidad = productos.Count;
-                Ingresos = productos.Sum(p => p.Valor);
+                Ingresos = viewList.Sum(p => p.ValorTotal);
                 dataGridView1.DataSource = viewList;
                 // Configurar las columnas para mostrar en el orden deseado
                 dataGridView1.Columns["Referencia"].DisplayIndex = 0;
                 dataGridView1.Columns["Nombre"].DisplayIndex = 1;
                 dataGridView1.Columns["Precio"].DisplayIndex = 2;
                 dataGridView1.Columns["Cantidad"].DisplayIndex = 3;
+                dataGridView1.Columns["ValorTotal"].DisplayIndex = 4;
                 lblCantidad.Text = Cantidad.ToString();
                 lblIngresos.Text = Ingresos.ToString();
-                
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
             else
             {
                 MessageBox.Show("Lista vacía");
             }
+            productosenviar = productos;
         }
+
         private void mostrarTablaMembresias()
         {
             dataGridView1.DataSource = null;
             var perfiles = PmembresiaService.consultartodo();
+
+            List<MembresiaAgrupada> agrupados = new List<MembresiaAgrupada>();
+
             if (perfiles != null && perfiles.Count > 0)
             {
                 var perfilesFiltrados = perfiles;
@@ -239,10 +200,10 @@ namespace Presentacion
                         .Where(p => p.Fechainicio >= fechainicio && p.Fechainicio <= fechafinal)
                         .ToList();
                 }
-                // Agrupar por nombre de membresía y calcular la cantidad y el valor total
-                var agrupados = perfilesFiltrados
+
+                agrupados = perfilesFiltrados
                     .GroupBy(p => p.TipoMembresia.Nombre)
-                    .Select(g => new
+                    .Select(g => new MembresiaAgrupada
                     {
                         Membresia = g.Key,
                         Cantidad = g.Count(),
@@ -252,6 +213,7 @@ namespace Presentacion
 
                 Cantidad = perfilesFiltrados.Count;
                 Ingresos = perfilesFiltrados.Sum(p => p.TipoMembresia.Valor);
+
                 if (agrupados.Count > 0)
                 {
                     dataGridView1.DataSource = agrupados;
@@ -260,6 +222,7 @@ namespace Presentacion
                     dataGridView1.Columns["Valor"].DisplayIndex = 2;
                     lblCantidad.Text = Cantidad.ToString();
                     lblIngresos.Text = Ingresos.ToString();
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 }
                 else
                 {
@@ -270,8 +233,9 @@ namespace Presentacion
             {
                 MessageBox.Show("Lista vacía");
             }
-        }
 
+            membresiaAgrupadas = agrupados;
+        }
         private void mostrarTablaMiembro()
         {
             dataGridView1.DataSource = null;
@@ -298,6 +262,10 @@ namespace Presentacion
                         perfilesFiltrados = perfiles;
                         break;
 
+                }
+                if (!string.IsNullOrEmpty(MembresiaSeleccionado) && MembresiaSeleccionado != "Todo")
+                {
+                    perfilesFiltrados = perfilesFiltrados.Where(p => p.TipoMembresia.Nombre == MembresiaSeleccionado).ToList();
                 }
                 if (fechainicio != DateTime.MinValue && fechafinal != DateTime.MaxValue && ReporteSeleccionado != "Ninguno")
                 {
@@ -334,7 +302,7 @@ namespace Presentacion
                     dataGridView1.Columns["FechaInicio"].DisplayIndex = 8;
                     dataGridView1.Columns["FechaFinal"].DisplayIndex = 9;
                     lblCantidad.Text = Cantidad.ToString();
-
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 }
                 else
                 {
@@ -346,7 +314,6 @@ namespace Presentacion
                 MessageBox.Show("Lista vacia");
             }
         }
-
         private void filtroMiembro()
         {
             if (rbActivos.Checked)
@@ -388,7 +355,15 @@ namespace Presentacion
         private void CbMembresia_SelectedIndexChanged(object sender, EventArgs e)
         {
             MembresiaSeleccionado = cbMembresias.SelectedItem.ToString();
-            mostrarTablaMembresias();
+            if (ReporteSeleccionado == "Membresias")
+            {
+                mostrarTablaMembresias();
+
+            }
+            else
+            {
+                mostrarTablaMiembro();
+            }
         }
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -409,14 +384,17 @@ namespace Presentacion
                     break;
                 case "Membresias":
                     cbMembresias.Visible = true;
+                    lblSeleccionmem.Visible = true;
                     groupBox1.Visible = false;
-                    
+
                     CargarMembresias();
                     mostrarTablaMembresias();
                     break;
                 case "Productos":
                     groupBox1.Visible = false;
                     cbMembresias.Visible = false;
+                    lblSeleccionmem.Visible = false;
+
                     lblCantidad.Text = Cantidad.ToString();
                     lblIngresos.Text = Ingresos.ToString();
                     mostrarTablaProductos();
@@ -426,25 +404,80 @@ namespace Presentacion
                     groupBox1.Visible = false;
                     lblCantidad.Text = Cantidad.ToString();
                     lblIngresos.Visible = false;
+                    lblSeleccionmem.Visible = false;
 
                     mostrarTablaEntrenadores();
                     break;
                 case "Miembros":
-                    cbMembresias.Visible = false;
+                    cbMembresias.Visible = true;
+                    lblSeleccionmem.Visible = true;
                     lblCantidad.Text = Cantidad.ToString();
                     lblIngresos.Visible = false;
                     groupBox1.Visible = true;
+                    CargarMembresias();
+
                     mostrarTablaMiembro();
                     break;
                 default:
+                    dataGridView1.DataSource = null;
+                    cbMembresias.Visible = false;
+                    lblSeleccionmem.Visible = false;
+                    groupBox1.Visible = false;
+                    break;
+            }
+        }
+        private void ObtenerRangoFechas(out DateTime fechainicio, out DateTime fechafinal)
+        {
+            string seleccionado = cbTipoReportes.SelectedItem?.ToString();
+            DateTime today = DateTime.Today;
+
+            fechainicio = DateTime.MinValue;
+            fechafinal = DateTime.MaxValue;
+
+            switch (seleccionado)
+            {
+                case "Hoy":
+                    fechainicio = today;
+                    fechafinal = today;
+                    break;
+                case "Ayer":
+                    fechainicio = today.AddDays(-1);
+                    fechafinal = today.AddDays(-1);
+                    break;
+                case "Esta semana":
+                    fechainicio = today.AddDays(-(int)today.DayOfWeek + (int)DayOfWeek.Monday);
+                    fechafinal = fechainicio.AddDays(6);
+                    break;
+                case "Semana pasada":
+                    fechainicio = today.AddDays(-(int)today.DayOfWeek + (int)DayOfWeek.Monday).AddDays(-7);
+                    fechafinal = fechainicio.AddDays(6);
+                    break;
+                case "Este mes":
+                    fechainicio = new DateTime(today.Year, today.Month, 1);
+                    fechafinal = fechainicio.AddMonths(1).AddDays(-1);
+                    break;
+                case "Mes pasado":
+                    fechainicio = new DateTime(today.Year, today.Month, 1).AddMonths(-1);
+                    fechafinal = fechainicio.AddMonths(1).AddDays(-1);
+                    break;
+                case "Este año":
+                    fechainicio = new DateTime(today.Year, 1, 1);
+                    fechafinal = new DateTime(today.Year, 12, 31);
+                    break;
+                case "Año pasado":
+                    fechainicio = new DateTime(today.Year - 1, 1, 1);
+                    fechafinal = new DateTime(today.Year - 1, 12, 31);
+                    break;
+                default:
+                    fechainicio = dtFechaInicio.Value;
+                    fechafinal = dtFechaFinal.Value;
                     break;
             }
         }
 
         private void btnFiltrarFecha_Click(object sender, EventArgs e)
         {
-            fechainicio = dtFechaInicio.Value;
-            fechafinal = dtFechaFinal.Value;
+            ObtenerRangoFechas(out fechainicio, out fechafinal);
 
             // Llamar al método correspondiente para mostrar los datos según el reporte seleccionado
             switch (ReporteSeleccionado)
@@ -462,34 +495,69 @@ namespace Presentacion
                     mostrarTablaEntrenadores();
                     break;
                 default:
+                    MessageBox.Show("Por favor, seleccione un tipo de reporte válido.");
                     break;
             }
-
-            // Resetear los valores de fecha a hoy después de actualizar los datos
-            fechafinal = DateTime.Today;
-            fechainicio = DateTime.Today;
         }
+
+
         private void generarPDF()
         {
-            //Factura factura = new Factura();
-            //factura.FechaFactura = DateTime.Today;
-            //factura.
-            //SaveFileDialog guardar = new SaveFileDialog();
-            //guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+            mostrarTablaMembresias();
+            mostrarTablaProductos();
+            dataGridView1.DataSource=null;
+            lblCantidad.Text = "";
+            lblIngresos.Text = "";  
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
 
-            //if (guardar.ShowDialog() == DialogResult.OK)
-            //{
-            //    facturaService.GenerarYEnviarPDFReporte(guardar.FileName);
-            //}
+            if (guardar.ShowDialog() == DialogResult.OK)
+            {
+                facturaService.GenerarYEnviarPDFReporte(productosenviar,membresiaAgrupadas, guardar.FileName);
+            }
         }
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            
+            generarPDF();
         }
 
         private void Btnregresar_Click(object sender, EventArgs e)
         {
             OnRegresar?.Invoke(this, EventArgs.Empty);
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            // Resetear los DateTimePickers a sus valores predeterminados
+            dtFechaInicio.Value = DateTime.Today;
+            dtFechaFinal.Value = DateTime.Today;
+
+            // Resetear el ComboBox cbTipoReportes a su valor inicial
+            if (cbTipoReportes.Items.Count > 0)
+            {
+                cbTipoReportes.SelectedIndex = 0; // Suponiendo que el primer ítem es "Ninguno" u otro valor predeterminado
+            }
+
+            // Limpiar DataGridView
+            dataGridView1.DataSource = null;
+
+            // Ocultar o resetear otros controles si es necesario
+            cbMembresias.Visible = false;
+            lblSeleccionmem.Visible = false;
+            groupBox1.Visible = false;
+            lblCantidad.Text = "";
+            lblIngresos.Text = "";
+
+            // Resetear cualquier otra variable o estado
+            fechainicio = DateTime.MinValue;
+            fechafinal = DateTime.MaxValue;
+            filtroestado = "";
+            Cantidad = 0;
+            Ingresos = 0;
+
+            // Informar al usuario que los filtros han sido reseteados
+            MessageBox.Show("Filtros reseteados");
+        }
+
     }
 }
