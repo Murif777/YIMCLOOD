@@ -162,28 +162,6 @@ C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\itextsharp.x
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\bin\Debug\itextsharp.xml
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\obj\Debug\BILL.Properties.Resources.resources
 C:\Users\Dario\OneDrive\Escritorio\YIMCLOOD\YIMCLOOD\BILL\obj\Debug\BLL.csproj.GenerateResource.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\BILL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\BILL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\DAL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\ENTITY.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\itextsharp.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\itextsharp.xmlworker.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\System.Memory.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\System.Buffers.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\DAL.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\ENTITY.pdb
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\bin\Debug\itextsharp.xml
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.AssemblyReference.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.Properties.Resources.resources
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.GenerateResource.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.dll
-C:\Users\farid muriel\OneDrive\Escritorio\c#\YIMCLOOD\BILL\obj\Debug\BILL.pdb
 C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
 C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\BILL\bin\Debug\BILL.dll
 C:\Users\Dario\OneDrive\Escritorio\CLONE1\YIMCLOOD\BILL\bin\Debug\BILL.pdb
@@ -250,6 +228,7 @@ C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\DAL.pdb
 C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\ENTITY.pdb
 C:\Users\farid muriel\Videos\YIMCLOOD\BILL\bin\Debug\itextsharp.xml
 C:\Users\farid muriel\Videos\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
+<<<<<<< HEAD
 C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
 C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\BILL\bin\Debug\BILL.dll
 C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\BILL\bin\Debug\BILL.pdb
@@ -272,3 +251,49 @@ C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\BILL\obj\Debug\BLL.cspro
 C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\BILL\obj\Debug\BILL.dll
 C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+=======
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\BILL.dll.config
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\BILL.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\BILL.pdb
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\DAL.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\ENTITY.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\itextsharp.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\System.Memory.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\System.Buffers.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\DAL.pdb
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\ENTITY.pdb
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\bin\Debug\itextsharp.xml
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\obj\Debug\BILL.Properties.Resources.resources
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\obj\Debug\BLL.csproj.GenerateResource.cache
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\obj\Debug\BILL.dll
+C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\BILL\obj\Debug\BILL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\BILL.dll.config
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\BILL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\BILL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\DAL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\ENTITY.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\itextsharp.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\System.Memory.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\System.Buffers.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\DAL.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\ENTITY.pdb
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\bin\Debug\itextsharp.xml
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BILL.Properties.Resources.resources
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.GenerateResource.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BILL.dll
+C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\BILL\obj\Debug\BILL.pdb
+>>>>>>> 32ab057cf79a7148a0b50775516c862fb687f5e2

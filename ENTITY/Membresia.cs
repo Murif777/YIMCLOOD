@@ -23,6 +23,7 @@ namespace ENTITY
             Duracion = duracion;
             Entrenador = entrenador;
         }
+        
         public int ObtenerDuracionEnDias()
         {
             return (int)Duracion.TotalDays;

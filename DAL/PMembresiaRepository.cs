@@ -116,6 +116,7 @@ namespace DAL
                 
             }
         }
+
         private PerfilMembresia Mapeo(MySqlDataReader reader)
         {
             string CorreoElectronico = reader.GetString(0);

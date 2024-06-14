@@ -48,6 +48,7 @@
     <Compile Include="Factura.cs" />
     <Compile Include="Historial.cs" />
     <Compile Include="Membresia.cs" />
+    <Compile Include="MembresiaAgrupada.cs" />
     <Compile Include="PerfilMembresia.cs" />
     <Compile Include="Miembro.cs" />
     <Compile Include="Persona.cs" />

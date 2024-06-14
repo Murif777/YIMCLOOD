@@ -143,7 +143,7 @@
             this.btnAgregarProducto.Location = new System.Drawing.Point(1672, 376);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(56, 52);
+            this.btnAgregarProducto.Size = new System.Drawing.Size(42, 42);
             this.btnAgregarProducto.TabIndex = 25;
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
@@ -190,10 +190,10 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(498, 370);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(458, 264);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(37, 46);
+            this.btnBuscar.Size = new System.Drawing.Size(28, 37);
             this.btnBuscar.TabIndex = 16;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
@@ -235,7 +235,7 @@
             this.btnsalir.Location = new System.Drawing.Point(15, 32);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(109, 52);
+            this.btnsalir.Size = new System.Drawing.Size(82, 42);
             this.btnsalir.TabIndex = 28;
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -265,9 +265,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1848, 955);
+            this.panel1.Size = new System.Drawing.Size(1386, 640);
             this.panel1.TabIndex = 28;
             // 
             // btnEliminarPro
@@ -276,7 +276,7 @@
             this.btnEliminarPro.Location = new System.Drawing.Point(1735, 395);
             this.btnEliminarPro.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarPro.Name = "btnEliminarPro";
-            this.btnEliminarPro.Size = new System.Drawing.Size(100, 28);
+            this.btnEliminarPro.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarPro.TabIndex = 34;
             this.btnEliminarPro.Text = "Eliminar";
             this.btnEliminarPro.UseVisualStyleBackColor = true;
@@ -291,7 +291,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1848, 84);
+            this.panel2.Size = new System.Drawing.Size(1386, 68);
             this.panel2.TabIndex = 33;
             // 
             // label6
@@ -354,12 +354,12 @@
             // 
             // AgregarFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1848, 955);
+            this.ClientSize = new System.Drawing.Size(1386, 640);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AgregarFactura";
             this.Text = "AgregarFactura";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).EndInit();
