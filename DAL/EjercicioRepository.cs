@@ -80,7 +80,7 @@ namespace DAL
             }
             finally
             {
-               //// // conexionBd.Close();
+               //conexionBd.Close();
             }
         }
 
@@ -110,7 +110,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public List<Ejercicio> ConsultarEjercicioMusculo(string musculo)
@@ -142,7 +142,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public List<Ejercicio> ConsultarEjerciciosPorRutina(int rutinaId)
@@ -182,7 +182,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 

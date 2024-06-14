@@ -52,10 +52,11 @@ namespace DAL
             }
             finally
             {
-                //conexionBd.Close();
+                conexionBd.Close();
             }
             return null;
         }
+
 
         public string ActualizaContraseña(Usuario usuario)
         {
@@ -122,6 +123,10 @@ namespace DAL
                 {
                     Console.WriteLine("Error al buscar el miembro por cédula: " + ex.Message);
                     return null;
+                }
+                finally
+                {
+                    conexionBd.Close();
                 }
             }
         }

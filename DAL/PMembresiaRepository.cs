@@ -46,7 +46,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
             return null;
 
@@ -79,7 +79,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
             return null;
 
@@ -112,10 +112,11 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
                 
             }
         }
+
         private PerfilMembresia Mapeo(MySqlDataReader reader)
         {
             string CorreoElectronico = reader.GetString(0);
@@ -213,7 +214,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public List<PerfilMembresia> ConsultarCed(string cedula)
@@ -277,7 +278,7 @@ namespace DAL
             }
             finally
             {
-               // // // conexionBd.Close();
+               // conexionBd.Close();
             }
         }
         private PerfilMembresia Map(MySqlDataReader reader)

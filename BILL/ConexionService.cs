@@ -49,5 +49,21 @@ namespace BILL
                 throw;
             }
         }
+        
+        public bool prueba()
+        {
+            Usuario usuario = new Usuario();
+            usuario.CorreoElectronico = "root";
+            usuario.Clave = "123456";
+            try
+            {
+                return ConexionBD.Login(usuario);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error :" + ex.Message);
+                return false;
+            }
+        }
     }
 }

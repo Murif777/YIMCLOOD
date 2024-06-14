@@ -52,7 +52,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
@@ -83,7 +83,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 
@@ -117,7 +117,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         private Entrenador Map(MySqlDataReader reader)
@@ -198,7 +198,7 @@ namespace DAL
             {
                 if (conexionBd != null)
                 {
-                   // // conexionBd.Close();
+                   conexionBd.Close();
                 }
             }
         }
@@ -237,7 +237,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 

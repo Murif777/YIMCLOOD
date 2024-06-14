@@ -52,7 +52,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
                 //CerrarConexion();
             }
             return null;

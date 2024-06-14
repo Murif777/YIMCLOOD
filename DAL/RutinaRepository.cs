@@ -39,7 +39,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public string GuardarRutinaPersoBD(Rutina rutina)
@@ -89,7 +89,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 
@@ -140,7 +140,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public List<Rutina> ConsultarPersonalizadas(string cedula)
@@ -192,7 +192,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
         public string EliminarRutinaPersonalizada(string nombre)
@@ -224,7 +224,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
             }
         }
 

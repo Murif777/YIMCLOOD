@@ -73,7 +73,7 @@ namespace DAL
             }
             finally
             {
-               // // conexionBd.Close();
+               //    
             }
         }
 
@@ -130,7 +130,7 @@ namespace DAL
                     }
                 }
 
-               // // conexionBd.Close();
+               //    
             }
 
             return historiales;

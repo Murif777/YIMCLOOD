@@ -122,6 +122,63 @@ namespace BILL
             }
             
         }
+        private void GenerarPDFReporte(Factura factura,PerfilMembresia perfilMembresia, string filePath)
+        {
+            string nombre = $"Reporte Ingresos";
+            //string apellido = factura.Miembro.Apellido; AGREGAR A PDF
+            string cedula ="yimclood";
+            DateTime fecha = factura.FechaFactura;
+            int numeroFactura = factura.Id;
+            //AGREGAR LOGO  ARREGLAR COLUMNA PRECIO TOTAL
+            string paginahtml_texto = Properties.Resources.plantillaFactura.ToString();
+            paginahtml_texto = paginahtml_texto.Replace("@CLIENTE", nombre);
+            paginahtml_texto = paginahtml_texto.Replace("@DOCUMENTO", cedula);
+            paginahtml_texto = paginahtml_texto.Replace("@FECHA", fecha.ToString("yyyy-MM-dd"));
+            paginahtml_texto = paginahtml_texto.Replace("@NUMEROFAC", numeroFactura.ToString());
+
+            string filas = string.Empty;
+            foreach (var row in factura.Productos)
+            {
+                filas += "<tr>";
+                filas += "<td>" + row.Referencia + "</td>";
+                filas += "<td>" + row.Nombre + "</td>";
+                filas += "<td>" + row.CantidadDisponible + " </td>";
+                filas += "<td>" + row.Valor + "</td>";
+                filas += "</tr>";
+            }
+            double total = factura.Precio_Total;
+
+            paginahtml_texto = paginahtml_texto.Replace("@FILAS", filas);
+            paginahtml_texto = paginahtml_texto.Replace("@TOTAL", total.ToString());
+
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            {
+                Document pdfDoc = new Document(PageSize.LETTER, 25, 25, 25, 25);
+                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                pdfDoc.Open();
+                pdfDoc.Add(new Phrase(""));
+
+                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.logo, System.Drawing.Imaging.ImageFormat.Png);
+                img.ScaleToFit(60, 60);
+                img.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                //img.SetAbsolutePosition(10,100);
+                img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                pdfDoc.Add(img);
+
+                using (StringReader sr = new StringReader(paginahtml_texto))
+                {
+                    XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                }
+                pdfDoc.Close();
+                stream.Close();
+            }
+
+        }
+        public void GenerarYEnviarPDFReporte(Factura factura,PerfilMembresia perfil, string filePath)
+        {
+            GenerarPDFReporte(factura,perfil, filePath);
+        }
 
         public void GenerarYEnviarPDF(Factura factura, string filePath)
         {

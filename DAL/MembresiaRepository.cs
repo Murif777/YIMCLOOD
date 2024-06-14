@@ -41,11 +41,11 @@ namespace DAL
             }
             catch (MySqlException ex)
             {
-                return "Error al guardar" + ex.Message;
+                return "Error al guardar " + ex.Message;
             }
             finally
             {
-               // // conexionBd.Close();
+               conexionBd.Close();
                 //CerrarConexion();
             }
             return null;
@@ -95,6 +95,10 @@ namespace DAL
                 {
                     Console.WriteLine("Error al consultar membresias: " + ex.Message);
                     return null;
+                }
+                finally
+                {
+                    conexionBd.Close();
                 }
             }
         }
