@@ -118,7 +118,7 @@
             // 
             this.txtValor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtValor.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
-            this.txtValor.Location = new System.Drawing.Point(790, 238);
+            this.txtValor.Location = new System.Drawing.Point(841, 373);
             this.txtValor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtValor.Multiline = true;
             this.txtValor.Name = "txtValor";
@@ -129,7 +129,7 @@
             // 
             this.txtDuracion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDuracion.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
-            this.txtDuracion.Location = new System.Drawing.Point(790, 380);
+            this.txtDuracion.Location = new System.Drawing.Point(841, 518);
             this.txtDuracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDuracion.Multiline = true;
             this.txtDuracion.Name = "txtDuracion";
@@ -140,7 +140,7 @@
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
-            this.txtNombre.Location = new System.Drawing.Point(790, 94);
+            this.txtNombre.Location = new System.Drawing.Point(841, 94);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -151,7 +151,7 @@
             // 
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
-            this.txtDescripcion.Location = new System.Drawing.Point(790, 525);
+            this.txtDescripcion.Location = new System.Drawing.Point(841, 238);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -163,7 +163,7 @@
             this.rbEntrenadorSi.AutoSize = true;
             this.rbEntrenadorSi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEntrenadorSi.Location = new System.Drawing.Point(28, 47);
-            this.rbEntrenadorSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbEntrenadorSi.Margin = new System.Windows.Forms.Padding(4);
             this.rbEntrenadorSi.Name = "rbEntrenadorSi";
             this.rbEntrenadorSi.Size = new System.Drawing.Size(17, 16);
             this.rbEntrenadorSi.TabIndex = 12;
@@ -176,8 +176,8 @@
             this.cbEntrenadores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbEntrenadores.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F);
             this.cbEntrenadores.FormattingEnabled = true;
-            this.cbEntrenadores.Location = new System.Drawing.Point(836, 785);
-            this.cbEntrenadores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEntrenadores.Location = new System.Drawing.Point(850, 781);
+            this.cbEntrenadores.Margin = new System.Windows.Forms.Padding(4);
             this.cbEntrenadores.Name = "cbEntrenadores";
             this.cbEntrenadores.Size = new System.Drawing.Size(229, 48);
             this.cbEntrenadores.TabIndex = 13;
@@ -187,7 +187,7 @@
             this.rbEntrenadoresNo.AutoSize = true;
             this.rbEntrenadoresNo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEntrenadoresNo.Location = new System.Drawing.Point(141, 47);
-            this.rbEntrenadoresNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbEntrenadoresNo.Margin = new System.Windows.Forms.Padding(4);
             this.rbEntrenadoresNo.Name = "rbEntrenadoresNo";
             this.rbEntrenadoresNo.Size = new System.Drawing.Size(17, 16);
             this.rbEntrenadoresNo.TabIndex = 14;
@@ -204,9 +204,9 @@
             this.groupBox1.Controls.Add(this.rbEntrenadorSi);
             this.groupBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 25F);
             this.groupBox1.Location = new System.Drawing.Point(822, 647);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(257, 101);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -243,7 +243,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.Location = new System.Drawing.Point(1201, 656);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(66, 73);
             this.btnAgregar.TabIndex = 16;
@@ -257,7 +257,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1731, 78);
             this.panel1.TabIndex = 17;
@@ -268,7 +268,7 @@
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Image = ((System.Drawing.Image)(resources.GetObject("btnsalir.Image")));
             this.btnsalir.Location = new System.Drawing.Point(13, 26);
-            this.btnsalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(109, 52);
             this.btnsalir.TabIndex = 2;
@@ -317,7 +317,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgregarMembresia";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);

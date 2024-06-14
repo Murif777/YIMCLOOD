@@ -21,7 +21,7 @@ namespace Presentacion
         public Login()
         {
             InitializeComponent();
-            metododeprueba();
+            //metododeprueba();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

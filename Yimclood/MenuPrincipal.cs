@@ -142,7 +142,7 @@ namespace Presentacion
             {
                 Agregarcontenedor.Height += 10;
                 ConsultarContenedor.Top += 10;
-                if (Agregarcontenedor.Height >= 330)
+                if (Agregarcontenedor.Height >= 320)
                 {
                     menuTransicion.Stop();
                     menuExpandAgregar = true;

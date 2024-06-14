@@ -108,8 +108,11 @@ namespace Presentacion
 
         private bool EsNombreValido(string nombre)
         {
-            return !string.IsNullOrWhiteSpace(nombre) && nombre.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+            return !string.IsNullOrEmpty(nombre) && nombre.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
         }
+
+
+
 
         private bool EsDescripcionValida(string descripcion)
         {

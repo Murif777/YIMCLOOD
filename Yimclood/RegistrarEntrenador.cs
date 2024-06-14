@@ -22,6 +22,9 @@ namespace Presentacion
 
         public event EventHandler OnRegresar;
         private byte[] imageBytes;
+        private string resultadousuario;
+        private string resultadoentrenador;
+        private string resultadomem;
         public RegistrarEntrenador(Entrenador entrenador)
         {
             InitializeComponent();
@@ -70,8 +73,21 @@ namespace Presentacion
                 correo, FechaNacimiento, imageBytes
             );
 
-            MessageBox.Show(entrenadorService.Registrar(entrenador));
+             resultadoentrenador =entrenadorService.Registrar(entrenador);
+
             RegistrarMembresia(membresiaSeleccionada, registrarUsuario(entrenador));
+
+            if (resultadoentrenador.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                resultadousuario.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                resultadomem.IndexOf("error", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                MessageBox.Show("Entrenador no guardado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Entrenador guardado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar_Campos();
+            }
             return true;
         }
 
@@ -144,12 +160,13 @@ namespace Presentacion
                                                     correo, FechaNacimiento, imageBytes
                                                    );
             MessageBox.Show(entrenadorService.ActualizarEntrenador(entrenador));
+
             //RegistrarMembresia(membresiaSeleccionada, registrarUsuario(entrenador));
         }
         private Usuario registrarUsuario(Entrenador entrenador)
         {
             Usuario usuario = new Usuario(entrenador);
-            MessageBox.Show(usuarioService.Registrar(usuario));
+          resultadousuario = usuarioService.Registrar(usuario);
             return usuario;
         }
         private string Sexo()
@@ -190,7 +207,7 @@ namespace Presentacion
                 perfil.TipoMembresia = membresia;
                 perfil.Pagado = true;
                 PMembresiaService PmembresiaService = new PMembresiaService();
-                MessageBox.Show(PmembresiaService.Registrar(perfil));
+                resultadomem= PmembresiaService.Registrar(perfil);
                 //PmembresiaService.VerificarMembresias(perfil);
             }
             else

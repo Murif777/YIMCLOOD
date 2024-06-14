@@ -68,8 +68,8 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.Agregarcontenedor);
+            this.MenuVertical.Controls.Add(this.ConsultarContenedor);
             this.MenuVertical.Controls.Add(this.btnSalir);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
@@ -88,7 +88,7 @@
             this.ConsultarContenedor.Controls.Add(this.btn_ConsultarUsuario);
             this.ConsultarContenedor.Controls.Add(this.btnconsultarfacturas);
             this.ConsultarContenedor.Controls.Add(this.bnt_ConsultarProducto);
-            this.ConsultarContenedor.Location = new System.Drawing.Point(3, 356);
+            this.ConsultarContenedor.Location = new System.Drawing.Point(1, 316);
             this.ConsultarContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConsultarContenedor.Name = "ConsultarContenedor";
             this.ConsultarContenedor.Size = new System.Drawing.Size(399, 58);
@@ -97,7 +97,7 @@
             // 
             // btnreportes
             // 
-            this.btnreportes.BackColor = System.Drawing.Color.LightBlue;
+            this.btnreportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.btnreportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnreportes.FlatAppearance.BorderSize = 0;
             this.btnreportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -226,7 +226,7 @@
             this.Agregarcontenedor.Controls.Add(this.menuanimacion);
             this.Agregarcontenedor.Controls.Add(this.AgregarUsuario);
             this.Agregarcontenedor.Controls.Add(this.BntAgregarporducto);
-            this.Agregarcontenedor.Location = new System.Drawing.Point(0, 250);
+            this.Agregarcontenedor.Location = new System.Drawing.Point(2, 185);
             this.Agregarcontenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Agregarcontenedor.Name = "Agregarcontenedor";
             this.Agregarcontenedor.Size = new System.Drawing.Size(399, 58);
@@ -242,7 +242,7 @@
             this.AgregarEjercicio.ForeColor = System.Drawing.Color.Black;
             this.AgregarEjercicio.Image = ((System.Drawing.Image)(resources.GetObject("AgregarEjercicio.Image")));
             this.AgregarEjercicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarEjercicio.Location = new System.Drawing.Point(0, 347);
+            this.AgregarEjercicio.Location = new System.Drawing.Point(0, 344);
             this.AgregarEjercicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarEjercicio.Name = "AgregarEjercicio";
             this.AgregarEjercicio.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -262,7 +262,7 @@
             this.AgregarFactura.ForeColor = System.Drawing.Color.Black;
             this.AgregarFactura.Image = ((System.Drawing.Image)(resources.GetObject("AgregarFactura.Image")));
             this.AgregarFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarFactura.Location = new System.Drawing.Point(0, 289);
+            this.AgregarFactura.Location = new System.Drawing.Point(0, 286);
             this.AgregarFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarFactura.Name = "AgregarFactura";
             this.AgregarFactura.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -282,7 +282,7 @@
             this.agregarmembresia.ForeColor = System.Drawing.Color.Black;
             this.agregarmembresia.Image = ((System.Drawing.Image)(resources.GetObject("agregarmembresia.Image")));
             this.agregarmembresia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agregarmembresia.Location = new System.Drawing.Point(0, 231);
+            this.agregarmembresia.Location = new System.Drawing.Point(0, 228);
             this.agregarmembresia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agregarmembresia.Name = "agregarmembresia";
             this.agregarmembresia.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -302,7 +302,7 @@
             this.btnAEntrenador.ForeColor = System.Drawing.Color.Black;
             this.btnAEntrenador.Image = ((System.Drawing.Image)(resources.GetObject("btnAEntrenador.Image")));
             this.btnAEntrenador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAEntrenador.Location = new System.Drawing.Point(0, 174);
+            this.btnAEntrenador.Location = new System.Drawing.Point(0, 171);
             this.btnAEntrenador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAEntrenador.Name = "btnAEntrenador";
             this.btnAEntrenador.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -322,7 +322,7 @@
             this.menuanimacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuanimacion.Image = ((System.Drawing.Image)(resources.GetObject("menuanimacion.Image")));
             this.menuanimacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuanimacion.Location = new System.Drawing.Point(3, 0);
+            this.menuanimacion.Location = new System.Drawing.Point(0, 1);
             this.menuanimacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.menuanimacion.Name = "menuanimacion";
             this.menuanimacion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
@@ -344,7 +344,7 @@
             this.AgregarUsuario.ForeColor = System.Drawing.Color.Black;
             this.AgregarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("AgregarUsuario.Image")));
             this.AgregarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AgregarUsuario.Location = new System.Drawing.Point(0, 62);
+            this.AgregarUsuario.Location = new System.Drawing.Point(0, 59);
             this.AgregarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarUsuario.Name = "AgregarUsuario";
             this.AgregarUsuario.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -365,7 +365,7 @@
             this.BntAgregarporducto.ForeColor = System.Drawing.Color.Black;
             this.BntAgregarporducto.Image = ((System.Drawing.Image)(resources.GetObject("BntAgregarporducto.Image")));
             this.BntAgregarporducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BntAgregarporducto.Location = new System.Drawing.Point(0, 117);
+            this.BntAgregarporducto.Location = new System.Drawing.Point(0, 114);
             this.BntAgregarporducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BntAgregarporducto.Name = "BntAgregarporducto";
             this.BntAgregarporducto.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -383,7 +383,6 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(4, 900);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -493,7 +492,6 @@
             this.Controls.Add(this.panelsuperior);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuPrincipal";
             this.Text = "FormMenuR";

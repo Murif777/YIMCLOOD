@@ -52,14 +52,6 @@ C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyRefe
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
 C:\Users\juann\Desktop\yimm\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
-<<<<<<< HEAD
-C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
-C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
-C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
-C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
-C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
-C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
-=======
 C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
 C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
 C:\Users\juann\Desktop\Nueva carpeta\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
@@ -72,4 +64,9 @@ C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\ENTITY\obj\Debug\ENTITY.cs
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\ENTITY\obj\Debug\ENTITY.dll
 C:\Users\farid muriel\OneDrive\Escritorio\c#\Yimclood\ENTITY\obj\Debug\ENTITY.pdb
->>>>>>> 32ab057cf79a7148a0b50775516c862fb687f5e2
+C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\bin\Debug\ENTITY.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\bin\Debug\ENTITY.pdb
+C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.AssemblyReference.cache
+C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\obj\Debug\ENTITY.csproj.CoreCompileInputs.cache
+C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\obj\Debug\ENTITY.dll
+C:\Users\Dario\OneDrive\Escritorio\CLONE BUENO\YIMCLOOD\ENTITY\obj\Debug\ENTITY.pdb
